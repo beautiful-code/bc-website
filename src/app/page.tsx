@@ -1,12 +1,5 @@
-import {
-  Monitor,
-  Server,
-  Brain,
-  Shield,
-  Database,
-  Settings,
-} from "lucide-react";
 import Image from "next/image";
+import ExpertiseIcon from "@/components/ExpertiseIcon";
 import "../styles/layout.scss";
 
 export default function Home() {
@@ -15,32 +8,26 @@ export default function Home() {
     {
       name: "Frontend Engineering",
       slug: "frontend-engineering",
-      icon: Monitor,
     },
     {
       name: "Backend Engineering",
       slug: "backend-engineering",
-      icon: Server,
     },
     {
       name: "AI & Applied ML",
       slug: "ai-applied-ml",
-      icon: Brain,
     },
     {
       name: "Infrastructure & Reliability",
       slug: "infrastructure-reliability",
-      icon: Shield,
     },
     {
       name: "Data Engineering",
       slug: "data-engineering",
-      icon: Database,
     },
     {
       name: "Software Maintenance",
       slug: "software-maintenance",
-      icon: Settings,
     },
   ];
 
@@ -76,16 +63,17 @@ export default function Home() {
             </h2>
             <div className="expertises ">
               {expertiseAreas.map((area) => {
-                const IconComponent = area.icon;
                 return (
                   <div
                     key={area.slug}
                     className="flex items-center space-x-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-4"
                   >
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center">
-                        <IconComponent className="w-48 h-48 text-slate-600" />
-                      </div>
+                      <ExpertiseIcon
+                        slug={area.slug}
+                        name={area.name}
+                        className="w-12 h-12"
+                      />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
