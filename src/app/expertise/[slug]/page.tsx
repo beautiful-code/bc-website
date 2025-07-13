@@ -200,10 +200,10 @@ export default async function ExpertisePage({
                   return (
                     <Link key={area.slug} href={`/expertise/${area.slug}`}>
                       <div
-                        className={`flex items-center space-x-4 cursor-pointer transition-all duration-300 py-3 px-8 ${
+                        className={`flex items-center space-x-4 cursor-pointer transition-all duration-300 py-3 px-8 group ${
                           isActive
                             ? "bg-white text-[var(--color-bc-red)]  "
-                            : "hover:bg-white/50 text-[var(--color-bc-text-black)] rounded-lg"
+                            : "hover:bg-white/50 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] rounded-lg"
                         }`}
                       >
                         <div className="flex-shrink-0">
