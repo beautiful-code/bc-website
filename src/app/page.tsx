@@ -67,20 +67,20 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-md mx-auto">
+          <div className="max-w-lg mx-auto">
             <h2
-              className="text-3xl font-bold tracking-wider uppercase mb-16 text-left"
+              className="text-3xl font-bold tracking-wider uppercase mb-16 text-left px-8 py-4"
               style={{ color: "var(--color-bc-red)" }}
             >
               WHAT WE ARE WIRED FOR
             </h2>
-            <div className="space-y-8">
+            <div className="expertises ">
               {expertiseAreas.map((area) => {
                 const IconComponent = area.icon;
                 return (
                   <div
                     key={area.slug}
-                    className="flex items-center space-x-6 rounded-lg cursor-pointer transition-all duration-300  group"
+                    className="flex items-center space-x-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-4"
                   >
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center">
