@@ -6,6 +6,7 @@ import {
   Database,
   Settings,
 } from "lucide-react";
+import Image from "next/image";
 import "../styles/layout.scss";
 
 export default function Home() {
@@ -48,10 +49,18 @@ export default function Home() {
       <div className="two-column-layout">
         <div className="sideColumn">
           <div className="max-w-sm">
-            <h1 className="text-4xl font-bold text-slate-900 mb-2">
-              <span className="text-red-500">///</span> BeautifulCode
-            </h1>
-            <p className="text-lg text-slate-600 font-medium">
+            <Image
+              src="/BCLogo.svg"
+              alt="BeautifulCode Logo"
+              width={250}
+              height={48}
+              priority
+              className="mb-4 mx-auto"
+            />
+            <p
+              className="text-lg font-normal tracking-wide font-[family-name:var(--font-jetbrains-mono)] text-center"
+              style={{ color: "var(--color-bc-text-gray)" }}
+            >
               Engineers Who Care About Engineering
             </p>
           </div>
@@ -73,7 +82,12 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl  text-slate-900">{area.name}</h3>
+                      <h3
+                        className="text-2xl"
+                        style={{ color: "var(--color-bc-text-black)" }}
+                      >
+                        {area.name}
+                      </h3>
                     </div>
                   </div>
                 );
