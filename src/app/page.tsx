@@ -58,27 +58,27 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <h2 className="text-red-500 text-2xl font-bold tracking-wider uppercase mb-12 text-center lg:text-left">
-            WHAT WE ARE WIRED FOR
-          </h2>
-          <div className="space-y-8">
-            {expertiseAreas.map((area) => {
-              const IconComponent = area.icon;
-              return (
-                <div key={area.slug} className="flex items-center space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-slate-600" />
+          <div className="max-w-md mx-auto">
+            <h2 className="text-red-500 text-3xl font-bold tracking-wider uppercase mb-16 text-left">
+              WHAT WE ARE WIRED FOR
+            </h2>
+            <div className="space-y-8">
+              {expertiseAreas.map((area) => {
+                const IconComponent = area.icon;
+                return (
+                  <div key={area.slug} className="flex items-center space-x-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-48 h-48 text-slate-600" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl  text-slate-900">{area.name}</h3>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-medium text-slate-900">
-                      {area.name}
-                    </h3>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
