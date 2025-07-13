@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BeautifulCode Website
+
+A modern, responsive website for BeautifulCode product engineering services firm.
+
+## Tech Stack
+
+- **Next.js 15.3.5** - React framework with app directory
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **ShadCN UI** - Beautiful, accessible UI components
+- **Vercel** - Deployment platform (planned)
+
+## Project Structure
+
+```
+bc-website/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx        # Homepage
+│   │   ├── layout.tsx      # Root layout
+│   │   └── globals.css     # Global styles
+│   ├── components/
+│   │   └── ui/             # ShadCN UI components
+│   └── lib/
+│       └── utils.ts        # Utility functions
+├── content/
+│   ├── expertise/          # Expertise area markdown files
+│   └── articles/           # Article markdown files
+└── public/                 # Static assets
+```
+
+## Pages
+
+### 1. Home Page
+
+- Two-column layout: logo on left, expertise areas on right
+- Responsive design with mobile-first approach
+- Built with ShadCN Card components
+
+### 2. Expertise Page (Coming Soon)
+
+- Same layout as home with navigation sidebar
+- Recent articles for each expertise area
+- Load more functionality
+
+### 3. Article Page (Coming Soon)
+
+- Individual article display
+- Author info, technologies, key takeaways
+- Markdown content rendering
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## Content Management
+
+Articles and expertise areas are managed through markdown files in the `content/` directory:
+
+- `content/expertise/` - Expertise area descriptions
+- `content/articles/` - Individual articles
+
+## Features
+
+- ✅ Responsive design
+- ✅ TypeScript support
+- ✅ ShadCN UI components
+- ✅ Tailwind CSS styling
+- ✅ SEO-friendly with Next.js SSG
+- ⏳ Markdown content support (planned)
+- ⏳ Dynamic routing (planned)
+- ⏳ Article pagination (planned)
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The website is now ready for incremental development!
