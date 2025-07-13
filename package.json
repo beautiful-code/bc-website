@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:clean": "rm -rf .next && next dev --turbopack",
+    "dev:stable": "next dev --turbopack --port 3000",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next node_modules/.cache"
   },
   "dependencies": {
     "@next/font": "^14.2.15",
