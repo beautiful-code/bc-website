@@ -58,7 +58,7 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <h2 className="text-red-500 text-sm font-bold tracking-wider uppercase mb-12 text-center lg:text-left">
+          <h2 className="text-red-500 text-2xl font-bold tracking-wider uppercase mb-12 text-center lg:text-left">
             WHAT WE ARE WIRED FOR
           </h2>
           <div className="space-y-8">
