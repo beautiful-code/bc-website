@@ -68,24 +68,27 @@ export default function Home() {
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="max-w-md mx-auto">
-            <h2 className="text-red-500 text-3xl font-bold tracking-wider uppercase mb-16 text-left">
+            <h2
+              className="text-3xl font-bold tracking-wider uppercase mb-16 text-left"
+              style={{ color: "var(--color-bc-red)" }}
+            >
               WHAT WE ARE WIRED FOR
             </h2>
             <div className="space-y-8">
               {expertiseAreas.map((area) => {
                 const IconComponent = area.icon;
                 return (
-                  <div key={area.slug} className="flex items-center space-x-6">
+                  <div
+                    key={area.slug}
+                    className="flex items-center space-x-6 rounded-lg cursor-pointer transition-all duration-300  group"
+                  >
                     <div className="flex-shrink-0">
                       <div className="w-12 h-12 rounded-lg flex items-center justify-center">
                         <IconComponent className="w-48 h-48 text-slate-600" />
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3
-                        className="text-2xl"
-                        style={{ color: "var(--color-bc-text-black)" }}
-                      >
+                      <h3 className="text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
                         {area.name}
                       </h3>
                     </div>
