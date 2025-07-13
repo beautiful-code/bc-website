@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import "../styles/layout.scss";
 
@@ -64,23 +65,22 @@ export default function Home() {
             <div className="expertises ">
               {expertiseAreas.map((area) => {
                 return (
-                  <div
-                    key={area.slug}
-                    className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-4"
-                  >
-                    <div className="flex-shrink-0">
-                      <ExpertiseIcon
-                        slug={area.slug}
-                        name={area.name}
-                        className="w-12 h-12"
-                      />
+                  <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                    <div className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-4">
+                      <div className="flex-shrink-0">
+                        <ExpertiseIcon
+                          slug={area.slug}
+                          name={area.name}
+                          className="w-12 h-12"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                          {area.name}
+                        </h3>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                        {area.name}
-                      </h3>
-                    </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

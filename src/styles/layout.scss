@@ -24,7 +24,7 @@ $bc-red: #e01236;
   background-color: $bc-beige;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 2rem;
 
   @media (min-width: 1024px) {
