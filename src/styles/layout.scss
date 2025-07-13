@@ -1,12 +1,24 @@
-// Layout styles for two-column design
-// Can be reused across multiple pages
+// Universal two-column layout
+// Can be reused across all pages
 
 // Color variables
 $bc-beige: #f5f3ef;
 
+// Grid layout for two-column design
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  min-height: 100vh;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+// Side column (left) - for navigation/branding
 .sideColumn {
-  // Side column specific styles
-  background-color: $bc-beige !important;
+  background-color: $bc-beige;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,100 +27,15 @@ $bc-beige: #f5f3ef;
   @media (min-width: 1024px) {
     grid-column: span 2;
   }
-
-  .logo-container {
-    max-width: 24rem; // max-w-sm equivalent
-    margin-bottom: 2rem; // mb-8 equivalent
-
-    .logo-title {
-      font-size: 2.25rem; // text-4xl equivalent
-      font-weight: 700; // font-bold equivalent
-      color: rgb(15 23 42); // text-slate-900 equivalent
-      margin-bottom: 0.5rem; // mb-2 equivalent
-
-      .logo-accent {
-        color: rgb(239 68 68); // text-red-500 equivalent
-      }
-    }
-
-    .logo-tagline {
-      font-size: 1.125rem; // text-lg equivalent
-      color: rgb(75 85 99); // text-slate-600 equivalent
-      font-weight: 500; // font-medium equivalent
-    }
-  }
 }
 
+// Main column (right) - for content
 .mainColumn {
-  // Main column specific styles
-  font-family: var(--font-jetbrains-mono);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 
   @media (min-width: 1024px) {
     grid-column: span 3;
-  }
-
-  .section-header {
-    color: rgb(239 68 68); // text-red-500 equivalent
-    font-size: 0.875rem; // text-sm equivalent
-    font-weight: 700; // font-bold equivalent
-    letter-spacing: 0.05em; // tracking-wider equivalent
-    text-transform: uppercase;
-    margin-bottom: 3rem; // mb-12 equivalent
-    text-align: center;
-
-    @media (min-width: 1024px) {
-      text-align: left;
-    }
-  }
-
-  .expertise-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; // space-y-8 equivalent
-
-    .expertise-item {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem; // space-x-6 equivalent
-
-      .expertise-icon {
-        flex-shrink: 0;
-        width: 3rem; // w-12 equivalent
-        height: 3rem; // h-12 equivalent
-        background-color: rgb(241 245 249); // bg-slate-100 equivalent
-        border-radius: 0.5rem; // rounded-lg equivalent
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        svg {
-          width: 1.5rem; // w-6 equivalent
-          height: 1.5rem; // h-6 equivalent
-          color: rgb(75 85 99); // text-slate-600 equivalent
-        }
-      }
-
-      .expertise-content {
-        flex: 1;
-
-        .expertise-title {
-          font-size: 1.25rem; // text-xl equivalent
-          font-weight: 500; // font-medium equivalent
-          color: rgb(15 23 42); // text-slate-900 equivalent
-        }
-      }
-    }
-  }
-}
-
-// Grid layout for two-column design
-.two-column-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem; // gap-16 equivalent
-  min-height: 100vh; // min-h-screen equivalent
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(5, 1fr);
   }
 }
