@@ -183,7 +183,7 @@ export default async function ExpertisePage({
                 width={300}
                 height={58}
                 priority
-                className="mb-8 cursor-pointer px-8"
+                className="mt-8 mb-12 cursor-pointer px-8"
               />
             </Link>
 

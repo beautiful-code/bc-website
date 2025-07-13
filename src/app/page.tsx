@@ -35,8 +35,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <div className="two-column-layout">
-        <div className="sideColumn">
-          <div className="max-w-sm">
+        <div className="sideColumn !justify-center">
+          <div className="max-w-lg">
             <Image
               src="/BCLogo.svg"
               alt="BeautifulCode Logo"
