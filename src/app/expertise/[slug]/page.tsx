@@ -175,21 +175,21 @@ export default async function ExpertisePage({
       <div className="two-column-layout">
         {/* Side Column - Navigation */}
         <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-sm">
+          <div className="max-w-lg ">
             <Link href="/">
               <Image
                 src="/BCLogo.svg"
                 alt="BeautifulCode Logo"
-                width={250}
-                height={48}
+                width={300}
+                height={58}
                 priority
-                className="mb-8 cursor-pointer"
+                className="mb-8 cursor-pointer px-8"
               />
             </Link>
 
             <div className="mt-8">
               <h2
-                className="text-xl tracking-wider uppercase mb-6 text-left"
+                className="text-xl tracking-wider uppercase mb-6 text-left px-8"
                 style={{ color: "var(--color-bc-text-gray)" }}
               >
                 WHAT WE ARE WIRED FOR
@@ -200,10 +200,10 @@ export default async function ExpertisePage({
                   return (
                     <Link key={area.slug} href={`/expertise/${area.slug}`}>
                       <div
-                        className={`flex items-center space-x-4 cursor-pointer transition-all duration-300 px-4 py-3 rounded-lg ${
+                        className={`flex items-center space-x-4 cursor-pointer transition-all duration-300 py-3 px-8 ${
                           isActive
-                            ? "bg-white text-[var(--color-bc-red)]"
-                            : "hover:bg-white/50 text-[var(--color-bc-text-black)]"
+                            ? "bg-white text-[var(--color-bc-red)]  "
+                            : "hover:bg-white/50 text-[var(--color-bc-text-black)] rounded-lg"
                         }`}
                       >
                         <div className="flex-shrink-0">
