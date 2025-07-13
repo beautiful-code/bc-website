@@ -211,6 +211,7 @@ export default async function ExpertisePage({
                             slug={area.slug}
                             name={area.name}
                             className="w-8 h-8"
+                            isActive={isActive}
                           />
                         </div>
                         <div className="flex-1">
