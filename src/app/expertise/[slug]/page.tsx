@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import ArticleCard from "@/components/ArticleCard";
+import Breadcrumb from "@/components/ui/breadcrumb";
+import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import "../../../styles/layout.scss";
 
 // Mock article data
@@ -229,6 +231,13 @@ export default async function ExpertisePage({
         {/* Main Column - Articles */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="px-16">
+            {/* Breadcrumb */}
+            <div className="mb-8">
+              <Breadcrumb
+                items={getExpertiseBreadcrumbs(currentExpertise.name)}
+              />
+            </div>
+
             <div className="mb-8">
               <h2
                 className="text-2xl font-bold mb-6"

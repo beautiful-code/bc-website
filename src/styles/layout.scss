@@ -40,7 +40,7 @@ $font-nunito-sans: var(--font-nunito-sans);
 .mainColumn {
   display: flex;
   flex-direction: column;
-  padding: 4rem 2rem 2rem;
+  padding: 2rem;
 
   @media (min-width: 1024px) {
     grid-column: span 3;
