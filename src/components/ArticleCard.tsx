@@ -1,21 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ArticleCardProps {
   title: string;
   date: string;
+  slug: string;
 }
 
-export default function ArticleCard({ title, date }: ArticleCardProps) {
+export default function ArticleCard({ title, date, slug }: ArticleCardProps) {
   return (
     <div className="font-[family-name:var(--font-nunito-sans)]">
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          <h3
-            className="text-xl font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
-            style={{ color: "var(--color-bc-text-black)" }}
-          >
-            {title}
-          </h3>
+          <Link href={`/articles/${slug}`}>
+            <h3
+              className="text-xl font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
+              style={{ color: "var(--color-bc-text-black)" }}
+            >
+              {title}
+            </h3>
+          </Link>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <div className="w-5 h-5 rounded-full overflow-hidden">

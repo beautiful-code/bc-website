@@ -4,133 +4,8 @@ import ExpertiseIcon from "@/components/ExpertiseIcon";
 import ArticleCard from "@/components/ArticleCard";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
+import { getArticlesByExpertise } from "@/lib/articles";
 import "../../../styles/layout.scss";
-
-// Mock article data
-const mockArticles = {
-  "ai-applied-ml": [
-    {
-      title:
-        "Managing Asynchronous Background Jobs with Google Cloud Tasks in Cloud-Native Applications",
-      date: "6 Jun, 25",
-      tags: ["Cloud", "Tasks"],
-    },
-    {
-      title:
-        "Real-Time Ride-Sharing Platform Architecture: Getting a Driver to Your Door in < 1 Minute",
-      date: "5 Jun, 25",
-      tags: ["Architecture"],
-    },
-    {
-      title: "Ad-Impression Tracking Pipeline: From Pixel to Dashboard",
-      date: "4 Jun, 25",
-      tags: ["Pipeline", "Analytics"],
-    },
-    {
-      title: "Real-Time Anomaly Detection in Streaming Data Pipelines",
-      date: "2 Jun, 25",
-      tags: ["Streaming", "ML", "Monitoring"],
-    },
-    {
-      title:
-        "Self-Supervised Representation Learning for Medical Imaging: Reducing Annotation Burden",
-      date: "1 Jun, 25",
-      tags: ["ML", "Healthcare"],
-    },
-    {
-      title: "MLOps at Scale: Continuous Delivery for Machine Learning Systems",
-      date: "1 Jun, 25",
-      tags: ["MLOps", "CI/CD"],
-    },
-  ],
-  "frontend-engineering": [
-    {
-      title:
-        "Building Scalable React Applications with Modern State Management",
-      date: "5 Jun, 25",
-      tags: ["React", "State"],
-    },
-    {
-      title:
-        "Performance Optimization in Next.js: From First Paint to Interaction",
-      date: "3 Jun, 25",
-      tags: ["Next.js", "Performance"],
-    },
-    {
-      title: "Design Systems at Scale: Building Consistent UIs Across Teams",
-      date: "1 Jun, 25",
-      tags: ["Design", "Systems"],
-    },
-  ],
-  "backend-engineering": [
-    {
-      title: "Microservices Architecture: Event-Driven Communication Patterns",
-      date: "4 Jun, 25",
-      tags: ["Microservices", "Events"],
-    },
-    {
-      title: "API Gateway Patterns for Distributed Systems",
-      date: "2 Jun, 25",
-      tags: ["API", "Gateway"],
-    },
-    {
-      title: "Database Sharding Strategies for High-Volume Applications",
-      date: "1 Jun, 25",
-      tags: ["Database", "Scaling"],
-    },
-  ],
-  "infrastructure-reliability": [
-    {
-      title: "Kubernetes Deployment Strategies for Zero-Downtime Releases",
-      date: "3 Jun, 25",
-      tags: ["Kubernetes", "Deployment"],
-    },
-    {
-      title: "Observability in Distributed Systems: Metrics, Logs, and Traces",
-      date: "2 Jun, 25",
-      tags: ["Observability", "Monitoring"],
-    },
-    {
-      title: "Chaos Engineering: Building Resilient Systems",
-      date: "1 Jun, 25",
-      tags: ["Chaos", "Resilience"],
-    },
-  ],
-  "data-engineering": [
-    {
-      title: "Building Real-Time Data Pipelines with Apache Kafka",
-      date: "4 Jun, 25",
-      tags: ["Kafka", "Streaming"],
-    },
-    {
-      title: "Data Lake Architecture: From Ingestion to Analytics",
-      date: "2 Jun, 25",
-      tags: ["Data Lake", "Analytics"],
-    },
-    {
-      title: "ETL vs ELT: Modern Data Processing Patterns",
-      date: "1 Jun, 25",
-      tags: ["ETL", "Processing"],
-    },
-  ],
-  "software-maintenance": [
-    {
-      title: "Legacy Code Modernization: Strategies for Gradual Migration",
-      date: "3 Jun, 25",
-      tags: ["Legacy", "Migration"],
-    },
-    {
-      title: "Technical Debt Management: Balancing Speed and Quality",
-      date: "2 Jun, 25",
-      tags: ["Technical Debt", "Quality"],
-    },
-    {
-      title: "Refactoring at Scale: Tools and Techniques",
-      date: "1 Jun, 25",
-      tags: ["Refactoring", "Tools"],
-    },
-  ],
-};
 
 const expertiseAreas = [
   {
@@ -166,11 +41,13 @@ export default async function ExpertisePage({
 }) {
   const { slug } = await params;
   const currentExpertise = expertiseAreas.find((area) => area.slug === slug);
-  const articles = mockArticles[slug as keyof typeof mockArticles] || [];
 
   if (!currentExpertise) {
     return <div>Expertise area not found</div>;
   }
+
+  // Load articles from markdown files
+  const articles = await getArticlesByExpertise(slug);
 
   return (
     <div className="min-h-screen bg-white">
@@ -245,15 +122,24 @@ export default async function ExpertisePage({
               >
                 Recent Articles
               </h2>
-              <div className="space-y-6">
-                {articles.map((article, index) => (
-                  <ArticleCard
-                    key={index}
-                    title={article.title}
-                    date={article.date}
-                  />
-                ))}
-              </div>
+              {articles.length > 0 ? (
+                <div className="space-y-6">
+                  {articles.map((article) => (
+                    <ArticleCard
+                      key={article.slug}
+                      title={article.title}
+                      date={article.date}
+                      slug={article.slug}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-8">
+                  <p className="text-gray-500">
+                    No articles available for this expertise area yet.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
