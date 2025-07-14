@@ -26,20 +26,26 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
             {item.href && !isLast ? (
               <Link
                 href={item.href}
-                className="flex items-center space-x-1 text-[var(--color-bc-text-gray)] hover:text-[var(--color-bc-red)] transition-colors duration-300"
+                className="flex items-center space-x-1 text-[var(--color-bc-text-gray)] transition-colors duration-300"
               >
-                {item.icon && <span className="w-4 h-4">{item.icon}</span>}
+                {item.icon && (
+                  <span className="w-5 h-5 flex items-center justify-center">
+                    {item.icon}
+                  </span>
+                )}
                 <span>{item.label}</span>
               </Link>
             ) : (
               <div className="flex items-center space-x-1">
-                {item.icon && <span className="w-4 h-4">{item.icon}</span>}
+                {item.icon && (
+                  <span className="w-5 h-5 flex items-center justify-center">
+                    {item.icon}
+                  </span>
+                )}
                 <span
-                  className={
-                    isLast
-                      ? "text-[var(--color-bc-red)] font-medium"
-                      : "text-[var(--color-bc-text-gray)]"
-                  }
+                  className={`text-[var(--color-bc-text-gray)] ${
+                    isLast ? "font-medium" : ""
+                  }`}
                 >
                   {item.label}
                 </span>

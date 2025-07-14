@@ -234,7 +234,7 @@ export default async function ExpertisePage({
             {/* Breadcrumb */}
             <div className="mb-8">
               <Breadcrumb
-                items={getExpertiseBreadcrumbs(currentExpertise.name)}
+                items={getExpertiseBreadcrumbs(currentExpertise.name, slug)}
               />
             </div>
 

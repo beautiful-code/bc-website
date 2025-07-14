@@ -1,4 +1,6 @@
 import { BreadcrumbItem } from "@/components/ui/breadcrumb";
+import ExpertiseIcon from "@/components/ExpertiseIcon";
+import React from "react";
 
 // Helper function to generate home breadcrumb
 export const getHomeBreadcrumb = (): BreadcrumbItem => ({
@@ -9,12 +11,18 @@ export const getHomeBreadcrumb = (): BreadcrumbItem => ({
 // Helper function to generate expertise page breadcrumbs
 export const getExpertiseBreadcrumbs = (
   expertiseName: string,
-  expertiseSlug?: string
+  expertiseSlug: string
 ): BreadcrumbItem[] => [
   getHomeBreadcrumb(),
   {
     label: expertiseName,
-    href: expertiseSlug ? `/expertise/${expertiseSlug}` : undefined,
+    href: undefined, // Current page, no link
+    icon: React.createElement(ExpertiseIcon, {
+      slug: expertiseSlug,
+      name: expertiseName,
+      isActive: true,
+      className: "w-5 h-5",
+    }),
   },
 ];
 
@@ -28,6 +36,12 @@ export const getArticleBreadcrumbs = (
   {
     label: expertiseName,
     href: `/expertise/${expertiseSlug}`,
+    icon: React.createElement(ExpertiseIcon, {
+      slug: expertiseSlug,
+      name: expertiseName,
+      isActive: true,
+      className: "w-5 h-5",
+    }),
   },
   {
     label: articleTitle,
