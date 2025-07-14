@@ -7,6 +7,10 @@ $bc-text-gray: #424d5b;
 $bc-text-black: #373737;
 $bc-red: #e01236;
 
+// Font variables
+$font-jetbrains-mono: var(--font-jetbrains-mono);
+$font-nunito-sans: var(--font-nunito-sans);
+
 // Grid layout for two-column design
 .two-column-layout {
   display: grid;

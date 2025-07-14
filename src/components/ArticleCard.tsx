@@ -6,7 +6,7 @@ interface ArticleCardProps {
 
 export default function ArticleCard({ title, date, tags }: ArticleCardProps) {
   return (
-    <div className="border-b border-gray-200 pb-6">
+    <div className="border-b border-gray-200 pb-6 font-[family-name:var(--font-nunito-sans)]">
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3

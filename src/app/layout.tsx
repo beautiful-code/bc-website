@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
 
@@ -20,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.variable} antialiased`}>
+      <body
+        className={`${jetBrainsMono.variable} ${nunitoSans.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
