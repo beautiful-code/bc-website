@@ -3,7 +3,8 @@ title: "Building Scalable React Applications with Modern State Management"
 date: "2024-06-05"
 expertise: "frontend-engineering"
 slug: "react-state-management"
-tags: ["React", "State Management", "Redux", "Zustand"]
+author: "Manjunath"
+tech: ["js", "nextjs"]
 ---
 
 Modern React applications require thoughtful state management strategies to remain maintainable and performant as they grow.

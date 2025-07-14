@@ -3,6 +3,7 @@ title: "Design Systems at Scale: Building Consistent UIs Across Teams"
 date: "2024-06-01"
 expertise: "frontend-engineering"
 slug: "design-systems"
+author: "Manjunath"
 tags: ["Design Systems", "UI", "Components", "Consistency"]
 ---
 

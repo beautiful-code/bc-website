@@ -9,6 +9,7 @@ export interface Article {
   date: string;
   expertise: string;
   slug: string;
+  author: string;
   tags: string[];
   content: string;
 }
@@ -18,6 +19,7 @@ export interface ArticleMetadata {
   date: string;
   expertise: string;
   slug: string;
+  author: string;
   tags: string[];
 }
 
@@ -49,6 +51,7 @@ export async function getArticlesByExpertise(
           date: data.date,
           expertise: data.expertise,
           slug: data.slug,
+          author: data.author,
           tags: data.tags || [],
         });
       }
@@ -87,6 +90,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           date: data.date,
           expertise: data.expertise,
           slug: data.slug,
+          author: data.author,
           tags: data.tags || [],
           content: processedContent.toString(),
         };
@@ -121,6 +125,7 @@ export async function getAllArticles(): Promise<ArticleMetadata[]> {
         date: data.date,
         expertise: data.expertise,
         slug: data.slug,
+        author: data.author,
         tags: data.tags || [],
       });
     }

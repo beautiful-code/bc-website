@@ -6,6 +6,8 @@ import { getArticleBySlug } from "@/lib/articles";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
+import { getAuthor } from "@/lib/authors";
+import { formatDate } from "@/lib/date-utils";
 import "../../../styles/layout.scss";
 
 const expertiseAreas = [
@@ -32,6 +34,8 @@ export default async function ArticlePage({
   const expertiseArea = expertiseAreas.find(
     (area) => area.slug === article.expertise
   );
+
+  const author = getAuthor(article.author);
 
   const breadcrumbItems = [
     getHomeBreadcrumb(),
@@ -128,34 +132,63 @@ export default async function ArticlePage({
                 {article.title}
               </h1>
 
-              <div className="flex items-center space-x-6 text-sm mb-8">
-                <span
-                  className="font-medium"
-                  style={{ color: "var(--color-bc-text-gray)" }}
-                >
-                  {article.date}
-                </span>
-                {expertiseArea && (
-                  <Link
-                    href={`/expertise/${expertiseArea.slug}`}
-                    className="hover:text-[var(--color-bc-red)] transition-colors duration-300"
-                    style={{ color: "var(--color-bc-text-gray)" }}
-                  >
-                    {expertiseArea.name}
-                  </Link>
-                )}
-                {article.tags.length > 0 && (
-                  <div className="flex items-center space-x-2">
-                    {article.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+              {/* Author Info and Tech Icons */}
+              <div className="flex items-center justify-between mb-8">
+                {/* Author Info */}
+                <div className="flex items-center space-x-3">
+                  {author && (
+                    <>
+                      <div className="w-10 h-10 rounded-full overflow-hidden">
+                        <Image
+                          src={author.profilePicUrl}
+                          alt={author.name}
+                          width={40}
+                          height={40}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <span
+                          className="font-medium font-[family-name:var(--font-nunito-sans)]"
+                          style={{ color: "var(--color-bc-text-black)" }}
+                        >
+                          {author.name}
+                        </span>
+                        <span
+                          className="text-sm"
+                          style={{ color: "var(--color-bc-text-gray)" }}
+                        >
+                          {formatDate(article.date)}
+                        </span>
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                {/* Tech Icons */}
+                <div className="flex items-center space-x-2">
+                  <div className="w-6 h-6 rounded-full overflow-hidden">
+                    <Image
+                      src="/icons/tech/js.svg"
+                      alt="TypeScript"
+                      width={24}
+                      height={24}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                )}
+                  <div className="w-6 h-6 rounded-full overflow-hidden">
+                    <Image
+                      src="/icons/tech/nextjs.svg"
+                      alt="Next.js"
+                      width={24}
+                      height={24}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-6 h-6 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                    <span className="text-xs font-bold text-blue-600">WA</span>
+                  </div>
+                </div>
               </div>
             </div>
 

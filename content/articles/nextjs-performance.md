@@ -3,6 +3,7 @@ title: "Performance Optimization in Next.js: From First Paint to Interaction"
 date: "2024-06-03"
 expertise: "frontend-engineering"
 slug: "nextjs-performance"
+author: "Manjunath"
 tags: ["Next.js", "Performance", "Optimization", "SSR"]
 ---
 
