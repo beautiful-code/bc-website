@@ -59,7 +59,7 @@ export default async function ExpertisePage({
               ) : (
                 <div className="text-center py-8">
                   <p className="text-gray-500">
-                    No articles available for this expertise area yet.
+                    <span className="font-bold">Coming soon</span>
                   </p>
                 </div>
               )}

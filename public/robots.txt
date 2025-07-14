@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Articles
+Allow: /articles/
+Allow: /expertise/
+
+# Static assets
+Allow: /icons/
+Allow: /authors/
+
+# Sitemap (add when you create one)
+# Sitemap: https://your-domain.com/sitemap.xml 
