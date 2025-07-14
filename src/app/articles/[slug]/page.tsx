@@ -132,7 +132,7 @@ export default async function ArticlePage({
                     <>
                       <div className="w-10 h-10 rounded-full overflow-hidden">
                         <Image
-                          src={author.profilePicUrl}
+                          src={`/authors/${author.imageFile}`}
                           alt={author.name}
                           width={40}
                           height={40}

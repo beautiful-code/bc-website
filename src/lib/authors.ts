@@ -1,13 +1,12 @@
 export interface Author {
   name: string;
-  profilePicUrl: string;
+  imageFile: string;
 }
 
 export const authorMap: Record<string, Author> = {
   Manjunath: {
     name: "Manjunath",
-    profilePicUrl:
-      "https://cdn.theorg.com/457e05fe-0414-423c-954f-34fa6d94a622_thumb.jpg",
+    imageFile: "manjunath.jpg",
   },
 };
 
