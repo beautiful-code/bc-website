@@ -6,8 +6,6 @@ slug: "nextjs-performance"
 tags: ["Next.js", "Performance", "Optimization", "SSR"]
 ---
 
-# Performance Optimization in Next.js: From First Paint to Interaction
-
 Next.js provides excellent performance out of the box, but understanding optimization techniques can take your applications to the next level.
 
 ## Core Performance Features

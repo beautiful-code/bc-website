@@ -6,8 +6,6 @@ slug: "react-state-management"
 tags: ["React", "State Management", "Redux", "Zustand"]
 ---
 
-# Building Scalable React Applications with Modern State Management
-
 Modern React applications require thoughtful state management strategies to remain maintainable and performant as they grow.
 
 ## The Evolution of State Management

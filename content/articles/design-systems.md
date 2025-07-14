@@ -6,8 +6,6 @@ slug: "design-systems"
 tags: ["Design Systems", "UI", "Components", "Consistency"]
 ---
 
-# Design Systems at Scale: Building Consistent UIs Across Teams
-
 A well-designed system is the backbone of scalable frontend development, ensuring consistency and efficiency across large organizations.
 
 ## What is a Design System?

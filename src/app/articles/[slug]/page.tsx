@@ -122,7 +122,7 @@ export default async function ArticlePage({
             {/* Article Header */}
             <div className="mb-12">
               <h1
-                className="text-4xl font-bold mb-4"
+                className="text-3xl font-medium mb-4 font-[family-name:var(--font-nunito-sans)]"
                 style={{ color: "var(--color-bc-text-black)" }}
               >
                 {article.title}
