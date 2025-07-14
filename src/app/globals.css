@@ -248,7 +248,9 @@
 .article-content img {
   max-width: 100%;
   height: auto;
-  margin: 1.5rem 2rem;
+  margin: 1.5rem auto;
+  margin-left: max(auto, 2rem);
+  margin-right: max(auto, 2rem);
   display: block;
 }
 
