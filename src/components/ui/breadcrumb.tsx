@@ -42,11 +42,7 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
                     {item.icon}
                   </span>
                 )}
-                <span
-                  className={`text-[var(--color-bc-text-gray)] ${
-                    isLast ? "font-medium" : ""
-                  }`}
-                >
+                <span className="text-[var(--color-bc-text-gray)]">
                   {item.label}
                 </span>
               </div>

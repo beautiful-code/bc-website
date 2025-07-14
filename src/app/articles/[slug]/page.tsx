@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { notFound } from "next/navigation";
 import { getArticleBySlug } from "@/lib/articles";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import "../../../styles/layout.scss";
 
 const expertiseAreas = [
@@ -32,17 +34,25 @@ export default async function ArticlePage({
   );
 
   const breadcrumbItems = [
-    { label: "Home", href: "/" },
-    { label: "Expertise", href: "/expertise" },
+    getHomeBreadcrumb(),
     ...(expertiseArea
       ? [
           {
             label: expertiseArea.name,
             href: `/expertise/${expertiseArea.slug}`,
+            icon: React.createElement(ExpertiseIcon, {
+              slug: expertiseArea.slug,
+              name: expertiseArea.name,
+              isActive: true,
+              className: "w-6 h-6",
+            }),
+          },
+          {
+            label: "Articles",
+            href: undefined, // Current section, no link
           },
         ]
       : []),
-    { label: article.title },
   ];
 
   return (
