@@ -2,7 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
 
 export interface Article {
   title: string;
@@ -85,8 +87,12 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
       const { data, content } = matter(fileContents);
 
       if (data.slug === slug) {
-        // Convert markdown to HTML
-        const processedContent = await remark().use(html).process(content);
+        // Convert markdown to HTML with syntax highlighting
+        const processedContent = await remark()
+          .use(remarkRehype)
+          .use(rehypeHighlight)
+          .use(rehypeStringify)
+          .process(content);
 
         return {
           title: data.title,
