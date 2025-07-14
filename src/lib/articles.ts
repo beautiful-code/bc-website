@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
@@ -89,6 +90,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
       if (data.slug === slug) {
         // Convert markdown to HTML with syntax highlighting
         const processedContent = await remark()
+          .use(remarkGfm)
           .use(remarkRehype, { allowDangerousHtml: true })
           .use(rehypeHighlight)
           .use(rehypeStringify, { allowDangerousHtml: true })
