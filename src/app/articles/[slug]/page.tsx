@@ -116,7 +116,7 @@ export default async function ArticlePage({
             </div>
 
             {/* Article Header */}
-            <div className="mb-12">
+            <div className="mb-4">
               <h1
                 className="text-3xl font-medium mb-4 font-[family-name:var(--font-nunito-sans)]"
                 style={{ color: "var(--color-bc-text-black)" }}
@@ -125,7 +125,7 @@ export default async function ArticlePage({
               </h1>
 
               {/* Author Info and Tech Icons */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-4">
                 {/* Author Info */}
                 <div className="flex items-center space-x-3">
                   {author && (
