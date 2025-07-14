@@ -230,18 +230,9 @@ export default async function ExpertisePage({
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="px-16">
             <div className="mb-8">
-              <h1
-                className="text-3xl font-bold mb-2"
-                style={{ color: "var(--color-bc-text-black)" }}
-              >
-                {currentExpertise.name}
-              </h1>
-            </div>
-
-            <div className="mb-8">
               <h2
                 className="text-2xl font-bold mb-6"
-                style={{ color: "var(--color-bc-text-black)" }}
+                style={{ color: "var(--color-bc-red)" }}
               >
                 Recent Articles
               </h2>

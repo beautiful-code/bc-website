@@ -10,7 +10,7 @@ export default function ArticleCard({ title, date, tags }: ArticleCardProps) {
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <h3
-            className="text-lg font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
+            className="text-xl font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
             style={{ color: "var(--color-bc-text-black)" }}
           >
             {title}
