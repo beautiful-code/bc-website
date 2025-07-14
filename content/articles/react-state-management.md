@@ -10,6 +10,11 @@ keytakeaway: "Modern React state management is about choosing the right tool for
 
 Modern React applications require thoughtful state management strategies to remain maintainable and performant as they grow.
 
+<figure>
+  <img src="/articles/react-state-management/redux.jpeg" alt="Redux State Management Architecture" />
+  <figcaption>Redux state management flow showing actions, reducers, and store interactions</figcaption>
+</figure>
+
 ### The Evolution of State Management
 
 React's built-in state management has evolved significantly:

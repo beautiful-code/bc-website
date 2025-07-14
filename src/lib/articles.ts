@@ -89,9 +89,9 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
       if (data.slug === slug) {
         // Convert markdown to HTML with syntax highlighting
         const processedContent = await remark()
-          .use(remarkRehype)
+          .use(remarkRehype, { allowDangerousHtml: true })
           .use(rehypeHighlight)
-          .use(rehypeStringify)
+          .use(rehypeStringify, { allowDangerousHtml: true })
           .process(content);
 
         return {
