@@ -1,13 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getTechIconPaths } from "@/lib/tech-icons";
 
 interface ArticleCardProps {
   title: string;
   date: string;
   slug: string;
+  tech: string[];
 }
 
-export default function ArticleCard({ title, date, slug }: ArticleCardProps) {
+export default function ArticleCard({
+  title,
+  date,
+  slug,
+  tech,
+}: ArticleCardProps) {
   return (
     <div className="font-[family-name:var(--font-nunito-sans)]">
       <div className="flex items-start justify-between">
@@ -22,24 +29,23 @@ export default function ArticleCard({ title, date, slug }: ArticleCardProps) {
           </Link>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <div className="w-5 h-5 rounded-full overflow-hidden">
-                <Image
-                  src="/icons/tech/js.svg"
-                  alt="JavaScript"
-                  width={20}
-                  height={20}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="w-5 h-5 rounded-full overflow-hidden">
-                <Image
-                  src="/icons/tech/nextjs.svg"
-                  alt="Next.js"
-                  width={20}
-                  height={20}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {getTechIconPaths(tech).map((iconPath, index) => {
+                const techName = tech[index];
+                return (
+                  <div
+                    key={index}
+                    className="w-5 h-5 rounded-full overflow-hidden"
+                  >
+                    <Image
+                      src={iconPath}
+                      alt={techName}
+                      width={20}
+                      height={20}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

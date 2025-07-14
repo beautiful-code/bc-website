@@ -4,7 +4,7 @@ date: "2024-06-05"
 expertise: "frontend-engineering"
 slug: "react-state-management"
 author: "Manjunath"
-tech: ["js", "nextjs"]
+tech: ["js"]
 ---
 
 Modern React applications require thoughtful state management strategies to remain maintainable and performant as they grow.

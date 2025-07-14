@@ -10,7 +10,7 @@ export interface Article {
   expertise: string;
   slug: string;
   author: string;
-  tags: string[];
+  tech: string[];
   content: string;
 }
 
@@ -20,7 +20,7 @@ export interface ArticleMetadata {
   expertise: string;
   slug: string;
   author: string;
-  tags: string[];
+  tech: string[];
 }
 
 const articlesDirectory = path.join(process.cwd(), "content/articles");
@@ -52,7 +52,7 @@ export async function getArticlesByExpertise(
           expertise: data.expertise,
           slug: data.slug,
           author: data.author,
-          tags: data.tags || [],
+          tech: data.tech || [],
         });
       }
     }
@@ -91,7 +91,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           expertise: data.expertise,
           slug: data.slug,
           author: data.author,
-          tags: data.tags || [],
+          tech: data.tech || [],
           content: processedContent.toString(),
         };
       }
@@ -126,7 +126,7 @@ export async function getAllArticles(): Promise<ArticleMetadata[]> {
         expertise: data.expertise,
         slug: data.slug,
         author: data.author,
-        tags: data.tags || [],
+        tech: data.tech || [],
       });
     }
 

@@ -4,7 +4,7 @@ date: "2024-06-03"
 expertise: "frontend-engineering"
 slug: "nextjs-performance"
 author: "Manjunath"
-tags: ["Next.js", "Performance", "Optimization", "SSR"]
+tech: ["js", "nextjs"]
 ---
 
 Next.js provides excellent performance out of the box, but understanding optimization techniques can take your applications to the next level.

@@ -8,6 +8,7 @@ import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import { getAuthor } from "@/lib/authors";
 import { formatDate } from "@/lib/date-utils";
+import { getTechIconPaths } from "@/lib/tech-icons";
 import "../../../styles/layout.scss";
 
 const expertiseAreas = [
@@ -36,6 +37,7 @@ export default async function ArticlePage({
   );
 
   const author = getAuthor(article.author);
+  const techIconPaths = getTechIconPaths(article.tech);
 
   const breadcrumbItems = [
     getHomeBreadcrumb(),
@@ -167,27 +169,23 @@ export default async function ArticlePage({
 
                 {/* Tech Icons */}
                 <div className="flex items-center space-x-2">
-                  <div className="w-6 h-6 rounded-full overflow-hidden">
-                    <Image
-                      src="/icons/tech/js.svg"
-                      alt="TypeScript"
-                      width={24}
-                      height={24}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="w-6 h-6 rounded-full overflow-hidden">
-                    <Image
-                      src="/icons/tech/nextjs.svg"
-                      alt="Next.js"
-                      width={24}
-                      height={24}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="w-6 h-6 rounded-full overflow-hidden bg-blue-100 flex items-center justify-center">
-                    <span className="text-xs font-bold text-blue-600">WA</span>
-                  </div>
+                  {techIconPaths.map((iconPath, index) => {
+                    const techName = article.tech[index];
+                    return (
+                      <div
+                        key={index}
+                        className="w-6 h-6 rounded-full overflow-hidden"
+                      >
+                        <Image
+                          src={iconPath}
+                          alt={techName}
+                          width={24}
+                          height={24}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

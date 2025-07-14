@@ -130,6 +130,7 @@ export default async function ExpertisePage({
                       title={article.title}
                       date={article.date}
                       slug={article.slug}
+                      tech={article.tech}
                     />
                   ))}
                 </div>

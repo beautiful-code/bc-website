@@ -4,7 +4,7 @@ date: "2024-06-01"
 expertise: "frontend-engineering"
 slug: "design-systems"
 author: "Manjunath"
-tags: ["Design Systems", "UI", "Components", "Consistency"]
+tech: ["js", "nextjs"]
 ---
 
 A well-designed system is the backbone of scalable frontend development, ensuring consistency and efficiency across large organizations.
