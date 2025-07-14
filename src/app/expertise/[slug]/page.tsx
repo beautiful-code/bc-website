@@ -251,7 +251,6 @@ export default async function ExpertisePage({
                     key={index}
                     title={article.title}
                     date={article.date}
-                    tags={article.tags}
                   />
                 ))}
               </div>

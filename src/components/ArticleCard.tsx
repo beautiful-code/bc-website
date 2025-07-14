@@ -1,10 +1,11 @@
+import Image from "next/image";
+
 interface ArticleCardProps {
   title: string;
   date: string;
-  tags: string[];
 }
 
-export default function ArticleCard({ title, date, tags }: ArticleCardProps) {
+export default function ArticleCard({ title, date }: ArticleCardProps) {
   return (
     <div className="border-b border-gray-200 pb-6 font-[family-name:var(--font-nunito-sans)]">
       <div className="flex items-start justify-between">
@@ -17,18 +18,24 @@ export default function ArticleCard({ title, date, tags }: ArticleCardProps) {
           </h3>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="inline-flex items-center justify-center w-6 h-6 rounded-full border text-xs font-medium"
-                  style={{
-                    borderColor: "var(--color-bc-text-gray)",
-                    color: "var(--color-bc-text-gray)",
-                  }}
-                >
-                  {tag.charAt(0).toUpperCase()}
-                </span>
-              ))}
+              <div className="w-5 h-5 rounded-full overflow-hidden">
+                <Image
+                  src="/icons/tech/js.svg"
+                  alt="JavaScript"
+                  width={20}
+                  height={20}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-5 h-5 rounded-full overflow-hidden">
+                <Image
+                  src="/icons/tech/nextjs.svg"
+                  alt="Next.js"
+                  width={20}
+                  height={20}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

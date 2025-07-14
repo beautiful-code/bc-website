@@ -17,7 +17,7 @@ export default function ExpertiseIcon({
     <div className={`relative ${className}`}>
       {/* Default icon */}
       <Image
-        src={`/icons/${slug}.svg`}
+        src={`/icons/expertise/${slug}.svg`}
         alt={`${name} icon`}
         width={48}
         height={48}
@@ -28,7 +28,7 @@ export default function ExpertiseIcon({
 
       {/* Hover icon */}
       <Image
-        src={`/icons/${slug}-hover.svg`}
+        src={`/icons/expertise/${slug}-hover.svg`}
         alt={`${name} hover icon`}
         width={48}
         height={48}
