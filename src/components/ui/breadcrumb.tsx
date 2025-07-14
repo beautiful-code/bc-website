@@ -29,7 +29,7 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
                 className="flex items-center space-x-1 text-[var(--color-bc-text-gray)] transition-colors duration-300"
               >
                 {item.icon && (
-                  <span className="w-5 h-5 flex items-center justify-center">
+                  <span className="w-6 h-6 flex items-center justify-center">
                     {item.icon}
                   </span>
                 )}
@@ -38,7 +38,7 @@ export default function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
             ) : (
               <div className="flex items-center space-x-1">
                 {item.icon && (
-                  <span className="w-5 h-5 flex items-center justify-center">
+                  <span className="w-6 h-6 flex items-center justify-center">
                     {item.icon}
                   </span>
                 )}

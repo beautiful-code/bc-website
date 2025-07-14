@@ -1,11 +1,19 @@
 import { BreadcrumbItem } from "@/components/ui/breadcrumb";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import React from "react";
+import Image from "next/image";
 
 // Helper function to generate home breadcrumb
 export const getHomeBreadcrumb = (): BreadcrumbItem => ({
-  label: "Home",
+  label: "",
   href: "/",
+  icon: React.createElement(Image, {
+    src: "/bc-lines.svg",
+    alt: "Home",
+    width: 24,
+    height: 24,
+    className: "w-6 h-6",
+  }),
 });
 
 // Helper function to generate expertise page breadcrumbs
@@ -21,7 +29,7 @@ export const getExpertiseBreadcrumbs = (
       slug: expertiseSlug,
       name: expertiseName,
       isActive: true,
-      className: "w-5 h-5",
+      className: "w-6 h-6",
     }),
   },
 ];
@@ -40,7 +48,7 @@ export const getArticleBreadcrumbs = (
       slug: expertiseSlug,
       name: expertiseName,
       isActive: true,
-      className: "w-5 h-5",
+      className: "w-6 h-6",
     }),
   },
   {
