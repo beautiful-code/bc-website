@@ -11,6 +11,7 @@ export interface Article {
   slug: string;
   author: string;
   tech: string[];
+  keytakeaway: string;
   content: string;
 }
 
@@ -21,6 +22,7 @@ export interface ArticleMetadata {
   slug: string;
   author: string;
   tech: string[];
+  keytakeaway: string;
 }
 
 const articlesDirectory = path.join(process.cwd(), "content/articles");
@@ -53,6 +55,7 @@ export async function getArticlesByExpertise(
           slug: data.slug,
           author: data.author,
           tech: data.tech || [],
+          keytakeaway: data.keytakeaway,
         });
       }
     }
@@ -92,6 +95,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           slug: data.slug,
           author: data.author,
           tech: data.tech || [],
+          keytakeaway: data.keytakeaway,
           content: processedContent.toString(),
         };
       }
@@ -127,6 +131,7 @@ export async function getAllArticles(): Promise<ArticleMetadata[]> {
         slug: data.slug,
         author: data.author,
         tech: data.tech || [],
+        keytakeaway: data.keytakeaway,
       });
     }
 

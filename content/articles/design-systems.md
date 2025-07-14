@@ -5,6 +5,7 @@ expertise: "frontend-engineering"
 slug: "design-systems"
 author: "Manjunath"
 tech: ["js", "nextjs"]
+keytakeaway: "A successful design system requires investment in both tooling and culture. Start with core components, establish clear governance, and gradually expand as your organization grows."
 ---
 
 A well-designed system is the backbone of scalable frontend development, ensuring consistency and efficiency across large organizations.

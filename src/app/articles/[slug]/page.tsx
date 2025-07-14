@@ -180,6 +180,23 @@ export default async function ArticlePage({
               </div>
             </div>
 
+            {/* Key Takeaway */}
+            {article.keytakeaway && (
+              <div className="mb-8">
+                <div className="border border-gray-300 rounded-2xl p-6 bg-white">
+                  <h3 className="text-lg font-medium mb-3 text-gray-600">
+                    Key Takeaway
+                  </h3>
+                  <p
+                    className="text-lg leading-relaxed font-[family-name:var(--font-nunito-sans)]"
+                    style={{ color: "var(--color-bc-text-black)" }}
+                  >
+                    &ldquo;{article.keytakeaway}&rdquo;
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Article Content */}
             <div className="article-content max-w-none mb-12">
               <div

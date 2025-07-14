@@ -5,6 +5,7 @@ expertise: "frontend-engineering"
 slug: "nextjs-performance"
 author: "Manjunath"
 tech: ["js", "nextjs"]
+keytakeaway: "Performance optimization in Next.js is about leveraging the right rendering strategy and being intentional about what code runs where. Start with SSG when possible and measure the impact on your Core Web Vitals."
 ---
 
 Next.js provides excellent performance out of the box, but understanding optimization techniques can take your applications to the next level.

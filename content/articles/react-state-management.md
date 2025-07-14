@@ -4,7 +4,8 @@ date: "2024-06-05"
 expertise: "frontend-engineering"
 slug: "react-state-management"
 author: "Manjunath"
-tech: ["js"]
+tech: ["js", "nextjs"]
+keytakeaway: "Modern React state management is about choosing the right tool for the job - start simple with local state, and gradually introduce more sophisticated solutions like Zustand or Redux as your application grows in complexity."
 ---
 
 Modern React applications require thoughtful state management strategies to remain maintainable and performant as they grow.
