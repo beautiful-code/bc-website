@@ -5,34 +5,8 @@ import ArticleCard from "@/components/ArticleCard";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/articles";
+import { expertiseAreas, getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
-
-const expertiseAreas = [
-  {
-    name: "Frontend Engineering",
-    slug: "frontend-engineering",
-  },
-  {
-    name: "Backend Engineering",
-    slug: "backend-engineering",
-  },
-  {
-    name: "AI & Applied ML",
-    slug: "ai-applied-ml",
-  },
-  {
-    name: "Infrastructure & Reliability",
-    slug: "infrastructure-reliability",
-  },
-  {
-    name: "Data Engineering",
-    slug: "data-engineering",
-  },
-  {
-    name: "Software Maintenance",
-    slug: "software-maintenance",
-  },
-];
 
 export default async function ExpertisePage({
   params,
@@ -40,7 +14,7 @@ export default async function ExpertisePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const currentExpertise = expertiseAreas.find((area) => area.slug === slug);
+  const currentExpertise = getExpertiseBySlug(slug);
 
   if (!currentExpertise) {
     return <div>Expertise area not found</div>;
