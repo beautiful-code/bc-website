@@ -11,6 +11,7 @@ import { formatDate } from "@/lib/date-utils";
 import { getTechIconPaths } from "@/lib/tech-icons";
 import { expertiseAreas, getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
+import "../../../styles/article-content.scss";
 
 export default async function ArticlePage({
   params,
