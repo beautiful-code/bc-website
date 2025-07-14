@@ -2,5 +2,38 @@
 // This file contains styles for article content rendering
 
 .article-content {
-  // Article content styles will be defined here
+  max-width: none;
+  margin-bottom: 3rem; // 48px equivalent to mb-12
+
+  // Typography sizing
+  font-size: 1rem;
+
+  // Responsive sizing
+  @media (min-width: 768px) {
+    font-size: 1.125rem; // text-lg on larger screens
+  }
+
+  // Headings sizing within article content
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--color-bc-red);
+  }
+
+  // Paragraph spacing
+  p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4 !important; // Tighter line spacing
+  }
+
+  // List spacing
+  ul,
+  ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
 }

@@ -10,7 +10,7 @@ keytakeaway: "Performance optimization in Next.js is about leveraging the right 
 
 Next.js provides excellent performance out of the box, but understanding optimization techniques can take your applications to the next level.
 
-## Core Performance Features
+### Core Performance Features
 
 ### Automatic Code Splitting
 
@@ -37,7 +37,7 @@ import Image from "next/image";
 />;
 ```
 
-## Advanced Optimizations
+### Advanced Optimizations
 
 ### Static Site Generation (SSG)
 
@@ -68,7 +68,7 @@ async function ProductList() {
 }
 ```
 
-## Performance Monitoring
+### Performance Monitoring
 
 ### Web Vitals
 
@@ -88,13 +88,13 @@ Use bundle analyzer to identify optimization opportunities:
 npx @next/bundle-analyzer
 ```
 
-## Best Practices
+### Best Practices
 
 1. **Use SSG when possible** - Pre-render static content
 2. **Optimize images** - Use Next.js Image component
 3. **Lazy load components** - Import components dynamically
 4. **Minimize client-side JavaScript** - Leverage server components
 
-## Conclusion
+### Conclusion
 
 Performance optimization in Next.js is about leveraging the right rendering strategy and being intentional about what code runs where. Start with these fundamentals and measure the impact on your Core Web Vitals.
