@@ -228,7 +228,7 @@ export default async function ExpertisePage({
 
         {/* Main Column - Articles */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-4xl mx-auto px-8">
+          <div className="px-16">
             <div className="mb-8">
               <h1
                 className="text-3xl font-bold mb-2"
