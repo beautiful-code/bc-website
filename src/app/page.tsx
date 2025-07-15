@@ -66,7 +66,7 @@ export default function Home() {
               {expertiseAreas.map((area) => {
                 return (
                   <Link key={area.slug} href={`/expertise/${area.slug}`}>
-                    <div className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-4">
+                    <div className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-2 sm:py-4">
                       <div className="flex-shrink-0">
                         <ExpertiseIcon
                           slug={area.slug}
