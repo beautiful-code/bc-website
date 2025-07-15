@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTechIconPaths } from "@/lib/tech-icons";
+import { formatDate } from "@/lib/date-utils";
 
 interface ArticleCardProps {
   title: string;
@@ -54,7 +55,7 @@ export default function ArticleCard({
             className="text-sm font-medium"
             style={{ color: "var(--color-bc-text-gray)" }}
           >
-            {date}
+            {formatDate(date)}
           </span>
         </div>
       </div>
