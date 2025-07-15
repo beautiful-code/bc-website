@@ -1,6 +1,7 @@
 import ArticleCard from "@/components/ArticleCard";
 import NavigationalSidebar from "@/components/NavigationalSidebar";
 import Logo from "@/components/Logo";
+import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/articles";
@@ -38,11 +39,29 @@ export default async function ExpertisePage({
         {/* Main Column - Articles */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="px-4 sm:px-16">
-            {/* Breadcrumb */}
-            <div className="mb-8">
+            {/* Breadcrumb - Desktop only */}
+            <div className="hidden sm:block mb-8">
               <Breadcrumb
                 items={getExpertiseBreadcrumbs(currentExpertise.name, slug)}
               />
+            </div>
+
+            {/* Mobile Header - Icon and Expertise Name */}
+            <div className="block sm:hidden mt-2 mb-4">
+              <div className="flex items-center space-x-3">
+                <ExpertiseIcon
+                  slug={slug}
+                  name={currentExpertise.name}
+                  className="w-6 h-6"
+                  isActive={true}
+                />
+                <h1
+                  className="text-lg "
+                  style={{ color: "var(--color-bc-text-black)" }}
+                >
+                  {currentExpertise.name}
+                </h1>
+              </div>
             </div>
 
             <div className="mb-8">
