@@ -43,7 +43,7 @@ export default function Home() {
               width={250}
               height={48}
               priority
-              className="mb-4 mx-auto"
+              className="mt-4 mb-4 mx-auto"
             />
             <p
               className="text-sm sm:text-lg font-normal tracking-wide font-[family-name:var(--font-jetbrains-mono)] text-center mb-4"
