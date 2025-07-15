@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import NavigationalSidebar from "./NavigationalSidebar";
 import Logo from "./Logo";
 
@@ -20,26 +21,16 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
       {/* Hamburger Menu Button */}
       <button
         onClick={toggleMenu}
-        className="sm:hidden fixed top-4 right-4 z-50 p-2 bg-white rounded-md shadow-lg border border-gray-200"
+        className="sm:hidden fixed top-5 right-4 z-50 p-2 bg-transparent"
         aria-label="Toggle navigation menu"
       >
-        <div className="w-6 h-6 flex flex-col justify-center items-center">
-          <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-transform duration-300 ${
-              isOpen ? "rotate-45 translate-y-1" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-opacity duration-300 mt-1 ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-transform duration-300 mt-1 ${
-              isOpen ? "-rotate-45 -translate-y-1" : ""
-            }`}
-          />
-        </div>
+        <Image
+          src="/icons/menu.svg"
+          alt="Menu"
+          width={24}
+          height={24}
+          className="w-6 h-6"
+        />
       </button>
 
       {/* Mobile Navigation Overlay */}
