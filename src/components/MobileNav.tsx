@@ -25,8 +25,8 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
         aria-label="Toggle navigation menu"
       >
         <Image
-          src="/icons/menu.svg"
-          alt="Menu"
+          src={isOpen ? "/icons/cancel.svg" : "/icons/menu.svg"}
+          alt={isOpen ? "Close Menu" : "Menu"}
           width={24}
           height={24}
           className="w-6 h-6"
@@ -35,19 +35,10 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div
-          className="sm:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
-          onClick={toggleMenu}
-        >
-          <div
-            className="fixed inset-y-0 left-0 w-80 bg-[var(--color-bc-beige)] shadow-lg transform transition-transform duration-300 ease-in-out"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)] h-full">
-              <div className="max-w-lg p-4">
-                <Logo />
-                <NavigationalSidebar activeSlug={activeSlug} />
-              </div>
+        <div className="sm:hidden fixed inset-y-0 left-0 w-80 bg-[var(--color-bc-beige)] shadow-lg transform transition-transform duration-300 ease-in-out z-40">
+          <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)] h-full">
+            <div className="max-w-lg p-4">
+              <NavigationalSidebar activeSlug={activeSlug} />
             </div>
           </div>
         </div>
