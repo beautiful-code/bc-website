@@ -37,7 +37,7 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
       {isOpen && (
         <div className="sm:hidden fixed inset-y-0 left-0 w-80 bg-[var(--color-bc-beige)] shadow-lg transform transition-transform duration-300 ease-in-out z-40">
           <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)] h-full">
-            <div className="max-w-lg p-4">
+            <div className="max-w-lg">
               <NavigationalSidebar activeSlug={activeSlug} />
             </div>
           </div>
