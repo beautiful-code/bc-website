@@ -46,7 +46,7 @@ export default function Home() {
               className="mb-4 mx-auto"
             />
             <p
-              className="text-lg font-normal tracking-wide font-[family-name:var(--font-jetbrains-mono)] text-center mb-4"
+              className="text-sm sm:text-lg font-normal tracking-wide font-[family-name:var(--font-jetbrains-mono)] text-center mb-4"
               style={{ color: "var(--color-bc-text-gray)" }}
             >
               Engineers Who Care About Engineering
