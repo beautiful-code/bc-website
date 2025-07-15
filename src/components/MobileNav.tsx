@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import NavigationalSidebar from "./NavigationalSidebar";
-import Logo from "./Logo";
 
 interface MobileNavProps {
   activeSlug: string;
@@ -35,10 +34,16 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
 
       {/* Mobile Navigation Overlay */}
       {isOpen && (
-        <div className="sm:hidden fixed inset-y-0 left-0 w-80 bg-[var(--color-bc-beige)] shadow-lg transform transition-transform duration-300 ease-in-out z-40">
-          <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)] h-full">
-            <div className="max-w-lg">
-              <NavigationalSidebar activeSlug={activeSlug} />
+        <div className="sm:hidden fixed inset-0 z-40" onClick={toggleMenu}>
+          {/* Navigation Panel */}
+          <div
+            className="fixed inset-y-0 left-0 w-80 bg-[var(--color-bc-beige)] shadow-lg transform transition-transform duration-300 ease-in-out"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)] h-full">
+              <div className="max-w-lg">
+                <NavigationalSidebar activeSlug={activeSlug} />
+              </div>
             </div>
           </div>
         </div>
