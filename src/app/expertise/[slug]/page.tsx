@@ -37,7 +37,7 @@ export default async function ExpertisePage({
 
         {/* Main Column - Articles */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="px-16">
+          <div className="px-4 sm:px-16">
             {/* Breadcrumb */}
             <div className="mb-8">
               <Breadcrumb
