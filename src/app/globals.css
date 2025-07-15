@@ -292,8 +292,11 @@
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  /* font-size: 0.875rem; */
   background-color: white;
+  /* Auto-scaling font size based on viewport */
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  /* Allow columns to size based on content */
+  table-layout: auto;
 }
 
 @media (min-width: 640px) {
@@ -302,14 +305,28 @@
     margin: 1.5rem 4rem;
     margin-left: max(4rem, 2rem);
     margin-right: max(4rem, 2rem);
+    font-size: 1rem; /* Override clamp on larger screens */
   }
 }
 
 .article-content th,
 .article-content td {
-  padding: 1rem 1.5rem;
+  /* Responsive padding that scales with viewport */
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(0.75rem, 3vw, 1.5rem);
   text-align: left;
   vertical-align: top;
+}
+
+/* Mobile-specific density reduction */
+@media (max-width: 640px) {
+  .article-content table {
+    font-size: 0.75rem; /* Ensure minimum readable size */
+  }
+
+  .article-content th,
+  .article-content td {
+    padding: 0.5rem 0.75rem; /* Tighter spacing on mobile */
+  }
 }
 
 .article-content th {
