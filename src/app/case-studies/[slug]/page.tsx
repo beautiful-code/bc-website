@@ -5,7 +5,7 @@ import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import "../../../styles/layout.scss";
-import "../../../styles/article-content.scss";
+import "../../../styles/markdown-content.scss";
 
 export default async function CaseStudyPage({
   params,
@@ -166,7 +166,7 @@ export default async function CaseStudyPage({
         )}
 
         {/* Case Study Content */}
-        <div className="article-content max-w-none mb-12">
+        <div className="markdown-content max-w-none mb-12">
           <div
             className="font-[family-name:var(--font-nunito-sans)] leading-relaxed"
             style={{ color: "var(--color-bc-text-black)" }}

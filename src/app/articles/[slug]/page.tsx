@@ -12,7 +12,7 @@ import { formatDate } from "@/lib/date-utils";
 import { getTechIconPaths } from "@/lib/tech-icons";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
-import "../../../styles/article-content.scss";
+import "../../../styles/markdown-content.scss";
 
 export default async function ArticlePage({
   params,
@@ -167,7 +167,7 @@ export default async function ArticlePage({
         )}
 
         {/* Article Content */}
-        <div className="article-content max-w-none mb-12">
+        <div className="markdown-content max-w-none mb-12">
           <div
             className="font-[family-name:var(--font-nunito-sans)] leading-relaxed"
             style={{ color: "var(--color-bc-text-black)" }}
