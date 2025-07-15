@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 export default function Logo({
-  className = "mt-8 mb-8 cursor-pointer px-8 mx-auto sm:mx-0",
+  className = "mt-4 mb-4 sm:mt-8 sm:mb-8 cursor-pointer px-8 mx-auto sm:mx-0",
 }: LogoProps) {
   return (
     <div className="text-center sm:text-left">
