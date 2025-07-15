@@ -219,9 +219,15 @@
   border: 1px solid #e1e4e8;
   border-radius: 0.5rem;
   padding: 1rem;
-  margin: 1.5rem 4rem;
+  margin: 1.5rem 0;
   overflow-x: auto;
   position: relative;
+}
+
+@media (min-width: 640px) {
+  .article-content pre {
+    margin: 1.5rem 4rem;
+  }
 }
 
 .article-content pre code {
@@ -231,6 +237,9 @@
   line-height: 1.6;
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Inline code styling */
@@ -249,15 +258,26 @@
   max-width: 100%;
   height: auto;
   margin: 1.5rem auto;
-  margin-left: max(auto, 2rem);
-  margin-right: max(auto, 2rem);
   display: block;
+}
+
+@media (min-width: 640px) {
+  .article-content img {
+    margin-left: max(auto, 2rem);
+    margin-right: max(auto, 2rem);
+  }
 }
 
 /* Figure captions */
 .article-content figure {
-  margin: 1.5rem 2rem;
+  margin: 1.5rem 0;
   text-align: center;
+}
+
+@media (min-width: 640px) {
+  .article-content figure {
+    margin: 1.5rem 2rem;
+  }
 }
 
 .article-content figcaption {
@@ -269,13 +289,20 @@
 
 /* Table styling */
 .article-content table {
-  width: calc(100% - 8rem);
+  width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 4rem;
-  margin-left: max(4rem, 2rem);
-  margin-right: max(4rem, 2rem);
+  margin: 1.5rem 0;
   /* font-size: 0.875rem; */
   background-color: white;
+}
+
+@media (min-width: 640px) {
+  .article-content table {
+    width: calc(100% - 8rem);
+    margin: 1.5rem 4rem;
+    margin-left: max(4rem, 2rem);
+    margin-right: max(4rem, 2rem);
+  }
 }
 
 .article-content th,
