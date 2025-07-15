@@ -57,7 +57,7 @@ export default function Home() {
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="max-w-lg mx-auto">
             <h2
-              className="text-3xl font-bold tracking-wider uppercase mb-8 text-left px-8"
+              className="text-lg sm:text-3xl tracking-wider uppercase mb-8 text-left px-8"
               style={{ color: "var(--color-bc-red)" }}
             >
               WHAT WE ARE WIRED FOR
@@ -71,11 +71,11 @@ export default function Home() {
                         <ExpertiseIcon
                           slug={area.slug}
                           name={area.name}
-                          className="w-12 h-12"
+                          className="w-8 h-8 sm:w-12 sm:h-12"
                         />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                        <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
                           {area.name}
                         </h3>
                       </div>
