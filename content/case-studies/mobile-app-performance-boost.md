@@ -5,7 +5,7 @@ industry: "Health & Fitness"
 heroImage: "/case-studies/mobile-app-performance-boost/hero-image.jpeg"
 problemStatement: "React Native app experiencing slow load times and poor user retention due to performance bottlenecks affecting 50,000+ daily active users."
 clientInfo: "FitnessTrack - Popular fitness tracking mobile app with 2M+ users"
-clientImage: "/case-studies/mobile-app-performance-boost/fitnestrack-logo.png"
+clientImage: "/case-studies/mobile-app-performance-boost/clientLogo.png"
 outcomes:
   - outcome: "75% faster app launch time"
     icon: "/case-studies/mobile-app-performance-boost/speed-icon.svg"

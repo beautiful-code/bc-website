@@ -71,37 +71,60 @@ export default async function CaseStudyPage({
             </span>
           </div>
           <h1
-            className="text-2xl sm:text-4xl font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+            className="text-xl sm:text-3xl font-medium mb-8 font-[family-name:var(--font-nunito-sans)]"
             style={{ color: "var(--color-bc-text-black)" }}
           >
             {caseStudy.title}
           </h1>
-          <p
-            className="text-lg leading-relaxed font-[family-name:var(--font-nunito-sans)]"
-            style={{ color: "var(--color-bc-text-gray)" }}
-          >
-            {caseStudy.problemStatement}
-          </p>
-        </div>
 
-        {/* Client Info */}
-        <div className="mb-8 flex items-center space-x-4">
-          {caseStudy.clientImage && (
-            <Image
-              src={caseStudy.clientImage}
-              alt="Client logo"
-              width={60}
-              height={60}
-              className="object-contain"
-            />
-          )}
-          <div>
-            <p
-              className="font-medium font-[family-name:var(--font-nunito-sans)]"
-              style={{ color: "var(--color-bc-text-black)" }}
-            >
-              {caseStudy.clientInfo}
-            </p>
+          {/* Problem Statement and Client Info - Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Problem Statement */}
+            <div>
+              <h2
+                className="text-lg font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+                style={{ color: "var(--color-bc-red)" }}
+              >
+                Problem Statement
+              </h2>
+              <blockquote
+                className="text-base leading-relaxed font-[family-name:var(--font-nunito-sans)]"
+                style={{ color: "var(--color-bc-text-black)" }}
+              >
+                &ldquo;{caseStudy.problemStatement}&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Client Info */}
+            <div>
+              <h2
+                className="text-lg font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+                style={{ color: "var(--color-bc-text-black)" }}
+              >
+                Client Info
+              </h2>
+              <div className="flex items-start justify-between">
+                <div className="flex-1 pr-4">
+                  <p
+                    className="text-base leading-relaxed font-[family-name:var(--font-nunito-sans)]"
+                    style={{ color: "var(--color-bc-text-black)" }}
+                  >
+                    {caseStudy.clientInfo}
+                  </p>
+                </div>
+                {caseStudy.clientImage && (
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={caseStudy.clientImage}
+                      alt="Client logo"
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
