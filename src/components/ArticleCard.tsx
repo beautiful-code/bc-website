@@ -22,7 +22,7 @@ export default function ArticleCard({
         <div className="flex-1">
           <Link href={`/articles/${slug}`}>
             <h3
-              className="text-xl font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
+              className="text-md sm:text-xl font-medium mb-2 hover:text-[var(--color-bc-red)] cursor-pointer transition-colors duration-300"
               style={{ color: "var(--color-bc-text-black)" }}
             >
               {title}

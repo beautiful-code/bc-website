@@ -47,7 +47,7 @@ export default async function ExpertisePage({
 
             <div className="mb-8">
               <h2
-                className="text-2xl font-bold mb-6"
+                className="text-md sm:text-2xl mb-2 sm:mb-6"
                 style={{ color: "var(--color-bc-red)" }}
               >
                 Recent Articles
