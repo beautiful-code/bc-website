@@ -1,8 +1,8 @@
 ---
 slug: "mobile-app-performance-boost"
-title: "Mobile App Performance Optimization"
+title: "Transforming a Sluggish Fitness Tracking Mobile App into Lightning Fast User Experience Through Performance Optimization"
 industry: "Health & Fitness"
-heroImage: "/case-studies/mobile-app-performance-boost/hero-image.jpg"
+heroImage: "/case-studies/mobile-app-performance-boost/hero-image.jpeg"
 problemStatement: "React Native app experiencing slow load times and poor user retention due to performance bottlenecks affecting 50,000+ daily active users."
 clientInfo: "FitnessTrack - Popular fitness tracking mobile app with 2M+ users"
 clientImage: "/case-studies/mobile-app-performance-boost/fitnestrack-logo.png"

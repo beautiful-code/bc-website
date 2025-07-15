@@ -1,9 +1,11 @@
 import ArticleCard from "@/components/ArticleCard";
+import CaseStudyCard from "@/components/CaseStudyCard";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/articles";
+import { getCaseStudiesByExpertise } from "@/lib/case-studies";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
 
@@ -19,8 +21,9 @@ export default async function ExpertisePage({
     return <div>Expertise area not found</div>;
   }
 
-  // Load articles from markdown files
+  // Load articles and case studies from markdown files
   const articles = await getArticlesByExpertise(slug);
+  const caseStudies = await getCaseStudiesByExpertise(slug);
 
   return (
     <MenuPage activeSlug={slug}>
@@ -50,6 +53,30 @@ export default async function ExpertisePage({
           </div>
         </div>
 
+        {/* Case Studies Section */}
+        {caseStudies.length > 0 && (
+          <div className="mb-8">
+            <h2
+              className="text-md sm:text-2xl mb-2 sm:mb-6"
+              style={{ color: "var(--color-bc-red)" }}
+            >
+              Case Studies
+            </h2>
+            <div className="space-y-6">
+              {caseStudies.map((caseStudy) => (
+                <CaseStudyCard
+                  key={caseStudy.slug}
+                  title={caseStudy.title}
+                  slug={caseStudy.slug}
+                  industry={caseStudy.industry}
+                  heroImage={caseStudy.heroImage}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Articles Section */}
         <div className="mb-8">
           <h2
             className="text-md sm:text-2xl mb-2 sm:mb-6"
