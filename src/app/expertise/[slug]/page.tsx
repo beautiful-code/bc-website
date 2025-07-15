@@ -1,5 +1,6 @@
 import ArticleCard from "@/components/ArticleCard";
 import NavigationalSidebar from "@/components/NavigationalSidebar";
+import Logo from "@/components/Logo";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/articles";
@@ -25,7 +26,14 @@ export default async function ExpertisePage({
     <div className="min-h-screen bg-white">
       <div className="two-column-layout">
         {/* Side Column - Navigation */}
-        <NavigationalSidebar activeSlug={slug} />
+        <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)]">
+          <div className="max-w-lg">
+            <Logo />
+            <div className="hidden sm:block">
+              <NavigationalSidebar activeSlug={slug} />
+            </div>
+          </div>
+        </div>
 
         {/* Main Column - Articles */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
