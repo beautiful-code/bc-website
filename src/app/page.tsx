@@ -57,7 +57,7 @@ export default function Home() {
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="max-w-lg mx-auto">
             <h2
-              className="text-lg sm:text-3xl tracking-wider uppercase mb-8 text-left px-8"
+              className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-2 text-left px-8"
               style={{ color: "var(--color-bc-red)" }}
             >
               WHAT WE ARE WIRED FOR
