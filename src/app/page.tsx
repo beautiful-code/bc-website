@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
+import Logo from "@/components/Logo";
 import "../styles/layout.scss";
 
 export default function Home() {
@@ -37,14 +37,7 @@ export default function Home() {
       <div className="two-column-layout">
         <div className="sideColumn !justify-center">
           <div className="max-w-lg">
-            <Image
-              src="/BCLogo.svg"
-              alt="BeautifulCode Logo"
-              width={250}
-              height={48}
-              priority
-              className="mt-4 mb-4 mx-auto"
-            />
+            <Logo className="mt-4 mb-4 mx-auto cursor-pointer" />
             <p
               className="text-sm sm:text-lg font-normal tracking-wide font-[family-name:var(--font-jetbrains-mono)] text-center mb-4"
               style={{ color: "var(--color-bc-text-gray)" }}
