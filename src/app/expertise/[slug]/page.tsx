@@ -2,6 +2,7 @@ import ArticleCard from "@/components/ArticleCard";
 import NavigationalSidebar from "@/components/NavigationalSidebar";
 import Logo from "@/components/Logo";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
+import MobileNav from "@/components/MobileNav";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/articles";
@@ -25,6 +26,7 @@ export default async function ExpertisePage({
 
   return (
     <div className="min-h-screen bg-white">
+      <MobileNav activeSlug={slug} />
       <div className="two-column-layout">
         {/* Side Column - Navigation */}
         <div className="sideColumn font-[family-name:var(--font-jetbrains-mono)]">
