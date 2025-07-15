@@ -20,7 +20,7 @@ export default function MobileNav({ activeSlug }: MobileNavProps) {
       {/* Hamburger Menu Button */}
       <button
         onClick={toggleMenu}
-        className="sm:hidden fixed top-5 right-4 z-50 p-2 bg-transparent"
+        className="sm:hidden p-2 pt-3 bg-transparent"
         aria-label="Toggle navigation menu"
       >
         <Image
