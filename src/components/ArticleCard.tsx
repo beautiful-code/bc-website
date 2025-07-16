@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getTechIconPaths } from "@/lib/tech-icons";
+import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech-icons";
 import { formatDate } from "@/lib/date-utils";
 
 interface ArticleCardProps {
@@ -29,8 +29,11 @@ export default function ArticleCard({
         </Link>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            {getTechIconPaths(tech).map((iconPath, index) => {
-              const techName = tech[index];
+            {tech.map((techSlug, index) => {
+              const techInfo = getTechBySlug(techSlug);
+              const iconPath = getTechIconPathBySlug(techSlug);
+              const techName = techInfo?.name || techSlug;
+
               return (
                 <div
                   key={index}

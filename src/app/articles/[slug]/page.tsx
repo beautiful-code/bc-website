@@ -9,7 +9,7 @@ import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import { getAuthor } from "@/lib/authors";
 import { formatDate } from "@/lib/date-utils";
-import { getTechIconPaths } from "@/lib/tech-icons";
+import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech-icons";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
@@ -29,7 +29,6 @@ export default async function ArticlePage({
   const expertiseArea = getExpertiseBySlug(article.expertise);
 
   const author = getAuthor(article.author);
-  const techIconPaths = getTechIconPaths(article.tech);
 
   const breadcrumbItems = [
     getHomeBreadcrumb(),
@@ -125,8 +124,11 @@ export default async function ArticlePage({
 
             {/* Tech Icons */}
             <div className="flex items-center space-x-2">
-              {techIconPaths.map((iconPath, index) => {
-                const techName = article.tech[index];
+              {article.tech.map((techSlug, index) => {
+                const techInfo = getTechBySlug(techSlug);
+                const iconPath = getTechIconPathBySlug(techSlug);
+                const techName = techInfo?.name || techSlug;
+
                 return (
                   <div
                     key={index}
