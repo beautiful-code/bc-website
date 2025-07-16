@@ -175,64 +175,6 @@ Use backticks for inline code references:
 Use `useState` for local component state and `useEffect` for side effects.
 ````
 
-## Content Guidelines
-
-### Writing Style
-
-- Write in a clear, instructional tone
-- Focus on practical, actionable advice
-- Use real-world examples when possible
-- Keep explanations concise but comprehensive
-
-### Structure Recommendations
-
-1. **Start with the "why"** - Explain why the principle matters
-2. **Provide concrete examples** - Show both good and bad practices
-3. **Include actionable steps** - Give readers specific things they can do
-4. **End with a call to action** - Encourage readers to apply the principle
-
-### Example Principle Structure
-
-````markdown
----
-title: "Write Clean, Readable Code"
-category: "coding-development"
-slug: "clean-code-practices"
----
-
-![Clean Code Practices](/principles/clean-code-practices/comic.png)
-
-Code is read much more often than it is written. This fundamental truth drives our approach to software development.
-
-### Deeper Understanding
-
-Clean code is not just about aesthetics—it's about maintainability, collaboration, and long-term project success.
-
-### How to put it into practice?
-
-**Use Meaningful Names**
-Variables, functions, and classes should have names that clearly express their purpose:
-
-```javascript
-// Bad
-const d = new Date();
-
-// Good
-const currentDate = new Date();
-```
-````
-
-**Follow Single Responsibility Principle**
-Each function and class should have one reason to change.
-
-**Code Review Checklist**
-Before submitting code for review, ask yourself:
-
-- [ ] Are variable and function names clear and descriptive?
-- [ ] Are functions small and focused on a single task?
-
-Clean code is an investment in the future. Make it count.
-
 ## Validation Checklist
 
 Before submitting a principle, ensure it meets all requirements:
