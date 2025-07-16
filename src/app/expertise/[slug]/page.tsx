@@ -4,7 +4,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
-import { getArticlesByExpertise } from "@/lib/articles";
+import { getArticlesByExpertise } from "@/lib/article";
 import { getCaseStudiesByExpertise } from "@/lib/case-studies";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";

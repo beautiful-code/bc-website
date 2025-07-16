@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { notFound } from "next/navigation";
-import { getArticleBySlug } from "@/lib/articles";
+import { getArticleBySlug } from "@/lib/article";
 import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
