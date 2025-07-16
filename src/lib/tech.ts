@@ -72,10 +72,15 @@ export function getTechIconPaths(techStrings: string[]): string[] {
 }
 
 export function getTechIconPathBySlug(slug: string): string {
-  return getTechIconPath(slug);
+  const tech = getTechBySlug(slug);
+  return tech ? getTechIconPath(slug) : "/icons/tech/generic.png";
 }
 
 export function getTechIconPathByName(name: string): string {
   const tech = getTechByName(name);
-  return tech ? getTechIconPath(tech.slug) : "";
+  return tech ? getTechIconPath(tech.slug) : "/icons/tech/generic.png";
+}
+
+export function getGenericIconPath(): string {
+  return "/icons/tech/generic.png";
 }

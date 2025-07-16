@@ -17,7 +17,7 @@ expertises: ["frontend-engineering", "software-maintenance"]
 technologies:
   - tech: "js"
     purpose: "for mobile app framework"
-  - tech: "typescript"
+  - tech: "xtypescript"
     purpose: "for type safety and better code maintainability"
   - tech: "nextjs"
     purpose: "for CDN implementation and API response optimization"
