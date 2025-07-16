@@ -1,6 +1,6 @@
 import ArticleCard from "@/components/ArticleCard";
 import CaseStudyCard from "@/components/CaseStudyCard";
-import ExpertiseIcon from "@/components/ExpertiseIcon";
+import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
@@ -38,9 +38,10 @@ export default async function ExpertisePage({
         {/* Mobile Header - Icon and Expertise Name */}
         <div className="block sm:hidden mt-2 mb-4">
           <div className="flex items-center space-x-3">
-            <ExpertiseIcon
+            <CategoryIcon
               slug={slug}
               name={currentExpertise.name}
+              type="expertise"
               className="w-6 h-6"
               isActive={true}
             />

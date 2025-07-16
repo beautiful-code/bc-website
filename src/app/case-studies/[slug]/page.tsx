@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getCaseStudyBySlug } from "@/lib/case-studies";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
-import ExpertiseIcon from "@/components/ExpertiseIcon";
+import CategoryIcon from "@/components/CategoryIcon";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import { getExpertiseBySlug } from "@/lib/expertise";
@@ -37,9 +37,10 @@ export default async function CaseStudyPage({
           {
             label: firstExpertise.name,
             href: `/expertise/${firstExpertise.slug}`,
-            icon: React.createElement(ExpertiseIcon, {
+            icon: React.createElement(CategoryIcon, {
               slug: firstExpertise.slug,
               name: firstExpertise.name,
+              type: "expertise",
               isActive: true,
               className: "w-6 h-6",
             }),

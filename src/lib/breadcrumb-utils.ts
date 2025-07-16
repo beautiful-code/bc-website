@@ -1,5 +1,5 @@
 import { BreadcrumbItem } from "@/components/ui/breadcrumb";
-import ExpertiseIcon from "@/components/ExpertiseIcon";
+import CategoryIcon from "@/components/CategoryIcon";
 import React from "react";
 import Image from "next/image";
 
@@ -25,9 +25,10 @@ export const getExpertiseBreadcrumbs = (
   {
     label: expertiseName,
     href: undefined, // Current page, no link
-    icon: React.createElement(ExpertiseIcon, {
+    icon: React.createElement(CategoryIcon, {
       slug: expertiseSlug,
       name: expertiseName,
+      type: "expertise",
       isActive: true,
       className: "w-6 h-6",
     }),
@@ -44,9 +45,10 @@ export const getArticleBreadcrumbs = (
   {
     label: expertiseName,
     href: `/expertise/${expertiseSlug}`,
-    icon: React.createElement(ExpertiseIcon, {
+    icon: React.createElement(CategoryIcon, {
       slug: expertiseSlug,
       name: expertiseName,
+      type: "expertise",
       isActive: true,
       className: "w-6 h-6",
     }),

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ExpertiseIcon from "@/components/ExpertiseIcon";
+import CategoryIcon from "@/components/CategoryIcon";
 import { expertiseAreas } from "@/lib/expertise";
 
 interface NavigationalSidebarProps {
@@ -30,9 +30,10 @@ export default function NavigationalSidebar({
                 }`}
               >
                 <div className="flex-shrink-0">
-                  <ExpertiseIcon
+                  <CategoryIcon
                     slug={area.slug}
                     name={area.name}
+                    type="expertise"
                     className="w-6 h-6 sm:w-8 sm:h-8"
                     isActive={isActive}
                   />

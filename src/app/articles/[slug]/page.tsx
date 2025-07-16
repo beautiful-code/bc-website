@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { notFound } from "next/navigation";
 import { getArticleBySlug } from "@/lib/articles";
-import ExpertiseIcon from "@/components/ExpertiseIcon";
+import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
@@ -37,9 +37,10 @@ export default async function ArticlePage({
           {
             label: expertiseArea.name,
             href: `/expertise/${expertiseArea.slug}`,
-            icon: React.createElement(ExpertiseIcon, {
+            icon: React.createElement(CategoryIcon, {
               slug: expertiseArea.slug,
               name: expertiseArea.name,
+              type: "expertise",
               isActive: true,
               className: "w-6 h-6",
             }),
@@ -64,9 +65,10 @@ export default async function ArticlePage({
         <div className="block sm:hidden mt-2 mb-4">
           <div className="flex items-center space-x-3 mb-2">
             {expertiseArea && (
-              <ExpertiseIcon
+              <CategoryIcon
                 slug={expertiseArea.slug}
                 name={expertiseArea.name}
+                type="expertise"
                 className="w-6 h-6"
                 isActive={true}
               />

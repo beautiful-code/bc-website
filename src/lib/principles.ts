@@ -12,22 +12,6 @@ export const principlesCategories: PrincipleCategory[] = [
     name: "Coding & Development",
     slug: "coding-development",
   },
-  {
-    name: "System Architecture",
-    slug: "system-architecture",
-  },
-  {
-    name: "Quality Assurance",
-    slug: "quality-assurance",
-  },
-  {
-    name: "Performance Optimization",
-    slug: "performance-optimization",
-  },
-  {
-    name: "Security Best Practices",
-    slug: "security-best-practices",
-  },
 ];
 
 export function getPrincipleBySlug(slug: string): PrincipleCategory | null {

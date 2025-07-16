@@ -1,23 +1,29 @@
 import Image from "next/image";
 
-interface ExpertiseIconProps {
+type IconType = "expertise" | "principle";
+
+interface CategoryIconProps {
   slug: string;
   name: string;
+  type: IconType;
   className?: string;
   isActive?: boolean;
 }
 
-export default function ExpertiseIcon({
+export default function CategoryIcon({
   slug,
   name,
+  type,
   className = "",
   isActive = false,
-}: ExpertiseIconProps) {
+}: CategoryIconProps) {
+  const iconPath = `/icons/${type}/${slug}`;
+
   return (
     <div className={`relative ${className}`}>
       {/* Default icon */}
       <Image
-        src={`/icons/expertise/${slug}.svg`}
+        src={`${iconPath}.svg`}
         alt={`${name} icon`}
         width={48}
         height={48}
@@ -28,7 +34,7 @@ export default function ExpertiseIcon({
 
       {/* Hover icon */}
       <Image
-        src={`/icons/expertise/${slug}-hover.svg`}
+        src={`${iconPath}-hover.svg`}
         alt={`${name} hover icon`}
         width={48}
         height={48}
