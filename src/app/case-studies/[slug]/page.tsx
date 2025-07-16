@@ -198,12 +198,12 @@ export default async function CaseStudyPage({
                     key={index}
                     className="inline-flex items-center space-x-2 px-3 py-2 border border-gray-200 rounded-full bg-white hover:shadow-sm transition-shadow duration-200"
                   >
-                    <div className="w-4 h-4 rounded-full overflow-hidden flex-shrink-0">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden flex-shrink-0">
                       <Image
                         src={iconPath}
                         alt={techName}
-                        width={16}
-                        height={16}
+                        width={24}
+                        height={24}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -211,7 +211,7 @@ export default async function CaseStudyPage({
                       className="text-sm font-[family-name:var(--font-nunito-sans)] whitespace-nowrap"
                       style={{ color: "var(--color-bc-text-black)" }}
                     >
-                      {techName} for {tech.purpose}
+                      {techName} {tech.purpose}
                     </span>
                   </div>
                 );

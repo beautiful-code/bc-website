@@ -37,13 +37,13 @@ export default function ArticleCard({
               return (
                 <div
                   key={index}
-                  className="w-5 h-5 rounded-full overflow-hidden"
+                  className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden"
                 >
                   <Image
                     src={iconPath}
                     alt={techName}
-                    width={20}
-                    height={20}
+                    width={24}
+                    height={24}
                     className="w-full h-full object-cover"
                   />
                 </div>

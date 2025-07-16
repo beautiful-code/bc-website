@@ -132,7 +132,7 @@ export default async function ArticlePage({
                 return (
                   <div
                     key={index}
-                    className="w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden"
+                    className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden"
                   >
                     <Image
                       src={iconPath}
