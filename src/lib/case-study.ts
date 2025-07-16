@@ -1,11 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeHighlight from "rehype-highlight";
-import rehypeStringify from "rehype-stringify";
+import { processMarkdown } from "./utils/markdown-processor";
 
 export interface CaseStudyOutcome {
   outcome: string;
@@ -106,12 +102,7 @@ export async function getCaseStudyBySlug(
 
       if (data.slug === slug) {
         // Convert markdown to HTML with syntax highlighting
-        const processedContent = await remark()
-          .use(remarkGfm)
-          .use(remarkRehype, { allowDangerousHtml: true })
-          .use(rehypeHighlight)
-          .use(rehypeStringify, { allowDangerousHtml: true })
-          .process(content);
+        const processedContent = await processMarkdown(content);
 
         return {
           slug: data.slug,
@@ -125,7 +116,7 @@ export async function getCaseStudyBySlug(
           expertises: data.expertises || [],
           technologies: data.technologies || [],
           testimonial: data.testimonial,
-          content: processedContent.toString(),
+          content: processedContent,
         };
       }
     }

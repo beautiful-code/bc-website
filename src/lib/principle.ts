@@ -1,11 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeHighlight from "rehype-highlight";
-import rehypeStringify from "rehype-stringify";
+import { processMarkdown } from "./utils/markdown-processor";
 import {
   principlesCategories,
   getPrincipleBySlug,
@@ -92,18 +88,13 @@ export async function getPrincipleContentBySlug(
       const fileSlug = data.slug || fileName.replace(".md", "");
       if (fileSlug === slug) {
         // Convert markdown to HTML with syntax highlighting
-        const processedContent = await remark()
-          .use(remarkGfm)
-          .use(remarkRehype, { allowDangerousHtml: true })
-          .use(rehypeHighlight)
-          .use(rehypeStringify, { allowDangerousHtml: true })
-          .process(content);
+        const processedContent = await processMarkdown(content);
 
         return {
           title: data.title,
           category: data.category,
           slug: fileSlug,
-          content: processedContent.toString(),
+          content: processedContent,
         };
       }
     }

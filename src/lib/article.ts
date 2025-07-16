@@ -1,11 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import remarkGfm from "remark-gfm";
-import remarkRehype from "remark-rehype";
-import rehypeHighlight from "rehype-highlight";
-import rehypeStringify from "rehype-stringify";
+import { processMarkdown } from "./utils/markdown-processor";
 
 export interface Article {
   title: string;
@@ -89,12 +85,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
 
       if (data.slug === slug) {
         // Convert markdown to HTML with syntax highlighting
-        const processedContent = await remark()
-          .use(remarkGfm)
-          .use(remarkRehype, { allowDangerousHtml: true })
-          .use(rehypeHighlight)
-          .use(rehypeStringify, { allowDangerousHtml: true })
-          .process(content);
+        const processedContent = await processMarkdown(content);
 
         return {
           title: data.title,
@@ -104,7 +95,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
           author: data.author,
           tech: data.tech || [],
           keytakeaway: data.keytakeaway,
-          content: processedContent.toString(),
+          content: processedContent,
         };
       }
     }
