@@ -235,6 +235,22 @@ Clean code is an investment in the future. Make it count.
 
 ````
 
+## Validation Checklist
+
+Before submitting a principle, ensure it meets all requirements:
+
+- [ ] Frontmatter includes all required fields with valid values
+- [ ] Only h3 headings are used in content
+- [ ] Introduction image is included at the top
+- [ ] Content follows the two-section structure (Deeper Understanding + How to put it into practice?)
+- [ ] Code examples include both good and bad practices
+- [ ] All images are properly wrapped in `<figure>` tags with `<figcaption>`
+- [ ] Code blocks specify the correct language for syntax highlighting
+- [ ] Content is practical and actionable
+- [ ] Writing style is clear and instructional
+- [ ] Principle appears correctly in the category page
+- [ ] All links and images work properly
+
 ## How to add a new principle?
 
 ### Step 1: Create the Markdown File
@@ -286,23 +302,7 @@ If you're creating a principle for a new category:
 1. Run the development server to ensure the principle renders correctly
 2. Check that the principle appears in the correct category page
 3. Verify all images load properly
-4. Review the content against the validation checklist below
-
-## Validation Checklist
-
-Before submitting a principle, ensure it meets all requirements:
-
-- [ ] Frontmatter includes all required fields with valid values
-- [ ] Only h3 headings are used in content
-- [ ] Introduction image is included at the top
-- [ ] Content follows the two-section structure (Deeper Understanding + How to put it into practice?)
-- [ ] Code examples include both good and bad practices
-- [ ] All images are properly wrapped in `<figure>` tags with `<figcaption>`
-- [ ] Code blocks specify the correct language for syntax highlighting
-- [ ] Content is practical and actionable
-- [ ] Writing style is clear and instructional
-- [ ] Principle appears correctly in the category page
-- [ ] All links and images work properly
+4. Review the content against the validation checklist above
 
 ```
 
