@@ -1,7 +1,10 @@
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { processMarkdown } from "./utils/markdown-processor";
+import {
+  loadMarkdownFiles,
+  loadMarkdownFileBySlug,
+  loadMarkdownFilesByField,
+} from "./utils/file-loader";
 
 export interface Article {
   title: string;
@@ -30,34 +33,21 @@ export async function getArticlesByExpertise(
   expertiseSlug: string
 ): Promise<ArticleMetadata[]> {
   try {
-    // Check if articles directory exists
-    if (!fs.existsSync(articlesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFilesByField(
+      articlesDirectory,
+      "expertise",
+      expertiseSlug
+    );
 
-    const fileNames = fs.readdirSync(articlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const articles: ArticleMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(articlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      // Filter by expertise
-      if (data.expertise === expertiseSlug) {
-        articles.push({
-          title: data.title,
-          date: data.date,
-          expertise: data.expertise,
-          slug: data.slug,
-          author: data.author,
-          tech: data.tech || [],
-          keytakeaway: data.keytakeaway,
-        });
-      }
-    }
+    const articles: ArticleMetadata[] = files.map((file) => ({
+      title: file.data.title as string,
+      date: file.data.date as string,
+      expertise: file.data.expertise as string,
+      slug: file.data.slug as string,
+      author: file.data.author as string,
+      tech: (file.data.tech as string[]) || [],
+      keytakeaway: file.data.keytakeaway as string,
+    }));
 
     // Sort by date (newest first)
     return articles.sort(
@@ -71,36 +61,25 @@ export async function getArticlesByExpertise(
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
   try {
-    if (!fs.existsSync(articlesDirectory)) {
+    const file = await loadMarkdownFileBySlug(articlesDirectory, slug);
+
+    if (!file) {
       return null;
     }
 
-    const fileNames = fs.readdirSync(articlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
+    // Convert markdown to HTML with syntax highlighting
+    const processedContent = await processMarkdown(file.content);
 
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(articlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
-
-      if (data.slug === slug) {
-        // Convert markdown to HTML with syntax highlighting
-        const processedContent = await processMarkdown(content);
-
-        return {
-          title: data.title,
-          date: data.date,
-          expertise: data.expertise,
-          slug: data.slug,
-          author: data.author,
-          tech: data.tech || [],
-          keytakeaway: data.keytakeaway,
-          content: processedContent,
-        };
-      }
-    }
-
-    return null;
+    return {
+      title: file.data.title as string,
+      date: file.data.date as string,
+      expertise: file.data.expertise as string,
+      slug: file.data.slug as string,
+      author: file.data.author as string,
+      tech: (file.data.tech as string[]) || [],
+      keytakeaway: file.data.keytakeaway as string,
+      content: processedContent,
+    };
   } catch (error) {
     console.error("Error loading article:", error);
     return null;
@@ -109,30 +88,17 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
 
 export async function getAllArticles(): Promise<ArticleMetadata[]> {
   try {
-    if (!fs.existsSync(articlesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFiles(articlesDirectory);
 
-    const fileNames = fs.readdirSync(articlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const articles: ArticleMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(articlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      articles.push({
-        title: data.title,
-        date: data.date,
-        expertise: data.expertise,
-        slug: data.slug,
-        author: data.author,
-        tech: data.tech || [],
-        keytakeaway: data.keytakeaway,
-      });
-    }
+    const articles: ArticleMetadata[] = files.map((file) => ({
+      title: file.data.title as string,
+      date: file.data.date as string,
+      expertise: file.data.expertise as string,
+      slug: file.data.slug as string,
+      author: file.data.author as string,
+      tech: (file.data.tech as string[]) || [],
+      keytakeaway: file.data.keytakeaway as string,
+    }));
 
     // Sort by date (newest first)
     return articles.sort(

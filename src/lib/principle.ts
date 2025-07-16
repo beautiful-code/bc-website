@@ -1,7 +1,10 @@
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { processMarkdown } from "./utils/markdown-processor";
+import {
+  loadMarkdownFiles,
+  loadMarkdownFileBySlug,
+  loadMarkdownFilesByField,
+} from "./utils/file-loader";
 import {
   principlesCategories,
   getPrincipleBySlug,
@@ -36,30 +39,17 @@ export async function getPrinciplesByCategory(
   categorySlug: string
 ): Promise<PrincipleMetadata[]> {
   try {
-    // Check if principles directory exists
-    if (!fs.existsSync(principlesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFilesByField(
+      principlesDirectory,
+      "category",
+      categorySlug
+    );
 
-    const fileNames = fs.readdirSync(principlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const principles: PrincipleMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(principlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      // Filter by category
-      if (data.category === categorySlug) {
-        principles.push({
-          title: data.title,
-          category: data.category,
-          slug: data.slug || fileName.replace(".md", ""),
-        });
-      }
-    }
+    const principles: PrincipleMetadata[] = files.map((file) => ({
+      title: file.data.title as string,
+      category: file.data.category as string,
+      slug: (file.data.slug as string) || file.fileName.replace(".md", ""),
+    }));
 
     // Sort by title
     return principles.sort((a, b) => a.title.localeCompare(b.title));
@@ -73,33 +63,21 @@ export async function getPrincipleContentBySlug(
   slug: string
 ): Promise<Principle | null> {
   try {
-    if (!fs.existsSync(principlesDirectory)) {
+    const file = await loadMarkdownFileBySlug(principlesDirectory, slug);
+
+    if (!file) {
       return null;
     }
 
-    const fileNames = fs.readdirSync(principlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
+    // Convert markdown to HTML with syntax highlighting
+    const processedContent = await processMarkdown(file.content);
 
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(principlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
-
-      const fileSlug = data.slug || fileName.replace(".md", "");
-      if (fileSlug === slug) {
-        // Convert markdown to HTML with syntax highlighting
-        const processedContent = await processMarkdown(content);
-
-        return {
-          title: data.title,
-          category: data.category,
-          slug: fileSlug,
-          content: processedContent,
-        };
-      }
-    }
-
-    return null;
+    return {
+      title: file.data.title as string,
+      category: file.data.category as string,
+      slug: (file.data.slug as string) || file.fileName.replace(".md", ""),
+      content: processedContent,
+    };
   } catch (error) {
     console.error("Error loading principle:", error);
     return null;
@@ -108,26 +86,13 @@ export async function getPrincipleContentBySlug(
 
 export async function getAllPrinciples(): Promise<PrincipleMetadata[]> {
   try {
-    if (!fs.existsSync(principlesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFiles(principlesDirectory);
 
-    const fileNames = fs.readdirSync(principlesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const principles: PrincipleMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(principlesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      principles.push({
-        title: data.title,
-        category: data.category,
-        slug: data.slug || fileName.replace(".md", ""),
-      });
-    }
+    const principles: PrincipleMetadata[] = files.map((file) => ({
+      title: file.data.title as string,
+      category: file.data.category as string,
+      slug: (file.data.slug as string) || file.fileName.replace(".md", ""),
+    }));
 
     // Sort by title
     return principles.sort((a, b) => a.title.localeCompare(b.title));

@@ -1,7 +1,10 @@
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { processMarkdown } from "./utils/markdown-processor";
+import {
+  loadMarkdownFiles,
+  loadMarkdownFileBySlug,
+  loadMarkdownFilesByArrayField,
+} from "./utils/file-loader";
 
 export interface CaseStudyOutcome {
   outcome: string;
@@ -43,38 +46,25 @@ export async function getCaseStudiesByExpertise(
   expertiseSlug: string
 ): Promise<CaseStudyMetadata[]> {
   try {
-    // Check if case studies directory exists
-    if (!fs.existsSync(caseStudiesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFilesByArrayField(
+      caseStudiesDirectory,
+      "expertises",
+      expertiseSlug
+    );
 
-    const fileNames = fs.readdirSync(caseStudiesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const caseStudies: CaseStudyMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(caseStudiesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      // Filter by expertise - case studies can have multiple expertises
-      if (data.expertises && data.expertises.includes(expertiseSlug)) {
-        caseStudies.push({
-          slug: data.slug,
-          title: data.title,
-          industry: data.industry,
-          heroImage: data.heroImage,
-          problemStatement: data.problemStatement,
-          clientInfo: data.clientInfo,
-          clientImage: data.clientImage,
-          outcomes: data.outcomes || [],
-          expertises: data.expertises || [],
-          technologies: data.technologies || [],
-          testimonial: data.testimonial,
-        });
-      }
-    }
+    const caseStudies: CaseStudyMetadata[] = files.map((file) => ({
+      slug: file.data.slug as string,
+      title: file.data.title as string,
+      industry: file.data.industry as string,
+      heroImage: file.data.heroImage as string,
+      problemStatement: file.data.problemStatement as string,
+      clientInfo: file.data.clientInfo as string,
+      clientImage: file.data.clientImage as string,
+      outcomes: (file.data.outcomes as CaseStudyOutcome[]) || [],
+      expertises: (file.data.expertises as string[]) || [],
+      technologies: (file.data.technologies as CaseStudyTechnology[]) || [],
+      testimonial: file.data.testimonial as CaseStudyTestimonial,
+    }));
 
     // Sort by title for now (can be changed to date if added later)
     return caseStudies.sort((a, b) => a.title.localeCompare(b.title));
@@ -88,40 +78,29 @@ export async function getCaseStudyBySlug(
   slug: string
 ): Promise<CaseStudy | null> {
   try {
-    if (!fs.existsSync(caseStudiesDirectory)) {
+    const file = await loadMarkdownFileBySlug(caseStudiesDirectory, slug);
+
+    if (!file) {
       return null;
     }
 
-    const fileNames = fs.readdirSync(caseStudiesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
+    // Convert markdown to HTML with syntax highlighting
+    const processedContent = await processMarkdown(file.content);
 
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(caseStudiesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
-
-      if (data.slug === slug) {
-        // Convert markdown to HTML with syntax highlighting
-        const processedContent = await processMarkdown(content);
-
-        return {
-          slug: data.slug,
-          title: data.title,
-          industry: data.industry,
-          heroImage: data.heroImage,
-          problemStatement: data.problemStatement,
-          clientInfo: data.clientInfo,
-          clientImage: data.clientImage,
-          outcomes: data.outcomes || [],
-          expertises: data.expertises || [],
-          technologies: data.technologies || [],
-          testimonial: data.testimonial,
-          content: processedContent,
-        };
-      }
-    }
-
-    return null;
+    return {
+      slug: file.data.slug as string,
+      title: file.data.title as string,
+      industry: file.data.industry as string,
+      heroImage: file.data.heroImage as string,
+      problemStatement: file.data.problemStatement as string,
+      clientInfo: file.data.clientInfo as string,
+      clientImage: file.data.clientImage as string,
+      outcomes: (file.data.outcomes as CaseStudyOutcome[]) || [],
+      expertises: (file.data.expertises as string[]) || [],
+      technologies: (file.data.technologies as CaseStudyTechnology[]) || [],
+      testimonial: file.data.testimonial as CaseStudyTestimonial,
+      content: processedContent,
+    };
   } catch (error) {
     console.error("Error loading case study:", error);
     return null;
@@ -130,34 +109,21 @@ export async function getCaseStudyBySlug(
 
 export async function getAllCaseStudies(): Promise<CaseStudyMetadata[]> {
   try {
-    if (!fs.existsSync(caseStudiesDirectory)) {
-      return [];
-    }
+    const files = await loadMarkdownFiles(caseStudiesDirectory);
 
-    const fileNames = fs.readdirSync(caseStudiesDirectory);
-    const markdownFiles = fileNames.filter((name) => name.endsWith(".md"));
-
-    const caseStudies: CaseStudyMetadata[] = [];
-
-    for (const fileName of markdownFiles) {
-      const fullPath = path.join(caseStudiesDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
-
-      caseStudies.push({
-        slug: data.slug,
-        title: data.title,
-        industry: data.industry,
-        heroImage: data.heroImage,
-        problemStatement: data.problemStatement,
-        clientInfo: data.clientInfo,
-        clientImage: data.clientImage,
-        outcomes: data.outcomes || [],
-        expertises: data.expertises || [],
-        technologies: data.technologies || [],
-        testimonial: data.testimonial,
-      });
-    }
+    const caseStudies: CaseStudyMetadata[] = files.map((file) => ({
+      slug: file.data.slug as string,
+      title: file.data.title as string,
+      industry: file.data.industry as string,
+      heroImage: file.data.heroImage as string,
+      problemStatement: file.data.problemStatement as string,
+      clientInfo: file.data.clientInfo as string,
+      clientImage: file.data.clientImage as string,
+      outcomes: (file.data.outcomes as CaseStudyOutcome[]) || [],
+      expertises: (file.data.expertises as string[]) || [],
+      technologies: (file.data.technologies as CaseStudyTechnology[]) || [],
+      testimonial: file.data.testimonial as CaseStudyTestimonial,
+    }));
 
     // Sort by title for now
     return caseStudies.sort((a, b) => a.title.localeCompare(b.title));
