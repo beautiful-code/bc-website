@@ -9,7 +9,7 @@ import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import { getAuthor } from "@/lib/author";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
-import { formatDate } from "@/lib/date-utils";
+import { formatDate } from "@/lib/utils/date";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
