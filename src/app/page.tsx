@@ -3,37 +3,10 @@ import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
 import { expertiseAreas } from "@/lib/expertise";
+import { principlesCategories } from "@/lib/principles";
 import "../styles/layout.scss";
 
 export default function Home() {
-  // Principles categories
-  const principlesCategories = [
-    {
-      name: "Software Design",
-      slug: "software-design",
-    },
-    {
-      name: "Coding & Development",
-      slug: "coding-development",
-    },
-    {
-      name: "System Architecture",
-      slug: "system-architecture",
-    },
-    {
-      name: "Quality Assurance",
-      slug: "quality-assurance",
-    },
-    {
-      name: "Performance Optimization",
-      slug: "performance-optimization",
-    },
-    {
-      name: "Security Best Practices",
-      slug: "security-best-practices",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <div className="two-column-layout">
