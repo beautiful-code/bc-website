@@ -3,8 +3,8 @@ import { notFound } from "next/navigation";
 import { getCaseStudyBySlug } from "@/lib/case-studies";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
-import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech-icons";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech-icons";
+import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { formatDate } from "@/lib/date-utils";
 
 interface ArticleCardProps {
