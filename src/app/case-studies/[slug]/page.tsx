@@ -4,6 +4,7 @@ import { getCaseStudyBySlug } from "@/lib/case-studies";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
+import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech-icons";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
 
@@ -181,28 +182,40 @@ export default async function CaseStudyPage({
         {caseStudy.technologies.length > 0 && (
           <div className="mb-8">
             <h2
-              className="text-xl sm:text-2xl font-normal mb-4 font-[family-name:var(--font-nunito-sans)]"
+              className="text-xl sm:text-2xl font-normal mb-6 font-[family-name:var(--font-nunito-sans)]"
               style={{ color: "var(--color-bc-red)" }}
             >
               Technologies Used
             </h2>
-            <div className="space-y-3">
-              {caseStudy.technologies.map((tech, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <span
-                    className="font-medium font-[family-name:var(--font-nunito-sans)]"
-                    style={{ color: "var(--color-bc-text-black)" }}
+            <div className="flex flex-wrap gap-3">
+              {caseStudy.technologies.map((tech, index) => {
+                const techInfo = getTechBySlug(tech.tech);
+                const iconPath = getTechIconPathBySlug(tech.tech);
+                const techName = techInfo?.name || tech.tech;
+
+                return (
+                  <div
+                    key={index}
+                    className="inline-flex items-center space-x-2 px-3 py-2 border border-gray-200 rounded-full bg-white hover:shadow-sm transition-shadow duration-200"
                   >
-                    {tech.tech}:
-                  </span>
-                  <span
-                    className="font-[family-name:var(--font-nunito-sans)]"
-                    style={{ color: "var(--color-bc-text-gray)" }}
-                  >
-                    {tech.purpose}
-                  </span>
-                </div>
-              ))}
+                    <div className="w-4 h-4 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src={iconPath}
+                        alt={techName}
+                        width={16}
+                        height={16}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <span
+                      className="text-sm font-[family-name:var(--font-nunito-sans)] whitespace-nowrap"
+                      style={{ color: "var(--color-bc-text-black)" }}
+                    >
+                      {techName} for {tech.purpose}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         )}

@@ -15,11 +15,11 @@ outcomes:
     icon: "/case-studies/mobile-app-performance-boost/stability-icon.svg"
 expertises: ["frontend-engineering", "software-maintenance"]
 technologies:
-  - tech: "react"
-    purpose: "React for mobile app framework"
+  - tech: "js"
+    purpose: "for mobile app framework"
   - tech: "typescript"
     purpose: "for type safety and better code maintainability"
-  - tech: "aws"
+  - tech: "nextjs"
     purpose: "for CDN implementation and API response optimization"
 testimonial:
   quote: "BC's performance optimization transformed our app from sluggish to lightning-fast. Our users love the improved experience, and our retention rates have never been better."
