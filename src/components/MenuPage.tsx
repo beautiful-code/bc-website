@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import NavigationalSidebar from "./NavigationalSidebar";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
+import Copyright from "./Copyright";
 
 interface MenuPageProps {
   activeSlug: string;
@@ -30,6 +31,7 @@ export default function MenuPage({ activeSlug, children }: MenuPageProps) {
         {/* Main Column - Content */}
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           {children}
+          <Copyright />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Logo from "@/components/Logo";
+import Copyright from "@/components/Copyright";
 import "../styles/layout.scss";
 
 export default function Home() {
@@ -78,6 +79,7 @@ export default function Home() {
               })}
             </div>
           </div>
+          <Copyright />
         </div>
       </div>
     </div>
