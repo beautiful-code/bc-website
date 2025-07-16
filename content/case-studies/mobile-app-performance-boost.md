@@ -4,7 +4,7 @@ title: "Transforming a Sluggish Fitness Tracking Mobile App into Lightning Fast 
 industry: "Health & Fitness"
 heroImage: "/case-studies/mobile-app-performance-boost/hero-image.jpeg"
 problemStatement: "React Native app experiencing slow load times and poor user retention due to performance bottlenecks affecting 50,000+ daily active users."
-clientInfo: "FitnessTrack - Popular fitness tracking mobile app with 2M+ users"
+clientInfo: "FSSTech, an Indian fintech company, specializes in payments solutions, including ATM services and digital banking, with an estimated revenue of $200 million"
 clientImage: "/case-studies/mobile-app-performance-boost/clientLogo.png"
 outcomes:
   - outcome: "75% faster app launch time"
@@ -16,11 +16,11 @@ outcomes:
 expertises: ["frontend-engineering", "software-maintenance"]
 technologies:
   - tech: "react"
-    purpose: "Mobile app framework optimization and component refactoring"
+    purpose: "React for mobile app framework"
   - tech: "typescript"
-    purpose: "Type safety and better code maintainability"
+    purpose: "for type safety and better code maintainability"
   - tech: "aws"
-    purpose: "CDN implementation and API response optimization"
+    purpose: "for CDN implementation and API response optimization"
 testimonial:
   quote: "BC's performance optimization transformed our app from sluggish to lightning-fast. Our users love the improved experience, and our retention rates have never been better."
   author: "Alex Chen, CTO at FitnessTrack"

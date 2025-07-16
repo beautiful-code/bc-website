@@ -78,17 +78,17 @@ export default async function CaseStudyPage({
           </h1>
 
           {/* Problem Statement and Client Info - Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Problem Statement */}
             <div>
               <h2
-                className="text-lg font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+                className="text-xl sm:text-2xl font-normal mb-6 font-[family-name:var(--font-nunito-sans)]"
                 style={{ color: "var(--color-bc-red)" }}
               >
                 Problem Statement
               </h2>
               <blockquote
-                className="text-base leading-relaxed font-[family-name:var(--font-nunito-sans)]"
+                className="text-lg sm:text-xl leading-relaxed font-[family-name:var(--font-nunito-sans)]"
                 style={{ color: "var(--color-bc-text-black)" }}
               >
                 &ldquo;{caseStudy.problemStatement}&rdquo;
@@ -97,32 +97,35 @@ export default async function CaseStudyPage({
 
             {/* Client Info */}
             <div>
-              <h2
-                className="text-lg font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
-                style={{ color: "var(--color-bc-text-black)" }}
-              >
-                Client Info
-              </h2>
-              <div className="flex items-start justify-between">
-                <div className="flex-1 pr-4">
+              <div className="bg-gray-100 rounded-lg px-6 py-4 ">
+                {/* Header Row - Title and Image */}
+                <div className="flex items-center justify-between">
+                  <h2
+                    className="text-xl sm:text-2xl font-normal font-[family-name:var(--font-nunito-sans)]"
+                    style={{ color: "var(--color-bc-text-black)" }}
+                  >
+                    Client Info
+                  </h2>
+                  {caseStudy.clientImage && (
+                    <Image
+                      src={caseStudy.clientImage}
+                      alt="Client logo"
+                      width={60}
+                      height={60}
+                      className="object-contain"
+                    />
+                  )}
+                </div>
+
+                {/* Content Row */}
+                <div>
                   <p
-                    className="text-base leading-relaxed font-[family-name:var(--font-nunito-sans)]"
+                    className="text-lg sm:text-xl leading-relaxed font-[family-name:var(--font-nunito-sans)]"
                     style={{ color: "var(--color-bc-text-black)" }}
                   >
                     {caseStudy.clientInfo}
                   </p>
                 </div>
-                {caseStudy.clientImage && (
-                  <div className="flex-shrink-0">
-                    <Image
-                      src={caseStudy.clientImage}
-                      alt="Client logo"
-                      width={80}
-                      height={80}
-                      className="object-contain"
-                    />
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -132,10 +135,10 @@ export default async function CaseStudyPage({
         {caseStudy.outcomes.length > 0 && (
           <div className="mb-8">
             <h2
-              className="text-xl font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+              className="text-xl sm:text-2xl font-normal mb-4 font-[family-name:var(--font-nunito-sans)]"
               style={{ color: "var(--color-bc-red)" }}
             >
-              Key Outcomes
+              Outcomes
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {caseStudy.outcomes.map((outcome, index) => (
@@ -148,13 +151,13 @@ export default async function CaseStudyPage({
                       <Image
                         src={outcome.icon}
                         alt="Outcome icon"
-                        width={24}
-                        height={24}
+                        width={64}
+                        height={64}
                       />
                     )}
                   </div>
                   <p
-                    className="font-medium font-[family-name:var(--font-nunito-sans)]"
+                    className="text-lg sm:text-xl font-medium font-[family-name:var(--font-nunito-sans)]"
                     style={{ color: "var(--color-bc-text-black)" }}
                   >
                     {outcome.outcome}
@@ -178,7 +181,7 @@ export default async function CaseStudyPage({
         {caseStudy.technologies.length > 0 && (
           <div className="mb-8">
             <h2
-              className="text-xl font-bold mb-4 font-[family-name:var(--font-nunito-sans)]"
+              className="text-xl sm:text-2xl font-normal mb-4 font-[family-name:var(--font-nunito-sans)]"
               style={{ color: "var(--color-bc-red)" }}
             >
               Technologies Used
