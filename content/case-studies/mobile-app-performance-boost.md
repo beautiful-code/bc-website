@@ -24,7 +24,7 @@ technologies:
 testimonial:
   quote: "BC's performance optimization transformed our app from sluggish to lightning-fast. Our users love the improved experience, and our retention rates have never been better."
   author: "Alex Chen, CTO at FitnessTrack"
-  authorImage: "/case-studies/mobile-app-performance-boost/alex-chen.jpg"
+  authorImage: "/case-studies/mobile-app-performance-boost/alex-chen.png"
 ---
 
 FitnessTrack came to BC with a critical challenge: their popular fitness tracking app was suffering from severe performance issues that were driving users away and hurting their business growth.

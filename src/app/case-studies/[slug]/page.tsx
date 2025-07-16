@@ -220,34 +220,41 @@ export default async function CaseStudyPage({
           </div>
         )}
 
-        {/* Testimonial */}
+        {/* Customer Testimonial */}
         {caseStudy.testimonial && (
           <div className="mb-8">
-            <div className="border border-black rounded-2xl p-6 bg-white shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
+            <h2
+              className="text-xl sm:text-2xl font-normal mb-6 font-[family-name:var(--font-nunito-sans)]"
+              style={{ color: "var(--color-bc-red)" }}
+            >
+              Customer Testimonial
+            </h2>
+            <div className="border border-gray-300 rounded-lg p-6 bg-white">
+              {/* Testimonial Quote */}
               <blockquote
-                className="text-lg sm:text-xl italic mb-4 font-[family-name:var(--font-nunito-sans)]"
+                className="text-lg sm:text-xl leading-relaxed font-[family-name:var(--font-nunito-sans)] mb-6"
                 style={{ color: "var(--color-bc-text-black)" }}
               >
                 &ldquo;{caseStudy.testimonial.quote}&rdquo;
               </blockquote>
+
+              {/* Author Attribution */}
               <div className="flex items-center space-x-3">
                 {caseStudy.testimonial.authorImage && (
                   <Image
                     src={caseStudy.testimonial.authorImage}
                     alt={caseStudy.testimonial.author}
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover"
+                    width={80}
+                    height={80}
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg object-cover"
                   />
                 )}
-                <div>
-                  <p
-                    className="font-medium font-[family-name:var(--font-nunito-sans)]"
-                    style={{ color: "var(--color-bc-text-black)" }}
-                  >
-                    {caseStudy.testimonial.author}
-                  </p>
-                </div>
+                <p
+                  className="text-base sm:text-lg font-[family-name:var(--font-nunito-sans)]"
+                  style={{ color: "var(--color-bc-text-black)" }}
+                >
+                  {caseStudy.testimonial.author}
+                </p>
               </div>
             </div>
           </div>
