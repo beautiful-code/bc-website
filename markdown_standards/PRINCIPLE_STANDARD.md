@@ -233,8 +233,6 @@ Before submitting code for review, ask yourself:
 
 Clean code is an investment in the future. Make it count.
 
-````
-
 ## Validation Checklist
 
 Before submitting a principle, ensure it meets all requirements:
@@ -268,7 +266,7 @@ title: "Your Principle Title"
 category: "category-slug"
 slug: "your-principle-slug"
 ---
-````
+```
 
 ### Step 3: Create Image Directory
 
@@ -303,7 +301,3 @@ If you're creating a principle for a new category:
 2. Check that the principle appears in the correct category page
 3. Verify all images load properly
 4. Review the content against the validation checklist above
-
-```
-
-```
