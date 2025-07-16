@@ -351,3 +351,95 @@ Before publishing, ensure your case study meets these requirements:
 - [ ] All images are wrapped in `<figure>` tags with `<figcaption>`
 - [ ] Code blocks specify language for syntax highlighting
 - [ ] All file paths use forward slashes and start with `/`
+
+## How to add a new case study?
+
+Follow these steps to add a new case study to the BC website:
+
+### Step 1: Create the Case Study Directory
+
+1. Create a new directory in `public/case-studies/` with your case study slug:
+
+   ```bash
+   mkdir public/case-studies/your-case-study-slug
+   ```
+
+2. Create a new directory in `content/case-studies/` for the markdown file:
+   ```bash
+   mkdir content/case-studies
+   # (if it doesn't exist already)
+   ```
+
+### Step 2: Prepare Assets
+
+1. **Hero Image**: Add your main case study image to `public/case-studies/{slug}/hero-image.jpg`
+2. **Client Logo**: Add client logo to `public/case-studies/{slug}/client-logo.png`
+3. **Outcome Icons**: Create/add SVG icons for each outcome to `public/case-studies/{slug}/`
+4. **Author Image**: Add client testimonial author photo to `public/case-studies/{slug}/author-name.jpg`
+5. **Content Images**: Add any diagrams, screenshots, or other images referenced in the content
+
+### Step 3: Create the Markdown File
+
+1. Create a new file: `content/case-studies/{slug}.md`
+2. Copy the frontmatter template from the example above
+3. Fill in all required fields:
+   - `slug`: URL-friendly identifier (e.g., "ecommerce-modernization")
+   - `title`: Case study title
+   - `industry`: Client's industry sector
+   - `heroImage`: Path to hero image
+   - `problemStatement`: Brief problem description
+   - `clientInfo`: Client name and description
+   - `clientImage`: Path to client logo
+   - `outcomes`: Array of measurable outcomes with icons
+   - `expertises`: Array of expertise areas (use valid values from the list above)
+   - `technologies`: Array of technologies used (use valid values from the list above)
+   - `testimonial`: Client quote, author name, and author image
+
+### Step 4: Write the Content
+
+1. **Use only h3 headings** (`###`) for section titles
+2. **Wrap all images** in `<figure>` tags with `<figcaption>`
+3. **Use code blocks** with language specification for technical details
+4. **Include tables** for metrics and comparisons
+5. **Follow the content structure** shown in the example above
+
+### Step 5: Validate Your Case Study
+
+1. Run the validation checklist above
+2. Ensure all image paths are correct and files exist
+3. Verify all expertise and technology values are from the valid lists
+4. Check that the markdown syntax is correct
+
+### Step 6: Test the Case Study
+
+1. Start the development server: `npm run dev`
+2. Navigate to `/case-studies/{your-slug}` to view your case study
+3. Check that all images load correctly
+4. Verify the layout and styling look good on both desktop and mobile
+5. Test that the case study appears on the relevant expertise pages
+
+### Step 7: Add to Version Control
+
+1. Add your new files to git:
+   ```bash
+   git add content/case-studies/{slug}.md
+   git add public/case-studies/{slug}/
+   ```
+2. Commit your changes:
+   ```bash
+   git commit -m "Add new case study: {title}"
+   ```
+
+### Common Issues and Solutions
+
+- **Images not loading**: Check that file paths start with `/` and match the actual file locations
+- **Case study not appearing**: Verify the slug in the URL matches the filename
+- **Expertise pages not showing case study**: Ensure expertise values match the valid list exactly
+- **Tech icons not displaying**: Check that technology slugs match the valid list in `src/lib/tech.ts`
+
+### Need Help?
+
+- Refer to existing case studies in `content/case-studies/` for examples
+- Check the tech library in `src/lib/tech.ts` for valid technology values
+- Review the expertise areas in `src/lib/expertise.ts` for valid expertise values
+- Use the validation checklist above to ensure compliance with standards
