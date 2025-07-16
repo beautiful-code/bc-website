@@ -7,7 +7,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
-import { getAuthor } from "@/lib/authors";
+import { getAuthor } from "@/lib/author";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { formatDate } from "@/lib/date-utils";
 import { getExpertiseBySlug } from "@/lib/expertise";
