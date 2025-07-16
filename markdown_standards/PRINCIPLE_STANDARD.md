@@ -175,42 +175,6 @@ Use backticks for inline code references:
 Use `useState` for local component state and `useEffect` for side effects.
 ````
 
-## Text Formatting
-
-### Basic Formatting
-
-```markdown
-**Bold text** for emphasis
-_Italic text_ for subtle emphasis
-`Inline code` for technical terms
-```
-
-### Lists
-
-```markdown
-### Unordered Lists
-
-- First item
-- Second item
-- Third item
-
-### Ordered Lists
-
-1. First step
-2. Second step
-3. Third step
-```
-
-### Checklists
-
-Use checkboxes for actionable items:
-
-```markdown
-- [ ] Are variable and function names clear and descriptive?
-- [ ] Are functions small and focused on a single task?
-- [ ] Is the code easy to read and understand?
-```
-
 ## Content Guidelines
 
 ### Writing Style

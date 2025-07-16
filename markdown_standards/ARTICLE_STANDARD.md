@@ -180,38 +180,6 @@ Tables use GitHub Flavored Markdown (GFM) syntax:
 - For longer descriptions, break into multiple lines naturally
 - Tables will automatically be styled with alternating row colors
 
-## Text Formatting
-
-### Basic Formatting
-
-```markdown
-**Bold text** for emphasis
-_Italic text_ for subtle emphasis
-`Inline code` for technical terms
-```
-
-### Lists
-
-```markdown
-### Unordered Lists
-
-- First item
-- Second item
-- Third item
-
-### Ordered Lists
-
-1. First step
-2. Second step
-3. Third step
-```
-
-### Quotes
-
-```markdown
-> This is a blockquote for highlighting important information or quotes.
-```
-
 ## Raw HTML Support
 
 The markdown processor supports raw HTML when needed:
