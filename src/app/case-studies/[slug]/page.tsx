@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { notFound } from "next/navigation";
-import { getCaseStudyBySlug } from "@/lib/case-studies";
+import { getCaseStudyBySlug } from "@/lib/case-study";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import CategoryIcon from "@/components/CategoryIcon";

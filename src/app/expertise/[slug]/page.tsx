@@ -5,7 +5,7 @@ import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getExpertiseBreadcrumbs } from "@/lib/breadcrumb-utils";
 import { getArticlesByExpertise } from "@/lib/article";
-import { getCaseStudiesByExpertise } from "@/lib/case-studies";
+import { getCaseStudiesByExpertise } from "@/lib/case-study";
 import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
 
