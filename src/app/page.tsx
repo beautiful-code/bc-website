@@ -3,7 +3,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
 import { expertiseAreas } from "@/lib/expertise";
-import { principlesCategories } from "@/lib/principle";
+import { principlesCategories } from "@/lib/principle-category";
 import "../styles/layout.scss";
 
 export default function Home() {

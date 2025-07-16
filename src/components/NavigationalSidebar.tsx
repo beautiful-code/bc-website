@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CategoryIcon from "@/components/CategoryIcon";
 import { expertiseAreas } from "@/lib/expertise";
-import { principlesCategories } from "@/lib/principle";
+import { principlesCategories } from "@/lib/principle-category";
 
 interface NavigationalSidebarProps {
   activeSlug?: string;
