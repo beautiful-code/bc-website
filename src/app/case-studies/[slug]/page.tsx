@@ -1,12 +1,16 @@
 import Image from "next/image";
+import React from "react";
 import { notFound } from "next/navigation";
 import { getCaseStudyBySlug } from "@/lib/case-studies";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import ExpertiseIcon from "@/components/ExpertiseIcon";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
+import { getExpertiseBySlug } from "@/lib/expertise";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
+import Link from "next/link";
 
 export default async function CaseStudyPage({
   params,
@@ -20,10 +24,30 @@ export default async function CaseStudyPage({
     notFound();
   }
 
+  // Get the first expertise area for breadcrumb
+  const firstExpertise =
+    caseStudy.expertises.length > 0
+      ? getExpertiseBySlug(caseStudy.expertises[0])
+      : null;
+
   const breadcrumbItems = [
     getHomeBreadcrumb(),
+    ...(firstExpertise
+      ? [
+          {
+            label: firstExpertise.name,
+            href: `/expertise/${firstExpertise.slug}`,
+            icon: React.createElement(ExpertiseIcon, {
+              slug: firstExpertise.slug,
+              name: firstExpertise.name,
+              isActive: true,
+              className: "w-6 h-6",
+            }),
+          },
+        ]
+      : []),
     {
-      label: "Case Studies",
+      label: "Case Study",
       href: undefined, // Current section, no link
     },
   ];
@@ -39,12 +63,14 @@ export default async function CaseStudyPage({
         {/* Mobile Header */}
         <div className="block sm:hidden mt-2 mb-4">
           <div className="flex items-center space-x-3 mb-2">
-            <h1
-              className="text-lg"
-              style={{ color: "var(--color-bc-text-black)" }}
+            <Link
+              href={firstExpertise ? `/expertise/${firstExpertise.slug}` : "/"}
+              className="inline-flex items-center space-x-2 text-sm hover:text-[var(--color-bc-red)] transition-colors duration-300"
+              style={{ color: "var(--color-bc-text-gray)" }}
             >
-              Case Study
-            </h1>
+              <span>←</span>
+              <span>Back</span>
+            </Link>
           </div>
         </div>
 
