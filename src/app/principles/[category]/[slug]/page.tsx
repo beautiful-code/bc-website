@@ -44,7 +44,7 @@ export default async function PrinciplePage({
         ]
       : []),
     {
-      label: principle.title,
+      label: "Principle",
       href: undefined, // Current page, no link
     },
   ];
@@ -80,14 +80,6 @@ export default async function PrinciplePage({
 
         {/* Principle Header */}
         <div className="mb-8">
-          <div className="mb-4">
-            <span
-              className="text-sm font-medium"
-              style={{ color: "var(--color-bc-text-gray)" }}
-            >
-              {categoryInfo?.name}
-            </span>
-          </div>
           <h1
             className="text-xl sm:text-3xl font-medium mb-8 font-[family-name:var(--font-nunito-sans)]"
             style={{ color: "var(--color-bc-text-black)" }}

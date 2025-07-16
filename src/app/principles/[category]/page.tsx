@@ -84,19 +84,11 @@ export default async function PrincipleCategoryPage({
                 >
                   <div className="border border-gray-200 rounded-lg p-4 sm:p-6 hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
                     <h3
-                      className="text-lg sm:text-xl font-medium mb-2 font-[family-name:var(--font-nunito-sans)]"
+                      className="text-lg sm:text-xl font-medium font-[family-name:var(--font-nunito-sans)]"
                       style={{ color: "var(--color-bc-text-black)" }}
                     >
                       {principle.title}
                     </h3>
-                    <div className="flex items-center space-x-2">
-                      <span
-                        className="text-sm"
-                        style={{ color: "var(--color-bc-text-gray)" }}
-                      >
-                        {currentCategory.name}
-                      </span>
-                    </div>
                   </div>
                 </Link>
               ))}
