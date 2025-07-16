@@ -33,6 +33,34 @@ export default function Home() {
     },
   ];
 
+  // Principles categories
+  const principlesCategories = [
+    {
+      name: "Software Design",
+      slug: "software-design",
+    },
+    {
+      name: "Coding & Development",
+      slug: "coding-development",
+    },
+    {
+      name: "System Architecture",
+      slug: "system-architecture",
+    },
+    {
+      name: "Quality Assurance",
+      slug: "quality-assurance",
+    },
+    {
+      name: "Performance Optimization",
+      slug: "performance-optimization",
+    },
+    {
+      name: "Security Best Practices",
+      slug: "security-best-practices",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <div className="two-column-layout">
@@ -71,6 +99,31 @@ export default function Home() {
                       <div className="flex-1">
                         <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
                           {area.name}
+                        </h3>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <h2
+              className="text-lg sm:text-3xl tracking-wider uppercase mt-12 mb-2 text-left px-8"
+              style={{ color: "var(--color-bc-red)" }}
+            >
+              OUR PRINCIPLES
+            </h2>
+            <div className="principles">
+              {principlesCategories.map((category) => {
+                return (
+                  <Link
+                    key={category.slug}
+                    href={`/principles/${category.slug}`}
+                  >
+                    <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-2 sm:py-4">
+                      <div className="flex-1">
+                        <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                          {category.name}
                         </h3>
                       </div>
                     </div>
