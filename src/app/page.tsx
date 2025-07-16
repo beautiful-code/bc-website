@@ -2,37 +2,10 @@ import Link from "next/link";
 import ExpertiseIcon from "@/components/ExpertiseIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
+import { expertiseAreas } from "@/lib/expertise";
 import "../styles/layout.scss";
 
 export default function Home() {
-  // Expertise areas matching the mock
-  const expertiseAreas = [
-    {
-      name: "Frontend Engineering",
-      slug: "frontend-engineering",
-    },
-    {
-      name: "Backend Engineering",
-      slug: "backend-engineering",
-    },
-    {
-      name: "AI & Applied ML",
-      slug: "ai-applied-ml",
-    },
-    {
-      name: "Infrastructure & Reliability",
-      slug: "infrastructure-reliability",
-    },
-    {
-      name: "Data Engineering",
-      slug: "data-engineering",
-    },
-    {
-      name: "Software Maintenance",
-      slug: "software-maintenance",
-    },
-  ];
-
   // Principles categories
   const principlesCategories = [
     {
