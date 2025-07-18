@@ -54,29 +54,6 @@ export default async function ExpertisePage({
           </div>
         </div>
 
-        {/* Case Studies Section */}
-        {caseStudies.length > 0 && (
-          <div className="mb-8">
-            <h2
-              className="text-md sm:text-2xl mb-2 sm:mb-6"
-              style={{ color: "var(--color-bc-red)" }}
-            >
-              Case Studies
-            </h2>
-            <div className="space-y-6">
-              {caseStudies.map((caseStudy) => (
-                <CaseStudyCard
-                  key={caseStudy.slug}
-                  title={caseStudy.title}
-                  slug={caseStudy.slug}
-                  industry={caseStudy.industry}
-                  heroImage={caseStudy.heroImage}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Articles Section */}
         <div className="mb-8">
           <h2
@@ -105,6 +82,29 @@ export default async function ExpertisePage({
             </div>
           )}
         </div>
+
+        {/* Case Studies Section */}
+        {caseStudies.length > 0 && (
+          <div className="mb-8">
+            <h2
+              className="text-md sm:text-2xl mb-2 sm:mb-6"
+              style={{ color: "var(--color-bc-red)" }}
+            >
+              Case Studies
+            </h2>
+            <div className="space-y-6">
+              {caseStudies.map((caseStudy) => (
+                <CaseStudyCard
+                  key={caseStudy.slug}
+                  title={caseStudy.title}
+                  slug={caseStudy.slug}
+                  industry={caseStudy.industry}
+                  heroImage={caseStudy.heroImage}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </MenuPage>
   );
