@@ -1,4 +1,4 @@
-import ArticleCard from "@/components/ArticleCard";
+import ArticleFeed from "@/components/ArticleFeed";
 import CaseStudyCard from "@/components/CaseStudyCard";
 import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
@@ -62,25 +62,7 @@ export default async function ExpertisePage({
           >
             Recent Articles
           </h2>
-          {articles.length > 0 ? (
-            <div className="space-y-6">
-              {articles.map((article) => (
-                <ArticleCard
-                  key={article.slug}
-                  title={article.title}
-                  date={article.date}
-                  slug={article.slug}
-                  tech={article.tech}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-gray-500">
-                <span className="font-bold">Coming soon</span>
-              </p>
-            </div>
-          )}
+          <ArticleFeed articles={articles} />
         </div>
 
         {/* Case Studies Section */}
