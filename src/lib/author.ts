@@ -8,6 +8,10 @@ export const authorMap: Record<string, Author> = {
     name: "Manjunath",
     imageFile: "manjunath.jpg",
   },
+  "Hemanth Kumar Kakumanu": {
+    name: "Hemanth",
+    imageFile: "manjunath.jpg",
+  },
 };
 
 export function getAuthor(authorName: string): Author | null {
