@@ -137,6 +137,14 @@
     }
   }
 
+  // Principle hero comic (first image)
+  > p:first-of-type > img,
+  > figure:first-of-type img {
+    max-width: clamp(220px, 60vw, 360px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   // Figures and captions
   figure {
     margin: 1.5rem 0;

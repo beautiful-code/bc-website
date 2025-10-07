@@ -3,7 +3,6 @@ import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
 import { expertiseAreas } from "@/lib/expertise";
-import { principlesCategories } from "@/lib/principle-category";
 import { SHOW_PRINCIPLES } from "@/lib/config";
 import "../styles/layout.scss";
 
@@ -24,7 +23,7 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-lg mx-auto">
+          <div className="max-w-xl mx-auto">
             <h2
               className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-2 text-left px-8"
               style={{ color: "var(--color-bc-red)" }}
@@ -56,40 +55,24 @@ export default function Home() {
             </div>
 
             {SHOW_PRINCIPLES && (
-              <>
-                <h2
-                  className="text-lg sm:text-3xl tracking-wider uppercase mt-12 mb-2 text-left px-8"
-                  style={{ color: "var(--color-bc-red)" }}
-                >
-                  OUR PRINCIPLES
-                </h2>
-                <div className="principles">
-                  {principlesCategories.map((category) => {
-                    return (
-                      <Link
-                        key={category.slug}
-                        href={`/principles/${category.slug}`}
-                      >
-                        <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-2 sm:py-4">
-                          <div className="flex-shrink-0">
-                            <CategoryIcon
-                              slug={category.slug}
-                              name={category.name}
-                              type="principle"
-                              className="w-8 h-8 sm:w-12 sm:h-12"
-                            />
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                              {category.name}
-                            </h3>
-                          </div>
-                        </div>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </>
+              <Link
+                href="/principles"
+                className=""
+                aria-label="Explore our engineering principles"
+              >
+                
+                  <div className="flex items-center justify-between gap-4 pl-6 py-6 hover:bg-[var(--color-bc-beige)]">
+                    <div>
+                    <h2
+                      className="text-lg sm:text-3xl tracking-wider uppercase text-left "
+                      style={{ color: "var(--color-bc-red)" }}
+                    >
+                      OUR ENGINEERING PRINCIPLES
+                    </h2>
+                    </div>
+                  </div>
+                
+              </Link>
             )}
           </div>
           <Copyright />

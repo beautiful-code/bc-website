@@ -1,14 +1,15 @@
 ---
 title: "Write Clean, Readable Code"
-category: "coding-development"
+category: "code-quality-maintainability"
 slug: "clean-code-practices"
+summary: "Code is read much more often than it is written. This fundamental truth drives our approach to software development."
 ---
 
 ![Clean Code Practices](/principles/clean-code-practices/comic.png)
 
-Code is read much more often than it is written. This fundamental truth drives our approach to software development.
 
-### Deeper Understanding
+
+### Explanation in layman terms
 
 Clean code is not just about aesthetics—it's about maintainability, collaboration, and long-term project success. When code is clean and readable:
 
@@ -19,7 +20,7 @@ Clean code is not just about aesthetics—it's about maintainability, collaborat
 
 The essence of clean code lies in its readability and maintainability. It's code that other developers (including your future self) can understand quickly and modify safely. Clean code follows established conventions, uses meaningful names, and is structured logically.
 
-### How to put it into practice?
+### Put it into practice?
 
 **Use Meaningful Names**
 Variables, functions, and classes should have names that clearly express their purpose:
