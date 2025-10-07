@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { notFound } from "next/navigation";
 import {
   getPrincipleBySlug as getPrincipleCategoryBySlug,
@@ -7,7 +7,6 @@ import {
 } from "@/lib/principle";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
-import CategoryIcon from "@/components/CategoryIcon";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import "../../../../styles/layout.scss";
 import "../../../../styles/markdown-content.scss";
@@ -26,31 +25,36 @@ export default async function PrinciplePage({
 
   const categoryInfo = getPrincipleCategoryBySlug(category);
 
+  const categoryIcon =
+    categoryInfo && (
+      <Image
+        src={`/icons/principle/${categoryInfo.iconSlug}.svg`}
+        alt={`${categoryInfo.name} icon`}
+        width={24}
+        height={24}
+        className="h-6 w-6 object-contain"
+      />
+    );
+
   const breadcrumbItems = [
     getHomeBreadcrumb(),
     ...(categoryInfo
       ? [
           {
             label: categoryInfo.name,
-            href: `/principles/${categoryInfo.slug}`,
-            icon: React.createElement(CategoryIcon, {
-              slug: categoryInfo.slug,
-              name: categoryInfo.name,
-              type: "principle",
-              isActive: true,
-              className: "w-6 h-6",
-            }),
+            href: `/principles#${principle.slug}`,
+            icon: categoryIcon,
           },
         ]
       : []),
     {
-      label: "Principle",
+      label: principle.title,
       href: undefined, // Current page, no link
     },
   ];
 
   return (
-    <MenuPage activeSlug={category}>
+    <MenuPage activeSlug="principles">
       <div className="px-4 sm:px-16">
         {/* Breadcrumb - Desktop only */}
         <div className="hidden sm:block mb-8">
@@ -60,15 +64,7 @@ export default async function PrinciplePage({
         {/* Mobile Header - Icon and Title */}
         <div className="block sm:hidden mt-2 mb-4">
           <div className="flex items-center space-x-3 mb-2">
-            {categoryInfo && (
-              <CategoryIcon
-                slug={categoryInfo.slug}
-                name={categoryInfo.name}
-                type="principle"
-                className="w-6 h-6"
-                isActive={true}
-              />
-            )}
+            {categoryIcon}
             <h1
               className="text-lg"
               style={{ color: "var(--color-bc-text-black)" }}
@@ -101,7 +97,7 @@ export default async function PrinciplePage({
         {categoryInfo && (
           <div className="pt-8 border-t border-gray-200">
             <Link
-              href={`/principles/${categoryInfo.slug}`}
+              href={`/principles#${principle.slug}`}
               className="inline-flex items-center space-x-2 text-sm hover:text-[var(--color-bc-red)] transition-colors duration-300"
               style={{ color: "var(--color-bc-text-gray)" }}
             >

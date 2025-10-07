@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import CategoryIcon from "@/components/CategoryIcon";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import {
@@ -7,7 +7,6 @@ import {
   getPrinciplesByCategory,
 } from "@/lib/principle";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
-import React from "react";
 import "../../../styles/layout.scss";
 
 export default async function PrincipleCategoryPage({
@@ -25,23 +24,27 @@ export default async function PrincipleCategoryPage({
   // Load principles from markdown files
   const principles = await getPrinciplesByCategory(category);
 
+  const categoryIcon = (
+    <Image
+      src={`/icons/principle/${currentCategory.iconSlug}.svg`}
+      alt={`${currentCategory.name} icon`}
+      width={24}
+      height={24}
+      className="h-6 w-6 object-contain"
+    />
+  );
+
   const breadcrumbItems = [
     getHomeBreadcrumb(),
     {
       label: currentCategory.name,
       href: undefined, // Current page, no link
-      icon: React.createElement(CategoryIcon, {
-        slug: currentCategory.slug,
-        name: currentCategory.name,
-        type: "principle",
-        isActive: true,
-        className: "w-6 h-6",
-      }),
+      icon: categoryIcon,
     },
   ];
 
   return (
-    <MenuPage activeSlug={category}>
+    <MenuPage activeSlug="principles">
       <div className="px-4 sm:px-16">
         {/* Breadcrumb - Desktop only */}
         <div className="hidden sm:block mb-8">
@@ -51,12 +54,12 @@ export default async function PrincipleCategoryPage({
         {/* Mobile Header - Icon and Category Name */}
         <div className="block sm:hidden mt-2 mb-4">
           <div className="flex items-center space-x-3">
-            <CategoryIcon
-              slug={category}
-              name={currentCategory.name}
-              type="principle"
-              className="w-6 h-6"
-              isActive={true}
+            <Image
+              src={`/icons/principle/${currentCategory.iconSlug}.svg`}
+              alt={`${currentCategory.name} icon`}
+              width={24}
+              height={24}
+              className="h-6 w-6 object-contain"
             />
             <h1
               className="text-lg"
@@ -80,7 +83,7 @@ export default async function PrincipleCategoryPage({
               {principles.map((principle) => (
                 <Link
                   key={principle.slug}
-                  href={`/principles/${category}/${principle.slug}`}
+                  href={`/principles/${currentCategory.slug}/${principle.slug}`}
                 >
                   <div className="border border-gray-200 rounded-lg p-4 sm:p-6 hover:bg-gray-50 transition-colors duration-300 cursor-pointer">
                     <h3
