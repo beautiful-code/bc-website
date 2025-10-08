@@ -77,6 +77,18 @@
     color: var(--color-bc-text-black);
   }
 
+  // Links
+  a {
+    color: var(--color-bc-red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
+  }
+
+  a:hover {
+    color: var(--color-bc-text-black);
+  }
+
   // Inline code styling
   code:not(pre code) {
     background-color: rgba(175, 184, 193, 0.2);
@@ -138,7 +150,8 @@
   }
 
   // Principle hero comic (first image)
-  > p:first-of-type > img,
+  > p:first-of-type > img, 
+  > p:first-of-type > a > img,
   > figure:first-of-type img {
     max-width: clamp(220px, 60vw, 360px);
     margin-left: auto;
@@ -168,14 +181,12 @@
     border-collapse: collapse;
     margin: 1.5rem 0;
     background-color: white;
+    font-family: "Courier New", Courier, monospace;
     font-size: clamp(0.75rem, 2.5vw, 1rem);
     table-layout: auto;
 
     @media (min-width: 640px) {
-      width: calc(100% - 8rem);
-      margin: 1.5rem 4rem;
-      margin-left: max(4rem, 2rem);
-      margin-right: max(4rem, 2rem);
+      width: 100%;
       font-size: 1rem;
     }
   }

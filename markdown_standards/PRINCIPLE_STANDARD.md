@@ -207,6 +207,7 @@ Add the required frontmatter at the top of the file:
 title: "Your Principle Title"
 category: "category-slug"
 slug: "your-principle-slug"
+summary: "Principle tagline or brief description to show in the principles page"
 ---
 ```
 

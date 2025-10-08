@@ -22,8 +22,8 @@ In programming, a function should be like a single kitchen appliance - it should
 
 | Action | What you'll learn |
 | :---- | :---- |
-| Watch this video [https://www.youtube.com/watch?v=rXjf8eiGsSI](https://www.youtube.com/watch?v=rXjf8eiGsSI) by Uncle Bob | How tiny a function should be. |
-| Read this article https://dev.to/56_kode/the-golden-rule-of-clean-code-functions-should-do-one-thing-3lf7 | Difference between multi-responsibility and single-responsibility functions  |
+| [Watch this Video](https://www.youtube.com/watch?v=rXjf8eiGsSI) by Uncle Bob | How tiny a function should be. |
+| [Read this article](https://dev.to/56_kode/the-golden-rule-of-clean-code-functions-should-do-one-thing-3lf7) | Difference between multi-responsibility and single-responsibility functions  |
 
 ### Put it into practice?
 
