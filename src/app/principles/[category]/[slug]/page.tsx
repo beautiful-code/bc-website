@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import path from "path";
+import { promises as fs } from "fs";
 import { notFound } from "next/navigation";
 import {
   getPrincipleBySlug as getPrincipleCategoryBySlug,
@@ -35,6 +37,27 @@ export default async function PrinciplePage({
         className="h-6 w-6 object-contain"
       />
     );
+
+  // Discover scene images (scene_01.png, scene_02.png, ...) from public/principles/<slug>
+  async function getSceneImagesForSlug(principleSlug: string): Promise<string[]> {
+    try {
+      const dir = path.join(process.cwd(), "public", "principles", principleSlug);
+      const files = await fs.readdir(dir);
+      const sceneFiles = files
+        .filter((name) => /^scene_\d+\.(png|jpe?g|webp|gif|svg)$/i.test(name))
+        .sort((a, b) => {
+          const aNum = parseInt(a.match(/\d+/)?.[0] ?? "0", 10);
+          const bNum = parseInt(b.match(/\d+/)?.[0] ?? "0", 10);
+          return aNum - bNum;
+        })
+        .map((name) => `/principles/${principleSlug}/${name}`);
+      return sceneFiles;
+    } catch {
+      return [];
+    }
+  }
+
+  const sceneImages = await getSceneImagesForSlug(principle.slug);
 
   const breadcrumbItems = [
     getHomeBreadcrumb(),
@@ -84,10 +107,50 @@ export default async function PrinciplePage({
           </h1>
         </div>
 
+        {/* Comic Strip (scenes) */}
+        {sceneImages.length > 0 && (
+          <div className="mb-8">
+            {/* Mobile: 2x2 grid, center each image, cap height 300px */}
+            <div className="grid grid-cols-2 gap-2 sm:hidden">
+              {sceneImages.map((src, index) => (
+                <div key={index} className="flex items-center justify-center">
+                  <Image
+                    src={src}
+                    alt={`Scene ${index + 1}`}
+                    width={600}
+                    height={600}
+                    className="w-auto h-auto max-h-[300px] object-contain rounded"
+                  />
+                </div>
+              ))}
+            </div>
+            {/* Tablet/Desktop: centered horizontal strip with optional scroll, cap height 300px */}
+            <div className="hidden sm:block w-full">
+              <div className="w-full overflow-x-auto">
+                <div className="inline-flex items-center justify-center gap-3 w-max mx-auto">
+                  {sceneImages.map((src, index) => (
+                    <div key={index} className="flex items-center justify-center">
+                      <Image
+                        src={src}
+                        alt={`Scene ${index + 1}`}
+                        width={600}
+                        height={600}
+                        className="w-auto h-auto max-h-[300px] object-contain rounded"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Principle Content */}
         <div className="markdown-content max-w-none mb-12">
           <div
-            className="font-[family-name:var(--font-nunito-sans)] leading-relaxed"
+            className={`font-[family-name:var(--font-nunito-sans)] leading-relaxed ${
+              sceneImages.length > 0 ? "has-comic-strip" : ""
+            }`}
             style={{ color: "var(--color-bc-text-black)" }}
             dangerouslySetInnerHTML={{ __html: principle.content }}
           />

@@ -158,6 +158,12 @@
     margin-right: auto;
   }
 
+  // When a custom comic strip is present, hide the first image/figure from markdown
+  .has-comic-strip > p:first-of-type,
+  .has-comic-strip > figure:first-of-type {
+    display: none;
+  }
+
   // Figures and captions
   figure {
     margin: 1.5rem 0;
