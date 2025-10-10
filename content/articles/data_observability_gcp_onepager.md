@@ -1,8 +1,17 @@
 ---
 title: "Build vs. Buy for Data Observability: Time-to-Signal Determines ROI"
-expertise-area: "Data Engineering"
+expertise: data-engineering
 slug: "build-vs-buy-data-observability"
-techtags: ["bigquery", "googlecloud", "kafka", "airflow", "databricks", "montecarlo", "terraform"]
+tech:
+  [
+    "bigquery",
+    "googlecloud",
+    "kafka",
+    "airflow",
+    "databricks",
+    "montecarlo",
+    "terraform",
+  ]
 date: "2025-10-09"
 author: "BeautifulCode"
 keytakeaway: "Choose build or buy based on time-to-signal for your first critical alerts, not feature completeness, and always own the raw observability data layer to retain optionability as your pipeline architecture evolves."
@@ -18,13 +27,13 @@ Building observability infrastructure creates a permanent maintenance surface th
 
 #### Artifact: Maintenance Burden Comparison
 
-| **Recurring Task** | **Build** | **Buy** |
-|--------------|-----------|---------|
-| Adding new tables to monitoring | Write freshness query, set alert thresholds, update dashboards manually | Connector auto-discovers tables, computes baseline within 24 hours |
-| Handling schema changes | Debug SQL failures, rewrite check logic, backfill historical baselines | Vendor detects change, fires alert, updates lineage graph automatically |
-| Reducing alert noise | Manually tune thresholds each time data patterns shift, update runbooks | ML-driven baseline adapts to seasonal patterns, surfaces anomaly scores |
-| Knowledge transfer when owner leaves | New engineer reverse-engineers queries, tribal knowledge from Slack threads | Vendor documentation and support, baseline logic persists in platform |
-| Tracing upstream dependencies during incidents | Parse Dataform YAML or dbt manifest, write custom lineage scripts | Click table in UI, view full lineage graph with last-run metadata |
+| **Recurring Task**                             | **Build**                                                                   | **Buy**                                                                 |
+| ---------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Adding new tables to monitoring                | Write freshness query, set alert thresholds, update dashboards manually     | Connector auto-discovers tables, computes baseline within 24 hours      |
+| Handling schema changes                        | Debug SQL failures, rewrite check logic, backfill historical baselines      | Vendor detects change, fires alert, updates lineage graph automatically |
+| Reducing alert noise                           | Manually tune thresholds each time data patterns shift, update runbooks     | ML-driven baseline adapts to seasonal patterns, surfaces anomaly scores |
+| Knowledge transfer when owner leaves           | New engineer reverse-engineers queries, tribal knowledge from Slack threads | Vendor documentation and support, baseline logic persists in platform   |
+| Tracing upstream dependencies during incidents | Parse Dataform YAML or dbt manifest, write custom lineage scripts           | Click table in UI, view full lineage graph with last-run metadata       |
 
 ### Coverage Before Depth for Early Wins
 

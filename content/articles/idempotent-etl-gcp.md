@@ -1,8 +1,8 @@
 ---
 title: "Stage-Hash-MERGE: Building Rerun-Safe ETL Pipelines on BigQuery"
-expertise-area: "Data Engineering"
+expertise: data-engineering
 slug: "stage-hash-merge-building-rerun-safe-etl-pipelines-on-bigquery"
-techtags: ["bigquery", "googlecloud", "airflow", "python"]
+tech: ["bigquery", "googlecloud", "airflow", "python"]
 date: "2025-10-09"
 author: "BeautifulCode"
 keytakeaway: "Idempotent ETL on GCP requires staging with deterministic hashes, overlapping watermarks committed only after successful publish, file generation tracking via manifests, range-driven task design, and validation guardrails before production writes, making arbitrary reruns and backfills safe by construction."
@@ -21,7 +21,7 @@ Idempotent loads require three architectural decisions working together. First, 
 ```sql
 MERGE `project.dataset.prod_table` AS target
 USING (
-  SELECT 
+  SELECT
     natural_key,
     field_a,
     field_b,

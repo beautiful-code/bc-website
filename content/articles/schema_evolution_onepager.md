@@ -1,8 +1,8 @@
 ---
 title: "Versioned Views as Consumer Contracts: Safe Schema Evolution in Production Pipelines"
-expertise-area: "Data Engineering"
+expertise: data-engineering
 slug: "versioned-views-consumer-contracts"
-techtags: ["kafka", "bigquery", "airflow", "redshift", "databricks"]
+tech: ["kafka", "bigquery", "airflow", "redshift", "databricks"]
 date: "2025-10-09"
 author: "BeautifulCode"
 keytakeaway: "Versioned views decouple storage evolution from consumer contracts, making additive changes instant safe and breaking changes manageable through controlled dual run windows enforced by CI."
@@ -18,12 +18,12 @@ Land all incoming data into a mutable base table where the physical schema can e
 
 **Versioned View Strategy:**
 
-| Change Type | Base Table Action | View Strategy | Consumer Impact |
-|-------------|------------------|---------------|-----------------|
-| Add nullable column | Add to base, backfill nulls | Ship v2 with new field | v1 unaffected, v2 adopts on schedule |
-| Rename column | Add new, dual-write both | v2 maps new name, v1 keeps old | Zero downtime, dual-run period |
-| Type change | Add typed column alongside | v2 exposes new type | v1 continues with old type |
-| Remove column | Stop writing, keep in base | Omit from v2, sunset v1 after cutoff | Track usage, announce deprecation |
+| Change Type         | Base Table Action           | View Strategy                        | Consumer Impact                      |
+| ------------------- | --------------------------- | ------------------------------------ | ------------------------------------ |
+| Add nullable column | Add to base, backfill nulls | Ship v2 with new field               | v1 unaffected, v2 adopts on schedule |
+| Rename column       | Add new, dual-write both    | v2 maps new name, v1 keeps old       | Zero downtime, dual-run period       |
+| Type change         | Add typed column alongside  | v2 exposes new type                  | v1 continues with old type           |
+| Remove column       | Stop writing, keep in base  | Omit from v2, sunset v1 after cutoff | Track usage, announce deprecation    |
 
 This approach turns additive changes into instant safe operations while giving breaking changes a controlled migration window.
 
