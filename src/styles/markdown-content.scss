@@ -43,6 +43,7 @@
     color: var(--color-bc-red);
   }
 
+
   // Paragraph spacing
   p {
     margin-bottom: 0.5rem;
@@ -99,7 +100,7 @@
     position: relative;
 
     @media (min-width: 640px) {
-      margin: 1.5rem 4rem;
+      // margin: 1.5rem 4rem;
     }
 
     code {

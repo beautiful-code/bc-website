@@ -76,7 +76,7 @@ export default async function CaseStudyPage({
         </div>
 
         {/* Hero Image */}
-        {caseStudy.heroImage && (
+        {/* {caseStudy.heroImage && (
           <div className="mb-8">
             <Image
               src={caseStudy.heroImage}
@@ -86,7 +86,7 @@ export default async function CaseStudyPage({
               className="w-full h-[200px] sm:h-[400px] object-cover rounded-lg"
             />
           </div>
-        )}
+        )} */}
 
         {/* Case Study Header */}
         <div className="mb-8">
