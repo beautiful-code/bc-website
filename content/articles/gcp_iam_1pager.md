@@ -1,8 +1,8 @@
 ---
 title: "Service-Account-Per-Pipeline: Confining Blast Radius in GCP Data Workloads"
-expertise-area: "Data Engineering"
+expertise: data-engineering
 slug: "service-account-per-pipeline-confining-blast-radius-in-gcp-data-workloads"
-techtags: ["googlecloud", "bigquery", "airflow", "terraform"]
+tech: ["googlecloud", "bigquery", "airflow", "terraform"]
 date: "2025-10-09"
 author: "BeautifulCode"
 keytakeaway: "Treating each pipeline as its own identity with dataset-scoped roles transforms IAM from a convenience layer into a containment system that limits damage, surfaces misconfigurations, and keeps privilege grants explicit and auditable."
@@ -18,12 +18,12 @@ Project-level grants like `bigquery.admin` hand out sweeping powers that few pip
 
 **Artifact: Minimal Role Matrix**
 
-| Pipeline Stage | Dataset | Role | Justification |
-|---|---|---|---|
-| Ingestion | `raw_events` | `bigquery.dataEditor` | Append-only writes |
-| Transformation | `staging` | `bigquery.dataEditor` | MERGE/UPDATE operations |
-| Analytics | `curated` | `bigquery.dataViewer` | Read-only reporting |
-| Break-glass | All datasets | `bigquery.admin` (time-boxed) | Emergency fixes with approval |
+| Pipeline Stage | Dataset      | Role                          | Justification                 |
+| -------------- | ------------ | ----------------------------- | ----------------------------- |
+| Ingestion      | `raw_events` | `bigquery.dataEditor`         | Append-only writes            |
+| Transformation | `staging`    | `bigquery.dataEditor`         | MERGE/UPDATE operations       |
+| Analytics      | `curated`    | `bigquery.dataViewer`         | Read-only reporting           |
+| Break-glass    | All datasets | `bigquery.admin` (time-boxed) | Emergency fixes with approval |
 
 ### Narrow Capabilities for Write Paths
 
