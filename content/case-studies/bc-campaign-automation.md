@@ -38,6 +38,14 @@ technologies:
 
 The initial hurdle involved comprehending the intricacies of the Ad-Tech domain. A significant amount of time was spent in collaborating with Business Analysts to grasp the nuances including aspects such as Bids, Targeting, Viewability, Ad Frequency, Campaign Goals, Budget, Margins, and the overall Campaign life cycle.
 
+
+<figure>
+  <img src="/case-studies/bc-campaign-automation/campaign_setup_automation_diagram.png" alt="Campaign Setup Solution Architecure diagram" />
+  <figcaption>
+    Campaign Setup Solution Architecure
+  </figcaption>
+</figure>
+
 The source data for campaign setup from different systems had been examined. Integrations for the CRM system (Salesforce), the warehouse (BQ), and various internal systems had been built to fetch data for campaign setup.
 
 ### Rule Engine & Setup Strategies Framework & React App
