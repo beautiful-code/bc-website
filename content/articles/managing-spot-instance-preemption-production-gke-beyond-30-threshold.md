@@ -1,10 +1,10 @@
 ---
 title: "Managing Spot Instance Preemption in Production GKE: Beyond the 30% Threshold"
-expertise: infrastructure-reliability
+expertise: "infrastructure-reliability"
 slug: managing-spot-instance-preemption-production-gke-beyond-30-threshold
 tech: [kubernetes, googlecloud, terraform, grafana]
 date: 2025-10-10
-author: BeautifulCode
+author: "BeautifulCode"
 keytakeaway: "GKE Spot preemption rates above 30% require intervention through instance family switches, region shifts, or adjusted Spot-to-on-demand ratios to maintain production reliability."
 ---
 
