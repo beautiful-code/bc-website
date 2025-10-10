@@ -46,9 +46,16 @@ technologies:
 
 We studied diverse data systems such as SharePoint, S3 buckets, API endpoints, and SFTP, through which companies share their first-party data. The goal was to extract data from these systems and place it into company-specific buckets for isolation and security compliance. Integrating each new system posed challenges, especially in understanding unique processes like authentication and downloading. To address this, we thoroughly analyzed these systems and developed tailored libraries. We also built an easy to use interfaces to access these libraries for simpler integration with different data systems.
 
+<figure>
+  <img src="/case-studies/bc-bigdata-engineering/implementation_architecture_diagram.png" alt="Implementation Architecure diagram" />
+  <figcaption>
+    Implementation Architecure diagram
+  </figcaption>
+</figure>
+
 ### Cleansing and Transformation pipeline stages
 
-*(Stages as per source case study.) artifact*
+
 
 Our data exists in various formats, including Avro, JSON, and CSV, among others. Each of these formats necessitates distinct data pipeline operations, such as cleaning and transformation, to be defined separately. To streamline this process, our strategy involves converting all these diverse data formats into a common CSV format. This uniformity allows us to run the data through the same pipeline efficiently. Additionally, this approach simplifies our optimization efforts, as we only need to focus on enhancing the processing of the CSV format, rather than tweaking the pipeline for every different format. This method not only standardizes our data processing but also significantly boosts efficiency and consistency across our operations.
 

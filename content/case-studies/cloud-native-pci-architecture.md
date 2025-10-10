@@ -62,6 +62,13 @@ We designed the architecture by dividing services into two distinct groups:
 
 This approach allowed us to deploy these groups in their respective Kubernetes clusters and subnets, shared within a common Virtual Private Cloud (VPC).
 
+<figure>
+  <img src="/case-studies/cloud-native-pci-architecture/generalized_architecture _diagram.png" alt="Generalised Architecure diagram" />
+  <figcaption>
+    Generalised Architecure Diagram
+  </figcaption>
+</figure>
+
 Here are the key implementations we carried out to address each PCI DSS requirements:
 
 

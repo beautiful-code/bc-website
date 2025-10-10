@@ -57,6 +57,14 @@ We evaluated Golang's suitability by migrating a critical component of the syste
 We created a solution powered by Generative AI that facilitates the migration of business logic from Python to GoLang. This is achieved through the use of OpenAI 3.5-Turbo and a range of customised prompts. Additionally, we have crafted unique workflows for developers to include split-screen interfaces that display both the original Python code and the migrated GoLang code side by side, along other relevant information to aid in the migration process.
 
 
+<figure>
+  <img src="/case-studies/python-to-golang-genai-migration/application_view.png" alt="An illustration of the proprietary conversion tool" />
+  <figcaption>
+    An illustration of the proprietary conversion tool
+  </figcaption>
+</figure>
+
+
 Our solution worked well, but it wasn't perfect for the following cases
 
 - Variations in data structures between Python and GoLang led to conversion issues. A prime example is the translation of Python dictionaries into Go maps, which necessitated extra measures to manage nil values and specific key types  
