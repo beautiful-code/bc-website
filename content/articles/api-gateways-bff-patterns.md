@@ -1,5 +1,5 @@
 ---
-title: API Gateways and Backend-for-Frontend: Decoupling Client Contracts from Backend Evolution
+title: "API Gateways and Backend-for-Frontend: Decoupling Client Contracts from Backend Evolution"
 expertise: "backend-engineering"
 slug: api-gateways-bff-patterns
 tech: ["graphql", "docker", "kubernetes"]
