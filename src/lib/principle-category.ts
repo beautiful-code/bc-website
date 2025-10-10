@@ -14,7 +14,6 @@ export const principlesCategories: PrincipleCategory[] = [
       "Clarity and consistency keep production calm and shipping predictable.",
     iconSlug: "code-quality-maintainability",
     principleSlugs: [
-      "clean-code-practices",
       "one-function-one-job",
       "name-things-clearly",
       "duplicate-logic-is-a-liability",
