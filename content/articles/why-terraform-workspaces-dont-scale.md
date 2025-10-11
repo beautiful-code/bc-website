@@ -1,7 +1,7 @@
 ---
 title: "Why Workspaces Don't Scale: Directory-per-Environment and Remote State Isolation in Terraform"
 expertise: "infrastructure-reliability"
-slug: why-workspaces-dont-scale
+slug: why-terraform-workspaces-dont-scale
 tech: [terraform, googlecloud, docker, kubernetes, githubactions, circleci]
 date: 2025-10-10
 author: BeautifulCode
