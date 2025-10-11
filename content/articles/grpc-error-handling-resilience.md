@@ -2,7 +2,7 @@
 title: "Granular Error Handling in gRPC: Beyond HTTP Status Codes"
 expertise: "backend-engineering"
 slug: grpc-error-handling-resilience
-tech: ["grpc", "golang"]
+tech: ["grpc"]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: gRPC's granular status codes and deadline propagation eliminate the guesswork of HTTP-based error handling, enabling intelligent client-side resilience and cross-service timeout coordination in microservice architectures.

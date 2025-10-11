@@ -2,7 +2,7 @@
 title: "Securing Token Flows: OAuth 2.0 Authorization Code with PKCE vs Implicit Grant in Modern SPAs"
 expertise: "backend-engineering"
 slug: oauth-oidc-pkce-token-security
-tech: ["oauth"]
+tech: ["authorization"]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: OAuth 2.0 with PKCE and refresh token rotation provides defense-in-depth security for modern SPAs, while hybrid token validation strategies balance latency and revocation needs in distributed backends.

@@ -2,7 +2,7 @@
 title: "gRPC Streaming Patterns: Flow Control and Backpressure in HTTP/2"
 expertise: "backend-engineering"
 slug: grpc-streaming-patterns-flow-control
-tech: ["grpc", "golang"]
+tech: ["grpc"]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: gRPC streaming with HTTP/2 flow control enables efficient, scalable communication by preventing resource exhaustion and adapting to client processing speed through automatic backpressure mechanisms.

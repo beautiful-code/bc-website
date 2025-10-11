@@ -2,7 +2,7 @@
 title: "Layered Caching in Rails: From View Fragments to Query-Level Optimization"
 expertise: "backend-engineering"
 slug: layered-caching-rails
-tech: ["rubyonrails", "redis", "performance", "caching", "backend"]
+tech: ["rubyonrails"]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: Use fragment caching with timestamp-based invalidation for views, Russian Doll patterns for hierarchies, and low-level Rails.cache for arbitrary data while leveraging automatic query caching within requests.

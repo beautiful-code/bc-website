@@ -2,7 +2,7 @@
 title: "ACID vs BASE: Consistency Trade-offs in Distributed Systems"
 expertise: "backend-engineering"
 slug: "acid-vs-base-distributed-consistency"
-tech: ["distributed-systems", "database-design", "consistency-models", "transaction-patterns", "scalability"]
+tech: ["distributed-systems", "database-design"]
 date: "2025-10-10"
 author: "BeautifulCode"
 keytakeaway: "ACID guarantees strong consistency through coordination overhead and reduced availability, while BASE trades immediate consistency for high availability and requires application logic to handle conflicts."
