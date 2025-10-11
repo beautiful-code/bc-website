@@ -2,7 +2,7 @@
 title: "Zero-Downtime Secret Rotation in GKE: Eliminating Credential Leaks with GCP Secret Manager"
 expertise: "infrastructure-reliability"
 slug: zero-downtime-secret-rotation-gke
-tech: ["kubernetes", "googlecloud", "docker", "terraform"]
+tech: ["kubernetes", "googlecloud", "terraform"]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Runtime secret injection via external-secrets operator combined with IAM conditions and versioned rotation eliminates credential leaks while enabling zero-downtime updates and compliance-ready audit trails."

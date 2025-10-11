@@ -2,7 +2,7 @@
 title: "When Service Mesh Solves Real Problems vs. Creating New Ones in Multi-Service Environments"
 expertise: infrastructure-reliability
 slug: service-mesh-cost-benefit-analysis
-tech: [kubernetes, istio, envoy]
+tech: [kubernetes, istio]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Service mesh delivers zero-trust security and advanced traffic management for complex microservice architectures, but only after validating that your environment truly needs these capabilities beyond what simpler alternatives like Gateway API provide."
