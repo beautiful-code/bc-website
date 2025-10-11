@@ -2,7 +2,7 @@
 title: "Building Production LLM Agents: Beyond ReAct to Multi-Memory Systems"
 expertise: ai-applied-ml
 slug: building-production-llm-agents-beyond-react-to-multi-memory-systems
-tech: ["openai", "langchain", "langgraph"]
+tech: ["adk", "vertexai", "langgraph"]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Production LLM agents require explicit planning mechanisms, multi-tiered memory systems, robust tool integration with error handling, and thoughtful coordination patterns when scaling to multi-agent architectures."

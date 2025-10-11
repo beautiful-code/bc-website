@@ -2,7 +2,7 @@
 title: "Context Engineering Beyond Embeddings: Attention Dilution and Hierarchical Organization in RAG Systems"
 expertise: ai-applied-ml
 slug: context-engineering-beyond-embeddings
-tech: [openai, langchain, anthropic]
+tech: [llamaindex]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "RAG performance is constrained not by retrieval quality but by attention dilution—context engineering requires multi-stage filtering, hierarchical organization, and dynamic evolution to maximize value within limited context windows."

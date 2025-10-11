@@ -2,7 +2,7 @@
 title: "Orchestrating External Tool Access in Production AI Agents"
 expertise: ai-applied-ml
 slug: orchestrating-external-tool-access-in-production-ai-agents
-tech: [openai, anthropic, langchain]
+tech: [langgraph, tavily, pinecone]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Tool-using AI agents extend language models into dynamic systems that interact with external services, but production deployments require rigorous error handling, security boundaries, and operational monitoring to ensure reliable performance."

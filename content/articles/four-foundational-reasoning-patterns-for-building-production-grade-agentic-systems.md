@@ -2,7 +2,7 @@
 title: "Four Foundational Reasoning Patterns for Building Production-Grade Agentic Systems"
 expertise: "ai-applied-ml"
 slug: "four-foundational-reasoning-patterns-for-building-production-grade-agentic-systems"
-tech: ["openai", "anthropic", "langchain"]
+tech: ["adk", "claude", "litellm"]
 date: "2025-10-10"
 author: "BeautifulCode"
 keytakeaway: "Production agentic systems gain reliability and capability by combining Reflection for quality, Tool Use for extending reach, Planning for task decomposition, and Multi-Agent Collaboration for specialized workflows."

@@ -2,7 +2,7 @@
 title: "RAG as a Precision Filter: Why Retrieval Still Matters with 2M+ Context Windows"
 expertise: ai-applied-ml
 slug: rag-precision-filter-2m-context-windows
-tech: [openai, langchain, pytorch]
+tech: [gemini, llamaindex, pinecone]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "RAG remains essential in the era of massive context windows by serving as a precision filter that solves cost, latency, and attention distribution challenges while enabling dynamic data access that static context windows cannot provide."
