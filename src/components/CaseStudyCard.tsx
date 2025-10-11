@@ -40,7 +40,7 @@ export default function CaseStudyCard({
               alt={title}
               width={120}
               height={80}
-              className="rounded-lg object-cover w-[120px] h-[80px] sm:w-[160px] sm:h-[100px]"
+              className="rounded-lg object-cover w-[120px] h-[80px] sm:w-[160px]  border border-gray-200"
             />
           </div>
         </div>

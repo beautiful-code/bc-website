@@ -76,17 +76,17 @@ export default async function CaseStudyPage({
         </div>
 
         {/* Hero Image */}
-        {/* {caseStudy.heroImage && (
+        {caseStudy.heroImage && (
           <div className="mb-8">
             <Image
               src={caseStudy.heroImage}
               alt={caseStudy.title}
               width={800}
               height={400}
-              className="w-full h-[200px] sm:h-[400px] object-cover rounded-lg"
+              className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg border border-gray-200"
             />
           </div>
-        )} */}
+        )}
 
         {/* Case Study Header */}
         <div className="mb-8">
