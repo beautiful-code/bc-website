@@ -24,10 +24,6 @@ export const expertiseAreas: ExpertiseArea[] = [
     name: "Data Engineering",
     slug: "data-engineering",
   },
-  {
-    name: "Software Maintenance",
-    slug: "software-maintenance",
-  },
 ];
 
 export function getExpertiseBySlug(slug: string): ExpertiseArea | null {
