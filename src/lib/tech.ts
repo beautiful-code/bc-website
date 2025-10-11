@@ -23,7 +23,6 @@ export const techStack: Tech[] = [
   { name: "DeepSeek", slug: "deepseek" },
   { name: "Django", slug: "django" },
   { name: "Docker", slug: "docker" },
-  { name: "Envoy", slug: "envoy" },
   { name: ".NET", slug: "dotnet" },
   { name: "Express.js", slug: "expressjs" },
   { name: "FastAPI", slug: "fastapi" },
