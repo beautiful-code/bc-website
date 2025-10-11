@@ -13,7 +13,7 @@ export const expertiseAreas: ExpertiseArea[] = [
     slug: "backend-engineering",
   },
   {
-    name: "AI & Applied ML",
+    name: "Applied AI",
     slug: "ai-applied-ml",
   },
   {

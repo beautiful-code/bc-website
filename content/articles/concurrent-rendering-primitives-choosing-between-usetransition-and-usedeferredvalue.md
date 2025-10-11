@@ -1,5 +1,5 @@
 ---
-title: "Concurrent Rendering Primitives: Choosing Between useTransition and useDeferredValue"
+title: "Concurrent Rendering Primitives: Choosing Between useTransition and useDeferredValue Concurrent Rendering Primitives useDeferredValue"
 expertise: frontend-engineering
 slug: concurrent-rendering-primitives-choosing-between-usetransition-and-usedeferredvalue
 tech: [react, typescript, nextjs]

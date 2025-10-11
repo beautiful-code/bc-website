@@ -47,7 +47,9 @@ export default function ArticleFeed({ articles }: ArticleFeedProps) {
         {articles.map((article, index) => (
           <div
             key={article.slug}
-            className={index >= displayedCount ? "hidden" : ""}
+            className={`${
+              index >= displayedCount ? "hidden" : ""
+            } py-4 -my-2 px-4 -mx-4 rounded-lg transition-colors duration-200 hover:bg-gray-50`}
           >
             <ArticleCard
               title={article.title}
@@ -57,13 +59,12 @@ export default function ArticleFeed({ articles }: ArticleFeedProps) {
           </div>
         ))}
       </div>
-
       {hasMore && (
-        <div className="mt-8 text-left">
+        <div className="mt-4 text-left">
           <button
             onClick={handleLoadMore}
             disabled={loading}
-            className="inline-flex items-center space-x-2 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="inline-flex items-center space-x-2 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
             <span className="text-sm font-normal">
               {loading ? "Loading..." : "Load More"}
