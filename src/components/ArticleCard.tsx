@@ -1,21 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
-import { formatDate } from "@/lib/utils/date";
 
 interface ArticleCardProps {
   title: string;
-  date: string;
   slug: string;
   tech: string[];
 }
 
-export default function ArticleCard({
-  title,
-  date,
-  slug,
-  tech,
-}: ArticleCardProps) {
+export default function ArticleCard({ title, slug, tech }: ArticleCardProps) {
   return (
     <div className="font-[family-name:var(--font-nunito-sans)]">
       <div>
@@ -50,12 +43,6 @@ export default function ArticleCard({
               );
             })}
           </div>
-          <span
-            className="text-sm font-medium"
-            style={{ color: "var(--color-bc-text-gray)" }}
-          >
-            {formatDate(date)}
-          </span>
         </div>
       </div>
     </div>

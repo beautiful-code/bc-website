@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import ArticleCard from "./ArticleCard";
-import { ARTICLES_PER_LOAD } from "@/lib/config";
+import {
+  ARTICLES_PER_INITIAL_LOAD,
+  ARTICLES_PER_LOAD_MORE,
+} from "@/lib/config";
 import { ArticleMetadata } from "@/lib/article";
 
 interface ArticleFeedProps {
@@ -10,7 +13,9 @@ interface ArticleFeedProps {
 }
 
 export default function ArticleFeed({ articles }: ArticleFeedProps) {
-  const [displayedCount, setDisplayedCount] = useState(ARTICLES_PER_LOAD);
+  const [displayedCount, setDisplayedCount] = useState(
+    ARTICLES_PER_INITIAL_LOAD
+  );
   const [loading, setLoading] = useState(false);
 
   const hasMore = displayedCount < articles.length;
@@ -20,7 +25,7 @@ export default function ArticleFeed({ articles }: ArticleFeedProps) {
     // Simulate loading delay for better UX
     setTimeout(() => {
       setDisplayedCount((prev) =>
-        Math.min(prev + ARTICLES_PER_LOAD, articles.length)
+        Math.min(prev + ARTICLES_PER_LOAD_MORE, articles.length)
       );
       setLoading(false);
     }, 200);
@@ -46,7 +51,6 @@ export default function ArticleFeed({ articles }: ArticleFeedProps) {
           >
             <ArticleCard
               title={article.title}
-              date={article.date}
               slug={article.slug}
               tech={article.tech}
             />

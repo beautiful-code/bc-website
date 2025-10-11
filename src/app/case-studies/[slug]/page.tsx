@@ -115,12 +115,12 @@ export default async function CaseStudyPage({
               >
                 Problem Statement
               </h2>
-              <blockquote
+              <p
                 className="text-lg sm:text-xl leading-relaxed font-[family-name:var(--font-nunito-sans)]"
                 style={{ color: "var(--color-bc-text-black)" }}
               >
-                &ldquo;{caseStudy.problemStatement}&rdquo;
-              </blockquote>
+                {caseStudy.problemStatement}
+              </p>
             </div>
 
             {/* Client Info */}
