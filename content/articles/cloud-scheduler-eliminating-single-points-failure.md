@@ -2,7 +2,7 @@
 title: "From VM Cron Daemons to Cloud Scheduler: Eliminating Single Points of Failure in Job Orchestration"
 expertise: "infrastructure-reliability"
 slug: cloud-scheduler-eliminating-single-points-failure
-tech: [googlecloud, kubernetes]
+tech: [googlecloudscheduler, kubernetes]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Cloud Scheduler eliminates the operational burden and single points of failure inherent in VM-based cron by providing managed scheduling with automatic failover, reducing costs by 80-95% while improving reliability through built-in retry mechanisms and comprehensive observability."

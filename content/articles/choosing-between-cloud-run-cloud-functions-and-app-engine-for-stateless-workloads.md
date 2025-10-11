@@ -2,7 +2,7 @@
 title: "Choosing Between Cloud Run, Cloud Functions, and App Engine for Stateless Workloads"
 expertise: "infrastructure-reliability"
 slug: choosing-between-cloud-run-cloud-functions-and-app-engine-for-stateless-workloads
-tech: ["googlecloud", "docker"]
+tech: ["googlecloudrun", "googlecloudfunctions", "googlecloudappengine"]
 date: 2025-10-11
 author: BeautifulCode
 keytakeaway: "Cloud Run provides the most versatile serverless foundation through container portability, while Cloud Functions optimizes for event-driven glue code, and App Engine Standard delivers the fastest cold starts with managed infrastructure at the cost of runtime flexibility."
