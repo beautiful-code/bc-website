@@ -3,7 +3,7 @@ title: "BigQuery Slots: When Flat-Rate Beats On-Demand"
 expertise: data-engineering
 slug: bigquery-slots-when-flat-rate-beats-on-demand
 tech: [bigquery, terraform]
-date: 2025-10-11
+date: 2025-10-12
 author: BeautifulCode
 keytakeaway: "Flat-rate slots deliver cost predictability and capacity guarantees for steady workloads, but query optimization through partitioning, clustering, and incremental models must precede any pricing migration to avoid amplifying inefficiencies."
 ---

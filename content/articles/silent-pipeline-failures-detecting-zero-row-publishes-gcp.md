@@ -2,8 +2,8 @@
 title: "Silent Pipeline Failures: Detecting Zero-Row Publishes on GCP"
 expertise: data-engineering
 slug: "silent-pipeline-failures-detecting-zero-row-publishes-gcp"
-tech: ["bigquery", "airflow", "kafka", "googlecloud", "dataform"]
-date: "2025-10-09"
+tech: ["googlecloud", "airflow"]
+date: "2025-10-14"
 author: "BeautifulCode"
 keytakeaway: "Monitoring task execution status is insufficient for data pipelines; layer heartbeat rows, freshness SLIs, volume bands, DLQ backlog alerts, and synthetic canaries to detect zero-row publishes before they become business incidents."
 ---

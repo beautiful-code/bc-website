@@ -2,8 +2,8 @@
 title: "Versioned Views as Consumer Contracts: Safe Schema Evolution in Production Pipelines"
 expertise: data-engineering
 slug: "versioned-views-consumer-contracts"
-tech: ["kafka", "bigquery", "airflow", "redshift", "databricks"]
-date: "2025-10-09"
+tech: ["sql"]
+date: "2025-10-14"
 author: "BeautifulCode"
 keytakeaway: "Versioned views decouple storage evolution from consumer contracts, making additive changes instant safe and breaking changes manageable through controlled dual run windows enforced by CI."
 ---

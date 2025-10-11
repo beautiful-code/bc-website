@@ -4,9 +4,8 @@ expertise: data-engineering
 slug: the-hidden-cost-of-federated-queries-between-bigquery-and-cloud-sql
 tech:
   - bigquery
-  - googlecloud
   - mysql
-date: 2025-10-11
+date: 2025-10-12
 author: BeautifulCode
 keytakeaway: "Federated queries between BigQuery and Cloud SQL are best reserved for small, real-time lookups; materialize larger datasets into BigQuery to avoid compounding network, compute, and cost overhead on every scan."
 ---
@@ -21,12 +20,12 @@ Predicate pushdown means filtering happens at the source before data crosses the
 
 **Artifact: When Predicate Pushdown Fails**
 
-| Query Pattern | Pushdown Behavior | What Actually Happens |
-|---------------|-------------------|--------|
-| Simple WHERE on indexed column | Pushed to Cloud SQL | Cloud SQL filters first, minimal transfer |
-| Complex JOIN with subqueries | Not pushed, full scan | All rows transferred, then joined in BigQuery |
-| Aggregations with CASE expressions | Partially pushed | Some filtering at source, rest after transfer |
-| Window functions over federated table | Not pushed | Entire table transferred for BigQuery to process |
+| Query Pattern                         | Pushdown Behavior     | What Actually Happens                            |
+| ------------------------------------- | --------------------- | ------------------------------------------------ |
+| Simple WHERE on indexed column        | Pushed to Cloud SQL   | Cloud SQL filters first, minimal transfer        |
+| Complex JOIN with subqueries          | Not pushed, full scan | All rows transferred, then joined in BigQuery    |
+| Aggregations with CASE expressions    | Partially pushed      | Some filtering at source, rest after transfer    |
+| Window functions over federated table | Not pushed            | Entire table transferred for BigQuery to process |
 
 ### Cost Compounding on Re-Scans
 

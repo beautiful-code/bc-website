@@ -2,7 +2,7 @@
 title: "Audit-Ready Data Pipelines: PII Governance in BigQuery + Dataflow"
 expertise: data-engineering
 slug: audit-ready-data-pipelines-pii-governance-bigquery-dataflow
-tech: [bigquery, dataflow, googlecloud]
+tech: [bigquery, dataflow]
 date: 2025-10-11
 author: BeautifulCode
 keytakeaway: "Enforce PII governance at pipeline build time through CI-gated policy tags, provenance logs, and deterministic tokenization, then expose data only via views that join consent and masking logic to make compliance verifiable by design."
@@ -16,12 +16,12 @@ Traditional data governance relies on post-deployment audits to catch untagged s
 
 **Artifact: Queryable Access Patterns**
 
-| Metric | Source | Detection Logic |
-|--------|--------|-----------------|
-| Principal queries on PII columns | BigQuery Audit Logs + INFORMATION_SCHEMA | Join job metadata with Data Catalog tags |
-| Row counts scanned | INFORMATION_SCHEMA.JOBS | Extract from "totalSlotMs" and "billedBytes" |
-| Egress size anomalies | VPC Flow Logs + Cloud Logging | Threshold alerts on bucket exports |
-| Unauthorized table access | Cloud Audit Logs | Policy tag violations + IAM deny events |
+| Metric                           | Source                                   | Detection Logic                              |
+| -------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| Principal queries on PII columns | BigQuery Audit Logs + INFORMATION_SCHEMA | Join job metadata with Data Catalog tags     |
+| Row counts scanned               | INFORMATION_SCHEMA.JOBS                  | Extract from "totalSlotMs" and "billedBytes" |
+| Egress size anomalies            | VPC Flow Logs + Cloud Logging            | Threshold alerts on bucket exports           |
+| Unauthorized table access        | Cloud Audit Logs                         | Policy tag violations + IAM deny events      |
 
 Rather than relying on manual access reviews, pipe BigQuery Audit Logs and INFORMATION_SCHEMA metadata into a dedicated monitoring dataset. Cross-reference query jobs with Data Catalog policy tags to identify which principals accessed PII-tagged columns, when, and how much data moved. Flag anomalies like sudden spikes in row scans or egress to external buckets. This creates a live audit trail where compliance teams query access patterns using SQL instead of reviewing spreadsheets. Every PII touch becomes evidence on demand.
 

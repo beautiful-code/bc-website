@@ -2,7 +2,7 @@
 title: "Per-Key State in Apache Beam: Eliminating External Lookups for Sub-Second Latency"
 expertise: data-engineering
 slug: per-key-state-apache-beam-eliminating-external-lookups
-tech: [airflow, googlecloud]
+tech: [apache-beam]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Beam's State API eliminates round-trip latency by colocating key-scoped context with processing logic, but requires explicit bounds to prevent memory bloat on hot keys."
@@ -18,12 +18,12 @@ Beam offers four state primitives, each optimized for different access patterns.
 
 #### State API Patterns
 
-| **Pattern** | **State Type** | **Example Use Case** |
-|-------------|----------------|----------------------|
-| Single flag or scalar | "ValueState" | Track fraud detection status |
-| Recent events buffer | "BagState" | Store last N transactions for context |
-| Running aggregate | "CombiningState" | Compute rolling 7-day spend |
-| Keyed cache | "MapState" | Lookup geo location to country code |
+| **Pattern**           | **State Type**   | **Example Use Case**                  |
+| --------------------- | ---------------- | ------------------------------------- |
+| Single flag or scalar | "ValueState"     | Track fraud detection status          |
+| Recent events buffer  | "BagState"       | Store last N transactions for context |
+| Running aggregate     | "CombiningState" | Compute rolling 7-day spend           |
+| Keyed cache           | "MapState"       | Lookup geo location to country code   |
 
 ### Durability and Fault Tolerance: State Survives Worker Failures
 

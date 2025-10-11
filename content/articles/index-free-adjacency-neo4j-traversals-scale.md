@@ -2,8 +2,8 @@
 title: "Index-Free Adjacency: Why Neo4j Traversals Scale Where Relational Joins Fail"
 expertise: data-engineering
 slug: index-free-adjacency-neo4j-traversals-scale
-tech: [neo4j, graphdb, python]
-date: 2025-10-10
+tech: [neo4j, graphdb]
+date: 2025-10-13
 author: BeautifulCode
 keytakeaway: "Index-free adjacency trades write-time pointer management for constant-time relationship traversals, making Neo4j superior for multi-hop queries but relational databases remain better for simple joins and transactional workloads."
 ---

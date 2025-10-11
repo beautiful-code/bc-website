@@ -2,8 +2,8 @@
 title: "Schema-Driven AI Documentation for BigQuery: Keeping Data Catalogs Honest in CI/CD"
 expertise: data-engineering
 slug: schema-driven-ai-documentation-bigquery
-tech: [bigquery, dbt, airflow]
-date: 2025-10-11
+tech: [bigquery]
+date: 2025-10-13
 author: BeautifulCode
 keytakeaway: "Treating schema metadata as the source of truth and enforcing documentation updates in CI transforms data catalogs from stale wikis into living contracts that stay synchronized with production reality."
 ---
