@@ -2,7 +2,7 @@
 title: "API Gateways and Backend-for-Frontend: Decoupling Client Contracts from Backend Evolution"
 expertise: "backend-engineering"
 slug: api-gateways-bff-patterns
-tech: ["graphql", "docker", "kubernetes"]
+tech: ["api-design"]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: API gateways with BFF patterns decouple client contracts from backend topology changes while using aggregation and circuit breakers to optimize performance and prevent cascading failures.

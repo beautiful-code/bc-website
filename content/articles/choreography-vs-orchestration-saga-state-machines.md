@@ -2,7 +2,7 @@
 title: "Choreography vs Orchestration: Designing Resilient Saga State Machines"
 expertise: "backend-engineering"
 slug: choreography-vs-orchestration-saga-state-machines
-tech: ["microservices", "distributedsystems"]
+tech: ["database-design", "microservices", "distributed-systems"]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: Orchestration with idempotent steps and explicit compensation logic provides the reliability needed for complex distributed transactions, while choreography trades visibility for loose coupling in simpler domains.
