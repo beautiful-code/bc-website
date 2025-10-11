@@ -2,7 +2,7 @@
 slug: "hasura-ecommerce-portal"
 title: "50% Faster Time to Market: Accelerating E-commerce Portal Development with Hasura"
 industry: "E-commerce"
-heroImage: "/case-studies/hasura-ecommerce-portal/ecommerportalcoverphoto.jpg"
+heroImage: "/case-studies/hasura-ecommerce-portal/cover_2.png"
 problemStatement: |
   Our client aimed to quickly launch a merchant portal to make it easier for merchants to sell their products online and to stay competitive. The two main challenges involved speeding up the app's development for a quick market launch, and creating a wide range of APIs that work well for both web and mobile versions, addressing different data needs.
 clientInfo: "Our Client, a leading marketplace in the e-commerce sector, offers extensive product range and focuses on digital innovation to enhance the online customer experience."
