@@ -3,7 +3,7 @@ title: "Beyond Round-Robin: Capacity-Aware Load Balancing Strategies"
 expertise: "infrastructure-reliability"
 slug: capacity-aware-load-balancing
 tech: ["kubernetes"]
-date: 2025-10-10
+date: 2024-10-10
 author: BeautifulCode
 keytakeaway: Capacity-aware load balancing algorithms like least connections and weighted routing significantly outperform naive round-robin distribution in production environments with heterogeneous infrastructure or variable request patterns.
 ---

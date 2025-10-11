@@ -3,7 +3,7 @@ title: "Sidecar Proxies vs Application-Level Middleware: When to Offload Network
 expertise: infrastructure-reliability
 slug: sidecar-proxies-network-concerns-envoy
 tech: ["kubernetes", "terraform", "grpc"]
-date: 2025-10-09
+date: 2025-01-09
 author: BeautifulCode
 keytakeaway: Service meshes offload network resilience and observability concerns to infrastructure, eliminating boilerplate from application code and enabling consistent, policy-driven behavior across polyglot microservices.
 ---

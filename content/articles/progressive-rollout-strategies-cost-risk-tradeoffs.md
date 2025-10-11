@@ -3,7 +3,7 @@ title: "Progressive Rollout Strategies: Cost-Risk Trade-offs in Production Deplo
 expertise: "infrastructure-reliability"
 slug: progressive-rollout-strategies-cost-risk-tradeoffs
 tech: [kubernetes, googlecloud]
-date: 2025-10-10
+date: 2024-01-10
 author: BeautifulCode
 keytakeaway: "Progressive rollouts optimize for different failure modes—canary trades rollback speed for cost efficiency through graduated traffic, blue-green pays 2x infrastructure for instant recovery, while feature flags decouple deployment risk from release timing at the cost of added code complexity."
 ---
