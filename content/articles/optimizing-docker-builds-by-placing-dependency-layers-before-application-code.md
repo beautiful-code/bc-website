@@ -3,7 +3,7 @@ title: "Optimizing Docker Builds by Placing Dependency Layers Before Application
 expertise: "infrastructure-reliability"
 slug: optimizing-docker-builds-by-placing-dependency-layers-before-application-code
 tech: [docker]
-date: 2025-10-11
+date: 2025-05-01
 author: BeautifulCode
 keytakeaway: "Strategic layer ordering based on change frequency, combined with multi-stage builds and build context optimization, transforms Docker from a deployment bottleneck into a sub-minute build process that scales across distributed CI/CD environments."
 ---

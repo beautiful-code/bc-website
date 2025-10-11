@@ -3,7 +3,7 @@ title: "Why Workspaces Don't Scale: Directory-per-Environment and Remote State I
 expertise: "infrastructure-reliability"
 slug: why-terraform-workspaces-dont-scale
 tech: [terraform, githubactions, circleci]
-date: 2025-10-10
+date: 2025-04-01
 author: BeautifulCode
 keytakeaway: "Enterprise Terraform scalability depends on state isolation through directory-per-environment and module-per-service patterns, combined with PR-based workflows and state locking to enable independent team velocity while preventing catastrophic cross-service failures."
 ---
