@@ -3,7 +3,7 @@ title: "Materialized Views in BigQuery: Speed vs Freshness"
 expertise: data-engineering
 slug: materialized-views-in-bigquery-speed-vs-freshness
 tech: [bigquery, sql]
-date: 2025-10-10
+date: 2025-10-09
 author: BeautifulCode
 keytakeaway: "Materialized views in BigQuery trade controllable staleness for dramatic cost and latency improvements on large-scale aggregations, with incremental refresh efficiency determined by query pattern compatibility and base table change characteristics."
 ---
@@ -20,7 +20,7 @@ Pre-aggregated materialized views transform terabyte-scale analytics by caching 
 CREATE MATERIALIZED VIEW sales_daily_agg
 PARTITION BY DATE(order_date)
 AS
-SELECT 
+SELECT
   DATE(order_date) as order_date,
   product_id,
   SUM(revenue) as total_revenue,

@@ -2,7 +2,7 @@
 title: "Building Production Reverse ETL Pipelines for GTM Systems"
 expertise: data-engineering
 slug: building-production-reverse-etl-pipelines-for-gtm-systems
-tech: [airflow, bigquery, salesforce]
+tech: [airflow, bigquery]
 date: 2025-10-11
 author: BeautifulCode
 keytakeaway: "Production Reverse ETL succeeds when architected around specific operational moments with stable ID mappings, incremental sync patterns, enforced data contracts, and field-level observability that maintains trust between data and GTM teams."
@@ -14,15 +14,15 @@ Reverse ETL justifies itself when it powers a specific action in downstream tool
 
 ### Idempotent Syncs Through Stable Mappings
 
-Without stable identifiers, every sync risks creating duplicate records in destination systems. The solution is maintaining a bidirectional mapping table in the warehouse that links internal IDs to external system IDs. For Salesforce, that means upserting against "ExternalId__c" custom fields rather than Salesforce's native ID. For HubSpot, it's tracking "hs_object_id" alongside your warehouse key.
+Without stable identifiers, every sync risks creating duplicate records in destination systems. The solution is maintaining a bidirectional mapping table in the warehouse that links internal IDs to external system IDs. For Salesforce, that means upserting against "ExternalId\_\_c" custom fields rather than Salesforce's native ID. For HubSpot, it's tracking "hs_object_id" alongside your warehouse key.
 
 **Mapping Table Structure:**
 
-| warehouse_id | destination_system | destination_id | sync_status | last_synced_at |
-|--------------|-------------------|----------------|-------------|----------------|
-| user_12345 | salesforce | 003xx000004TmiQ | success | 2025-10-10 14:23:11 |
-| user_12345 | hubspot | 98765432 | success | 2025-10-10 14:23:15 |
-| account_789 | salesforce | 001xx000003DhYQ | failed | 2025-10-10 14:20:05 |
+| warehouse_id | destination_system | destination_id  | sync_status | last_synced_at      |
+| ------------ | ------------------ | --------------- | ----------- | ------------------- |
+| user_12345   | salesforce         | 003xx000004TmiQ | success     | 2025-10-10 14:23:11 |
+| user_12345   | hubspot            | 98765432        | success     | 2025-10-10 14:23:15 |
+| account_789  | salesforce         | 001xx000003DhYQ | failed      | 2025-10-10 14:20:05 |
 
 This table enables UPSERT operations that remain deterministic across retries and supports graceful handling of API failures without creating orphaned records.
 

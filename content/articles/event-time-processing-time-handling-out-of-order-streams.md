@@ -2,7 +2,7 @@
 title: "Event Time ≠ Processing Time: Handling Out-of-Order Streams"
 expertise: data-engineering
 slug: event-time-processing-time-handling-out-of-order-streams
-tech: [kafka, airflow, bigquery]
+tech: [apache-beam, dataflow]
 date: 2025-10-11
 author: BeautifulCode
 keytakeaway: "Event time windowing with watermarks and allowed lateness ensures correctness in out-of-order streams, but requires finite lateness bounds and sink-level deduplication to avoid unbounded state and duplicate writes."
@@ -31,7 +31,7 @@ A watermark is the system's best estimate of event-time progress. It answers "ha
 )
 ```
 
-*Watermark-based triggers emit results when the watermark passes, with early firings every 60 seconds and a 5-minute allowed lateness window.*
+_Watermark-based triggers emit results when the watermark passes, with early firings every 60 seconds and a 5-minute allowed lateness window._
 
 ### Allowed Lateness and Triggers Balance Speed vs Accuracy
 

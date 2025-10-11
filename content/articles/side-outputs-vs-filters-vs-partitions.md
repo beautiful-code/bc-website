@@ -3,7 +3,7 @@ title: "Side Outputs vs. Filters vs. Partitions: Choosing the Right Branching Pr
 expertise: data-engineering
 slug: side-outputs-vs-filters-vs-partitions
 tech: [apache-beam, googlecloud]
-date: 2025-10-11
+date: 2025-10-15
 author: BeautifulCode
 keytakeaway: "Choose side outputs for overlapping logic, filters for simple conditions, and partitions for mutually exclusive routing—then isolate hot branches into separate stages to avoid Dataflow autoscaling bottlenecks."
 ---

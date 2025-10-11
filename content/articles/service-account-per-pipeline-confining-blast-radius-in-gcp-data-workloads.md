@@ -2,8 +2,8 @@
 title: "Service-Account-Per-Pipeline: Confining Blast Radius in GCP Data Workloads"
 expertise: data-engineering
 slug: "service-account-per-pipeline-confining-blast-radius-in-gcp-data-workloads"
-tech: ["googlecloud", "bigquery", "airflow", "terraform"]
-date: "2025-10-09"
+tech: ["googlecloud"]
+date: "2025-10-13"
 author: "BeautifulCode"
 keytakeaway: "Treating each pipeline as its own identity with dataset-scoped roles transforms IAM from a convenience layer into a containment system that limits damage, surfaces misconfigurations, and keeps privilege grants explicit and auditable."
 ---

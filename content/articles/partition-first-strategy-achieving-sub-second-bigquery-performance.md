@@ -2,8 +2,8 @@
 title: "Partition-First Strategy: Achieving Sub-Second BigQuery Performance with Predictable Costs"
 expertise: data-engineering
 slug: partition-first-strategy-achieving-sub-second-bigquery-performance
-tech: [bigquery, googlecloud, databricks]
-date: 2025-10-10
+tech: [bigquery]
+date: 2025-10-14
 author: BeautifulCode
 keytakeaway: "Partition on high-selectivity time dimensions with appropriate granularity, cluster on frequently filtered columns, and enforce partition filters to achieve predictable sub-second BigQuery performance while controlling costs."
 ---
@@ -18,12 +18,12 @@ After partitions narrow the scope, clustering further reduces scanned data by or
 
 **Clustering Strategy Table:**
 
-| Column Type | Example | Why It Works | Query Impact |
-|---|---|---|---|
-| High-cardinality ID | "user_id", "customer_id" | Sorting by millions of unique IDs creates tight ranges per block; metadata shows exact ID spans | `WHERE user_id = 'X'` skips 95-99% of blocks; scans drop from 100GB to 500MB |
-| Categorical filter | "event_type", "status" | Groups identical values together; all "purchase" events live in same blocks | `GROUP BY event_type` reads pre-sorted data; reduces shuffle from 50GB to 2GB across workers |
-| Join key | "order_id", "session_id" | Both tables clustered on same key store matching rows in aligned blocks | Joins read co-located data; 10x less network shuffle between workers |
-| Time component | "hour", "region" | Adds granularity within daily partitions; creates sub-ranges in already-partitioned data | `WHERE date = 'X' AND hour = 14` scans 1 hour not 24; reduces intraday scans by 95% |
+| Column Type         | Example                  | Why It Works                                                                                    | Query Impact                                                                                 |
+| ------------------- | ------------------------ | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| High-cardinality ID | "user_id", "customer_id" | Sorting by millions of unique IDs creates tight ranges per block; metadata shows exact ID spans | `WHERE user_id = 'X'` skips 95-99% of blocks; scans drop from 100GB to 500MB                 |
+| Categorical filter  | "event_type", "status"   | Groups identical values together; all "purchase" events live in same blocks                     | `GROUP BY event_type` reads pre-sorted data; reduces shuffle from 50GB to 2GB across workers |
+| Join key            | "order_id", "session_id" | Both tables clustered on same key store matching rows in aligned blocks                         | Joins read co-located data; 10x less network shuffle between workers                         |
+| Time component      | "hour", "region"         | Adds granularity within daily partitions; creates sub-ranges in already-partitioned data        | `WHERE date = 'X' AND hour = 14` scans 1 hour not 24; reduces intraday scans by 95%          |
 
 ### Predictable Latency Through Data Locality
 

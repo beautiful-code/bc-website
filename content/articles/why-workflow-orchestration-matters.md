@@ -20,12 +20,12 @@ Orchestrators centralize dependency management, error handling, and execution tr
 
 Modern systems use orchestration across three primary patterns. Data engineering teams orchestrate ETL pipelines where data extraction from sources must complete before transformations run, and transformations must finish before loading to warehouses. A typical pipeline waits for daily files to arrive, validates data quality, transforms records, and loads to BigQuery, with each step depending on previous success.
 
-| Use Case | Coordination Challenge | Orchestration Solution |
-|----------|------------------------|------------------------|
-| Daily ETL pipeline | Wait for source data, handle late arrivals | Sensor operators poll for data availability |
-| Microservice transaction | Order → Payment → Inventory → Shipping | State machine tracks multi-service flow |
-| ML model training | Data prep → Training → Validation → Deployment | Pipeline tracks artifacts between stages |
-| Event-driven processing | File upload → Validation → Processing → Notification | Workflow triggers on events, handles retries |
+| Use Case                 | Coordination Challenge                               | Orchestration Solution                       |
+| ------------------------ | ---------------------------------------------------- | -------------------------------------------- |
+| Daily ETL pipeline       | Wait for source data, handle late arrivals           | Sensor operators poll for data availability  |
+| Microservice transaction | Order → Payment → Inventory → Shipping               | State machine tracks multi-service flow      |
+| ML model training        | Data prep → Training → Validation → Deployment       | Pipeline tracks artifacts between stages     |
+| Event-driven processing  | File upload → Validation → Processing → Notification | Workflow triggers on events, handles retries |
 
 Application developers orchestrate service-to-service communication where business logic spans multiple APIs. An e-commerce checkout might call payment providers, update inventory systems, trigger shipping workflows, and send notifications, requiring retry logic for transient failures and rollback strategies for partial successes. Event-driven systems orchestrate long-running processes initiated by external triggers like file uploads or webhook callbacks, where maintaining execution state across hours or days becomes critical.
 
