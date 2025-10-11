@@ -3,7 +3,7 @@ title: "JWT Security Trade-offs: Statefulness, Storage, and Signature Validation
 expertise: "backend-engineering"
 slug: jwt-security-trade-offs
 tech: ["jwt", "authorization"]
-date: 2025-10-10
+date: 2025-09-19
 author: BeautifulCode
 keytakeaway: JWTs require careful architectural decisions around statefulness, token rotation patterns, payload design, signature validation, and storage to balance security, scalability, and usability.
 ---

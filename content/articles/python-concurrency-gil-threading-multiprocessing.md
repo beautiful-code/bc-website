@@ -3,7 +3,7 @@ title: "Threading vs Multiprocessing: Choosing the Right Concurrency Model Beyon
 expertise: "backend-engineering"
 slug: python-concurrency-gil-threading-multiprocessing
 tech: ["python"]
-date: 2025-10-09
+date: 2025-09-15
 author: BeautifulCode
 keytakeaway: The GIL is not a blocker for I/O-bound services due to automatic release during system calls, making threading the pragmatic choice. For CPU-bound work, leverage GIL-aware libraries or accept multiprocessing's serialization cost based on task granularity.
 ---

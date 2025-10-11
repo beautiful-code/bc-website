@@ -3,7 +3,7 @@ title: "gRPC vs REST: Choosing the Right Protocol for Your Service Mesh"
 expertise: "backend-engineering"
 slug: grpc-vs-rest-service-mesh
 tech: ["grpc"]
-date: 2025-10-09
+date: 2025-09-25
 author: BeautifulCode
 keytakeaway: gRPC optimizes for internal service efficiency through HTTP/2 multiplexing and bidirectional streaming, while REST prioritizes interoperability and debuggability for external APIs, making protocol selection a question of operational scope rather than pure performance.
 ---

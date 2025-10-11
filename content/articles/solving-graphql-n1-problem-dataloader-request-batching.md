@@ -3,7 +3,7 @@ title: "Solving GraphQL's N+1 Problem with DataLoader Request Batching"
 expertise: "backend-engineering"
 slug: "solving-graphql-n1-problem-dataloader-request-batching"
 tech: ["graphql", "nodejs"]
-date: "2025-10-10"
+date: "2025-09-10"
 author: "BeautifulCode"
 keytakeaway: "DataLoader eliminates GraphQL's N+1 queries through per-request batching and caching, but production APIs require query complexity limits to prevent nested-query denial-of-service attacks."
 ---

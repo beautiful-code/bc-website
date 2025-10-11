@@ -3,7 +3,7 @@ title: "Production Profiling Strategy: From Flame Graphs to Continuous Monitorin
 expertise: "backend-engineering"
 slug: production-profiling-strategy-from-flame-graphs-to-continuous-monitoring
 tech: [python, golang, grafana, kubernetes]
-date: 2025-10-09
+date: 2025-09-11
 author: BeautifulCode
 keytakeaway: "Continuous profiling with flame graph visualization transforms performance optimization from reactive debugging into proactive engineering, catching regressions before they reach customers while ensuring optimization efforts focus on measured bottlenecks."
 ---

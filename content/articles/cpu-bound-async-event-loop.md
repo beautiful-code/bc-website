@@ -3,7 +3,7 @@ title: "CPU-Bound Work in Async Functions Stalls the Event Loop"
 expertise: "backend-engineering"
 slug: cpu-bound-async-event-loop
 tech: [python]
-date: 2025-10-09
+date: 2025-09-16
 author: BeautifulCode
 keytakeaway: Async/await coordinates I/O concurrency on a single thread, but CPU-bound tasks and blocking I/O calls prevent the event loop from yielding, eliminating concurrency entirely.
 ---

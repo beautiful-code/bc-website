@@ -3,7 +3,7 @@ title: "Go Concurrency: Choosing Synchronization Primitives for Performance"
 expertise: "backend-engineering"
 slug: go-concurrency-synchronization-primitives
 tech: ["golang"]
-date: 2025-10-09
+date: 2025-09-14
 author: BeautifulCode
 keytakeaway: Go's lack of memory visibility guarantees demands explicit synchronization, the right primitive depends on whether you're protecting state (mutexes), passing data (channels), or updating simple values (atomics).
 ---

@@ -3,7 +3,7 @@ title: "Static Type Safety Without the Runtime Tax - Mastering Python's Optional
 expertise: "backend-engineering"
 slug: python-type-hints-static-analysis
 tech: ["python", "django"]
-date: 2025-10-09
+date: 2025-09-09
 author: BeautifulCode
 keytakeaway: Python type hints provide static analysis benefits without runtime overhead, enabling structural typing through Protocols and generic safety through TypeVar, all while supporting gradual adoption in existing codebases.
 ---
