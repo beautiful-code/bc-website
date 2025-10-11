@@ -3,9 +3,9 @@ title: "Beyond Embeddings: Production RAG Architecture Trade-offs"
 expertise: ai-applied-ml
 slug: beyond-embeddings-production-rag-architecture-trade-offs
 tech:
+  - llamaindex
+  - pinecone
   - openai
-  - langchain
-  - pytorch
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Production RAG systems require hybrid retrieval architectures, domain-aware chunking, and reranking stages to achieve reliable accuracy beyond what embeddings alone provide."

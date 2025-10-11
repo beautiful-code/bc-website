@@ -2,7 +2,7 @@
 title: "Contextual RAG: Improving Retrieval Accuracy with Document-Aware Chunking"
 expertise: ai-applied-ml
 slug: contextual-rag-improving-retrieval-accuracy-with-document-aware-chunking
-tech: [openai, langchain, huggingface]
+tech: [llamaindex, pinecone]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Augmenting chunks with document-level context before embedding and indexing bridges the semantic gap between ambiguous chunk content and precise user queries, significantly improving retrieval accuracy in RAG systems."
