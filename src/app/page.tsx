@@ -25,10 +25,10 @@ export default function Home() {
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="max-w-xl mx-auto">
             <h2
-              className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-2 text-left px-8"
+              className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-6 text-left px-8"
               style={{ color: "var(--color-bc-red)" }}
             >
-              WHAT WE ARE WIRED FOR
+              {">"} WHAT WE ARE WIRED FOR
             </h2>
             <div className="expertises ">
               {expertiseAreas.map((area) => {
@@ -60,18 +60,18 @@ export default function Home() {
                 className=""
                 aria-label="Explore our engineering principles"
               >
-                
-                  <div className="flex items-center justify-between gap-4 pl-6 py-6 hover:bg-[var(--color-bc-beige)]">
-                    <div>
-                    <h2
-                      className="text-lg sm:text-3xl tracking-wider uppercase text-left "
-                      style={{ color: "var(--color-bc-red)" }}
-                    >
-                      OUR ENGINEERING PRINCIPLES
+                <div className="flex items-center justify-between mt-2 gap-4 pl-6 pr-2 py-8 hover:bg-[var(--color-bc-beige)] group">
+                  <div>
+                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
+                      <span style={{ color: "var(--color-bc-red)" }}>
+                        {">"}
+                      </span>
+                      <span className="font-bold text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                        READ OUR ENGINEERING PRINCIPLES
+                      </span>
                     </h2>
-                    </div>
                   </div>
-                
+                </div>
               </Link>
             )}
           </div>
