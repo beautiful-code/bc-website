@@ -1,6 +1,6 @@
 ---
 title: "Why Traditional Firewalls Fail at Layer 7: The Case for Web Application Firewalls"
-expertise: infrastructure-reliability
+expertise: "infrastructure-reliability"
 slug: traditional-firewalls-fail-layer-7-waf
 tech: [googlecloud, kubernetes]
 date: 2025-10-11

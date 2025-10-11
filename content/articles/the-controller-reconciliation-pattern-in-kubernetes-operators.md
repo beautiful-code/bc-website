@@ -3,7 +3,7 @@ title: "The Controller Reconciliation Pattern in Kubernetes Operators"
 expertise: "infrastructure-reliability"
 slug: the-controller-reconciliation-pattern-in-kubernetes-operators
 tech: [kubernetes]
-date: 2025-10-11
+date: 2025-08-11
 author: BeautifulCode
 keytakeaway: "Kubernetes operators transform operational runbooks into self-healing controllers that reduce manual toil by 70% through continuous reconciliation, justified when operational complexity or scale exceeds the 2-6 month development investment."
 ---

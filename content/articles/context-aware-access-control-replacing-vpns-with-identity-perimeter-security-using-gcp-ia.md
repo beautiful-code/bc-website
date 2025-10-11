@@ -3,7 +3,7 @@ title: "Context-Aware Access Control: Replacing VPNs with Identity Perimeter Sec
 expertise: "infrastructure-reliability"
 slug: "context-aware-access-control-replacing-vpns-with-identity-perimeter-security-using-gcp-iap"
 tech: ["googlecloud", "aws", "kubernetes"]
-date: 2025-10-10
+date: 2025-09-10
 author: BeautifulCode
 keytakeaway: "IAP replaces network perimeter security with request-level identity verification, reducing infrastructure costs by 90% while containing the impact of credential compromise through context-aware access controls."
 ---
