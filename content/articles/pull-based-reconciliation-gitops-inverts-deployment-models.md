@@ -1,8 +1,8 @@
 ---
 title: "Pull-Based Reconciliation: How GitOps Inverts Deployment Models and Cuts MTTR by 90%"
-expertise: infrastructure-reliability
+expertise: "infrastructure-reliability"
 slug: pull-based-reconciliation-gitops-inverts-deployment-models
-tech: [kubernetes, docker, terraform, githubactions, circleci, aws, googlecloud, azure]
+tech: [git]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "GitOps inverts traditional push-based deployments by using in-cluster agents that continuously reconcile Git-declared state with live infrastructure, reducing rollback time from 45+ minutes to under 5 minutes while automatically generating compliance audit trails through Git's version control primitives."

@@ -1,8 +1,8 @@
 ---
 title: "Why Workflow Orchestration Matters in Distributed Systems"
-expertise: data-engineering
+expertise: "data-engineering"
 slug: why-workflow-orchestration-matters
-tech: [airflow, googlecloud, python]
+tech: [airflow, googlecloud]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Workflow orchestration centralizes state management and error handling for multi-step distributed processes, with tool selection driven by pipeline complexity, execution frequency, and whether teams need Python extensibility or serverless simplicity."

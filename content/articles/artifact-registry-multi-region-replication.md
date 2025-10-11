@@ -2,7 +2,7 @@
 title: "Why Artifact Registry's Multi-Region Replication Beats DIY Container Registries"
 expertise: infrastructure-reliability
 slug: artifact-registry-multi-region-replication
-tech: [docker, kubernetes, googlecloud]
+tech: [docker, googlecloud]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Artifact Registry's automated replication, built-in vulnerability scanning, and immutable tags eliminate the operational overhead of self-managed registries while reducing both deployment incidents and storage costs through policy-driven cleanup."
