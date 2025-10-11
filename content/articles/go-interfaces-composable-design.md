@@ -3,7 +3,7 @@ title: "Go Interfaces: Composable Design Without Coupling"
 expertise: "backend-engineering"
 slug: "go-interfaces-composable-design"
 tech: ["golang"]
-date: 2025-10-09
+date: 2025-09-13
 author: "BeautifulCode"
 keytakeaway: "Design Go systems around minimal, focused interfaces that accept interfaces and return concrete structs, leveraging implicit satisfaction to achieve testability and decoupling without sacrificing type safety."
 ---

@@ -3,7 +3,7 @@ title: "Idempotency Keys vs Database Constraints: Building Resilient Retry Logic
 expertise: "backend-engineering"
 slug: idempotency-keys-database-constraints
 tech: ["database-design", "api", "distributed-systems"]
-date: 2025-10-10
+date: 2025-09-10
 author: BeautifulCode
 keytakeaway: Idempotency requires defense in depth across application caches, database constraints, and state design to safely handle network retries without duplicating side effects.
 ---

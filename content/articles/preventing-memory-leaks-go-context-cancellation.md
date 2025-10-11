@@ -3,7 +3,7 @@ title: "Preventing Memory Leaks in Go: Context Cancellation and Goroutine Cleanu
 expertise: "backend-engineering"
 slug: preventing-memory-leaks-go-context-cancellation
 tech: [golang]
-date: 2025-10-09
+date: 2025-09-12
 author: BeautifulCode
 keytakeaway: Goroutine leaks are silent killers in Go services. Use context cancellation, sync.WaitGroup, and proper timeout patterns to ensure every spawned goroutine has a defined lifecycle and guaranteed cleanup path.
 ---

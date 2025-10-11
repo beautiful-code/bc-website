@@ -3,7 +3,7 @@ title: "RBAC + ABAC Hybrid: Choosing Authorization Models for Production Systems
 expertise: "backend-engineering"
 slug: rbac-abac-hybrid-authorization
 tech: ["authorization"]
-date: 2025-10-10
+date: 2025-09-20
 author: BeautifulCode
 keytakeaway: Combine RBAC for stable, coarse permissions with ABAC or policy-based systems for dynamic, context-dependent access control to balance simplicity and flexibility without creating unsustainable role hierarchies.
 ---

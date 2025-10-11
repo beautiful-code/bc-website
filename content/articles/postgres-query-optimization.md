@@ -3,7 +3,7 @@ title: "Index Selectivity vs Covering Indexes: Tuning PostgreSQL Query Plans for
 expertise: "backend-engineering"
 slug: index-selectivity-vs-covering-indexes
 tech: ["database-design"]
-date: 2025-10-09
+date: 2025-09-18
 author: BeautifulCode
 keytakeaway: "Effective PostgreSQL optimization requires understanding how index selectivity and covering indexes influence planner decisions, then validating assumptions with EXPLAIN ANALYZE to ensure estimated costs align with actual execution under production load patterns."
 ---

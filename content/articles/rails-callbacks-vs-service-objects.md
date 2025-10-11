@@ -3,7 +3,7 @@ title: "Rails Callbacks vs Service Objects: Control Flow and Testability Trade-o
 expertise: "backend-engineering"
 slug: rails-callbacks-vs-service-objects
 tech: ["rubyonrails"]
-date: 2025-10-09
+date: 2025-09-09
 author: BeautifulCode
 keytakeaway: Service objects replace implicit callback dependencies with explicit control flow, dramatically improving testability and debuggability in Rails applications.
 ---

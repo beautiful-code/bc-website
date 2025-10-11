@@ -3,7 +3,7 @@ title: "The Performance Trade-offs of State Reconstruction in Event Sourcing Sys
 expertise: "backend-engineering"
 slug: performance-trade-offs-state-reconstruction-event-sourcing
 tech: ["kafka", "mongodb", "database-design"]
-date: 2025-10-09
+date: 2025-09-28
 author: BeautifulCode
 keytakeaway: "Event sourcing provides powerful audit trails and temporal queries but requires snapshot strategies for performance and explicit schema versioning for long-term maintainability, with CQRS addressing read-side query optimization through eventually consistent projections."
 ---

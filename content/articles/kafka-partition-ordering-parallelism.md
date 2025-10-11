@@ -3,7 +3,7 @@ title: "Partition-Level Ordering vs. Topic-Level Parallelism in Kafka"
 expertise: data-engineering
 slug: kafka-partition-ordering-parallelism
 tech: ["kafka"]
-date: 2025-10-09
+date: 2025-09-26
 author: BeautifulCode
 keytakeaway: Design for partition scalability using partition keys to co-locate related messages, and monitor lag and rebalancing as critical system health signals to prevent bottlenecks and data loss.
 ---

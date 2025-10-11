@@ -3,7 +3,7 @@ title: "Kafka Message Delivery Semantics: Engineering for Reliability vs Perform
 expertise: "backend-engineering"
 slug: kafka-delivery-semantics-reliability-vs-performance
 tech: ["kafka", "python"]
-date: 2025-10-09
+date: 2025-09-29
 author: BeautifulCode
 keytakeaway: "Kafka delivery semantics force explicit trade-offs between throughput, reliability, and implementation complexity, requiring teams to match guarantees to business requirements rather than defaulting to the strongest option."
 ---
