@@ -11,6 +11,7 @@ import { getAuthor } from "@/lib/author";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { formatDate } from "@/lib/utils/date";
 import { getExpertiseBySlug } from "@/lib/expertise";
+import TechIcon from "@/components/TechIcon";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
 
@@ -132,18 +133,13 @@ export default async function ArticlePage({
                 const techName = techInfo?.name || techSlug;
 
                 return (
-                  <div
+                  <TechIcon
                     key={index}
-                    className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden"
-                  >
-                    <Image
-                      src={iconPath}
-                      alt={techName}
-                      width={24}
-                      height={24}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                    iconPath={iconPath}
+                    techName={techName}
+                    size="small"
+                    showTooltip={true}
+                  />
                 );
               })}
             </div>

@@ -92,6 +92,7 @@ export const techStack: Tech[] = [
   { name: "Rollup", slug: "rollup" },
   { name: "Ruby", slug: "ruby" },
   { name: "Ruby on Rails", slug: "rubyonrails" },
+  { name: "RxJs", slug: "rxjs" },
   { name: "Selenium", slug: "selenium" },
   { name: "shadcn/ui", slug: "shadcnui" },
   { name: "Stackdriver", slug: "stackdriver" },

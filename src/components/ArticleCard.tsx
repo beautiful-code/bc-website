@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
+import TechIcon from "@/components/TechIcon";
 
 interface ArticleCardProps {
   title: string;
@@ -26,22 +26,14 @@ export default function ArticleCard({ title, slug, tech }: ArticleCardProps) {
           const techName = techInfo?.name || techSlug;
 
           return (
-            <div
+            <TechIcon
               key={index}
-              className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden inline-block align-middle relative group cursor-pointer -translate-y-[2px]"
-              title={techName}
-            >
-              <Image
-                src={iconPath}
-                alt={techName}
-                width={24}
-                height={24}
-                className="w-full h-full object-cover"
-              />
-              <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                {techName}
-              </span>
-            </div>
+              iconPath={iconPath}
+              techName={techName}
+              size="small"
+              showTooltip={true}
+              className="inline-block align-middle -translate-y-[2px]"
+            />
           );
         })}
       </div>
