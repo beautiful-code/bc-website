@@ -8,6 +8,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import { getTechIconPathBySlug, getTechBySlug } from "@/lib/tech";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import { getExpertiseBySlug } from "@/lib/expertise";
+import TechIcon from "@/components/TechIcon";
 import "../../../styles/layout.scss";
 import "../../../styles/markdown-content.scss";
 import Link from "next/link";
@@ -225,15 +226,13 @@ export default async function CaseStudyPage({
                     key={index}
                     className="inline-flex items-center space-x-2 px-3 py-2 border border-gray-200 rounded-lg bg-white hover:shadow-sm transition-shadow duration-200"
                   >
-                    <div className="w-5 h-5 sm:w-6 sm:h-6 overflow-hidden flex-shrink-0">
-                      <Image
-                        src={iconPath}
-                        alt={techName}
-                        width={24}
-                        height={24}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <TechIcon
+                      iconPath={iconPath}
+                      techName={techName}
+                      size="small"
+                      showTooltip={false}
+                      className="flex-shrink-0"
+                    />
                     <span
                       className="text-md font-[family-name:var(--font-nunito-sans)]"
                       style={{ color: "var(--color-bc-text-black)" }}

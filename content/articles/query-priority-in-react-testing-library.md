@@ -2,8 +2,8 @@
 title: "Query Priority in React Testing Library: Why getByRole Beats getByTestId"
 expertise: frontend-engineering
 slug: query-priority-in-react-testing-library
-tech: [react, reacttestinglib, typescript]
-date: 2025-10-10
+tech: [reacttestinglibrary, jest]
+date: 2025-10-11
 author: BeautifulCode
 keytakeaway: "React Testing Library's query priority directly maps to accessibility robustness - tests that rely on roles and labels catch both functional bugs and a11y gaps, while testId-first approaches create false confidence in inaccessible interfaces."
 ---

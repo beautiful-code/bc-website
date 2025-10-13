@@ -3,7 +3,7 @@ title: "Beyond String Translation: Pluralization, Formatting, and RTL in Product
 expertise: frontend-engineering
 slug: beyond-string-translation-pluralization-formatting-rtl-production-i18n
 tech: [react, typescript, tailwind]
-date: 2025-10-11
+date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "Production internationalization requires ICU MessageFormat for plurals, memoized Intl formatters for locale-aware numbers and dates, logical CSS properties for RTL layouts, and testing with actual target locale content to catch BiDi and formatting edge cases."
 ---

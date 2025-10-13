@@ -3,7 +3,7 @@ title: "Why Array Index Keys Break React's Reconciliation Model"
 expertise: "frontend-engineering"
 slug: "why-array-index-keys-break-react-reconciliation-model"
 tech: ["react", "js", "typescript"]
-date: "2025-10-09"
+date: "2025-10-12"
 author: "BeautifulCode"
 keytakeaway: "Stable keys let React preserve component identity through list changes, avoiding expensive destroy-recreate cycles and state mismatches that index keys cause in dynamic lists."
 ---

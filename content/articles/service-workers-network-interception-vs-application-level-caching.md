@@ -3,7 +3,7 @@ title: "Service Workers: Network Interception vs. Application-Level Caching Trad
 expertise: frontend-engineering
 slug: service-workers-network-interception-vs-application-level-caching
 tech: [js, typescript, webpack]
-date: 2025-10-10
+date: 2025-10-13
 author: BeautifulCode
 keytakeaway: "Service workers enable offline-first web applications through network-level request interception, but production success requires matching cache strategies to resource characteristics and implementing explicit update UX to navigate the complex activation lifecycle."
 ---
