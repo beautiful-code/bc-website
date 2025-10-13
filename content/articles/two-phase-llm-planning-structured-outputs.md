@@ -2,8 +2,8 @@
 title: "Two-Phase LLM Planning: Building Reliable AI Workflow Generators with Structured Outputs"
 expertise: ai-applied-ml
 slug: two-phase-llm-planning-structured-outputs
-tech: [adk, gemini, pinecone]
-date: 2025-10-10
+tech: [adk, gemini]
+date: 2025-08-04
 author: BeautifulCode
 keytakeaway: "Reliable LLM workflow generation requires hierarchical planning architecture, strict schema enforcement with Pydantic, human approval gates, and context-rich prompts over brute-force model scaling."
 ---

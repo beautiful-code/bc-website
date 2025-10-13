@@ -2,8 +2,8 @@
 title: "Layered Evaluation Strategies: Balancing Speed, Cost, and Quality in Production AI Systems"
 expertise: ai-applied-ml
 slug: layered-evaluation-strategies-balancing-speed-cost-and-quality-in-production-ai-systems
-tech: [langsmith, deepeval, gemini]
-date: 2025-10-11
+tech: [langsmith, deepeval]
+date: 2025-08-05
 author: BeautifulCode
 keytakeaway: "Production AI systems require layered evaluation strategies where fast heuristics catch obvious failures, model-based judges assess quality at scale, and human review focuses on high-stakes edge cases, with offline evals preventing regressions and online evals surfacing real-world UX issues."
 ---

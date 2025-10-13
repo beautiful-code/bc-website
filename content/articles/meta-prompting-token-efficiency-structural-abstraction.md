@@ -2,8 +2,8 @@
 title: "Meta-Prompting: Achieving Token Efficiency Through Structural Abstraction in LLM Workflows"
 expertise: ai-applied-ml
 slug: meta-prompting-token-efficiency-structural-abstraction
-tech: [langchain, claude, openai]
-date: 2025-10-11
+tech: [langchain, claude]
+date: 2025-08-02
 author: BeautifulCode
 keytakeaway: "Meta-prompting reduces token overhead and improves generalization by replacing concrete examples with abstract structural guidance that defines task logic without sample data."
 ---

@@ -2,8 +2,8 @@
 title: "Why GenAI Evaluation is Your Production Bottleneck"
 expertise: ai-applied-ml
 slug: why-genai-evaluation-is-your-production-bottleneck
-tech: [deepeval, langsmith, pytest]
-date: 2025-10-11
+tech: [deepeval, langsmith]
+date: 2025-10-05
 author: BeautifulCode
 keytakeaway: "GenAI systems fail in production not from poor models but from blind iteration—invest in multi-tier evaluation infrastructure with curated golden datasets and failure mode catalogs to ship confidently."
 ---

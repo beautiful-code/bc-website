@@ -6,7 +6,7 @@ tech:
   - langsmith
   - deepseek
   - openai
-date: 2025-10-11
+date: 2025-06-02
 author: BeautifulCode
 keytakeaway: "Chain-of-Thought prompting reduces hallucinations in LLMs by externalizing reasoning steps, making it essential for mathematical and multi-hop logical tasks where verifiable accuracy matters."
 ---

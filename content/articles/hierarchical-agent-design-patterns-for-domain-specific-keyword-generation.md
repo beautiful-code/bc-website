@@ -3,7 +3,7 @@ title: "Hierarchical Agent Design Patterns for Domain-Specific Keyword Generatio
 expertise: ai-applied-ml
 slug: hierarchical-agent-design-patterns-for-domain-specific-keyword-generation
 tech: [adk, gemini, litellm]
-date: 2025-10-10
+date: 2025-09-04
 author: BeautifulCode
 keytakeaway: "Hierarchical multi-agent architectures with structured prompts and domain-specific critic loops outperform monolithic LLM calls for complex, constraint-heavy generation tasks."
 ---

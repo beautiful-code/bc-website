@@ -3,7 +3,7 @@ title: "Dynamic Task Decomposition: Building Adaptive Planning Engines for AI Ag
 expertise: ai-applied-ml
 slug: dynamic-task-decomposition-building-adaptive-planning-engines-for-ai-agents
 tech: [taskgen, langgraph, crewai]
-date: 2025-10-10
+date: 2025-07-04
 author: BeautifulCode
 keytakeaway: "Effective AI agent planning balances upfront decomposition with runtime adaptability by implementing shallow planning loops that checkpoint progress and trigger replanning when environmental conditions invalidate prior assumptions."
 ---

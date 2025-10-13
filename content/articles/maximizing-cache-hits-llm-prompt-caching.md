@@ -4,9 +4,8 @@ expertise: ai-applied-ml
 slug: maximizing-cache-hits-llm-prompt-caching
 tech:
   - claude
-  - openai
   - gemini
-date: 2025-10-11
+date: 2025-09-02
 author: BeautifulCode
 keytakeaway: "Cache hit rates depend entirely on prompt structure—place all static content before dynamic variables to ensure prefix stability and maximize token reuse across requests."
 ---
