@@ -2,8 +2,8 @@
 title: "INP Optimization: Code-Splitting by Interaction, Not Route"
 expertise: frontend-engineering
 slug: inp-optimization-code-splitting-by-interaction
-tech: [react, javascript, webpack]
-date: 2025-10-10
+tech: [react, webpack]
+date: 2025-10-12 
 author: BeautifulCode
 keytakeaway: "Maintaining good INP scores requires splitting expensive code by when interactions trigger it and marking deferrable updates as transitions, not just optimizing route-based bundle sizes."
 ---

@@ -3,7 +3,7 @@ title: "The Hidden Costs of CSS Isolation and Runtime Duplication in Micro-Front
 expertise: "frontend-engineering"
 slug: "hidden-costs-css-isolation-runtime-duplication-micro-frontends"
 tech: ["react", "webpack", "nextjs"]
-date: "2025-10-10"
+date: "2025-10-11"
 author: "BeautifulCode"
 keytakeaway: "Micro-frontends solve organizational scaling problems at the cost of CSS isolation complexity, shared library coordination overhead, and runtime performance degradation that often exceeds monolithic alternatives."
 ---

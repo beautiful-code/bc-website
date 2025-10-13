@@ -1,9 +1,9 @@
 ---
-title: "Concurrent Rendering Primitives: Choosing Between useTransition and useDeferredValue Concurrent Rendering Primitives useDeferredValue"
+title: "Concurrent Rendering Primitives: Choosing Between useTransition and useDeferredValue"
 expertise: frontend-engineering
 slug: concurrent-rendering-primitives-choosing-between-usetransition-and-usedeferredvalue
 tech: [react, typescript, nextjs]
-date: 2025-10-11
+date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "React 18's concurrent primitives eliminate manual debouncing by allowing interruptible renders through useTransition and useDeferredValue, while Suspense boundaries enable progressive hydration that prioritizes critical interactive elements in SSR applications."
 ---

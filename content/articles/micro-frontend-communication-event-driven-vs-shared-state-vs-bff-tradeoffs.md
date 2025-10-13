@@ -2,15 +2,15 @@
 title: "Micro-Frontend Communication: Event-Driven vs Shared State vs BFF Trade-offs"
 expertise: "frontend-engineering"
 slug: "micro-frontend-communication-event-driven-vs-shared-state-vs-bff-tradeoffs"
-tech: ["react", "typescript", "redux"]
-date: "2025-10-10"
+tech: ["rxjs", "redux"]
+date: "2025-10-13"
 author: "BeautifulCode"
-keytakeaway: "Micro-frontend communication strategies trade architectural independence for operational complexity - event-driven systems hide data flow requiring runtime debugging, shared stores create deployment coupling, and per-team BFFs multiply infrastructure while maximizing team autonomy."
+keytakeaway: "Micro-frontend communication trades independence for visibility: event-driven patterns hide data flow, shared state forces coordinated deployments, and per-team BFFs multiply infrastructure costs."
 ---
 
 ### The Debugging Cost of Event-Driven Decoupling
 
-Event-driven communication using CustomEvents or pub-sub patterns keeps micro-frontends independent without direct imports. A checkout module can emit "cart:updated" and the header listens without knowing about checkout's internals. This architectural boundary prevents cascading changes across teams. But the trade-off hits during debugging: data flow becomes invisible. When a bug surfaces in the header, you cannot use IDE navigation to trace which modules emit the event. Runtime debugging becomes mandatory, requiring event monitoring tools or manual log searches across multiple applications to understand interactions.
+When you split a monolithic frontend into independent micro-frontends, each team-owned application needs to communicate without creating tight coupling. A shopping cart module must notify the header when items change, and the checkout flow needs access to authentication state. Traditional approaches like direct function imports defeat the purpose of micro-frontends by creating dependencies between codebases. The fundamental tension: how do you let applications talk to each other while keeping them truly independent? Three patterns emerge, each trading different aspects of simplicity for autonomy.
 
 ### Event Versioning and Consumer Contracts
 

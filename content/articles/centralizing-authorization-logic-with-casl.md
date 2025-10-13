@@ -2,8 +2,8 @@
 title: "Centralizing Authorization Logic with CASL's Ability-Based Access Control"
 expertise: frontend-engineering
 slug: centralizing-authorization-logic-with-casl
-tech: [react, nodejs, typescript]
-date: 2025-10-11
+tech: [casl, react]
+date: 2025-10-12
 author: BeautifulCode
 keytakeaway: "CASL's centralized ability definitions replace scattered permission checks with declarative, context-aware rules that synchronize authorization logic across frontend and backend, but require disciplined adherence to prevent erosion back to inline conditionals."
 ---

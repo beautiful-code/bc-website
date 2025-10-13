@@ -3,7 +3,7 @@ title: "Why Vite's Dev Server is Instant but Production Builds Still Need Rollup
 expertise: frontend-engineering
 slug: why-vite-dev-server-instant-production-builds-need-rollup
 tech: [vite, webpack, rollup]
-date: 2025-10-10
+date: 2025-10-13
 author: BeautifulCode
 keytakeaway: "Vite achieves instant dev server startup through native ESM but still requires Rollup bundling for production because browser ESM's request overhead makes unbundled delivery impractical at scale."
 ---
