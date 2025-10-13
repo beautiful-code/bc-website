@@ -2,8 +2,8 @@
 title: "Beyond Benchmarks: Production LLM Evaluation Pitfalls and Private Test Suites"
 expertise: ai-applied-ml
 slug: beyond-benchmarks-production-llm-evaluation-pitfalls
-tech: [deepeval, langsmith, huggingface]
-date: 2025-10-11
+tech: [deepeval, langsmith]
+date: 2025-09-05
 author: BeautifulCode
 keytakeaway: "Effective LLM evaluation requires private task-specific benchmarks, statistical sampling to handle prompt sensitivity, and production observability to catch failures that synthetic tests miss."
 ---

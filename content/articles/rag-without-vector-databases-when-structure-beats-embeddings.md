@@ -2,8 +2,8 @@
 title: "RAG Without Vector Databases: When Structure Beats Embeddings"
 expertise: ai-applied-ml
 slug: rag-without-vector-databases-when-structure-beats-embeddings
-tech: [llamindex, langchain, claude]
-date: 2025-10-10
+tech: [llamindex, claude]
+date: 2025-06-03
 author: BeautifulCode
 keytakeaway: "Vector databases are not a prerequisite for effective RAG systems; choosing retrieval strategies based on domain characteristics, query patterns, and infrastructure constraints often yields better cost-performance trade-offs than defaulting to semantic search."
 ---

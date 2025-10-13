@@ -6,7 +6,7 @@ tech:
   - llamaindex
   - pinecone
   - openai
-date: 2025-10-10
+date: 2025-10-03
 author: BeautifulCode
 keytakeaway: "Production RAG systems require hybrid retrieval architectures, domain-aware chunking, and reranking stages to achieve reliable accuracy beyond what embeddings alone provide."
 ---

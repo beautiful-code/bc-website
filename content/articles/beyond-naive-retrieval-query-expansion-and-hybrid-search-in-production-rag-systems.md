@@ -3,7 +3,7 @@ title: "Beyond Naive Retrieval: Query Expansion and Hybrid Search in Production 
 expertise: ai-applied-ml
 slug: beyond-naive-retrieval-query-expansion-and-hybrid-search-in-production-rag-systems
 tech: [llamaindex, langchain, gemini]
-date: 2025-10-10
+date: 2025-09-03
 author: BeautifulCode
 keytakeaway: "Production RAG systems require layered retrieval strategies where query expansion improves recall, hybrid search handles both semantic and exact matches, and re-ranking ensures relevant context reaches the LLM."
 ---

@@ -2,8 +2,8 @@
 title: "IVF Indexing for Product Search: Scaling Beyond Brute-Force Vector Comparisons"
 expertise: ai-applied-ml
 slug: ivf-indexing-product-search-scaling-vector-comparisons
-tech: [postgres, python, openai]
-date: 2025-10-10
+tech: [postgres, openai]
+date: 2025-07-03
 author: BeautifulCode
 keytakeaway: "IVF indexing transforms vector similarity search from O(N) to approximately O(sqrt(N)) by clustering embeddings and searching only relevant partitions, enabling sub-100ms product search queries at the cost of minor recall degradation."
 ---

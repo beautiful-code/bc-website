@@ -3,7 +3,7 @@ title: "TaskGen: Shared Memory Architecture for Multi-Agent Task Decomposition"
 expertise: ai-applied-ml
 slug: taskgen-shared-memory-multi-agent-task-decomposition
 tech: [taskgen, openai]
-date: 2025-10-10
+date: 2025-06-04
 author: BeautifulCode
 keytakeaway: "TaskGen's task-based decomposition with RAG over function space enables reliable multi-agent execution by semantically matching user goals to available functions before generating subtask plans, while avoiding the token inefficiency of conversational frameworks through structured state management."
 ---

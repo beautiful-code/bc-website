@@ -2,8 +2,8 @@
 title: "Pairwise Comparison vs. Absolute Scoring in LLM Evaluation Systems"
 expertise: ai-applied-ml
 slug: pairwise-comparison-vs-absolute-scoring-in-llm-evaluation-systems
-tech: [langsmith, deepeval, openai]
-date: 2025-10-11
+tech: [langsmith, deepeval]
+date: 2025-07-05
 author: BeautifulCode
 keytakeaway: "Pairwise comparison with multi-dimensional scoring produces more reliable LLM evaluation than absolute scoring, but judge models still require human calibration to avoid recursive validation failures."
 ---

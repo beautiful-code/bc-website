@@ -3,7 +3,7 @@ title: "Model Context Protocol: Bridging AI Applications with External Data Sour
 expertise: ai-applied-ml
 slug: model-context-protocol-bridging-ai-applications-with-external-data-sources
 tech: [claude, postgres]
-date: 2025-10-10
+date: 2025-07-02
 author: BeautifulCode
 keytakeaway: "Model Context Protocol standardizes AI-to-data communication through a security-first architecture, making it valuable for multi-source enterprise AI systems that require governed access and audit trails."
 ---
