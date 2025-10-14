@@ -29,8 +29,6 @@ technologies:
 
 
 
-### Problem Statement
-Increase online booking conversions and revenue for hotels by effectively targeting customer segments.
 
 ### How did BeautifulCode do it?
 
@@ -46,6 +44,13 @@ Segmenting and defining thousands of customer types for effective targeting was 
 
 ### Solution
 Developed a real-time customer segmentation platform using Vertex AI and deep neural networks, improving targeting and boosting performance significantly.
+
+<figure>
+  <img src="/" alt="" />
+  <figcaption>
+    
+  </figcaption>
+</figure>
 
 ### Overview of Delivery Methodology
 Step 1: Data Collection

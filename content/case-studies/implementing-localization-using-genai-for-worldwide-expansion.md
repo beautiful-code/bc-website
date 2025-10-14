@@ -38,6 +38,13 @@ Implemented a GenAI-based solution to automate translations, reducing turnaround
 ### Solution
 Our solution addressed the customer’s challenges by employing GenAI and building an internal Python backend with the LangChain package, providing context for accurate translations and manual verification for cultural relevance.
 
+<figure>
+  <img src="/case-studies/implementing-localization-using-genai-for-worldwide-expansion/implementing-localization-using-genai-for-worldwide-expansion.png" alt="" />
+  <figcaption>
+  
+  </figcaption>
+</figure>
+
 ### Overview of Delivery Methodology
 Step 1 - Proof of Concept with supporting 1 language
 Identified the appropriate React framework and the suitable LLM model for localization in the client's web app.

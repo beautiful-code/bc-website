@@ -41,6 +41,13 @@ User Experience: Balanced automation with analyst control via interactive “Ver
 ### Solution
 Built SuperReport: an AI-native platform leveraging RAG pipelines to generate citation-rich report drafts, enable verification workflows, and accelerate analysts’ turnaround time with high accuracy.
 
+<figure>
+  <img src="" alt="" />
+  <figcaption>
+    
+  </figcaption>
+</figure>
+
 ### Overview of Delivery Methodology
 Step 1 – Discovery: Understood analyst workflows and bottlenecks in research reporting.
 

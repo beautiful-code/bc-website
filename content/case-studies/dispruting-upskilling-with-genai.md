@@ -8,19 +8,19 @@ clientInfo: "An established IT Services provider"
 # clientImage: "/case-studies/dispruting-upskilling-with-genai/client-logo.svg"
 outcomes:
   - outcome: "(5x) Scaling of mentees for a given mentor "
-    icon: "/case-studies/dispruting-upskilling-with-genai/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-scale.png"
   - outcome: "Halfed the training time of ramping up of leaners into projects"
     icon: "/icons/outcome/outcome-down.png"
   - outcome: "Added a comprehensive evaluation phase in the training period"
     icon: "/case-studies/dispruting-upskilling-with-genai/outcome-icon.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
-  - tech: "python"
-    purpose: "Core AI and data automation components"
-  - tech: "aws"
-    purpose: "Cloud deployment and infrastructure"
-  - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
+  - tech: "openai"
+    purpose: "Foundation models for learning evaluation and feedback"
+  - tech: "react"
+    purpose: "Web UI for learning experiences"
+  - tech: "supabase"
+    purpose: "Auth, database, and storage backend"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -44,7 +44,14 @@ Analyzed learner performance to adaptively provide personalized follow-ups, incl
 ### Solution
 Implemented researched learning methodologies, leveraged GenAI for continuous performance observation and feedback, digitized offline learning experiences, and scaled up quality mentor support for a superior, integrated learning platform
 
-Technologies: OpenAI Foundation Models, React, Supabase
+
+<figure>
+  <img src="/case-studies/dispruting-upskilling-with-genai/dispruting-upskilling-with-genai.png" alt="" />
+  <figcaption>
+    Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
+  </figcaption>
+</figure>
+
 
 ### Overview of Delivery Methodology
 Step 1 - Research and Build 

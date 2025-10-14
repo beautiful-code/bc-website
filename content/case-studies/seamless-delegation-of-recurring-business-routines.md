@@ -40,6 +40,13 @@ Integration Gaps: Bridging data flow with existing tools like spreadsheets and e
 ### Solution
 Built an AI-powered delegation platform to capture, organize, and track recurring tasks, offering visibility, reminders, and structured templates for repeatable routines, improving accountability and reducing oversight effort.
 
+<figure>
+  <img src="" alt="" />
+  <figcaption>
+   
+  </figcaption>
+</figure>
+
 ### Overview of Delivery Methodology
 Step 1 – Discovery: Workshops with stakeholders to capture recurring routine pain points.
 

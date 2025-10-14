@@ -38,6 +38,13 @@ Integrating varied formats like technical documentation, service catalogs, and v
 ### Solution
 We built an AI-powered conversational sales agent. It uses a Retrieval-Augmented Generation (RAG) model over technical documentation, videos, and a service catalog to guide customers to optimal solutions.
 
+<figure>
+  <img src="/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.png" alt="" />
+  <figcaption>
+    
+  </figcaption>
+</figure>
+
 ### Overview of Delivery Methodology
 Step 1 - Knowlege base construction: We processed & indexed different files into unified content optimized for RAG
 

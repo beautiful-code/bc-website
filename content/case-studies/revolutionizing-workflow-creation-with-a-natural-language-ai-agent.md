@@ -15,10 +15,8 @@ expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"
-  - tech: "aws"
-    purpose: "Cloud deployment and infrastructure"
   - tech: "langchain"
-#     purpose: "GenAI orchestration and automation"
+    purpose: "GenAI orchestration and automation"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -37,6 +35,13 @@ The AI could generate workflows with logical errors. We implemented a validator 
 
 ### Solution
 We delivered an agentic AI solution that interprets user requests in natural language. The agent plans, builds, and validates workflows by translating high-level goals into executable automation steps.
+
+<figure>
+  <img src="/case-studies/revolutionizing-workflow-creation-with-a-natural-language-ai-agent/revolutionizing-workflow-creation-with-a-natural-language-ai-agent.png" alt="" />
+  <figcaption>
+    
+  </figcaption>
+</figure>
 
 ### Overview of Delivery Methodology
 Step 1 – Discovery: Analyzed the automation platform’s components and defined the initial command scope.

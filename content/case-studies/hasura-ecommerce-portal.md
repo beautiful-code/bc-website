@@ -11,7 +11,7 @@ outcomes:
   - outcome: "50% Reduction in Development Time"
     icon: "/case-studies/hasura-ecommerce-portal/outcome-time.png"
   - outcome: "30% Savings on Cloud Infrastructure"
-    icon: "/case-studies/hasura-ecommerce-portal/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.svg"
   - outcome: "Supports 1 Million Live Data Connections"
     icon: "/case-studies/hasura-ecommerce-portal/outcome-connections.png"
 expertises: ["backend-engineering", "frontend-engineering", "cloud-devops"]

@@ -8,17 +8,25 @@ clientInfo: "A client specialised in managing Search Engine Marketing (SEM) camp
 # clientImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/client-logo.svg"
 outcomes:
   - outcome: "Reduced time to create SEM Ads by 97%"
-    icon: "/icons/outcome/outcome-time.png"
+    icon: "/icons/outcome/outcome-down.svg"
   - outcome: "Click-Through Rate (CTR) of the SEM Ads increased by 37%"
-    icon: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-click.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
-    purpose: "Core AI and data automation components"
-  - tech: "aws"
-    purpose: "Cloud deployment and infrastructure"
+    purpose: "Core scripting and data integration"
   - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
+    purpose: "Agent orchestration and prompt pipelines"
+  - tech: "langsmith"
+    purpose: "Prompt evaluation and tracing"
+  - tech: "streamlit"
+    purpose: "Rapid prototyping UI for analysts"
+  - tech: "gemini"
+    purpose: "LLM for content and copy generation"
+  - tech: "serper"
+    purpose: "Search API to fetch attraction data"
+  - tech: "fastapi"
+    purpose: "Production API endpoints"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -33,11 +41,23 @@ technologies:
 Defining High-Quality SEM Ads
 To define the key elements of a high-quality SEM ad, we collaborated with experts experienced in crafting successful SEM campaigns. Their valuable insights were then incorporated into a refined prompt for generating top-performing ads.
 
+
+
+
+
+
 Ensuring Up-to-Date Tourist Attraction Information
 We deployed agents to gather the latest details on tourist attractions. This ensured that our generated SEM ads remained accurate and relevant to recent changes or developments.
 
 ### Solution
 We harnessed LangChain and the Serper API to dynamically gather property information, ensuring generated SEM ads were high-quality, accurate, and aligned with business goals.
+
+<figure>
+  <img src="" alt="" />
+  <figcaption>
+    Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
+  </figcaption>
+</figure>
 
 Technologies: Python, LangChain, LangSmith, StreamLit, Gemini, Serper Tool, FastAPI
 

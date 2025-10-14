@@ -14,11 +14,17 @@ outcomes:
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
-    purpose: "Core AI and data automation components"
-  - tech: "aws"
-    purpose: "Cloud deployment and infrastructure"
+    purpose: "Core data processing and orchestration"
   - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
+    purpose: "RAG pipelines and document tools"
+  - tech: "pinecone"
+    purpose: "Vector database for policy embeddings"
+  - tech: "gemini"
+    purpose: "LLM for analysis and summarization"
+  - tech: "streamlit"
+    purpose: "POC UI for rapid evaluation"
+  - tech: "googlecloud"
+    purpose: "Cloud services for hosting and data"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -41,6 +47,13 @@ The RAG model's broad retrieval hindered CCPA-specific analysis. We improved it 
 
 ### Solution
 We developed a LangChain tool to retrieve relevant policy document sections, summarize the content, and analyze the summary for potential CCPA violations.
+
+<figure>
+  <img src="/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/achieving-rapid-ccpa-compliance-with-genai-powered-analysis.png" alt="" />
+  <figcaption>
+    Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
+  </figcaption>
+</figure>
 
 Technologies: Python, LangChain, PineCone, Gemini, StreamLit, GCP
 

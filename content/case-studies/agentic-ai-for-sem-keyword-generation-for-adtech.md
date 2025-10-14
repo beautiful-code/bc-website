@@ -17,8 +17,6 @@ expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"
-  - tech: "aws"
-    purpose: "Cloud deployment and infrastructure"
   - tech: "langchain"
     purpose: "GenAI orchestration and automation"
 # testimonial:
@@ -38,6 +36,13 @@ Translating the nuanced strategies of expert SEM analysts into structured, machi
 
 ### Solution
 We developed a multi-agent AI system. It researches campaign goals, analyzes performance data, and uses an critic agent to generate high-intent Phrase and Exact Match keywords.
+
+<figure>
+  <img src="/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/agentic-ai-for-sem-keyword-generation-for-adtech.png" alt="" />
+  <figcaption>
+
+  </figcaption>
+</figure>
 
 ### Overview of Delivery Methodology
 Step 1: Discovery: Collaborated with SEM Analyst to understand the problem & document guidelines

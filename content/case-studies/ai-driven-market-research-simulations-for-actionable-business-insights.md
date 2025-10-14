@@ -40,6 +40,13 @@ Insight Trust: Building customer trust in AI responses; solved with transparent 
 ### Solution
 Developed an AI system that created profiles from real data and simulated responses, accelerating research cycles and improving decision confidence.
 
+<figure>
+  <img src="" alt="" />
+  <figcaption>
+
+  </figcaption>
+</figure>
+
 ### Overview of Delivery Methodology
 Step 1 – Discovery: Understood analyst workflows and bottlenecks in research reporting.
 
