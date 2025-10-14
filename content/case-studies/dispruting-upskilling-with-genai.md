@@ -8,11 +8,11 @@ clientInfo: "An established IT Services provider"
 # clientImage: "/case-studies/dispruting-upskilling-with-genai/client-logo.svg"
 outcomes:
   - outcome: "(5x) Scaling of mentees for a given mentor "
-    icon: "/icons/outcome/outcome-scale.png"
+    icon: "/icons/outcome/outcome-scale-1.svg"
   - outcome: "Halfed the training time of ramping up of leaners into projects"
-    icon: "/icons/outcome/outcome-down.png"
+    icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Added a comprehensive evaluation phase in the training period"
-    icon: "/case-studies/dispruting-upskilling-with-genai/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-evaluate.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "openai"
@@ -27,23 +27,10 @@ technologies:
 #   authorImage: "/case-studies/dispruting-upskilling-with-genai/client-author.svg"
 ---
 
-
-
 ### How did BeautifulCode do it?
 
-### Challenges Encountered During Implementation
-Support and Standardize Offline Learning
-Enabled effective traditional note-taking within a cohesive digital experience, ensuring seamless integration of offline methods into the overall learning platform.
-
-Identify Key Feedback Touchpoints
-Studied effective learning workflows and seamlessly integrated AI and human mentor feedback into the platform to enhance the learning experience.
-
-Personalize the Learning Experience
-Analyzed learner performance to adaptively provide personalized follow-ups, including hands-on exercises and application projects, enhancing individual learning paths
-
-### Solution
-Implemented researched learning methodologies, leveraged GenAI for continuous performance observation and feedback, digitized offline learning experiences, and scaled up quality mentor support for a superior, integrated learning platform
-
+BeautifulCode began by analyzing the critical pain points in the client's traditional training model. The process was heavily reliant on mentor availability, leading to bottlenecks in feedback, inconsistent evaluation, and a significant time lag between learning and application. This model was not scalable and struggled to provide the deep, personalized assessment needed to ensure learners were truly project-ready.
+To solve this, we developed an intelligent, multi-stage upskilling platform powered by Generative AI. The new process creates a structured, interactive, and highly efficient learning journey:
 
 <figure>
   <img src="/case-studies/dispruting-upskilling-with-genai/dispruting-upskilling-with-genai.png" alt="" />
@@ -52,14 +39,35 @@ Implemented researched learning methodologies, leveraged GenAI for continuous pe
   </figcaption>
 </figure>
 
+To solve this, we developed an intelligent, multi-stage upskilling platform powered by Generative AI. The new process creates a structured, interactive, and highly efficient learning journey:
 
-### Overview of Delivery Methodology
-Step 1 - Research and Build 
+### Structured Course Design
+
+The process begins with the course designer, who curates modules and learning tasks. Crucially, for each task, they embed the specific concepts a learner is expected to grasp and formulate targeted questions to validate that understanding. This creates a clear framework for both teaching and assessment.
+
+### Learner-Centric Input
+
+After completing the learning tasks, the learner digitizes and uploads their handwritten notes into the system. This step is designed to capture their authentic thought process and initial understanding of the material.
+
+### AI-Powered Note Analysis
+
+The platform's AI analyzes these notes to check for comprehension of the key concepts defined by the course designer. It provides immediate, constructive feedback to the learner, pinpointing areas of misunderstanding or gaps in their knowledge.
+
+### Adaptive Assessment and Mentor Reporting
+
+If the AI determines the notes sufficiently cover the required concepts, the module is marked as complete. However, if key concepts are missing, the AI initiates a dialogue, asking the specific questions the course designer had prepared. It assesses the learner's responses, provides further feedback to solidify their understanding, and only then marks the module as complete. Upon completion, the AI generates a concise summary report for the mentor, detailing the learner's performance.
+
+### Seamless Mentor Handoff
+
+Once a learner completes all modules, the mentor has access to a comprehensive overview of their entire learning journey. This allows mentors to bypass granular, repetitive checks and focus their time on high-impact, strategic conversations, preparing the learner for the final project phase.
+
+<!-- ### Overview of Delivery Methodology
+
+Step 1 - Research and Build
 Developed multiple proof of concepts for micro learning experiences.
-Step 2 - Brainstorm and Propose 
+Step 2 - Brainstorm and Propose
 Formulated and proposed philosophical models of learning.
 Step 3 - Roadmap Creation
 Broke down desired features into a prioritized development roadmap.
-Step 4 - Kanban Implementation 
-Launched features incrementally using the Kanban method.
-
+Step 4 - Kanban Implementation
+Launched features incrementally using the Kanban method. -->

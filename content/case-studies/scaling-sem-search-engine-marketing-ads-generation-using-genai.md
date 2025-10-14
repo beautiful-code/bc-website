@@ -33,41 +33,35 @@ technologies:
 #   authorImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/client-author.svg"
 ---
 
-
-
 ### How did BeautifulCode do it?
 
-### Challenges Encountered During Implementation
-Defining High-Quality SEM Ads
-To define the key elements of a high-quality SEM ad, we collaborated with experts experienced in crafting successful SEM campaigns. Their valuable insights were then incorporated into a refined prompt for generating top-performing ads.
-
-
-
-
-
-
-Ensuring Up-to-Date Tourist Attraction Information
-We deployed agents to gather the latest details on tourist attractions. This ensured that our generated SEM ads remained accurate and relevant to recent changes or developments.
-
-### Solution
-We harnessed LangChain and the Serper API to dynamically gather property information, ensuring generated SEM ads were high-quality, accurate, and aligned with business goals.
+BeautifulCode started by shadowing the client's Business Analysts to deeply understand the creative and strategic process that went into creating a successful SEM ad. We identified that the core challenge was codifying their domain expertise and automating the research and generation process. To address this, we developed a human-in-the-loop AI agent to act as a powerful assistant for the analysts.
 
 <figure>
-  <img src="" alt="" />
+  <img src="/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/ScalingSEM_artifact.png" alt="" />
   <figcaption>
     Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
   </figcaption>
 </figure>
 
-Technologies: Python, LangChain, LangSmith, StreamLit, Gemini, Serper Tool, FastAPI
+Our solution streamlined the entire ad creation workflow into a simple, interactive application:
 
-### Overview of Delivery Methodology
-Step 1: Understand the Problem
-We spent time with the client to understand the problem they were trying to solve. We ensured the right people were involved in the meetings.
+### Capturing Domain Knowledge
 
-Step 2: Rapid prototyping & Iteration
-We built a rapid prototype using Streamlit and deployed it to Hugging Face for the business analysts to assess the quality of the outputs. We refined the prompt based on the feedback we recieved using LangSmith.
+We collaborated closely with the analysts to distill their expert insights on ad copy, keyword strategy, and calls-to-action into a comprehensive, sophisticated prompt that would guide the AI's creative process.
 
-Step 3: Deployment
-We built API endpoints using FastAPI and deployed them for consumption by other services.
+### Building an Empowered AI Agent
 
+We constructed a single, powerful agent using LangChain. This agent was armed with our expertly crafted prompt and equipped with specialized tools: the Serper Search API for real-time web research and a custom Python tool to integrate directly with the Demand-Side Platform (DSP) API. The entire experience was delivered through a user-friendly Streamlit web application.
+
+### Automated Research and Ad Generation
+
+When an analyst entered the name of a tourist attraction into the app, the agent immediately used the Serper tool to search the web for current details, highlights, and unique selling points about the property. It then synthesized these search results with the best practices embedded in its core prompt to generate a variety of high-quality SEM ad options, which were instantly displayed to the user.
+
+### Analyst-in-the-Loop for Approval
+
+The Business Analyst could then review the AI-generated ads, selecting the most promising options with a single click. Once they gave their final approval, the agent automatically used its "Create in DSP" tool to push the ads live, completing the process seamlessly.
+
+### Continuous Improvement via Feedback
+
+To ensure the agent grew smarter over time, we implemented a feedback loop. We collected data on the ads that analysts rejected and used this information to continuously refine and improve the master prompt, making the agent's future suggestions even more accurate and effective.

@@ -4,19 +4,19 @@ title: "Efficiency Unleashed: Automating Campaign Setup Across Multiple Ad Platf
 industry: "Ad-Tech "
 heroImage: "/case-studies/bc-campaign-automation/heroimage.jpg"
 problemStatement: |
-                  Our client assists travel businesses in connecting with their audiences through advertising campaigns.Previous campaign setup relied on manual Excel templates, faced several key challenges High manpower requirement: Involvement of many team members
-                  Time-consuming: Extensive time needed due to manual operations
-                  Error-prone: Increased likelihood of mistakesq
-                  Lack of scalability: Difficulty in handling larger number of campaigns.
+  Our client assists travel businesses in connecting with their audiences through advertising campaigns.Previous campaign setup relied on manual Excel templates, faced several key challenges High manpower requirement: Involvement of many team members
+  Time-consuming: Extensive time needed due to manual operations
+  Error-prone: Increased likelihood of mistakesq
+  Lack of scalability: Difficulty in handling larger number of campaigns.
 clientInfo: "A $25M ARR travel marketing platform that provides data-driven solutions for travel brands, specializing in digital advertising to optimize campaigns and enhance customer engagement."
 # clientImage: "/case-studies/bc-campaign-automation/client-logo.png"
 outcomes:
   - outcome: "Automated campaign setup across Google, Facebook, Xandr, and other ad platforms via APIs"
-    icon: "/case-studies/bc-campaign-automation/outcome-automation.png"
+    icon: "/icons/outcome/outcome-automation.svg"
   - outcome: "Reduced manual input and errors by replacing spreadsheets with a rules-driven setup flow"
-    icon: "/case-studies/bc-campaign-automation/outcome-quality.png"
+    icon: "/icons/outcome/outcome-down.svg"
   - outcome: "Enabled scalable handling of a larger number of campaigns"
-    icon: "/case-studies/bc-campaign-automation/outcome-scale.png"
+    icon: "/icons/outcome/outcome-scale-1.svg"
 expertises: ["backend-engineering", "frontend-engineering", "data-engineering"]
 technologies:
   - tech: "python"
@@ -33,11 +33,9 @@ technologies:
 #   authorImage: "/case-studies/bc-campaign-automation/client-author.jpg"
 ---
 
-
 ### How did BeautifulCode do it?
 
 The initial hurdle involved comprehending the intricacies of the Ad-Tech domain. A significant amount of time was spent in collaborating with Business Analysts to grasp the nuances including aspects such as Bids, Targeting, Viewability, Ad Frequency, Campaign Goals, Budget, Margins, and the overall Campaign life cycle.
-
 
 <figure>
   <img src="/case-studies/bc-campaign-automation/campaign_setup_automation_diagram.png" alt="Campaign Setup Solution Architecure diagram" />
@@ -56,7 +54,7 @@ The rule engine was designed to automatically determine campaign setup strategie
 
 The UI rich front-end app, built with React was primarily designed for two purposes:
 
-- Configuring rules through a user-friendly interface  
+- Configuring rules through a user-friendly interface
 - Configuring strategies.
 
 This allowed stakeholders to manage both aspects without further involvement from the engineering team.
@@ -64,9 +62,6 @@ This allowed stakeholders to manage both aspects without further involvement fro
 ### Campaign setup solution Architecture
 
 A micro-service Campaign Setup service was developed to generate campaign setup data by amalgamating inputs from the rule engine and source data. The generated campaign setup data was utilized to setup campaigns across various Ad Platforms (e.g., Google, Facebook, Xandr, etc.) through APIs.
-
-
-
 
 ### Conclusion
 

@@ -3,14 +3,14 @@ slug: "implementing-localization-using-genai-for-worldwide-expansion"
 title: "Implementing Localization using GenAI for Worldwide Expansion"
 industry: "Technology"
 heroImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/hero-image.svg"
-problemStatement: "The client’s global expansion and go-to-market strategy were hindered by localization bottlenecks and translation inefficiencies in their web app due to lacking built-in capabilities."
+problemStatement: "The client's global expansion and go-to-market strategy were hindered by localization bottlenecks and translation inefficiencies in their web app due to lacking built-in capabilities."
 clientInfo: "A client in Hospitality industry offers a cloud-based platform to help its customers manage operations and drive bookings."
 # clientImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/client-logo.svg"
 outcomes:
   - outcome: "10x faster translation process"
-    icon: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "80% cost savings on translations"
-    icon: "/icons/outcome/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
@@ -25,35 +25,31 @@ technologies:
 #   authorImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/client-author.svg"
 ---
 
-
 ### How did BeautifulCode do it?
 
-### Challenges Encountered During Implementation
-Delayed Roll-outs due to dependency on External agenices
-
-Maintaining consistent tone and terminology across languages
-
-Implemented a GenAI-based solution to automate translations, reducing turnaround times and accelerating global launches with a consistent tone.
-
-### Solution
-Our solution addressed the customer’s challenges by employing GenAI and building an internal Python backend with the LangChain package, providing context for accurate translations and manual verification for cultural relevance.
+BeautifulCode began by investigating standard translation solutions like Google Translate. We quickly identified a critical flaw: these tools translated words and phrases in isolation, failing to consider the surrounding user interface and the specific context of the webpage. This resulted in awkward, inaccurate, and often nonsensical text that would damage the user experience.
 
 <figure>
   <img src="/case-studies/implementing-localization-using-genai-for-worldwide-expansion/implementing-localization-using-genai-for-worldwide-expansion.png" alt="" />
   <figcaption>
-  
+    Implementing Localization using GenAI for Worldwide Expansion
   </figcaption>
 </figure>
 
-### Overview of Delivery Methodology
-Step 1 - Proof of Concept with supporting 1 language
-Identified the appropriate React framework and the suitable LLM model for localization in the client's web app.
+Our solution was to build a bespoke, context-aware translation pipeline powered by a Large Language Model (LLM).
 
-Step 2 - GenAI-powered translation 
-Used Llama-3 and a python based backend system to automate the translation processes. 
+### Engineering a Context-Rich Data Structure
 
-Step 3 - Optimization 
-Optimized translation accuracy by providing additional context in the prompts.
+We first designed a unique input data structure. Instead of just sending a word or phrase for translation, this structure included the text itself, its specific location on the webpage, and a description of the surrounding context. This ensured the AI had the full picture before attempting a translation.
 
-Step 4 - Manual verification process. 
-Generated translations were manually verified by a translator for errors and cultural context.
+### Crafting a Sophisticated Prompt
+
+We developed a detailed prompt that instructed the LLM on the client's specific business tone and brand voice. The prompt was engineered to use the rich contextual data from our input structure, guiding the model to produce translations that were not only accurate but also culturally appropriate and consistent with the brand's identity.
+
+### Leveraging Llama 3 for High-Quality Translation
+
+We chose Llama 3 as the core translation engine for its advanced reasoning and language generation capabilities. By feeding it our context-rich data and specialized prompt, we could generate translations that preserved the original meaning and nuance, far surpassing the quality of context-unaware tools.
+
+### Human-in-the-Loop for Quality Assurance
+
+To guarantee the highest level of accuracy and quality, all AI-generated translations were sent for a final review by human linguists. This crucial step ensured that every piece of localized content met the client's standards before being integrated into the live web application.

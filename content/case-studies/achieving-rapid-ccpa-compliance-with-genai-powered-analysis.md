@@ -8,9 +8,9 @@ clientInfo: "A company focused on safeguarding online privacy by removing person
 # clientImage: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/client-logo.svg"
 outcomes:
   - outcome: "10x faster compliance analysis"
-    icon: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-scale-1.svg"
   - outcome: "60% Cost-effective scaling of privacy operations"
-    icon: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-savings.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
@@ -31,42 +31,35 @@ technologies:
 #   authorImage: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/client-author.svg"
 ---
 
-
-
-### Problem Statement
-California's CCPA laws forced our client to analyze 5,000+ company privacy policies to track potential data sales. Speed was important to gain a competitive advantage.
-
 ### How did BeautifulCode do it?
 
-### Challenges Encountered During Implementation
-Handling Ambiguous Policy Language:
-Privacy policies' vagueness makes AI interpretation difficult. Our solution combined AI flagging of unclear areas with human-in-the-loop feedback, allowing for continuous AI improvement.
-
-Finding Relevant Policy Snippets with RAG
-The RAG model's broad retrieval hindered CCPA-specific analysis. We improved it by refining queries with CCPA-centric keywords and providing the model with labeled training examples for better focus.
-
-### Solution
-We developed a LangChain tool to retrieve relevant policy document sections, summarize the content, and analyze the summary for potential CCPA violations.
+BeautifulCode first invested time to understand the manual workflow and pinpoint the primary bottleneck: the time-consuming and tedious process of having legal experts read and interpret thousands of lengthy, complex privacy policies. To overcome this, we designed and implemented a sophisticated analysis pipeline powered by Large Language Models (LLMs).
 
 <figure>
   <img src="/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/achieving-rapid-ccpa-compliance-with-genai-powered-analysis.png" alt="" />
   <figcaption>
-    Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
+    Achieving Rapid CCPA Compliance with GenAI-Powered Analysis
   </figcaption>
 </figure>
 
-Technologies: Python, LangChain, PineCone, Gemini, StreamLit, GCP
+Our approach automated the discovery and assessment process through a series of carefully orchestrated steps:
 
-### Overview of Delivery Methodology
-Step 1: Problem Definition and Discovery 
-Understand client's objectives to outline project scope.
+### Building the Knowledge Base (RAG Pipeline)
 
-Step 2: Ideation and Solution Design
-Architect solution at high level & validate it with client
+We initiated a Retrieval-Augmented Generation (RAG) pipeline to process the vast number of privacy policies. Each policy was systematically broken down into smaller, digestible chunks. These chunks were then converted into numerical representations (embeddings) and stored in a specialized vector database, creating a searchable library of policy information.
 
-Step 3: Rapid Prototyping and Evaluation
-Develop POC, collect feedback and enhance the solution.
+### Generating Targeted Questions
 
-Step 4: Development and Deployment
-Develop final solution and deploy it.
+Instead of manual interpretation, we used the official CCPA compliance policy as a source document. We prompted an LLM to act as a legal expert and generate a precise set of questions based on the new, nuanced definition of "selling consumer data."
 
+### Expanding the Scope of Inquiry
+
+To ensure a comprehensive analysis and avoid missing relevant policy clauses, we used an LLM to expand upon each generated question. This created multiple variations and phrasings, covering a wider range of potential legal jargon and terminology.
+
+### Intelligent Information Retrieval
+
+For each of the 5,000+ companies, our system iterated through the expanded questions. It queried the vector database to find the most relevant chunks from each company's privacy policy, using metadata filters to ensure accuracy.
+
+### AI-Powered Analysis and Confidence Scoring
+
+The retrieved policy chunks and the original question were fed into a final LLM. This model was tasked with making a determination: was the company selling data as per the CCPA rules? The output was a confidence score indicating the certainty of its assessment. All results with low confidence were automatically flagged and escalated for an efficient human review, ensuring accuracy without sacrificing speed.

@@ -8,11 +8,11 @@ clientInfo: "A leading advertising technology firm specializing in managing and 
 # clientImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/client-logo.svg"
 outcomes:
   - outcome: "Significant improvement in keyword performance and click-through rates."
-    icon: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-click.svg"
   - outcome: "Reduced cost-per-acquisition (CPA) by minimizing wasted ad spend."
-    icon: "/icons/outcome/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.svg"
   - outcome: "Increased SEM analyst productivity."
-    icon: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/outcome-icon.svg"
+    icon: "/icons/outcome/outcome-growth.svg"
 expertises: ["ai-applied-ml", "data-engineering"]
 technologies:
   - tech: "python"
@@ -25,29 +25,36 @@ technologies:
 #   authorImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/client-author.svg"
 ---
 
-
-
 ### How did BeautifulCode do it?
 
-### Challenges Encountered During Implementation
-Codifying Human Analyst Expertise:
-
-Translating the nuanced strategies of expert SEM analysts into structured, machine-readable guidelines for the AI agent required significant knowledge engineering and prompt refinement.
-
-### Solution
-We developed a multi-agent AI system. It researches campaign goals, analyzes performance data, and uses an critic agent to generate high-intent Phrase and Exact Match keywords.
+After a deep dive into the problem, we recognized that effective keyword generation required more than just automation; it needed expertise, context, and a nuanced understanding of search intent. We moved beyond simple scripts and architected a complex, multi-agent system designed to replicate and scale the strategic thinking of an expert SEM analyst.
 
 <figure>
   <img src="/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/agentic-ai-for-sem-keyword-generation-for-adtech.png" alt="" />
   <figcaption>
-
+    Agentic AI for SEM Keyword Generation for AdTech
   </figcaption>
 </figure>
 
-### Overview of Delivery Methodology
-Step 1: Discovery: Collaborated with SEM Analyst to understand the problem & document guidelines
+Our solution is a sophisticated pipeline where multiple AI agents collaborate to research, generate, critique, and refine keywords:
 
-Step 2: Architecture: Created the high level agentic design which involved a critic agent to assess the Keywords created by the AI agent
+### The Detailing Agent: Building Context
 
-Step 3: Development: Developed the agentic solution and integrated it with the UI providing a Human In The Loop solution.
+The process begins with our "Detailing Agent." When an analyst provides a hotel name, this agent uses a Google Search tool to conduct comprehensive research. It analyzes and extracts crucial details like the hotel's specific facilities, unique selling points, value proposition, and the profile of an ideal customer. This rich context forms the foundation for all subsequent steps.
 
+### Parallel Expert Agents: Specialized Generation
+
+The detailed information is then passed to a parallel processing workflow to generate both "Phrase Match" and "Exact Match" keywords simultaneously. Each parallel track is managed by a dedicated "Expert Agent" (e.g., a "Phrase Match Expert"). These agents are armed with two key assets: the detailed hotel information from the first step and a deep knowledge base of best practices for their specific keyword type. They also use the search tool to find timely information about local events or conferences happening near the hotel.
+
+### The Refinement Loop: Autonomous Quality Control
+
+The initial keyword lists from the expert agents are fed into a powerful "Refinement Loop." This loop consists of two collaborating agents:
+
+- **The Critic Agent**: This agent analyzes the generated keywords, ranking them based on criteria like search intent, relevance, and adherence to best practices. It then provides specific, actionable feedback for improvement.
+- **The Refinement Agent**: This agent takes the critic's feedback and intelligently rewrites and improves the keywords.
+
+This loop runs iteratively up to three times or until the Critic Agent is fully satisfied with the quality of the keywords, whichever comes first.
+
+### Final Analyst Review
+
+The final, highly-refined keyword lists are then presented to the human SEM analysts for their expert review and final approval, ensuring a perfect blend of AI-driven scale and human strategic oversight.
