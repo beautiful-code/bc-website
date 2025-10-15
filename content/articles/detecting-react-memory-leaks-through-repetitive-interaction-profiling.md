@@ -14,7 +14,7 @@ Memory leaks in React often stem from event listeners, timers, or subscriptions 
 
 ### Baseline and Comparison Workflow
 
-The profiling process relies on establishing a clean baseline before triggering suspected leaks. Open Chrome DevTools Memory tab, force garbage collection using the trash icon, and capture an initial snapshot. Next, perform repetitive actions like navigating routes or toggling modals 10-20 times to stress test the component lifecycle. Force garbage collection again to eliminate temporary allocations. Finally, take a comparison snapshot and examine the Size Delta column in Comparison view.
+The profiling process relies on establishing a clean baseline before triggering suspected leaks. Open Chrome DevTools Memory tab, force Garbage Collection (GC) using the trash icon, and capture an initial snapshot. Next, perform repetitive actions like navigating routes or toggling modals 10-20 times to stress test the component lifecycle. Force garbage collection again to eliminate temporary allocations. Finally, take a comparison snapshot and examine the Size Delta column in Comparison view.
 
 #### Snapshot Analysis Pattern
 

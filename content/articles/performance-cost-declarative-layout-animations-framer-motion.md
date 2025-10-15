@@ -10,7 +10,7 @@ keytakeaway: "Framer Motion's declarative API trades performance for developer c
 
 ### FLIP Technique Eliminates Transform Math But Adds Measurement Overhead
 
-The "layout" prop in Framer Motion implements the FLIP technique to automatically animate position and size changes without manual transform calculations. When a component's layout shifts due to flex reordering, grid repositioning, or content-driven size changes, Motion captures the First and Last positions, calculates the Invert transform, and Plays the animation. This means toggling an expanded state or reordering a list just works - no coordinate tracking required.
+The "layout" prop in Framer Motion implements the First, Last, Invert, Play (FLIP) technique to automatically animate position and size changes without manual transform calculations. When a component's layout shifts due to flex reordering, grid repositioning, or content-driven size changes, Motion captures the First and Last positions, calculates the Invert transform, and Plays the animation. This means toggling an expanded state or reordering a list just works - no coordinate tracking required.
 
 However, this convenience comes with measurable overhead. Every layout-triggering state change forces DOM measurements before and after render, transform matrix calculations, and animation frame scheduling. On large lists or deeply nested component trees, these synchronous layout reads cause jank, especially when multiple elements animate simultaneously.
 

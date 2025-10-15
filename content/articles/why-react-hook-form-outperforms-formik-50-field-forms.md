@@ -47,7 +47,7 @@ Integrating Zod or Yup shifts validation from imperative checks to declarative s
 
 ### Field Arrays with Surgical DOM Updates
 
-Managing dynamic form sections (add/remove rows) with "useState" causes full list rerenders and focus loss on reorders. React Hook Form's "useFieldArray" provides "append", "remove", and "move" operations that generate stable keys and perform targeted DOM updates. When combined with RHF's uncontrolled approach, appending a field to a 100-item list only renders the new field, not all existing ones. The catch is understanding field array paths like "fields.0.name" and "fields.1.name". React Hook Form flattens nested structures for validation error mapping, so you need to grasp dot notation for proper error display.
+Managing dynamic form sections (add/remove rows) with "useState" causes full list rerenders and focus loss on reorders. React Hook Form's "useFieldArray" provides "append", "remove", and "move" operations that generate stable keys and perform targeted DOM updates. When combined with React Hook Form's (RHF) uncontrolled approach, appending a field to a 100-item list only renders the new field, not all existing ones. The catch is understanding field array paths like "fields.0.name" and "fields.1.name". React Hook Form flattens nested structures for validation error mapping, so you need to grasp dot notation for proper error display.
 
 ### Applied Insight
 

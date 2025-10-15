@@ -14,11 +14,11 @@ Traditional Next.js forces a binary choice: static generation for speed or serve
 
 ### How PPR Restructures Route-Level Rendering
 
-Partial Pre-Rendering treats Suspense boundaries as the delimiter between static and dynamic. The static shell (navigation, layout, skeleton loaders) is pre-rendered at build time and cached globally. Dynamic segments (user-specific data, real-time metrics) render on-demand and stream to the client.
+Partial Pre-Rendering (PPR) treats Suspense boundaries as the delimiter between static and dynamic. The static shell (navigation, layout, skeleton loaders) is pre-rendered at build time and cached globally. Dynamic segments (user-specific data, real-time metrics) render on-demand and stream to the client.
 
 **Rendering Strategy Comparison:**
 
-| Approach | TTFB | Personalization | Cache Strategy |
+| Approach | Time To First Byte (TTFB) | Personalization | Cache Strategy |
 |----------|------|-----------------|----------------|
 | Static Generation | <50ms | None | CDN, revalidate intervals |
 | Server-Side Rendering | 200-500ms | Full | No caching, compute per request |
@@ -26,7 +26,7 @@ Partial Pre-Rendering treats Suspense boundaries as the delimiter between static
 
 This model shifts optimization focus from page-level to component-level decisions. Wrapping a user profile fetch in Suspense lets Next.js serve the page frame instantly while the profile streams in separately.
 
-### Streaming SSR and Search Engine Visibility
+### Streaming Server-Side Rendering and Search Engine Visibility
 
 Streaming SSR flushes the initial HTML before all data resolves, improving Time to First Byte without breaking SEO. Search engine crawlers wait for the entire stream to complete, receiving fully hydrated HTML. Users see interactive content progressively as chunks arrive. The critical distinction: components outside Suspense boundaries block the initial response, while those inside stream asynchronously. Misplacing a slow database query outside Suspense negates the performance gain.
 

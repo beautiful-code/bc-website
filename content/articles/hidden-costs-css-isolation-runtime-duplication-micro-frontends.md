@@ -10,7 +10,7 @@ keytakeaway: "Micro-frontends solve organizational scaling problems at the cost 
 
 ### Global CSS Leakage Without Encapsulation
 
-When multiple teams deploy micro-frontends into a shared DOM, CSS isolation becomes a critical challenge. A ".button" class defined by Team A will override Team B's styles if both target the same selectors. Traditional solutions like CSS Modules or BEM naming conventions break down because autonomous teams cannot coordinate naming strategies. The root issue: the global nature of CSS combined with independent team deployments creates unpredictable style collisions that surface only in production integrations.
+When multiple teams deploy micro-frontends into a shared DOM, CSS isolation becomes a critical challenge. A ".button" class defined by Team A will override Team B's styles if both target the same selectors. Traditional solutions like CSS Modules or Block Element Modifier (BEM) naming conventions break down because autonomous teams cannot coordinate naming strategies. The root issue: the global nature of CSS combined with independent team deployments creates unpredictable style collisions that surface only in production integrations.
 
 Shadow DOM provides true encapsulation by creating isolated style scopes, but introduces new problems. Global theming breaks because styles cannot penetrate the shadow boundary, and accessibility tools struggle with shadow-piercing. CSS-in-JS with generated unique class names solves collisions but adds runtime parsing overhead. Namespace prefixing enforces team boundaries through conventions, but scales poorly as teams grow and remains fragile under pressure.
 

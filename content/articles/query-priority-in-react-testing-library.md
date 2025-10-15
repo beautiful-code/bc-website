@@ -26,7 +26,7 @@ const errorMessage = screen.getByText(/invalid credentials/i);
 const loadingSpinner = screen.getByTestId('loading-spinner');
 ```
 
-Role queries work with implicit ARIA roles from semantic HTML ("button", "textbox") or explicit "role" attributes. Label queries require proper "htmlFor" connections or "aria-label". Reaching for "getByTestId" early creates tests that pass while accessibility breaks - users with screen readers face different barriers than your test suite reveals.
+Role queries work with implicit Accessible Rich Internet Applications (ARIA) roles from semantic HyperText Markup Language (HTML) ("button", "textbox") or explicit "role" attributes. Label queries require proper "htmlFor" connections or "aria-label". Reaching for "getByTestId" early creates tests that pass while accessibility breaks - users with screen readers face different barriers than your test suite reveals.
 
 ### Async Rendering Requires Query Strategy
 

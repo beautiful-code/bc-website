@@ -8,9 +8,9 @@ author: BeautifulCode
 keytakeaway: "Vite achieves instant dev server startup through native ESM but still requires Rollup bundling for production because browser ESM's request overhead makes unbundled delivery impractical at scale."
 ---
 
-### Native ESM Eliminates Upfront Bundling
+### Native ES Modules Eliminate Upfront Bundling
 
-Vite's development server achieves instant startup by serving source files as ES modules directly to the browser, transforming them on-demand rather than bundling everything upfront like Webpack. The browser's native module system handles dependency resolution, which means the dev server starts regardless of application size. Hot Module Replacement updates are nearly instantaneous because only the changed module requires re-transformation, not a full bundle rebuild. This architectural choice shifts the work from build time to request time, but since transformations happen only for requested modules, the perceived performance is dramatically faster.
+Vite's development server achieves instant startup by serving source files as ES Modules (ESM) directly to the browser, transforming them on-demand rather than bundling everything upfront like Webpack. The browser's native module system handles dependency resolution, which means the dev server starts regardless of application size. Hot Module Replacement updates are nearly instantaneous because only the changed module requires re-transformation, not a full bundle rebuild. This architectural choice shifts the work from build time to request time, but since transformations happen only for requested modules, the perceived performance is dramatically faster.
 
 ### Dependency Pre-Bundling Prevents Request Waterfalls
 
@@ -42,7 +42,7 @@ The first dev server start incurs the bundling cost, but subsequent starts are i
 
 ### Production Builds Require Different Optimization
 
-Despite development using native ESM, production builds still need bundling through Rollup. Browser ESM has inherent limitations - even with HTTP/2 multiplexing, hundreds of small file requests create overhead that impacts loading performance. Rollup generates optimized chunks with tree-shaking and code-splitting, producing efficient production assets. The critical insight is that development speed and production optimization require different strategies: unbundled ESM for instant dev feedback, bundled output for optimal user-facing performance.
+Despite development using native ESM, production builds still need bundling through Rollup. Browser ESM has inherent limitations - even with HTTP/2 (Hypertext Transfer Protocol version 2) multiplexing, hundreds of small file requests create overhead that impacts loading performance. Rollup generates optimized chunks with tree-shaking and code-splitting, producing efficient production assets. The critical insight is that development speed and production optimization require different strategies: unbundled ESM for instant dev feedback, bundled output for optimal user-facing performance.
 
 ### Applied Insight: Test Production Builds to Catch Disparity Issues
 
