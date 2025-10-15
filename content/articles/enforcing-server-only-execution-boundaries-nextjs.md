@@ -14,9 +14,9 @@ Traditional form handling in React applications forces developers to expose API 
 
 The security posture improves dramatically when client components are architecturally prevented from touching privileged APIs. Instead of trusting that no developer accidentally imports a database client into a client component, Next.js uses module-level markers and build-time analysis to fail compilation when server-only code attempts to cross into client bundles.
 
-### Reducing Client JavaScript Through RSC Boundaries
+### Reducing Client JavaScript Through React Server Components Boundaries
 
-Server Actions pair naturally with React Server Components to eliminate entire categories of client-side code. When a form submission triggers a Server Action, the mutation logic, validation, and database calls all execute on the server without requiring corresponding client-side JavaScript for API fetching, state management, or error handling boilerplate.
+Server Actions pair naturally with React Server Components (RSC) to eliminate entire categories of client-side code. When a form submission triggers a Server Action, the mutation logic, validation, and database calls all execute on the server without requiring corresponding client-side JavaScript for API fetching, state management, or error handling boilerplate.
 
 **Artifact: Code Snippet**
 
@@ -50,7 +50,7 @@ This pattern eliminates the fetch call, loading states, and error boundary code 
 
 ### Build-Time Module Separation Enforcement
 
-Next.js enforces the server-client boundary at build time using the 'use server' and 'use client' directives combined with module graph analysis. When a module marked with 'use server' is imported into a client component, the bundler replaces the actual implementation with a lightweight RPC stub. Any attempt to import server-only modules like database clients or private keys into client code triggers a build failure before deployment.
+Next.js enforces the server-client boundary at build time using the 'use server' and 'use client' directives combined with module graph analysis. When a module marked with 'use server' is imported into a client component, the bundler replaces the actual implementation with a lightweight Remote Procedure Call (RPC) stub. Any attempt to import server-only modules like database clients or private keys into client code triggers a build failure before deployment.
 
 This compile-time guarantee means security boundaries are enforced by the framework, not code review. Tools like the server-only package make this explicit by throwing errors if server modules accidentally get bundled for the client. The build process becomes a security gate that prevents privileged code from ever reaching browsers, even if a developer makes a mistake in the import chain.
 
