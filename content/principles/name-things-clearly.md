@@ -19,7 +19,7 @@ Choosing strong names for your code is like labeling every critical part of your
 | Action | What you'll learn |
 | :---- | :---- |
 | Read [101: Function and Variable Naming](https://engineering.corzent.com/101-function-and-variable-naming-8cde11bdedbc) | Tips on naming functions and variables |
-| Read https://www.freecodecamp.org/news/how-to-write-better-variable-names/ | Difference between bad way of naming & good way of naming functions, variables, & classes. |
+| Read this [article](https://www.freecodecamp.org/news/how-to-write-better-variable-names/) | Difference between bad way of naming & good way of naming functions, variables, & classes. |
 
 ### Put it into practice?
 

@@ -14,9 +14,9 @@ Imagine patching a leaky pipe by wrapping tape around it. If you never pressure-
 
 | Action | What you'll learn |
 | :---- | :---- |
-| Read Martin Fowler's Test Pyramid article [https://martinfowler.com/bliki/TestPyramid.html](https://martinfowler.com/bliki/TestPyramid.html) | The strategic approach to testing that balances different types of tests and why unit tests form the foundation for catching bugs quickly |
-| Watch the video "Why you should write tests first" by Uncle Bob [https://youtu.be/4SIpyrko-x4](https://youtu.be/4SIpyrko-x4) | The psychological and practical reasons why writing tests after the fact often leads to untested code and hidden bugs |
-| Read the article "Test-Driven Bugfixing" [https://evolveum.com/test-driven-bugfixing/](https://evolveum.com/test-driven-bugfixing/) | A practical approach for applying TDD principles when fixing bugs |
+| Read Martin Fowler's [Test Pyramid article](https://martinfowler.com/bliki/TestPyramid.html) | The strategic approach to testing that balances different types of tests and why unit tests form the foundation for catching bugs quickly |
+| Watch the [video](https://youtu.be/4SIpyrko-x4) "Why you should write tests first" by Uncle Bob | The psychological and practical reasons why writing tests after the fact often leads to untested code and hidden bugs |
+| Read the [article](https://evolveum.com/test-driven-bugfixing/) "Test-Driven Bugfixing" | A practical approach for applying TDD principles when fixing bugs |
 
 ### Put it into practice?
 

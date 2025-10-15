@@ -45,3 +45,64 @@ $font-nunito-sans: var(--font-nunito-sans);
     grid-column: span 3;
   }
 }
+
+// Comic Strip Styles
+.comic-strip-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.comic-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  
+  // Mobile: 2x2 grid layout using flex
+  @media (max-width: 639px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    .comic-scene {
+      flex: 0 0 calc(50% - 0.25rem);
+      max-width: calc(50% - 0.25rem);
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  // Desktop: horizontal layout
+  @media (min-width: 640px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    
+    .comic-scene {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.comic-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  &:hover {
+    transform: scale(1.02);
+  }
+  
+  // Ensure responsive behavior
+  @media (max-width: 639px) {
+    max-height: 200px;
+  }
+}
