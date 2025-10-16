@@ -5,7 +5,7 @@ slug: rag-without-vector-databases-when-structure-beats-embeddings
 tech: [llamindex, claude]
 date: 2025-06-03
 author: BeautifulCode
-keytakeaway: "Vector databases are not a prerequisite for effective RAG systems; choosing retrieval strategies based on domain characteristics, query patterns, and infrastructure constraints often yields better cost-performance trade-offs than defaulting to semantic search."
+keytakeaway: "Vector databases are not a prerequisite for effective RAG (Retrieval-Augmented Generation) systems; choosing retrieval strategies based on domain characteristics, query patterns, and infrastructure constraints often yields better cost-performance trade-offs than defaulting to semantic search."
 ---
 
 ### The Vector Database Overhead Problem
@@ -23,7 +23,7 @@ Different retrieval approaches offer distinct advantages depending on corpus cha
 | Structure-aware Search | Low-data domains (legal, biomedical) | Low | Minimal |
 | On-demand Agent Retrieval | Low query volume relative to corpus | Variable | Very Low |
 
-Keyword search with BM25 scoring followed by LLM-based re-ranking consistently outperforms semantic embeddings in specialized domains where terminology is precise and stable. Graph-based approaches excel when relationships between entities matter more than semantic similarity between isolated chunks.
+Keyword search with BM25 (Best Matching 25) scoring followed by LLM-based re-ranking consistently outperforms semantic embeddings in specialized domains where terminology is precise and stable. Graph-based approaches excel when relationships between entities matter more than semantic similarity between isolated chunks.
 
 ### When Document Structure Outperforms Embeddings
 

@@ -10,7 +10,7 @@ keytakeaway: "GenAI systems fail in production not from poor models but from bli
 
 ### The Real Failure Point in GenAI Systems
 
-Most GenAI projects don't fail because of weak models or poor prompts. They fail because engineering teams have no systematic way to measure whether their changes improve or degrade system behavior. Without rigorous evaluation, every prompt tweak, model swap, or retrieval strategy adjustment becomes a gamble. You're optimizing in the dark, deploying changes that feel better but might perform worse on edge cases you haven't considered.
+Most GenAI (Generative AI) projects don't fail because of weak models or poor prompts. They fail because engineering teams have no systematic way to measure whether their changes improve or degrade system behavior. Without rigorous evaluation, every prompt tweak, model swap, or retrieval strategy adjustment becomes a gamble. You're optimizing in the dark, deploying changes that feel better but might perform worse on edge cases you haven't considered.
 
 Traditional ML metrics like "accuracy" or "precision" collapse when applied to GenAI outputs. A product description, email draft, or code suggestion can't be scored with a confusion matrix. The outputs are creative, context-dependent, and often have multiple valid solutions. This is where most teams hit a wall.
 
@@ -19,7 +19,7 @@ Traditional ML metrics like "accuracy" or "precision" collapse when applied to G
 | Evaluation Type | What It Measures | Example Metric |
 |---|---|---|
 | Component-level | Individual LLM call quality | Prompt response relevance, hallucination rate |
-| System-level | End-to-end pipeline behavior | RAG retrieval precision, multi-step agent success rate |
+| System-level | End-to-end pipeline behavior | RAG (Retrieval-Augmented Generation) retrieval precision, multi-step agent success rate |
 | Business-level | Real user outcomes | Task completion rate, user satisfaction, cost per query |
 
 Most teams obsess over component-level metrics and wonder why production fails. A perfectly scoring LLM call means nothing if your retrieval step surfaces irrelevant documents or your agent loops infinitely. System-level evaluation catches pipeline failures. Business-level evaluation tells you if users actually care.

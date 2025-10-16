@@ -14,7 +14,7 @@ Multi-agent frameworks typically struggle with two competing requirements: agent
 
 ### Task-Based Decomposition with RAG Over Function Space
 
-TaskGen's core philosophy centers on breaking goals into bite-sized, executable subtasks rather than generating conversational responses. The Meta Agent analyzes the user's task and available function signatures, then generates a subtask sequence where each step maps to a specific function call. What makes this powerful is the RAG over function space: before generating subtasks, the agent retrieves relevant functions from its function registry based on semantic similarity to the task description. This prevents the agent from hallucinating non-existent capabilities and ensures each subtask can actually be executed.
+TaskGen's core philosophy centers on breaking goals into bite-sized, executable subtasks rather than generating conversational responses. The Meta Agent analyzes the user's task and available function signatures, then generates a subtask sequence where each step maps to a specific function call. What makes this powerful is the RAG (Retrieval-Augmented Generation) over function space: before generating subtasks, the agent retrieves relevant functions from its function registry based on semantic similarity to the task description. This prevents the agent from hallucinating non-existent capabilities and ensures each subtask can actually be executed.
 
 **Subtask Generation Flow:**
 

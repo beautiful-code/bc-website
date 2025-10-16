@@ -5,7 +5,7 @@ slug: contextual-rag-improving-retrieval-accuracy-with-document-aware-chunking
 tech: [llamaindex, pinecone]
 date: 2025-08-03
 author: BeautifulCode
-keytakeaway: "Augmenting chunks with document-level context before embedding and indexing bridges the semantic gap between ambiguous chunk content and precise user queries, significantly improving retrieval accuracy in RAG systems."
+keytakeaway: "Augmenting chunks with document-level context before embedding and indexing bridges the semantic gap between ambiguous chunk content and precise user queries, significantly improving retrieval accuracy in RAG (Retrieval-Augmented Generation) systems."
 ---
 
 ### The Retrieval Problem with Isolated Chunks
