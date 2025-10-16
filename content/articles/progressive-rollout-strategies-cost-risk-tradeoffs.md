@@ -15,7 +15,7 @@ Canary deployments use graduated traffic shifts—5%, 25%, 50%, 100%—to valida
 Traffic weighting happens at the routing layer, enabling real-time adjustments without DNS propagation delays. The key advantage lies in risk containment—when problems surface at 5% traffic, rollback affects minimal users while providing sufficient signal for issue detection. This graduated validation creates natural checkpoints where teams can pause, observe metrics, and make informed decisions about progression.
 
 **Implementation Options in GKE:**
-GKE supports progressive rollouts through multiple approaches—GKE Gateway (Gateway API) provides native weighted traffic splitting via HTTPRoute configuration, Istio service mesh offers fine-grained traffic management with VirtualServices, and native Kubernetes achieves basic canary deployments using multiple Deployments with label selectors to control pod ratios.
+GKE (Google Kubernetes Engine) supports progressive rollouts through multiple approaches—GKE Gateway (Gateway API) provides native weighted traffic splitting via HTTPRoute configuration, Istio service mesh offers fine-grained traffic management with VirtualServices, and native Kubernetes achieves basic canary deployments using multiple Deployments with label selectors to control pod ratios.
 
 ### Progressive Rollout Patterns
 

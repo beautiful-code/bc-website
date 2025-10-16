@@ -10,7 +10,7 @@ keytakeaway: "Cloud Run provides the most versatile serverless foundation throug
 
 ### Understanding Serverless Compute
 
-Serverless computing abstracts away server management—you deploy code, and the cloud provider handles provisioning, scaling, and infrastructure maintenance. Unlike VM-based deployments where you manage operating systems and capacity planning, serverless platforms scale automatically from zero to thousands of instances based on incoming requests. You pay only for actual compute time (billed per 100ms), not for idle server capacity. The trade-off is accepting platform constraints like execution time limits, stateless architecture, and cold start latency when instances spin up after idle periods.
+Serverless computing abstracts away server management, you deploy code, and the cloud provider handles provisioning, scaling, and infrastructure maintenance. Unlike VM-based deployments where you manage operating systems and capacity planning, serverless platforms scale automatically from zero to thousands of instances based on incoming requests. You pay only for actual compute time (billed per 100ms), not for idle server capacity. The trade-off is accepting platform constraints like execution time limits, stateless architecture, and cold start latency when instances spin up after idle periods.
 
 GCP offers three primary serverless compute options: Cloud Run for containerized applications, Cloud Functions for event-driven code execution, and App Engine for managed web applications with built-in services.
 

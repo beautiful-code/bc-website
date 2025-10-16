@@ -27,11 +27,11 @@ Service mesh injects sidecar proxies like Envoy alongside each pod. These sideca
 | GCP Integration     | Native (Trace, Logging)  | Manual setup required    |
 | Flexibility         | Limited customization    | Full control             |
 
-ASM offers automatic updates and deep GCP integration but locks you into Google's upgrade cycle. Self-managed Istio demands significant operational investment but gives complete control over configuration and timing.
+ASM (Anthos Service Mesh) offers automatic updates and deep GCP integration but locks you into Google's upgrade cycle. Self-managed Istio demands significant operational investment but gives complete control over configuration and timing.
 
 ### Gateway API as the Simpler Path
 
-GKE's Gateway API provides L7 load balancing, TLS termination, and traffic splitting without sidecars. This matters when your needs stop at basic ingress routing. If you don't require service-to-service mTLS, inter-service observability, or advanced policies like retries and timeouts, Gateway API eliminates the sidecar overhead entirely. It's the right choice for architectures where external traffic management is the primary concern, not internal service communication.
+GKE's (Google Kubernetes Engine) Gateway API provides L7 load balancing, TLS termination, and traffic splitting without sidecars. This matters when your needs stop at basic ingress routing. If you don't require service-to-service mTLS, inter-service observability, or advanced policies like retries and timeouts, Gateway API eliminates the sidecar overhead entirely. It's the right choice for architectures where external traffic management is the primary concern, not internal service communication.
 
 ### Adoption Strategy That Works
 

@@ -29,7 +29,7 @@ Declarative manifests describe what should exist, not how to create it. Controll
 
 ### MTTR Reduction Through Git Operations
 
-GitOps significantly reduces mean time to recovery. Traditional rollbacks require identifying the problematic deployment, locating previous manifests, and re-executing deployment pipelines. This process averages 45+ minutes when including incident detection, triage, and execution. GitOps reduces this to under 5 minutes because rollback is a Git operation: git revert the bad commit, push to main, and reconciliation controllers automatically restore the previous state within one sync cycle.
+GitOps significantly reduces MTTR (mean time to recovery). Traditional rollbacks require identifying the problematic deployment, locating previous manifests, and re-executing deployment pipelines. This process averages 45+ minutes when including incident detection, triage, and execution. GitOps reduces this to under 5 minutes because rollback is a Git operation: git revert the bad commit, push to main, and reconciliation controllers automatically restore the previous state within one sync cycle.
 
 This works because Git preserves complete deployment history. Every configuration change exists as a commit with full context: what changed, who approved it via PR merge, and when it deployed. Rolling back doesn't require reconstructing state from backups or debugging live systems. Controllers simply reapply manifests from the reverted commit, recreating the known-good configuration.
 

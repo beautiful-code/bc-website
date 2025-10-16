@@ -10,7 +10,7 @@ keytakeaway: "Runtime secret injection via external-secrets operator combined wi
 
 ### The Credential Leak Problem in Container Workloads
 
-Hardcoded credentials in source code repositories account for over 90% of secret leaks in production systems. While environment variables avoid baking secrets into container images, they still expose credentials in deployment manifests, Helm charts, and CI/CD pipelines. GCP Secret Manager addresses this by providing encrypted storage with automatic versioning and audit logging, ensuring secrets are never stored in version control or deployment files. The integration with GKE through the external-secrets operator allows pods to fetch credentials at runtime from a centralized secret store, eliminating the need to manage secrets across multiple deployment configurations.
+Hardcoded credentials in source code repositories account for over 90% of secret leaks in production systems. While environment variables avoid baking secrets into container images, they still expose credentials in deployment manifests, Helm charts, and CI/CD pipelines. GCP Secret Manager addresses this by providing encrypted storage with automatic versioning and audit logging, ensuring secrets are never stored in version control or deployment files. The integration with GKE (Google Kubernetes Engine) through the external-secrets operator allows pods to fetch credentials at runtime from a centralized secret store, eliminating the need to manage secrets across multiple deployment configurations.
 
 ### Runtime Secret Injection Pattern
 
