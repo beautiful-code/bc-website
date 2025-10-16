@@ -1,5 +1,5 @@
 ---
-title: "Securing Token Flows: OAuth 2.0 Authorization Code with PKCE vs Implicit Grant in Modern SPAs"
+title: "Securing Token Flows: OAuth 2.0 Authorization Code with Proof Key for Code Exchange(PKCE) vs Implicit Grant in Modern SPAs"
 expertise: "backend-engineering"
 slug: oauth-oidc-pkce-token-security
 tech: ["authorization"]

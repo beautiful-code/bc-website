@@ -1,5 +1,5 @@
 ---
-title: "Index Selectivity vs Covering Indexes: Tuning PostgreSQL Query Plans for OLTP Workloads"
+title: "Index Selectivity vs Covering Indexes: Tuning PostgreSQL Query Plans for Online Transaction Processing(OLTP) Workloads"
 expertise: "backend-engineering"
 slug: index-selectivity-vs-covering-indexes
 tech: ["database-design"]
