@@ -1,5 +1,5 @@
 ---
-title: "Choosing Consistency Models in Distributed Systems: From RYW to CRDTs"
+title: "Choosing Consistency Models in Distributed Systems: From RYW(Read-Your-Writes) to CRDTs(Conflict-free Replicated Data Types)"
 expertise: "backend-engineering"
 slug: "consistency-models-distributed-systems"
 tech: ["distributed-systems", "redis", "kafka"]

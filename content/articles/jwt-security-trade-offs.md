@@ -10,7 +10,7 @@ keytakeaway: JWTs require careful architectural decisions around statefulness, t
 
 ### The Stateless-Security Paradox
 
-JWTs are stateless by design, which means your authentication server doesn't maintain session state after token issuance. This scalability benefit comes with a critical trade-off: once a JWT is signed and issued, you cannot invalidate it before its expiration time without maintaining additional infrastructure. If a user logs out or their permissions change, that token remains valid for other servers consuming it until the exp claim is reached. This forces you to either accept delayed invalidation or implement a token blacklist (essentially introducing state), defeating much of the stateless advantage.
+JWTs(JSON Web Tokens) are stateless by design, which means your authentication server doesn't maintain session state after token issuance. This scalability benefit comes with a critical trade-off: once a JWT is signed and issued, you cannot invalidate it before its expiration time without maintaining additional infrastructure. If a user logs out or their permissions change, that token remains valid for other servers consuming it until the exp claim is reached. This forces you to either accept delayed invalidation or implement a token blacklist (essentially introducing state), defeating much of the stateless advantage.
 
 The practical implication is that you must make an architectural decision early: either accept that tokens live for their full duration, or build a separate blacklist service (typically Redis or your cache layer) that tracks revoked tokens. Many teams underestimate this cost and encounter problems when they need immediate token revocation for security incidents or permission changes.
 
