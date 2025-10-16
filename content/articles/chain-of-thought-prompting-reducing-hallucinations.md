@@ -17,7 +17,7 @@ Large language models struggle with complex tasks that require multiple logical 
 
 ### Breaking Down Reasoning with Chain-of-Thought
 
-Chain-of-Thought prompting instructs models to articulate their reasoning process step by step before arriving at a final answer. Instead of asking "What is the answer?", you prompt the model to explain "how" it arrives at the answer. This technique forces the model to externalize its intermediate reasoning steps, making the thought process visible and verifiable.
+Chain-of-Thought (CoT) prompting instructs models to articulate their reasoning process step by step before arriving at a final answer. Instead of asking "What is the answer?", you prompt the model to explain "how" it arrives at the answer. This technique forces the model to externalize its intermediate reasoning steps, making the thought process visible and verifiable.
 
 **Common CoT Patterns**
 

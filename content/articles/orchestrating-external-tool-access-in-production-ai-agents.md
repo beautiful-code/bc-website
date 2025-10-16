@@ -18,7 +18,7 @@ Tool-using AI systems break free from the limitations of parametric knowledge by
 
 1. **Information Retrieval:** Web search APIs, vector databases, document stores
 1. **Computation:** Code interpreters, mathematical engines, data processors
-1. **External Systems:** CRM APIs, internal databases, authentication services
+1. **External Systems:** CRM (Customer Relationship Management) APIs, internal databases, authentication services
 1. **Action Tools:** Email senders, ticket creators, workflow triggers
 
 The agent receives tool descriptions in its prompt, including function signatures, parameter types, and usage constraints. During execution, the model generates structured tool calls (typically JSON), which the orchestration layer validates, executes, and returns results for the next reasoning step.

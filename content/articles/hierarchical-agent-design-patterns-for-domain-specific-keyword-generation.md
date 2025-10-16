@@ -10,7 +10,7 @@ keytakeaway: "Hierarchical multi-agent architectures with structured prompts and
 
 ### Agent Composition Over Monolithic Prompts
 
-Building a domain-specific keyword generator for hospitality SEM campaigns revealed that monolithic LLM calls struggle with multi-constraint optimization. Instead of cramming all logic into one prompt, Google's ADK enabled hierarchical decomposition using three core patterns: "ParallelAgent" for concurrent execution of independent workflows, "SequentialAgent" for ordered task chains, and "LoopAgent" for iterative refinement. The root agent coordinates specialized child agents through the "output_key" mechanism, propagating state across the hierarchy while maintaining modularity. This architecture makes complex workflows maintainable and debuggable compared to single-call approaches.
+Building a domain-specific keyword generator for hospitality SEM (Search Engine Marketing) campaigns revealed that monolithic LLM calls struggle with multi-constraint optimization. Instead of cramming all logic into one prompt, Google's ADK (Agent Development Kit) enabled hierarchical decomposition using three core patterns: "ParallelAgent" for concurrent execution of independent workflows, "SequentialAgent" for ordered task chains, and "LoopAgent" for iterative refinement. The root agent coordinates specialized child agents through the "output_key" mechanism, propagating state across the hierarchy while maintaining modularity. This architecture makes complex workflows maintainable and debuggable compared to single-call approaches.
 
 ### Pattern Mapping
 

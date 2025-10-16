@@ -5,7 +5,7 @@ slug: context-engineering-beyond-embeddings
 tech: [llamaindex]
 date: 2025-10-02
 author: BeautifulCode
-keytakeaway: "RAG performance is constrained not by retrieval quality but by attention dilution—context engineering requires multi-stage filtering, hierarchical organization, and dynamic evolution to maximize value within limited context windows."
+keytakeaway: "RAG (Retrieval-Augmented Generation) performance is constrained not by retrieval quality but by attention dilution—context engineering requires multi-stage filtering, hierarchical organization, and dynamic evolution to maximize value within limited context windows."
 ---
 
 ### Context as Dynamic Currency, Not Static Retrieval

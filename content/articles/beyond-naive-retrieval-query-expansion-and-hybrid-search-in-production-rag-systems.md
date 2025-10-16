@@ -5,12 +5,12 @@ slug: beyond-naive-retrieval-query-expansion-and-hybrid-search-in-production-rag
 tech: [llamaindex, langchain, gemini]
 date: 2025-09-03
 author: BeautifulCode
-keytakeaway: "Production RAG systems require layered retrieval strategies where query expansion improves recall, hybrid search handles both semantic and exact matches, and re-ranking ensures relevant context reaches the LLM."
+keytakeaway: "Production RAG (Retrieval-Augmented Generation) systems require layered retrieval strategies where query expansion improves recall, hybrid search handles both semantic and exact matches, and re-ranking ensures relevant context reaches the LLM (Large Language Model)."
 ---
 
 ### The Query Problem in RAG
 
-User queries in production RAG systems are typically short and underspecified. A query like "performance issues" could mean system latency, model inference speed, or memory bottlenecks. This ambiguity creates a mismatch between the query embedding and relevant document embeddings, leading to poor retrieval recall. The core challenge is bridging the gap between what users type and what the retrieval system needs to find the right context.
+User queries in production RAG (Retrieval-Augmented Generation) systems are typically short and underspecified. A query like "performance issues" could mean system latency, model inference speed, or memory bottlenecks. This ambiguity creates a mismatch between the query embedding and relevant document embeddings, leading to poor retrieval recall. The core challenge is bridging the gap between what users type and what the retrieval system needs to find the right context.
 
 ### Query Expansion Techniques
 
@@ -47,7 +47,7 @@ final_results = sort_by_score(merged_results[:50], reranked_scores)[:10]
 
 ### Hybrid Search: Combining Semantic and Keyword Retrieval
 
-Pure vector search fails on queries with specific terminology, product codes, or exact phrases. Hybrid search combines semantic search with keyword-based methods like BM25. Semantic search captures conceptual similarity while BM25 ensures exact term matches aren't missed. The results from both methods are typically merged using reciprocal rank fusion, which handles the different score scales gracefully. This dual approach is particularly critical in technical domains where jargon and precise terminology matter.
+Pure vector search fails on queries with specific terminology, product codes, or exact phrases. Hybrid search combines semantic search with keyword-based methods like BM25 (Best Matching 25). Semantic search captures conceptual similarity while BM25 ensures exact term matches aren't missed. The results from both methods are typically merged using reciprocal rank fusion, which handles the different score scales gracefully. This dual approach is particularly critical in technical domains where jargon and precise terminology matter.
 
 ### Re-Ranking to Fix "Lost in the Middle"
 

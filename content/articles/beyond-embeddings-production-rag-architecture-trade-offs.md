@@ -8,12 +8,12 @@ tech:
   - openai
 date: 2025-10-03
 author: BeautifulCode
-keytakeaway: "Production RAG systems require hybrid retrieval architectures, domain-aware chunking, and reranking stages to achieve reliable accuracy beyond what embeddings alone provide."
+keytakeaway: "Production RAG (Retrieval-Augmented Generation) systems require hybrid retrieval architectures, domain-aware chunking, and reranking stages to achieve reliable accuracy beyond what embeddings alone provide."
 ---
 
 ### The Retrieval Quality Problem
 
-Embedding-based semantic search provides intuitive relevance matching, but production systems quickly reveal its limitations. Pure vector similarity misses exact keyword matches and struggles with domain-specific terminology. Hybrid retrieval architectures combine dense embeddings with sparse lexical methods like BM25, using reciprocal rank fusion to merge results. Metadata filtering adds another layer, enabling attribute-based constraints that vector similarity alone cannot capture. This multi-stage approach consistently outperforms single-method retrieval in real-world deployments.
+Embedding-based semantic search provides intuitive relevance matching, but production systems quickly reveal its limitations. Pure vector similarity misses exact keyword matches and struggles with domain-specific terminology. Hybrid retrieval architectures combine dense embeddings with sparse lexical methods like BM25 (Best Matching 25), using reciprocal rank fusion to merge results. Metadata filtering adds another layer, enabling attribute-based constraints that vector similarity alone cannot capture. This multi-stage approach consistently outperforms single-method retrieval in real-world deployments.
 
 ### Retrieval Performance Comparison
 
@@ -34,4 +34,4 @@ Context window organization affects output quality more than model size. A well-
 
 ### Vector Database Selection Criteria
 
-Approximate nearest neighbor algorithms power vector databases, with each offering different accuracy-speed profiles. HNSW provides high recall with graph-based indexing but consumes significant memory. IVF methods partition vector space for faster search at the cost of reduced accuracy. Product quantization compresses vectors, trading precision for storage efficiency. The choice depends on scale and latency requirements. Sub-100ms retrieval with 95%+ recall works for most applications, but real-time systems may accept 85% recall for 20ms latency. Benchmarking against your actual query distribution and dataset size reveals the right balance.
+Approximate nearest neighbor algorithms power vector databases, with each offering different accuracy-speed profiles. HNSW (Hierarchical Navigable Small World) provides high recall with graph-based indexing but consumes significant memory. IVF (Inverted File) methods partition vector space for faster search at the cost of reduced accuracy. Product quantization compresses vectors, trading precision for storage efficiency. The choice depends on scale and latency requirements. Sub-100ms retrieval with 95%+ recall works for most applications, but real-time systems may accept 85% recall for 20ms latency. Benchmarking against your actual query distribution and dataset size reveals the right balance.

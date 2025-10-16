@@ -10,7 +10,7 @@ keytakeaway: "Reliable LLM workflow generation requires hierarchical planning ar
 
 ### Hierarchical Decomposition Beats Single-Pass Generation
 
-Building an AI system that generates executable workflows revealed that complex planning tasks require architectural separation. A single LLM call attempting both high-level design and low-level parameter generation produces inconsistent outputs. The solution: split the process into abstract planning (workflow structure and step logic) and concrete building (parameter values and configurations). Each phase uses dedicated LLM calls with phase-specific prompts, allowing the model to focus on one level of abstraction at a time. This architectural pattern mirrors how human engineers work, first sketching the overall approach before filling in implementation details.
+Building an AI system that generates executable workflows revealed that complex planning tasks require architectural separation. A single LLM (Large Language Model) call attempting both high-level design and low-level parameter generation produces inconsistent outputs. The solution: split the process into abstract planning (workflow structure and step logic) and concrete building (parameter values and configurations). Each phase uses dedicated LLM calls with phase-specific prompts, allowing the model to focus on one level of abstraction at a time. This architectural pattern mirrors how human engineers work, first sketching the overall approach before filling in implementation details.
 
 ### Enforcing Schema Compliance with Pydantic
 

@@ -16,7 +16,7 @@ The test set becomes your ground truth. It should cover edge cases, common failu
 
 ### Offline and Online Evaluation: Catching Different Failure Modes
 
-Offline evaluation runs test suites before deployment using static datasets. It catches obvious breaks like format errors, hallucinations on known facts, or response length violations. Online evaluation happens in production through A/B testing, user feedback signals like thumbs up/down, or RLHF pipelines that learn from real user interactions.
+Offline evaluation runs test suites before deployment using static datasets. It catches obvious breaks like format errors, hallucinations on known facts, or response length violations. Online evaluation happens in production through A/B testing, user feedback signals like thumbs up/down, or RLHF (Reinforcement Learning from Human Feedback) pipelines that learn from real user interactions.
 
 **Evaluation Layer Comparison**
 

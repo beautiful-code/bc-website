@@ -5,7 +5,7 @@ slug: ivf-indexing-product-search-scaling-vector-comparisons
 tech: [postgres, openai]
 date: 2025-07-03
 author: BeautifulCode
-keytakeaway: "IVF indexing transforms vector similarity search from O(N) to approximately O(sqrt(N)) by clustering embeddings and searching only relevant partitions, enabling sub-100ms product search queries at the cost of minor recall degradation."
+keytakeaway: "IVF (Inverted File) indexing transforms vector similarity search from O(N) to approximately O(sqrt(N)) by clustering embeddings and searching only relevant partitions, enabling sub-100ms product search queries at the cost of minor recall degradation."
 ---
 
 ### The Brute-Force Bottleneck in Vector Search
@@ -55,4 +55,4 @@ In production, selecting nlist = sqrt(N) where N is the dataset size provides a 
 
 ### Applied Insight: When to Use IVF Indexing
 
-Use IVF indexing when your product catalog exceeds 10,000 embeddings and search latency becomes user-facing. For smaller catalogs under 5,000 products, brute-force search remains fast enough and avoids index maintenance overhead. Monitor your recall metrics closely—if business requirements demand >98% recall for revenue-critical queries, consider more sophisticated indexing like HNSW or product quantization techniques that better preserve search quality at scale.
+Use IVF indexing when your product catalog exceeds 10,000 embeddings and search latency becomes user-facing. For smaller catalogs under 5,000 products, brute-force search remains fast enough and avoids index maintenance overhead. Monitor your recall metrics closely—if business requirements demand >98% recall for revenue-critical queries, consider more sophisticated indexing like HNSW (Hierarchical Navigable Small World) or product quantization techniques that better preserve search quality at scale.
