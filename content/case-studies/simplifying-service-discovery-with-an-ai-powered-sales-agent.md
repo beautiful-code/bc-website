@@ -2,9 +2,9 @@
 slug: "simplifying-service-discovery-with-an-ai-powered-sales-agent"
 title: "Simplifying Service Discovery with an AI-Powered Sales Agent"
 industry: "Technology"
-heroImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/hero-image.svg"
-problemStatement: "Customers faced a complex service discovery process, struggling to map their technical problems to the right solutions from a vast catalog and documentation library."
-clientInfo: "A leading global provider of on-demand, private network and cloud connectivity solutions."
+heroImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.svg"
+problemStatement: "The client's vast service catalog was overwhelming, even for expert customers. Prospects struggled to find the right solution for their needs, leading to a long sales cycle, stalled deals, and customer drop-off."
+clientInfo: "A global leader in enterprise cloud connectivity with an extensive portfolio of services. Their own success had made their offerings too complex for customers to navigate."
 # clientImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/client-logo.svg"
 outcomes:
   - outcome: "Accelerated the customer service discovery journey."
@@ -32,7 +32,7 @@ technologies:
 Our process began with a deep dive into the client's domain and their customer's journey. We spent time with their team to understand the typical questions and challenges potential customers faced. The core issue was clear: customers needed a guide, not just a search bar. We set out to build an AI-powered sales agent that could intelligently navigate them from problem to solution.
 
 <figure>
-  <img src="/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.png" alt="" />
+  <img src="/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.gif" alt="AI-Powered Sales Agent Demo" />
   <figcaption>
     Simplifying Service Discovery with an AI-Powered Sales Agent
   </figcaption>

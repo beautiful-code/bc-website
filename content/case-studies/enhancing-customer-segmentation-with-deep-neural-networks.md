@@ -2,7 +2,7 @@
 slug: "enhancing-customer-segmentation-with-deep-neural-networks"
 title: "Enhancing Customer Segmentation with Deep Neural Networks"
 industry: "Technology"
-heroImage: "/case-studies/enhancing-customer-segmentation-with-deep-neural-networks/hero-image.svg"
+heroImage: "/case-studies/enhancing-customer-segmentation-with-deep-neural-networks/enhancing-customer-segmentation-with-deep-neural-networks.svg"
 problemStatement: "Increase online booking conversions and revenue for hotels by effectively targeting customer segments."
 clientInfo: "A 30M ARR travel marketing platform providing data-driven solutions for businesses in the travel industry, specializing in digital advertising."
 # clientImage: "/case-studies/enhancing-customer-segmentation-with-deep-neural-networks/client-logo.svg"

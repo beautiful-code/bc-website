@@ -2,9 +2,9 @@
 slug: "agentic-ai-for-sem-keyword-generation-for-adtech"
 title: "Agentic AI for SEM Keyword Generation for AdTech"
 industry: "Technology"
-heroImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/hero-image.svg"
-problemStatement: "Automated keyword generation was failing, producing low-performing keywords misaligned with consumer search behavior and campaign goals, resulting in inefficient ad spend and poor ROI."
-clientInfo: "A leading advertising technology firm specializing in managing and optimizing paid search (SEM) campaigns."
+heroImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/agentic-ai-for-sem-keyword-generation-for-adtech.svg"
+problemStatement: "The agency's growth had hit a wall. Their existing keyword tools were creating more work than they saved, forcing their best analysts to manually fix low-quality outputs instead of focusing on strategy. This massive inefficiency was eroding their profit margins on each account and physically limiting how many new clients they could successfully onboard."
+clientInfo: "A large performance marketing agency specializing in the hospitality industry. Their business model relies on efficiently managing SEM campaigns for hundreds of hotel clients, where profitability is directly tied to operational speed and campaign effectiveness."
 # clientImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/client-logo.svg"
 outcomes:
   - outcome: "Significant improvement in keyword performance and click-through rates."

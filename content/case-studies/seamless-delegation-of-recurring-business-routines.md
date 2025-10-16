@@ -2,7 +2,7 @@
 slug: "seamless-delegation-of-recurring-business-routines"
 title: "Seamless Delegation of Recurring Business Routines"
 industry: "Technology"
-heroImage: "/case-studies/seamless-delegation-of-recurring-business-routines/hero-image.svg"
+heroImage: "/case-studies/seamless-delegation-of-recurring-business-routines/seamless-delegation-of-recurring-business-routines.svg"
 problemStatement: "Customer needed a reliable system to delegate, track, and ensure timely execution of recurring business routines across finance, HR, and operations teams."
 clientInfo: "Mid-sized professional services firm managing cross-functional operations"
 # clientImage: "/case-studies/seamless-delegation-of-recurring-business-routines/client-logo.svg"

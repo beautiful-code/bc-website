@@ -2,7 +2,7 @@
 slug: "bc-campaign-automation"
 title: "Efficiency Unleashed: Automating Campaign Setup Across Multiple Ad Platforms"
 industry: "Ad-Tech "
-heroImage: "/case-studies/bc-campaign-automation/heroimage.jpg"
+heroImage: "/case-studies/bc-campaign-automation/bc-campaign-automation.svg"
 problemStatement: |
   Our client assists travel businesses in connecting with their audiences through advertising campaigns.Previous campaign setup relied on manual Excel templates, faced several key challenges High manpower requirement: Involvement of many team members
   Time-consuming: Extensive time needed due to manual operations

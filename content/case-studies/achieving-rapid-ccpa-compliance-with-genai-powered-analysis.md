@@ -2,9 +2,9 @@
 slug: "achieving-rapid-ccpa-compliance-with-genai-powered-analysis"
 title: "Achieving Rapid CCPA Compliance with GenAI-Powered Analysis"
 industry: "Technology"
-heroImage: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/hero-image.svg"
-problemStatement: "California's CCPA laws forced our client to analyze 5,000+ company privacy policies to track potential data sales. Speed was important to gain a competitive advantage."
-clientInfo: "A company focused on safeguarding online privacy by removing personal information from data broker websites and people-search platforms"
+heroImage: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/achieving-rapid-ccpa-compliance-with-genai-powered-analysis.svg"
+problemStatement: "The client's expert legal team could meticulously analyze a handful of policies per day. Faced with a deluge of over 5,000 complex legal documents, their existing workflow was operationally and financially unviable. To meet the deadline manually, it would have required hiring an army of legal analysts, delaying their market response by months and erasing their profit margins. They had hit a scalability wall that their human resources couldn't break through."
+clientInfo: "A trusted, established name in online privacy protection with large user base. Their brand is built on accuracy and reliability, and their customers depend on them to navigate the complex, ever-changing landscape of data privacy regulations."
 # clientImage: "/case-studies/achieving-rapid-ccpa-compliance-with-genai-powered-analysis/client-logo.svg"
 outcomes:
   - outcome: "10x faster compliance analysis"

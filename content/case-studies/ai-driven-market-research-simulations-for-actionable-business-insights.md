@@ -2,7 +2,7 @@
 slug: "ai-driven-market-research-simulations-for-actionable-business-insights"
 title: "AI-Driven Market Research Simulations for Actionable Business Insights"
 industry: "Technology"
-heroImage: "/case-studies/ai-driven-market-research-simulations-for-actionable-business-insights/hero-image.svg"
+heroImage: "/case-studies/ai-driven-market-research-simulations-for-actionable-business-insights/ai-driven-market-research-simulations-for-actionable-business-insights-1.svg"
 problemStatement: "Customer sought faster, scalable insights from interview transcripts and real data to answer product choice, segmentation, and market expansion questions."
 clientInfo: "Mid-size Market Research Firm serving global consumer brands.(ex: Google, Coke, Amazon)"
 # clientImage: "/case-studies/ai-driven-market-research-simulations-for-actionable-business-insights/client-logo.svg"

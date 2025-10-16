@@ -1,10 +1,10 @@
 ---
 slug: "dispruting-upskilling-with-genai"
 title: "Dispruting Upskilling with GenAI"
-industry: "Technology"
-heroImage: "/case-studies/dispruting-upskilling-with-genai/hero-image.svg"
-problemStatement: "Reimagining upskilling with GenAI to deliver superior systems and workflows compared to traditional training methods"
-clientInfo: "An established IT Services provider"
+industry: "Education"
+heroImage: "/case-studies/dispruting-upskilling-with-genai/dispruting-upskilling-with-genai.svg"
+problemStatement: "The client's growth was creating a critical training bottleneck. With a constant influx of new hires, their traditional mentor-led model couldn't scale. Each experienced mentor could only support a handful of mentees, leading to long wait times, delayed project readiness, and missed revenue opportunities. They needed a way to break the linear relationship between mentors and mentees to unlock scalable growth."
+clientInfo: "A global systems integrator with over 50,000 employees. Their business model relies on hiring thousands of university graduates each year and rapidly deploying them to billable client projects."
 # clientImage: "/case-studies/dispruting-upskilling-with-genai/client-logo.svg"
 outcomes:
   - outcome: "(5x) Scaling of mentees for a given mentor "

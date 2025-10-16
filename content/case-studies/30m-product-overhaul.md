@@ -2,7 +2,7 @@
 slug: "30m-product-overhaul"
 title: "Enabling Future Success: Building a unified product to meet future business demands"
 industry: "Ad-Tech / Travel Marketing"
-heroImage: "/case-studies/30m-product-overhaul/heroimage.jpg"
+heroImage: "/case-studies/30m-product-overhaul/30m-product-overhaul.svg"
 problemStatement: |
   "The client was developing a new-generation travel marketing platform to keep pace with the Ad-Tech industry's dynamic nature. The primary objectives of this application were
 

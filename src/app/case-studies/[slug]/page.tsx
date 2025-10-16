@@ -78,13 +78,13 @@ export default async function CaseStudyPage({
 
         {/* Hero Image */}
         {caseStudy.heroImage && (
-          <div className="mb-8">
+          <div className="mb-8 w-full rounded-lg " style={{ backgroundColor: "#FFF2F4" }}>
             <Image
               src={caseStudy.heroImage}
               alt={caseStudy.title}
               width={800}
               height={400}
-              className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg border border-gray-200"
+              className="w-full h-[200px]  object-contain rounded-lg"
             />
           </div>
         )}

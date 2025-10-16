@@ -2,7 +2,7 @@
 slug: "bc-bigdata-engineering"
 title: "Unifying Heterogeneity: Ingesting Multi-Source First-Party Data for Cookieless Retargeting"
 industry: "Ad-Tech "
-heroImage: "/case-studies/bc-bigdata-engineering/heroimage.jpg"
+heroImage: "/case-studies/bc-bigdata-engineering/bc-bigdata-engineering.svg"
 problemStatement: |
   Amidst rising user privacy concerns, major players such as Apple and Google have initiated restrictions on third-party browser cookies. Third-party cookies compromise user privacy by enabling cross-site tracking without explicit consent. The inevitable deprecation of third-party cookies emphasise the importance of relying on first-party data, which is privacy compliant.
 
@@ -44,6 +44,7 @@ technologies:
 
 We studied diverse data systems such as SharePoint, S3 buckets, API endpoints, and SFTP, through which companies share their first-party data. The goal was to extract data from these systems and place it into company-specific buckets for isolation and security compliance. Integrating each new system posed challenges, especially in understanding unique processes like authentication and downloading. To address this, we thoroughly analyzed these systems and developed tailored libraries. We also built an easy to use interfaces to access these libraries for simpler integration with different data systems.
 
+
 <figure>
   <img src="/case-studies/bc-bigdata-engineering/implementation_architecture_diagram.png" alt="Implementation Architecure diagram" />
   <figcaption>
@@ -77,6 +78,4 @@ Every company's data has its own unique format and dimensions, making it challen
 
 While Pandas excels at data analysis, it can struggle with massive datasets, often exceeding RAM limitations and causing performance bottlenecks. To overcome these challenges, we utilized DASK which was built on top of Pandas' API. DASK seamlessly scales data processing to multiple cores and even distributed clusters. DASK allows us to read data in chunks, parallelizing operations across available resources. This gave a performance boost to the pipelines, enabling us to handle large datasets with fewer machines.
 
-### Implemented architecture
 
-_(Diagram from source case study.)_

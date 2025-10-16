@@ -1,10 +1,10 @@
 ---
 slug: "scaling-sem-search-engine-marketing-ads-generation-using-genai"
 title: "Scaling SEM (Search Engine Marketing) Ads Generation using GenAI"
-industry: "Technology"
-heroImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/hero-image.svg"
-problemStatement: "The bottleneck to the client's growth was the time spent by Business Analysts manually creating high-quality SEM ads."
-clientInfo: "A client specialised in managing Search Engine Marketing (SEM) campaigns for tourist attractions."
+industry: "Travel & Tourism"
+heroImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/scaling-sem-search-engine-marketing-ads-generation-using-genai-1.svg"
+problemStatement: "The client's business model depended on volume, but their margins were being eroded by the manual labor of campaign setup. The hours required for each analyst to research, write, and launch ads for a new attraction made it increasingly unprofitable to serve the small-to-mid-sized clients that formed the core of their business. They were working harder for less return."
+clientInfo: "A large digital marketing agency specializing in the travel and tourism sector. Their business model is built on efficiently managing campaigns for hundreds of mid-sized attractions, from regional theme parks to city museums."
 # clientImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/client-logo.svg"
 outcomes:
   - outcome: "Reduced time to create SEM Ads by 97%"

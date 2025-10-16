@@ -2,7 +2,7 @@
 slug: "superreport-ai-powered-verified-research-reports"
 title: "SuperReport: AI-Powered Verified Research Reports"
 industry: "Technology"
-heroImage: "/case-studies/superreport-ai-powered-verified-research-reports/hero-image.svg"
+heroImage: "/case-studies/superreport-ai-powered-verified-research-reports/superreport-ai-powered-verified-research-reports.svg"
 problemStatement: "Needed faster, accurate research reports with citations to improve analyst productivity and client delivery timelines."
 clientInfo: "Mid-size consulting firm specializing in market research"
 # clientImage: "/case-studies/superreport-ai-powered-verified-research-reports/client-logo.svg"

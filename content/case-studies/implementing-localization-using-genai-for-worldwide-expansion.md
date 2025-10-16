@@ -2,9 +2,9 @@
 slug: "implementing-localization-using-genai-for-worldwide-expansion"
 title: "Implementing Localization using GenAI for Worldwide Expansion"
 industry: "Technology"
-heroImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/hero-image.svg"
-problemStatement: "The client's global expansion and go-to-market strategy were hindered by localization bottlenecks and translation inefficiencies in their web app due to lacking built-in capabilities."
-clientInfo: "A client in Hospitality industry offers a cloud-based platform to help its customers manage operations and drive bookings."
+heroImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/implementing-localization-using-genai-for-worldwide-expansion-1.svg"
+problemStatement: "The client's international expansion was failing at the first hurdle. When potential hotel customers in new markets visited their platform, they were met with confusing, machine-translated text that made the sophisticated software appear unprofessional and untrustworthy. This \"language barrier\" was crippling their ability to run effective marketing campaigns, generate qualified leads, and close deals, effectively blocking their entry into lucrative new regions"
+clientInfo: "A rapidly growing SaaS company providing a sophisticated Property Management System to independent hotels and boutique chains worldwide. Their entire growth strategy hinges on successfully penetrating non-English speaking markets in Europe and Asia."
 # clientImage: "/case-studies/implementing-localization-using-genai-for-worldwide-expansion/client-logo.svg"
 outcomes:
   - outcome: "10x faster translation process"

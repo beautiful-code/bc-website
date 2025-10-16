@@ -2,7 +2,7 @@
 slug: "cloud-native-pci-architecture"
 title: "Building a Cloud-Native PCI DSS Level 1 Architecture"
 industry: "Fintech / Payments"
-heroImage: "/case-studies/cloud-native-pci-architecture/heroimage.jpg"
+heroImage: "/case-studies/cloud-native-pci-architecture/cloud-native-pci-architecture.svg"
 problemStatement: |
   FSSTech wanted a next gen payments product that needs to process and store cardholder data, including card numbers and expiry date. The product needed to be compliant with the Payment Card Industry (PCI) standards.
 
@@ -11,9 +11,9 @@ clientInfo: "FSSTech, an Indian fintech company, specializes in payments solutio
 clientImage: "/case-studies/cloud-native-pci-architecture/clientLogo.png"
 outcomes:
   - outcome: "Designed a lean Card Data Environment (CDE) to minimize the security perimeter."
-    icon: "/case-studies/cloud-native-pci-architecture/credit-card.png"
+    icon: "/icons/outcome/outcome-cde.png"
   - outcome: "Created a Cloud Native PCI DSS Level 1 certified payment solution."
-    icon: "/icons/outcome/outcome-pci.png"
+    icon: "/icons/outcome/outcome-pci.svg"
 expertises: ["backend-engineering", "cloud-devops", "security-engineering"]
 technologies:
   - tech: "iframe"
