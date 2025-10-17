@@ -10,7 +10,7 @@ keytakeaway: "Beam's State API eliminates round-trip latency by colocating key-s
 
 ### The Context Problem: When External Lookups Become the Bottleneck
 
-Real-time pipelines often need contextual checks like "has this user triggered fraud alerts before?" or "what's their rolling 7-day spend?" The naive approach queries Redis or a database per event, introducing 10-50ms round-trips that stack up fast. When processing thousands of events per second per key, these lookups dominate total latency. Beam's State API sidesteps this entirely by colocating state with computation inside the "DoFn", giving you in-memory access to key-scoped context without leaving the worker.
+Real-time pipelines often need contextual checks like "has this user triggered fraud alerts before?" or "what's their rolling 7-day spend?" The naive approach queries Redis or a database per event, introducing 10-50ms round-trips that stack up fast. When processing thousands of events per second per key, these lookups dominate total latency. Beam's State API sidesteps this entirely by colocating state with computation inside the Do Function (DoFn), giving you in-memory access to key-scoped context without leaving the worker.
 
 ### State Type Selection: Matching Data Structures to Use Cases
 

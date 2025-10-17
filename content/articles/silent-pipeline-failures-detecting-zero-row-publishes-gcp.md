@@ -41,11 +41,11 @@ Alert on missing heartbeat rows, not task failures. If a hourly window closes wi
 
 ### Freshness and Volume: Dual Detection Layers
 
-Freshness SLIs track `MAX(event_timestamp)` per table and page when lag exceeds the ingestion cadence. For an hourly pipeline, staleness beyond 90 minutes indicates upstream stalls. This catches scenarios where data stops flowing but no errors surface, like network partitions, API rate limits, or silent permission failures.
+Freshness Service Level Indicators (SLIs) track `MAX(event_timestamp)` per table and page when lag exceeds the ingestion cadence. For an hourly pipeline, staleness beyond 90 minutes indicates upstream stalls. This catches scenarios where data stops flowing but no errors surface, like network partitions, API rate limits, or silent permission failures.
 
 Volume band monitoring compares observed rows and bytes against baseline ranges for each time window. Establish acceptable bands (e.g., 70-130% of historical average) and alert on breaches. A sudden drop to zero rows triggers immediately, but gradual underloads become visible too. Volume bands detect partial failures where some data arrives but most is missing.
 
-Dead letter queues capture malformed records that fail parsing or schema validation. Route these to a dedicated DLQ topic or table, then alert when backlog sustains above zero for more than 10 minutes. Without DLQ monitoring, schema mismatches cause silent data loss. Records disappear without trace because they never reach the target table.
+Dead Letter Queues (DLQs) capture malformed records that fail parsing or schema validation. Route these to a dedicated DLQ topic or table, then alert when backlog sustains above zero for more than 10 minutes. Without DLQ monitoring, schema mismatches cause silent data loss. Records disappear without trace because they never reach the target table.
 
 ### Applied Insight: Synthetic Canaries as Ground Truth
 

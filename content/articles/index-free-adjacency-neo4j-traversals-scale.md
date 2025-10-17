@@ -40,7 +40,7 @@ This pointer-based structure means traversing from one node to another is a sing
 
 The performance difference becomes dramatic with complex traversals. In benchmark tests comparing friend recommendation queries across 1 million users, Neo4j's traversal time remains constant at approximately 2-3 milliseconds per hop regardless of total graph size. The same query in PostgreSQL with properly indexed foreign keys starts at 50ms for small datasets but degrades to multi-second response times as the dataset grows beyond 10 million relationships.
 
-The key advantage emerges in path-finding and pattern-matching queries. Finding the shortest path between two nodes in a social graph with Neo4j requires following pointers along candidate paths. In a relational database, the same operation requires recursive CTEs or application-level iteration with repeated join operations.
+The key advantage emerges in path-finding and pattern-matching queries. Finding the shortest path between two nodes in a social graph with Neo4j requires following pointers along candidate paths. In a relational database, the same operation requires recursive Common Table Expressions (CTEs) or application-level iteration with repeated join operations.
 
 ### Applied Insight: When to Choose Graph Over Relational
 
