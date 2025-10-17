@@ -16,7 +16,6 @@ Directory per environment structures (dev/, staging/, prod/) with separate remot
 
 ### Module-per-Service Architecture
 
-**Code Snippet:**
 ```hcl
 infrastructure/
 ├── modules/

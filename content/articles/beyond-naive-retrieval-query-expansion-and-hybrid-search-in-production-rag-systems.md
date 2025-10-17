@@ -14,8 +14,6 @@ User queries in production RAG (Retrieval-Augmented Generation) systems are typi
 
 ### Query Expansion Techniques
 
-**Artifact: Code Snippet**
-
 ```python
 # Query expansion: generate variations
 expanded_queries = llm.generate([

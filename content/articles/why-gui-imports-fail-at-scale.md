@@ -16,8 +16,6 @@ Most database GUIs treat bulk imports as convenience features, not performance p
 
 "LOAD DATA INFILE" bypasses SQL execution for individual rows. It parses the file format once, validates column mappings, and writes rows directly to the storage engine in bulk. This eliminates per-row query overhead and leverages MySQL's internal batching mechanisms. The statement handles format parsing inline with clauses like "FIELDS TERMINATED BY" and "ENCLOSED BY", and supports transformation via column variables.
 
-**Code Snippet:**
-
 ```sql
 LOAD DATA LOCAL INFILE '/data/transactions.csv'
 INTO TABLE staging_txn

@@ -14,8 +14,6 @@ When building production LLM systems, token budgets matter. Traditional few-shot
 
 ### Structure Over Examples
 
-**Artifact Type:** Code Snippet
-
 ```python
 # Meta-prompt: Abstract structural guidance
 meta_prompt = """

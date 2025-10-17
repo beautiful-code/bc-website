@@ -16,8 +16,6 @@ React interrupts and resumes work based on priority. High-priority updates like 
 
 ### Architectural Decision Matrix
 
-**Artifact: Code Snippet**
-
 ```typescript
 // Use useTransition when you control the state setter
 const [isPending, startTransition] = useTransition();

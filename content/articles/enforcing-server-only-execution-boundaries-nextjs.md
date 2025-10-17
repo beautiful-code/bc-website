@@ -18,8 +18,6 @@ The security posture improves dramatically when client components are architectu
 
 Server Actions pair naturally with React Server Components (RSC) to eliminate entire categories of client-side code. When a form submission triggers a Server Action, the mutation logic, validation, and database calls all execute on the server without requiring corresponding client-side JavaScript for API fetching, state management, or error handling boilerplate.
 
-**Artifact: Code Snippet**
-
 ```typescript
 // app/actions.ts (server-only)
 'use server'
