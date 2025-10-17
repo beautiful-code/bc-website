@@ -3,7 +3,7 @@ title: "Shared Embeddings Across Semantically-Similar Features: Memory-Efficient
 expertise: ai-applied-ml
 slug: shared-embeddings-memory-efficient-architecture
 tech: [pytorch, tensorflow, python]
-date: 2025-10-01
+date: 2025-10-03
 author: BeautifulCode
 keytakeaway: "Sharing embeddings across semantically-similar features reduces memory by 40-60% and improves convergence by 15-25% through cross-feature gradient updates, applicable to any multi-categorical model including classification, fraud detection, and churn prediction tasks."
 ---
