@@ -3,7 +3,7 @@ title: "Accelerating ML Retraining with Kubeflow's Step-Level Caching"
 expertise: ai-applied-ml
 slug: accelerating-ml-retraining-kubeflow-step-level-caching
 tech: [kubeflow, kubernetes, docker]
-date: 2025-08-01
+date: 2025-09-02
 author: BeautifulCode
 keytakeaway: "Kubeflow's step-level caching with input artifact hashing eliminates redundant computation in ML pipelines, cutting retraining time by reusing stable preprocessing and feature engineering outputs across runs."
 ---
@@ -15,8 +15,6 @@ The single biggest pain point in Kubeflow pipeline development is waiting for id
 ### Enabling Step-Level Caching
 
 Kubeflow Pipelines provides built-in caching at the component level through execution fingerprinting. When a pipeline step executes, Kubeflow generates a cache key based on the component's code, input parameters, and artifact hashes. On subsequent runs, if the cache key matches, Kubeflow bypasses execution and reuses the cached outputs.
-
-**Code Snippet**
 
 ```python
 from kfp import dsl

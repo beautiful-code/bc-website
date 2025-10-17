@@ -3,7 +3,7 @@ title: "Precomputing SHAP Values for Low-Latency ML Explainability in Production
 expertise: ai-applied-ml
 slug: precomputing-shap-values-low-latency-ml-explainability
 tech: [pytorch, bigquery, tensorflow]
-date: 2025-09-01
+date: 2025-09-04
 author: BeautifulCode
 keytakeaway: "Precomputing SHAP values during batch inference and persisting them in BigQuery decouples explainability from serving latency while enabling drift monitoring through attribution pattern tracking."
 ---
@@ -13,8 +13,6 @@ keytakeaway: "Precomputing SHAP values during batch inference and persisting the
 SHAP (SHapley Additive exPlanations) provides model-agnostic explanations by computing feature contributions through coalitional game theory. While SHAP delivers interpretable insights, computing Shapley values at inference time introduces prohibitive latency. For tree-based models, TreeSHAP requires traversing decision paths across all trees. For neural networks, DeepSHAP or KernelSHAP involves hundreds of forward passes with perturbed inputs. This makes real-time scoring impractical when prediction latency budgets are measured in milliseconds.
 
 ### Batch Precomputation Strategy
-
-**Code Snippet**
 
 ```python
 # Batch SHAP computation pipeline
