@@ -7,8 +7,6 @@ summary: "Code is read much more often than it is written. This fundamental trut
 
 ![Clean Code Practices](/principles/clean-code-practices/comic.png)
 
-
-
 ### Explanation in layman terms
 
 Clean code is not just about aesthetics—it's about maintainability, collaboration, and long-term project success. When code is clean and readable:

@@ -7,6 +7,7 @@ import {
 } from "@/lib/principle";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
+import ComicStrip from "@/components/ComicStrip";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
 import "../../../../styles/layout.scss";
 import "../../../../styles/markdown-content.scss";
@@ -83,6 +84,9 @@ export default async function PrinciplePage({
             {principle.title}
           </h1>
         </div>
+
+        {/* Comic Strip */}
+        <ComicStrip principleSlug={principle.slug} />
 
         {/* Principle Content */}
         <div className="markdown-content max-w-none mb-12">

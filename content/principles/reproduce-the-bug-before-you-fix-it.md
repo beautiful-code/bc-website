@@ -23,9 +23,9 @@ Creating an automated test for this is the gold standard. It's like building a r
 | Action | What you'll learn |
 | :---- | :---- |
 | Watch this [video](https://youtu.be/_GxfTfMnwvw?si=5WCKF6u4E1-EgVky) from 21:00 mins | How to record, replay, and trigger bugs systematically using browser tools |
-|  Read this article https://www.ministryoftesting.com/articles/taming-the-beast-of-irreproducible-bugs-finding-opportunities-in-chaos | A structured approach and a set of principles for investigating bugs that can't easily be reproduced. |
-| Read this article https://debugagent.com/cant-reproduce-a-bug | The two-pronged approach to solving bugs: replicating the environment and user behavior, and using logs to understand the issue when direct reproduction is not possible. |
-| Read the section "Disruptive Environments: Exposing Hidden Bugs" in this article https://medium.com/javarevisited/debugging-tips-and-tricks-a-comprehensive-guide-8d84a58ca9f2 | How to use "disruption" (e.g., network throttling, changing the environment) as a technique to unearth hard-to-reproduce bugs.  |
+|  Read this [article](https://www.ministryoftesting.com/articles/taming-the-beast-of-irreproducible-bugs-finding-opportunities-in-chaos) | A structured approach and a set of principles for investigating bugs that can't easily be reproduced. |
+| Read this [article](https://debugagent.com/cant-reproduce-a-bug) | The two-pronged approach to solving bugs: replicating the environment and user behavior, and using logs to understand the issue when direct reproduction is not possible. |
+| Read the section "Disruptive Environments: Exposing Hidden Bugs" in this [article](https://medium.com/javarevisited/debugging-tips-and-tricks-a-comprehensive-guide-8d84a58ca9f2) | How to use "disruption" (e.g., network throttling, changing the environment) as a technique to unearth hard-to-reproduce bugs.  |
 
 ### Put it into practice?
 

@@ -36,9 +36,9 @@ This principle doesn't mean eliminating accountability. It means shifting accoun
 
 | Action | What you'll learn |
 | :---- | :---- |
-| Listen to "Blameless Engineering at ASOS" podcast [apple.co/3blameless-asos](https://podcasts.apple.com/dk/podcast/16-blameless-engineering-at-asos/id1535752959?i=1000544260124) | Real-world case study of how ASOS tech teams transitioned to a blameless postmortem culture. |
-| Study "A Beginners Guide To Root Cause Analysis (RCA)" [reliability.com/resources/articles/beginners-guide-to-root-cause-analysis](https://reliability.com/resources/articles/beginners-guide-to-root-cause-analysis/) | Basic steps of RCA methodology  |
-| Explore "Postmortem Documentation Guide" [pagerduty.com/resources/insights/learn/how-to-write-postmortem](https://www.pagerduty.com/resources/insights/learn/how-to-write-postmortem/) | Guide on writing effective postmortems andbest practices for blameless analysis. |
+| Listen to "Blameless Engineering at ASOS" [podcast](https://podcasts.apple.com/dk/podcast/16-blameless-engineering-at-asos/id1535752959?i=1000544260124) | Real-world case study of how ASOS tech teams transitioned to a blameless postmortem culture. |
+| Study "A Beginners Guide To Root Cause Analysis (RCA)" [article](https://reliability.com/resources/articles/beginners-guide-to-root-cause-analysis/) | Basic steps of RCA methodology  |
+| Explore "Postmortem Documentation Guide" [article](https://www.pagerduty.com/resources/insights/learn/how-to-write-postmortem/) | Guide on writing effective postmortems andbest practices for blameless analysis. |
 
 ### Put it into practice?
 

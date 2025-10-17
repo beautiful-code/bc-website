@@ -37,7 +37,7 @@ Remember, you write code once, but you read it many times. Studies show develope
 
 | Action | What you'll learn |
 | :---- | :---- |
-| Study the article "Clear is Better Than Clever" by Dave Cheney ([https://dave.cheney.net/2019/07/09/clear-is-better-than-clever](https://dave.cheney.net/2019/07/09/clear-is-better-than-clever)) | The difference between code that works and code that communicates. |
+| Study the [article](https://dave.cheney.net/2019/07/09/clear-is-better-than-clever) "Clear is Better Than Clever" by Dave Cheney | The difference between code that works and code that communicates. |
 | Read the article ["The Complete Guide to Readable Code: 11 Principles"](https://fellow.ai/blog/the-complete-guide-to-readable-code/) | Principles like naming, single responsibility, and feedback loops to ensure code is easy for anyone to understand and change |
 | Read the opinion post ["Clever code is probably the worst code you could write"](https://read.engineerscodex.com/p/clever-code-is-probably-the-worst) | Practical evidence on why clever code is often less maintainable and why teams should value clarity highly |
 

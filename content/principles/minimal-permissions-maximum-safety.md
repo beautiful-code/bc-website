@@ -28,7 +28,7 @@ In practice, this is often implemented using systems like Role-Based Access Cont
 
 | Action | What you'll learn |
 | :---- | :---- |
-| Read this article (https://www.strongdm.com/blog/principle-of-least-privilege)  | The definition of the Principle of Least Privilege (PoLP) through a clear analogy, understand its importance, and see practical examples of how it prevents and mitigates damage from common issues like "privilege creep" and phishing attacks. |
+| Read this [article](https://www.strongdm.com/blog/principle-of-least-privilege)  | The definition of the Principle of Least Privilege (PoLP) through a clear analogy, understand its importance, and see practical examples of how it prevents and mitigates damage from common issues like "privilege creep" and phishing attacks. |
 
 ### Put it into practice?
 
