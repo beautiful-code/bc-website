@@ -14,8 +14,6 @@ Pre-aggregated materialized views transform terabyte-scale analytics by caching 
 
 ### Incremental Refresh Mechanics
 
-**Artifact: Code Snippet**
-
 ```sql
 CREATE MATERIALIZED VIEW sales_daily_agg
 PARTITION BY DATE(order_date)

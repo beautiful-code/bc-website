@@ -14,8 +14,6 @@ React Hook Form diverges from traditional controlled component patterns by using
 
 ### Schema Validation as Single Source of Truth
 
-**Artifact: Code Snippet**
-
 ```typescript
 // Import Zod schema builder and React Hook Form resolver
 import { z } from 'zod';

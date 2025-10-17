@@ -16,7 +16,6 @@ Traditional async state management relies on multiple boolean flags like "isLoad
 
 Discriminated unions use a literal type property as a discriminator to represent mutually exclusive states. Instead of combining flags, you define distinct type shapes for each state.
 
-**Code Snippet:**
 ```typescript
 // Before: Impossible states possible
 interface BadState {

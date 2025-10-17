@@ -14,8 +14,6 @@ The "contain" property establishes rendering boundaries that isolate layout calc
 
 ### Virtual Scrolling Without Framework Overhead
 
-**Artifact: Code Snippet**
-
 ```css
 .list-item {
   content-visibility: auto;
