@@ -29,7 +29,7 @@ FROM raw_orders
 GROUP BY DATE(order_date), product_id;
 ```
 
-BigQuery's incremental refresh only recomputes partitions where base table data changed. This works because operations like "SUM", "COUNT", "MIN", and "MAX" with "GROUP BY" are associative and commutative. You can merge partial results without rescanning everything. Window functions, "DISTINCT" on non-key columns, and non-deterministic UDFs break this contract and force full recomputation. The engine tracks modified partitions in base tables and propagates changes efficiently through the materialization graph.
+BigQuery's incremental refresh only recomputes partitions where base table data changed. This works because operations like "SUM", "COUNT", "MIN", and "MAX" with "GROUP BY" are associative and commutative. You can merge partial results without rescanning everything. Window functions, "DISTINCT" on non-key columns, and non-deterministic User-Defined Functions (UDFs) break this contract and force full recomputation. The engine tracks modified partitions in base tables and propagates changes efficiently through the materialization graph.
 
 ### Freshness as a Controllable Trade-off
 

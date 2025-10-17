@@ -10,7 +10,7 @@ keytakeaway: "Versioned views decouple storage evolution from consumer contracts
 
 ### The Problem: Raw Tables Break Consumer Trust
 
-When downstream consumers query tables directly, every schema change becomes a coordination nightmare. A single column rename can break dashboards, ETL jobs, and ML pipelines simultaneously. Teams end up either freezing schemas entirely or forcing synchronized deployments across dozens of services. The real issue is exposing mutable storage as the interface instead of treating it as an implementation detail that can safely evolve underneath a stable contract.
+When downstream consumers query tables directly, every schema change becomes a coordination nightmare. A single column rename can break dashboards, ETL jobs, and Machine Learning (ML) pipelines simultaneously. Teams end up either freezing schemas entirely or forcing synchronized deployments across dozens of services. The real issue is exposing mutable storage as the interface instead of treating it as an implementation detail that can safely evolve underneath a stable contract.
 
 ### The Pattern: Base Tables Behind Versioned Views
 
@@ -29,8 +29,8 @@ This approach turns additive changes into instant safe operations while giving b
 
 ### Enforce Compatibility in CI Before Production
 
-Store schemas in a typed format like Avro or Protobuf in version control and run compatibility checks on every pull request. Block merges that attempt to remove fields, change types, or rename columns without following the dual-run pattern. Also compile and execute v1 queries against the current base schema as an integration test. If existing consumer queries would break, the CI pipeline should fail immediately. This catches breaking changes at code review time instead of discovering them through production alerts.
+Store schemas in a typed format like Avro or Protobuf in version control and run compatibility checks on every Pull Request (PR). Block merges that attempt to remove fields, change types, or rename columns without following the dual-run pattern. Also compile and execute v1 queries against the current base schema as an integration test. If existing consumer queries would break, the CI pipeline should fail immediately. This catches breaking changes at code review time instead of discovering them through production alerts.
 
 ### Applied Insight: Automate the Migration Playbook
 
-Standardize schema evolution with a five-step playbook: schema PR with compatibility check, base table DDL migration, backfill job for new columns, v2 view release, and adoption tracking dashboard. When adoption hits your threshold (typically 90%), announce the v1 sunset date and remove it after usage drops to zero. Rollback is trivial: redirect consumers to the previous view version without touching the base table. This turns schema evolution from a risky manual process into a repeatable, low risk operation.
+Standardize schema evolution with a five-step playbook: schema PR with compatibility check, base table Data Definition Language (DDL) migration, backfill job for new columns, v2 view release, and adoption tracking dashboard. When adoption hits your threshold (typically 90%), announce the v1 sunset date and remove it after usage drops to zero. Rollback is trivial: redirect consumers to the previous view version without touching the base table. This turns schema evolution from a risky manual process into a repeatable, low risk operation.

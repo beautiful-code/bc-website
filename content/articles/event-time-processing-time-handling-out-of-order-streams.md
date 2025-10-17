@@ -39,4 +39,4 @@ Late events arriving after the watermark still belong to their original window. 
 
 ### Applied Insight: Guardrails for Production Streams
 
-Set finite allowed lateness to prevent unbounded state growth (monitor state bytes and backlog metrics in Dataflow). Use deterministic keys and insert IDs (like BigQuery "insertId") to dedupe late duplicates at the sink, or implement stateful "DoFns" for deduplication logic. Route extremely late data to a side output or dead letter queue for auditing rather than silently dropping it. This gives you visibility into outliers and prevents data loss while keeping your main pipeline healthy.
+Set finite allowed lateness to prevent unbounded state growth (monitor state bytes and backlog metrics in Dataflow). Use deterministic keys and insert IDs (like BigQuery "insertId") to dedupe late duplicates at the sink, or implement stateful Do Functions (DoFns) for deduplication logic. Route extremely late data to a side output or dead letter queue for auditing rather than silently dropping it. This gives you visibility into outliers and prevents data loss while keeping your main pipeline healthy.

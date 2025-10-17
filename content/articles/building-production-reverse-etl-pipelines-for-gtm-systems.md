@@ -10,7 +10,7 @@ keytakeaway: "Production Reverse ETL succeeds when architected around specific o
 
 ### The Operational Moment Drives Architecture
 
-Reverse ETL justifies itself when it powers a specific action in downstream tools. Lead scoring triggers routing logic in Salesforce, churn risk surfaces in CS dashboards, LTV segments activate suppression rules in Braze. The pattern holds: identify one high-value operational moment, then sync only the minimal attribute set that moment requires. This constraint prevents overbuilding and focuses warehouse models on actionable truth rather than exhaustive exports.
+Reverse ETL justifies itself when it powers a specific action in downstream tools. Lead scoring triggers routing logic in Salesforce, churn risk surfaces in Customer Success (CS) dashboards, Lifetime Value (LTV) segments activate suppression rules in Braze. The pattern holds: identify one high-value Go-To-Market (GTM) operational moment, then sync only the minimal attribute set that moment requires. This constraint prevents overbuilding and focuses warehouse models on actionable truth rather than exhaustive exports.
 
 ### Idempotent Syncs Through Stable Mappings
 
@@ -28,10 +28,10 @@ This table enables UPSERT operations that remain deterministic across retries an
 
 ### Delta Detection and Backfill Strategy
 
-Syncing full tables on every run overwhelms destination APIs and violates rate limits. Build incremental dbt models that emit only changed rows using "updated_at" timestamps or row-level hashes. A 48-hour lookback window catches late-arriving updates from upstream systems. When backfilling historical data, chunk records into batches sized to respect API quotas and implement exponential backoff for rejected requests. Queue failures into a retry table rather than blocking the entire pipeline.
+Syncing full tables on every run overwhelms destination APIs and violates rate limits. Build incremental data build tool (dbt) models that emit only changed rows using "updated_at" timestamps or row-level hashes. A 48-hour lookback window catches late-arriving updates from upstream systems. When backfilling historical data, chunk records into batches sized to respect API quotas and implement exponential backoff for rejected requests. Queue failures into a retry table rather than blocking the entire pipeline.
 
 ### Contracts and Observability Lock In Trust
 
 Treat each destination as a data contract. Define what fields you send, their types, and required values upfront. Add dbt tests that block syncs when data violates these rules. Before going live, test with a 1% sample and log what would change. This lets GTM teams review before full rollout.
 
-After deployment, track the metrics that matter: rows attempted versus succeeded, why records failed, and what changed per destination. Build dashboards showing these numbers so marketing and sales can verify their segments worked as expected. This visibility also creates audit trails for compliance reviews around PII and consent.
+After deployment, track the metrics that matter: rows attempted versus succeeded, why records failed, and what changed per destination. Build dashboards showing these numbers so marketing and sales can verify their segments worked as expected. This visibility also creates audit trails for compliance reviews around Personally Identifiable Information (PII) and consent.

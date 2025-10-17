@@ -10,7 +10,7 @@ keytakeaway: "Choose build or buy based on time-to-signal for your first critica
 
 ### Time-to-Signal as the Decision Filter
 
-The build-versus-buy decision for data observability collapses to a single question: how fast can you surface freshness, volume, and schema anomalies? If a vendor integration delivers table-level freshness monitoring, volume bands, and schema drift detection in under two weeks, the velocity advantage outweighs custom infrastructure. Conversely, if you can ship heartbeat checks and alerting via native warehouse tools (Scheduled Queries, dbt tests, Airflow sensors) in the same timeframe, building remains viable. Feature parity is a distraction; what matters is operational readiness. The team that detects a missing daily partition or a silent schema break hours earlier ships more reliable data products, and that time advantage compounds across incidents.
+The build-versus-buy decision for data observability collapses to a single question: how fast can you surface freshness, volume, and schema anomalies? If a vendor integration delivers table-level freshness monitoring, volume bands, and schema drift detection in under two weeks, the velocity advantage outweighs custom infrastructure. Conversely, if you can ship heartbeat checks and alerting via native warehouse tools (Scheduled Queries, data build tool (dbt) tests, Airflow sensors) in the same timeframe, building remains viable. Feature parity is a distraction; what matters is operational readiness. The team that detects a missing daily partition or a silent schema break hours earlier ships more reliable data products, and that time advantage compounds across incidents.
 
 ### The Hidden Tax of Ownership
 
@@ -18,13 +18,13 @@ Building observability infrastructure creates a permanent maintenance surface th
 
 #### Artifact: Maintenance Burden Comparison
 
-| **Recurring Task**                             | **Build**                                                                   | **Buy**                                                                 |
-| ---------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Adding new tables to monitoring                | Write freshness query, set alert thresholds, update dashboards manually     | Connector auto-discovers tables, computes baseline within 24 hours      |
-| Handling schema changes                        | Debug SQL failures, rewrite check logic, backfill historical baselines      | Vendor detects change, fires alert, updates lineage graph automatically |
-| Reducing alert noise                           | Manually tune thresholds each time data patterns shift, update runbooks     | ML-driven baseline adapts to seasonal patterns, surfaces anomaly scores |
-| Knowledge transfer when owner leaves           | New engineer reverse-engineers queries, tribal knowledge from Slack threads | Vendor documentation and support, baseline logic persists in platform   |
-| Tracing upstream dependencies during incidents | Parse Dataform YAML or dbt manifest, write custom lineage scripts           | Click table in UI, view full lineage graph with last-run metadata       |
+| **Recurring Task**                             | **Build**                                                                   | **Buy**                                                                                    |
+| ---------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Adding new tables to monitoring                | Write freshness query, set alert thresholds, update dashboards manually     | Connector auto-discovers tables, computes baseline within 24 hours                         |
+| Handling schema changes                        | Debug SQL failures, rewrite check logic, backfill historical baselines      | Vendor detects change, fires alert, updates lineage graph automatically                    |
+| Reducing alert noise                           | Manually tune thresholds each time data patterns shift, update runbooks     | Machine Learning (ML)-driven baseline adapts to seasonal patterns, surfaces anomaly scores |
+| Knowledge transfer when owner leaves           | New engineer reverse-engineers queries, tribal knowledge from Slack threads | Vendor documentation and support, baseline logic persists in platform                      |
+| Tracing upstream dependencies during incidents | Parse Dataform YAML or dbt manifest, write custom lineage scripts           | Click table in UI, view full lineage graph with last-run metadata                          |
 
 ### Coverage Before Depth for Early Wins
 
@@ -34,7 +34,7 @@ A lightweight in-house observability layer (heartbeat checks, freshness lag quer
 
 Building observability works when your stack lives in one warehouse. Native tools like Scheduled Queries, dbt tests, and Airflow sensors already share authentication, query engines, and monitoring dashboards with your pipelines. Adding freshness checks is just writing more SQL in the same environment.
 
-The calculus flips in multi-warehouse or multi-source architectures. If you're pulling from Salesforce, Stripe, and Google Analytics into different warehouses, building means maintaining separate credential stores, writing source-specific API clients, and stitching together lineage across systems that don't know about each other. When Salesforce changes their OAuth flow or Stripe deprecates a webhook payload, your observability breaks before your data does. Vendors absorb this integration tax with pre-built, maintained connectors. Their lineage engines parse metadata across systems automatically, so you see "Salesforce Account table is 6 hours stale, blocking downstream BigQuery revenue reports" in one view without writing cross-platform correlation logic. The vendor value isn't features; it's not owning the connector maintenance burden and authentication fragility across a heterogeneous stack.
+The calculus flips in multi-warehouse or multi-source architectures. If you're pulling from Salesforce, Stripe, and Google Analytics into different warehouses, building means maintaining separate credential stores, writing source-specific API clients, and stitching together lineage across systems that don't know about each other. When Salesforce changes their Open Authorization (OAuth) flow or Stripe deprecates a webhook payload, your observability breaks before your data does. Vendors absorb this integration tax with pre-built, maintained connectors. Their lineage engines parse metadata across systems automatically, so you see "Salesforce Account table is 6 hours stale, blocking downstream BigQuery revenue reports" in one view without writing cross-platform correlation logic. The vendor value isn't features; it's not owning the connector maintenance burden and authentication fragility across a heterogeneous stack.
 
 #### Applied Insight: Own Your Signal Layer
 

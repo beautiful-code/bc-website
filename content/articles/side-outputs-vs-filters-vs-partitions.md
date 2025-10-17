@@ -10,7 +10,7 @@ keytakeaway: "Choose side outputs for overlapping logic, filters for simple cond
 
 ### Understanding Side Outputs as Parallel Branches
 
-Side outputs in Apache Beam are not separate pipelines but parallel branches within a single pipeline graph. When a "DoFn" emits multiple "PCollections" using "TupleTag" (Java/Go) or tagged outputs via "ParDo" (Python), each branch inherits the same windowing and triggering semantics. This means event-time behavior remains consistent across all branches, eliminating the need to manage separate pipelines for related processing logic. The pipeline graph treats these as concurrent outputs from the same transform, ensuring unified execution.
+Side outputs in Apache Beam are not separate pipelines but parallel branches within a single pipeline graph. When a Do Function (DoFn) emits multiple "PCollections" using "TupleTag" (Java/Go) or tagged outputs via Parallel Do (ParDo) (Python), each branch inherits the same windowing and triggering semantics. This means event-time behavior remains consistent across all branches, eliminating the need to manage separate pipelines for related processing logic. The pipeline graph treats these as concurrent outputs from the same transform, ensuring unified execution.
 
 ### Branching Primitives: Intent-Driven Selection
 

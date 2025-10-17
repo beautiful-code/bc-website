@@ -38,7 +38,7 @@ resource "google_bigquery_reservation" "analytics" {
 }
 ```
 
-**Description:** This configuration isolates production ETL from analyst queries by creating dedicated reservations. The ETL reservation gets 500 slots with strict boundaries, while the analytics reservation allows idle slot sharing to prevent waste. Assigning by project and job type ensures noisy neighbors like data science ML training jobs cannot starve critical dashboard queries.
+**Description:** This configuration isolates production ETL from analyst queries by creating dedicated reservations. The ETL reservation gets 500 slots with strict boundaries, while the analytics reservation allows idle slot sharing to prevent waste. Assigning by project and job type ensures noisy neighbors like data science Machine Learning (ML) training jobs cannot starve critical dashboard queries.
 
 ### Autoscaling Guardrails and Profiling
 

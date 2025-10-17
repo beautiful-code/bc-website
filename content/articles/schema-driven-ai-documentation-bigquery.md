@@ -10,7 +10,7 @@ keytakeaway: "Treating schema metadata as the source of truth and enforcing docu
 
 ### Metadata as Ground Truth, Not Memory
 
-Traditional data documentation dies in wikis because engineers write descriptions from memory after building pipelines. The better approach treats BigQuery "INFORMATION_SCHEMA" as the source of truth. By querying table and column metadata, sampling actual values, and parsing upstream SQL from dbt or Dataform, an LLM can draft realistic table purposes, column descriptions with units, business rules, and common join patterns. Engineers review these AI-generated docs and commit them alongside code, ensuring documentation reflects what actually exists in the warehouse rather than what someone remembered building three months ago.
+Traditional data documentation dies in wikis because engineers write descriptions from memory after building pipelines. The better approach treats BigQuery "INFORMATION_SCHEMA" as the source of truth. By querying table and column metadata, sampling actual values, and parsing upstream SQL from data build tool (dbt) or Dataform, an LLM can draft realistic table purposes, column descriptions with units, business rules, and common join patterns. Engineers review these AI-generated docs and commit them alongside code, ensuring documentation reflects what actually exists in the warehouse rather than what someone remembered building three months ago.
 
 ### CI-Enforced Documentation with Schema Diff Analysis
 
@@ -24,11 +24,11 @@ Traditional data documentation dies in wikis because engineers write description
 5. Post-merge → Sync approved docs to Data Catalog + dbt docs site
 ```
 
-Making documentation a build gate transforms it from optional housekeeping into enforced discipline. When a PR introduces schema changes, the CI job surfaces missing or stale field descriptions and proposes dbt tests like "accepted_values" or "not_null" constraints based on sampled data. The build won't pass until owners explicitly approve or refine the suggestions, which means docs and tests evolve in lockstep with schema.
+Making documentation a build gate transforms it from optional housekeeping into enforced discipline. When a Pull Request (PR) introduces schema changes, the CI job surfaces missing or stale field descriptions and proposes dbt tests like "accepted_values" or "not_null" constraints based on sampled data. The build won't pass until owners explicitly approve or refine the suggestions, which means docs and tests evolve in lockstep with schema.
 
 ### Single Source of Truth with Policy Tag Automation
 
-Once approved, descriptions are pushed back to BigQuery Data Catalog or dbt docs as the canonical reference. The system scans column names and sample values to suggest policy tags for sensitive data like emails, PAN-like patterns, or PII markers, so governance becomes automatic rather than manual tagging. BI tools like Looker or Tableau read these descriptions via native connectors, eliminating the copy-paste drift that happens when analysts maintain their own field glossaries.
+Once approved, descriptions are pushed back to BigQuery Data Catalog or dbt docs as the canonical reference. The system scans column names and sample values to suggest policy tags for sensitive data like emails, Primary Account Number (PAN)-like patterns, or Personally Identifiable Information (PII) markers, so governance becomes automatic rather than manual tagging. Business Intelligence (BI) tools like Looker or Tableau read these descriptions via native connectors, eliminating the copy-paste drift that happens when analysts maintain their own field glossaries.
 
 ### Continuous Validation Against Production Reality
 
