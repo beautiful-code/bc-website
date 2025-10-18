@@ -3,24 +3,24 @@ slug: "simplifying-service-discovery-with-an-ai-powered-sales-agent"
 title: "Simplifying Service Discovery with an AI-Powered Sales Agent"
 industry: "Technology"
 heroImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.svg"
-problemStatement: "The client's vast service catalog was overwhelming, even for expert customers. Prospects struggled to find the right solution for their needs, leading to a long sales cycle, stalled deals, and customer drop-off."
-clientInfo: "A global leader in enterprise cloud connectivity with an extensive portfolio of services. Their own success had made their offerings too complex for customers to navigate."
+problemStatement: "The client's vast service catalog was overwhelming, even for expert customers. Prospects struggled to find the right solution for their needs, leading to long sales cycles, stalled deals, and customer drop-off."
+clientInfo: "A global leader in enterprise cloud connectivity with an extensive portfolio of services. Their success had created such a diverse range of offerings that customers found it difficult to navigate."
 # clientImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/client-logo.svg"
 outcomes:
-  - outcome: "Accelerated the customer service discovery journey."
+  - outcome: "Accelerated the customer's service discovery journey."
     icon: "/icons/outcome/outcome-speed.svg"
   - outcome: "Increased user engagement with technical content."
     icon: "/icons/outcome/outcome-growth.svg"
   - outcome: "Improved lead qualification for the sales team."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml", "frontend-engineering"]
 technologies:
-  - tech: "python"
-    purpose: "Core AI and data automation components"
-  - tech: "aws"
+  - tech: "gcp"
     purpose: "Cloud deployment and infrastructure"
-  - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
+  - tech: "openai"
+    purpose: "Foundation model"
+  - tech: "react"
+    purpose: "Modern AI-specific user interface for seamless customer interaction"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -29,7 +29,7 @@ technologies:
 
 ### How did BeautifulCode do it?
 
-Our process began with a deep dive into the client's domain and their customer's journey. We spent time with their team to understand the typical questions and challenges potential customers faced. The core issue was clear: customers needed a guide, not just a search bar. We set out to build an AI-powered sales agent that could intelligently navigate them from problem to solution.
+Our process began with a deep dive into the client's domain and their customers' journey. We spent time with their team to understand the typical questions and challenges that potential customers faced. The core issue was clear: customers needed a guide, not just a search bar. We set out to build an AI-powered sales agent that could intelligently navigate them from problem to solution.
 
 <figure>
   <img src="/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/simplifying-service-discovery-with-an-ai-powered-sales-agent.gif" alt="AI-Powered Sales Agent Demo" />
@@ -48,7 +48,7 @@ We constructed a robust Retrieval-Augmented Generation (RAG) pipeline to process
 
 ### Designing the AI Sales Agent Persona
 
-We engineered an "AI Sales Agent" persona designed to be more than just a question-answering bot. Its core directive was to understand a customer's technical query and guide them effectively. To achieve this, the agent was programmed to generate relevant, related follow-up questions, proactively nudging the user down the sales funnel. For transparency and trust, the agent also provided a list of the source documents it used to formulate each response.
+We engineered an "AI Sales Agent" persona designed to be more than just a question-answering bot. Its core directive was to understand a customer's technical query and guide the customer effectively. To achieve this, the agent was programmed to generate relevant, related follow-up questions, proactively guiding users through the sales funnel. For transparency and trust, the agent also provided a list of the source documents it used to formulate each response.
 
 ### Creating a Modern, Frictionless User Experience
 

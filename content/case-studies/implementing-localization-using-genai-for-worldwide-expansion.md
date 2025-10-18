@@ -11,14 +11,16 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "80% cost savings on translations"
     icon: "/icons/outcome/outcome-savings.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml", "frontend-engineering"]
 technologies:
+  - tech: "llama"
+    purpose: "Foundation model for translation"
+  - tech: "llmlite"
+    purpose: "Interacting with foundation models"
   - tech: "python"
     purpose: "Core AI and data automation components"
   - tech: "aws"
     purpose: "Cloud deployment and infrastructure"
-  - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"

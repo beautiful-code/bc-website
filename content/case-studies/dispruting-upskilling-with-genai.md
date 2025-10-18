@@ -13,10 +13,12 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Added a comprehensive evaluation phase in the training period"
     icon: "/icons/outcome/outcome-evaluate.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml", "frontend-engineering"]
 technologies:
   - tech: "openai"
     purpose: "Foundation models for learning evaluation and feedback"
+  - tech: "Pydantic"
+    purpose: "structured output from Foundation models"
   - tech: "react"
     purpose: "Web UI for learning experiences"
   - tech: "supabase"

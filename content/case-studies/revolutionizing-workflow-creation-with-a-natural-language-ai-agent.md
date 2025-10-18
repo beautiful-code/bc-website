@@ -11,10 +11,14 @@ outcomes:
     icon: "/icons/outcome/outcome-automation.svg"
   - outcome: "Increased user adoption and platform engagement."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"
+  - tech: "pydantic"
+    purpose: "Structured output from Foundation models"
+  - tech: "openrouter"
+    purpose: "Multi-model LLM experimentation"
   - tech: "langchain"
     purpose: "GenAI orchestration and automation"
 # testimonial:

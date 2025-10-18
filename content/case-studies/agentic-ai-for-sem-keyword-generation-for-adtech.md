@@ -13,12 +13,16 @@ outcomes:
     icon: "/icons/outcome/outcome-savings.svg"
   - outcome: "Increased SEM analyst productivity."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml"]
 technologies:
+  - tech: "adk"
+    purpose: "Google ADK for agent orchestration and tool use"
+  - tech: "gemini"
+    purpose: "Gemini as Foundation model"
   - tech: "python"
     purpose: "Core AI and data automation components"
-  - tech: "langchain"
-    purpose: "GenAI orchestration and automation"
+  - tech: "serper"
+    purpose: "Search API to fetch hotel related information"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"

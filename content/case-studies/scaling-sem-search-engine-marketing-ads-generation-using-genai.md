@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-down.svg"
   - outcome: "Click-Through Rate (CTR) of the SEM Ads increased by 37%"
     icon: "/icons/outcome/outcome-click.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["ai-applied-ml"]
 technologies:
   - tech: "python"
     purpose: "Core scripting and data integration"
@@ -19,10 +19,8 @@ technologies:
     purpose: "Agent orchestration and prompt pipelines"
   - tech: "langsmith"
     purpose: "Prompt evaluation and tracing"
-  - tech: "streamlit"
-    purpose: "Rapid prototyping UI for analysts"
   - tech: "gemini"
-    purpose: "LLM for content and copy generation"
+    purpose: "Foundation model for content and copy generation"
   - tech: "serper"
     purpose: "Search API to fetch attraction data"
   - tech: "fastapi"
