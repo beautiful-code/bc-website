@@ -2,7 +2,7 @@
 title: "Why React Hook Form Outperforms Formik on 50+ Field Forms"
 expertise: "frontend-engineering"
 slug: "why-react-hook-form-outperforms-formik-50-field-forms"
-tech: ["react", "typescript", "statemanagement"]
+tech: ["react", "typescript"]
 date: "2025-10-10"
 author: "BeautifulCode"
 keytakeaway: "React Hook Form's ref-based registration and schema integration sacrifice per-keystroke reactivity for rerender elimination, making it ideal for large forms where validation logic can be declaratively shared across the stack."

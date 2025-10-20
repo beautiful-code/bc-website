@@ -2,7 +2,7 @@
 title: "N+1 Query Antipattern: Strategies for Efficient Association Loading"
 expertise: "backend-engineering"
 slug: n-plus-one-query-optimization
-tech: ["rubyonrails", "database"]
+tech: ["rubyonrails"]
 date: 2025-09-17
 author: BeautifulCode
 keytakeaway: Preloading associations strategically eliminates N+1 queries, with choice of method depending on whether you're filtering, aggregating, or simply accessing related data.

@@ -2,7 +2,7 @@
 title: "Choosing RabbitMQ Exchange Types: Routing Precision vs Broadcasting Flexibility"
 expertise: "backend-engineering"
 slug: choosing-rabbitmq-exchange-types
-tech: [rabbitmq, messagequeues]
+tech: [rabbitmq]
 date: 2025-09-09
 author: BeautifulCode
 keytakeaway: "RabbitMQ exchange selection hinges on routing complexity requirements, with direct exchanges optimizing for speed, topic exchanges for pattern flexibility, and fanout for guaranteed broadcast, while durability requires coordinating both queue and message persistence settings."

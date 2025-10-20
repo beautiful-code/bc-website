@@ -2,7 +2,7 @@
 title: "EXISTS vs IN: Why Semi-Join Short-Circuiting Wins in BigQuery"
 expertise: data-engineering
 slug: exists-vs-in-bigquery-semi-join
-tech: [bigquery, sql]
+tech: [bigquery]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "EXISTS delivers faster semi-joins through short-circuit evaluation and safer NULL handling, making it the default choice for large-scale presence filters in BigQuery."

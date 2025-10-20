@@ -2,7 +2,7 @@
 title: "Materialized Views in BigQuery: Speed vs Freshness"
 expertise: data-engineering
 slug: materialized-views-in-bigquery-speed-vs-freshness
-tech: [bigquery, sql]
+tech: [bigquery]
 date: 2025-10-09
 author: BeautifulCode
 keytakeaway: "Materialized views in BigQuery trade controllable staleness for dramatic cost and latency improvements on large-scale aggregations, with incremental refresh efficiency determined by query pattern compatibility and base table change characteristics."
