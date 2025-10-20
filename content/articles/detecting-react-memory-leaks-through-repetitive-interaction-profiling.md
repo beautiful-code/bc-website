@@ -2,7 +2,7 @@
 title: "Detecting React Memory Leaks Through Repetitive Interaction Profiling"
 expertise: frontend-engineering
 slug: detecting-react-memory-leaks-through-repetitive-interaction-profiling
-tech: [chrome-devtools, debugging]
+tech: [chrome-devtools]
 date: 2025-10-12
 author: BeautifulCode
 keytakeaway: "Amplifying memory leaks through 10-20x repetition of mount-unmount cycles transforms hard-to-detect per-interaction leaks into measurable retained memory patterns visible after forced garbage collection."

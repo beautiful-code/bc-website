@@ -2,7 +2,7 @@
 title: "Choosing Consistency Models in Distributed Systems: From RYW(Read-Your-Writes) to CRDTs(Conflict-free Replicated Data Types)"
 expertise: "backend-engineering"
 slug: "consistency-models-distributed-systems"
-tech: ["distributed-systems", "redis", "kafka"]
+tech: ["redis", "kafka"]
 date: "2025-09-27"
 author: "BeautifulCode"
 keytakeaway: "Weak consistency models like read-your-writes and causal consistency offer better latency than strong consistency while CRDTs and anti-entropy mechanisms ensure correctness without expensive coordination."

@@ -2,7 +2,7 @@
 title: "Optimistic vs Pessimistic Locking: Choosing the Right Concurrency Strategy"
 expertise: "backend-engineering"
 slug: optimistic-vs-pessimistic-locking
-tech: ["database-design"]
+tech: []
 date: 2025-09-10
 author: BeautifulCode
 keytakeaway: Choose optimistic locking for read-heavy, low-contention workloads where fast reads matter and choose pessimistic locking for write-heavy, high-contention scenarios where retry overhead would degrade performance.

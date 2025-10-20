@@ -2,7 +2,7 @@
 title: "Caching Strategies: Consistency vs Performance Trade-offs in High-Throughput Systems"
 expertise: "backend-engineering"
 slug: caching-strategies-consistency-performance-tradeoffs
-tech: ["redis", "database-design"]
+tech: ["redis"]
 date: 2025-09-21
 author: BeautifulCode
 keytakeaway: Cache patterns are not neutral choices, consistency is costly, and your database is the bottleneck that determines which pattern survives production.

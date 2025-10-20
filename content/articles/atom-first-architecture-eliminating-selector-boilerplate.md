@@ -2,7 +2,7 @@
 title: "Atom-First Architecture: Eliminating Selector Boilerplate in React State Management"
 expertise: frontend-engineering
 slug: atom-first-architecture-eliminating-selector-boilerplate
-tech: [react, redux, typescript, statemanagement]
+tech: [react, redux, typescript]
 date: 2025-10-12
 author: BeautifulCode
 keytakeaway: "Atomic state libraries achieve fine-grained reactivity by inverting the subscription model from store slices to dependency graphs, eliminating the selector boilerplate and rerender optimization burden inherent in monolithic state patterns."

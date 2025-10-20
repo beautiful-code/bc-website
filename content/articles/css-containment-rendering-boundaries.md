@@ -2,7 +2,7 @@
 title: "CSS Containment as a Rendering Boundary Strategy for Performance-Critical UIs"
 expertise: frontend-engineering
 slug: css-containment-rendering-boundaries
-tech: [css, react, performance]
+tech: [css, react]
 date: 2025-10-10
 author: BeautifulCode
 keytakeaway: "CSS containment transforms rendering performance by establishing explicit isolation boundaries, but requires deliberate architectural choices about component contracts and layout dependencies rather than drop-in optimization."

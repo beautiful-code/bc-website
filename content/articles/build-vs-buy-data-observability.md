@@ -2,7 +2,7 @@
 title: "Build vs. Buy for Data Observability: Time-to-Signal Determines ROI"
 expertise: data-engineering
 slug: "build-vs-buy-data-observability"
-tech: ["observability"]
+tech: []
 date: "2025-10-12"
 author: "BeautifulCode"
 keytakeaway: "Choose build or buy based on time-to-signal for your first critical alerts, not feature completeness, and always own the raw observability data layer to retain optionability as your pipeline architecture evolves."
