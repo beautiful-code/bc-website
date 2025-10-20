@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-scale-1.svg"
   - outcome: "Halfed the training time of ramping up of leaners into projects"
     icon: "/icons/outcome/outcome-time-2.svg"
-  - outcome: "Added a comprehensive evaluation phase in the training period"
+  - outcome: "Achieved a 95% course completion rate by eliminating feedback delays and keeping learners engaged."
     icon: "/icons/outcome/outcome-evaluate.svg"
 expertises: ["ai-applied-ml", "frontend-engineering"]
 technologies:
