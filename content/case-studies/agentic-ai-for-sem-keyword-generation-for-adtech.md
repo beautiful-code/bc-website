@@ -7,11 +7,11 @@ problemStatement: "The agency's growth had hit a wall. Their existing keyword to
 clientInfo: "A large performance marketing agency specializing in the hospitality industry. Their business model relies on efficiently managing SEM campaigns for hundreds of hotel clients, where profitability is directly tied to operational speed and campaign effectiveness."
 # clientImage: "/case-studies/agentic-ai-for-sem-keyword-generation-for-adtech/client-logo.svg"
 outcomes:
-  - outcome: "Significant improvement in keyword performance and click-through rates."
+  - outcome: "Achieved 32% average increase in click-through rates within first quarter."
     icon: "/icons/outcome/outcome-click.svg"
-  - outcome: "Reduced cost-per-acquisition (CPA) by minimizing wasted ad spend."
+  - outcome: "Reduced cost-per-acquisition by 28%."
     icon: "/icons/outcome/outcome-savings.svg"
-  - outcome: "Increased SEM analyst productivity."
+  - outcome: "Reduced keyword generation time by 85%, enabling analysts to manage 3x more accounts."
     icon: "/icons/outcome/outcome-growth.svg"
 expertises: ["ai-applied-ml"]
 technologies:

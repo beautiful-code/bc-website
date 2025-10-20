@@ -7,11 +7,11 @@ problemStatement: "The client's vast service catalog was overwhelming, even for 
 clientInfo: "A global leader in enterprise cloud connectivity with an extensive portfolio of services. Their success had created such a diverse range of offerings that customers found it difficult to navigate."
 # clientImage: "/case-studies/simplifying-service-discovery-with-an-ai-powered-sales-agent/client-logo.svg"
 outcomes:
-  - outcome: "Accelerated the customer's service discovery journey."
+  - outcome: "Reduced average service discovery time from 1-2 weeks to less than 24 hours."
     icon: "/icons/outcome/outcome-speed.svg"
-  - outcome: "Increased user engagement with technical content."
+  - outcome: "82% of users found the required information within 2 minutes, compared to 15+ minutes with manual navigation."
     icon: "/icons/outcome/outcome-growth.svg"
-  - outcome: "Improved lead qualification for the sales team."
+  - outcome: "Improved lead qualification rate by 52%."
     icon: "/icons/outcome/outcome-growth.svg"
 expertises: ["ai-applied-ml", "frontend-engineering"]
 technologies:
