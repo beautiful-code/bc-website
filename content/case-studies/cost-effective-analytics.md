@@ -2,17 +2,17 @@
 slug: "cost-effective-analytics"
 title: "Cost-Effective Analytics: Elevating Speed and Cutting Down Tableau Costs"
 industry: "Travel & Tourism"
-heroImage: "/case-studies/cost-effective-analytics/heroimage.jpg"
+heroImage: "/case-studies/cost-effective-analytics/cost-effective-analytics.svg"
 problemStatement: "As adoption grew, the client needed a more cost-effective analytics stack to reduce licensing costs while fixing sluggish dashboard performance and poor interactivity."
 clientInfo: "A $30M ARR SaaS product focused on processing large-scale travel and tourism data."
 # clientImage: "/case-studies/cost-effective-analytics/client-logo.png"
 outcomes:
   - outcome: "Average load time reduced from 6s to 1.5s"
-    icon: "/case-studies/cost-effective-analytics/outcome-time.png"
+    icon: "/icons/outcome/outcome-time.png"
   - outcome: "25% lower browser RAM usage"
-    icon: "/case-studies/cost-effective-analytics/outcome-down.png"
+    icon: "/icons/outcome/outcome-down.png"
   - outcome: "Saved $1.2M in Tableau licenses"
-    icon: "/case-studies/cost-effective-analytics/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.png"
 expertises: ["frontend-engineering", "data-engineering", "cloud-infrastructure", "product-engineering"]
 technologies:
   - tech: "react"

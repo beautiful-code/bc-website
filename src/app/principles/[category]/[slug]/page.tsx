@@ -89,7 +89,7 @@ export default async function PrinciplePage({
         <ComicStrip principleSlug={principle.slug} />
 
         {/* Principle Content */}
-        <div className="markdown-content max-w-none mb-12">
+        <div className="markdown-content principle-content max-w-none mb-12">
           <div
             className="font-[family-name:var(--font-nunito-sans)] leading-relaxed"
             style={{ color: "var(--color-bc-text-black)" }}

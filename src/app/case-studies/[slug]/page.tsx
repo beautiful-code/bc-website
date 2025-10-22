@@ -78,13 +78,13 @@ export default async function CaseStudyPage({
 
         {/* Hero Image */}
         {caseStudy.heroImage && (
-          <div className="mb-8">
+          <div className="mb-8 w-full rounded-lg " style={{ backgroundColor: "#FFF2F4" }}>
             <Image
               src={caseStudy.heroImage}
               alt={caseStudy.title}
               width={800}
               height={400}
-              className="w-full h-[200px] sm:h-[250px] object-cover rounded-lg border border-gray-200"
+              className="w-full h-[200px]  object-contain rounded-lg"
             />
           </div>
         )}
@@ -111,7 +111,7 @@ export default async function CaseStudyPage({
             {/* Problem Statement */}
             <div>
               <h2
-                className="text-xl sm:text-2xl font-normal mb-6 font-[family-name:var(--font-nunito-sans)]"
+                className="text-xl sm:text-2xl mb-6"
                 style={{ color: "var(--color-bc-red)" }}
               >
                 Problem Statement
@@ -129,12 +129,12 @@ export default async function CaseStudyPage({
               <div className="bg-gray-100 rounded-lg px-6 py-4 ">
                 {/* Header Row - Title and Image */}
                 <div className="flex items-center justify-between">
-                  <h2
-                    className="text-xl sm:text-2xl font-normal font-[family-name:var(--font-nunito-sans)]"
+                  <h3
+                    className="text-lg sm:text-xl  "
                     style={{ color: "var(--color-bc-text-black)" }}
                   >
                     Client Info
-                  </h2>
+                  </h3>
                   {caseStudy.clientImage && (
                     <Image
                       src={caseStudy.clientImage}
@@ -164,7 +164,7 @@ export default async function CaseStudyPage({
         {caseStudy.outcomes.length > 0 && (
           <div className="mb-8">
             <h2
-              className="text-xl sm:text-2xl font-normal mb-4 font-[family-name:var(--font-nunito-sans)]"
+              className="text-xl sm:text-2xl font-normal mb-4 "
               style={{ color: "var(--color-bc-red)" }}
             >
               Outcomes
@@ -210,7 +210,7 @@ export default async function CaseStudyPage({
         {caseStudy.technologies.length > 0 && (
           <div className="mb-8">
             <h2
-              className="text-xl sm:text-2xl font-normal mb-6 font-[family-name:var(--font-nunito-sans)]"
+              className="text-xl sm:text-2xl font-normal mb-6"
               style={{ color: "var(--color-bc-red)" }}
             >
               Technologies Used

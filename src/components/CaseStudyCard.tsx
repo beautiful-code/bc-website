@@ -34,13 +34,13 @@ export default function CaseStudyCard({
               {title}
             </h3>
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 rounded-lg" >
             <Image
               src={heroImage}
               alt={title}
               width={120}
               height={80}
-              className="rounded-lg object-cover w-[120px] h-[80px] sm:w-[160px]  border border-gray-200"
+              className="rounded-lg object-contain w-[120px] h-[80px]"
             />
           </div>
         </div>

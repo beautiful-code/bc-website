@@ -2,7 +2,7 @@
 slug: "bc-bigdata-engineering"
 title: "Unifying Heterogeneity: Ingesting Multi-Source First-Party Data for Cookieless Retargeting"
 industry: "Ad-Tech "
-heroImage: "/case-studies/bc-bigdata-engineering/heroimage.jpg"
+heroImage: "/case-studies/bc-bigdata-engineering/bc-bigdata-engineering.svg"
 problemStatement: |
   Amidst rising user privacy concerns, major players such as Apple and Google have initiated restrictions on third-party browser cookies. Third-party cookies compromise user privacy by enabling cross-site tracking without explicit consent. The inevitable deprecation of third-party cookies emphasise the importance of relying on first-party data, which is privacy compliant.
 
@@ -13,11 +13,11 @@ clientInfo: "A leading marketing agency, specialized in retargeting campaigns."
 # clientImage: "/case-studies/bc-bigdata-engineering/client-logo.png"
 outcomes:
   - outcome: "Time to onboard a new customer reduced from 2 months to 1 week."
-    icon: "/case-studies/bc-bigdata-engineering/outcome-time.png"
+    icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Resilient system that can read and process large files (upto 100GB)."
-    icon: "/case-studies/bc-bigdata-engineering/outcome-scale.png"
+    icon: "/icons/outcome/outcome-scale-1.svg"
   - outcome: "Sales team differentiated their pitch to onboard new customers citing the pilot success stories."
-    icon: "/case-studies/bc-bigdata-engineering/outcome-deck.png"
+    icon: "/icons/outcome/outcome-deck.png"
 expertises: ["data-engineering", "backend-engineering", "cloud-devops"]
 technologies:
   - tech: "pandas"
@@ -40,11 +40,10 @@ technologies:
 #   authorImage: "/case-studies/bc-bigdata-engineering/client-author.jpg"
 ---
 
-
-
 ### How did BeautifulCode do it?
 
 We studied diverse data systems such as SharePoint, S3 buckets, API endpoints, and SFTP, through which companies share their first-party data. The goal was to extract data from these systems and place it into company-specific buckets for isolation and security compliance. Integrating each new system posed challenges, especially in understanding unique processes like authentication and downloading. To address this, we thoroughly analyzed these systems and developed tailored libraries. We also built an easy to use interfaces to access these libraries for simpler integration with different data systems.
+
 
 <figure>
   <img src="/case-studies/bc-bigdata-engineering/implementation_architecture_diagram.png" alt="Implementation Architecure diagram" />
@@ -55,17 +54,13 @@ We studied diverse data systems such as SharePoint, S3 buckets, API endpoints, a
 
 ### Cleansing and Transformation pipeline stages
 
-
-
 Our data exists in various formats, including Avro, JSON, and CSV, among others. Each of these formats necessitates distinct data pipeline operations, such as cleaning and transformation, to be defined separately. To streamline this process, our strategy involves converting all these diverse data formats into a common CSV format. This uniformity allows us to run the data through the same pipeline efficiently. Additionally, this approach simplifies our optimization efforts, as we only need to focus on enhancing the processing of the CSV format, rather than tweaking the pipeline for every different format. This method not only standardizes our data processing but also significantly boosts efficiency and consistency across our operations.
 
 The following are the different aspects of the solution
 
-
 ### Abstract data connector framework
 
 This framework allows for seamless data retrieval from various sources, including FTP, SharePoint, APIs, and different cloud storage platforms. It simplifies the process of integrating new data sources by providing a standard interface and handling authentication and authorization mechanisms.
-
 
 ### Isolated Cloud Storage
 
@@ -82,19 +77,5 @@ Every company's data has its own unique format and dimensions, making it challen
 ### Boosting Pipeline Performance
 
 While Pandas excels at data analysis, it can struggle with massive datasets, often exceeding RAM limitations and causing performance bottlenecks. To overcome these challenges, we utilized DASK which was built on top of Pandas' API. DASK seamlessly scales data processing to multiple cores and even distributed clusters. DASK allows us to read data in chunks, parallelizing operations across available resources. This gave a performance boost to the pipelines, enabling us to handle large datasets with fewer machines.
-
-
-
-
-
-
-
-
-### Implemented architecture
-
-*(Diagram from source case study.)*
-
-
-
 
 
