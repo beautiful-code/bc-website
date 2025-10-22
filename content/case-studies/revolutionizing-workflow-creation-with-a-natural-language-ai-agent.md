@@ -41,17 +41,25 @@ The client came to us with the challenge of transforming their complex, UI-drive
 
 ### Challenges Encountered During Implementation
 
-**Translating Ambiguous Language into Concrete Workflow Steps:**
+### Translating Ambiguous Language into Concrete Workflow Steps
+
 Natural language requests were often imprecise. The agent needed to be trained to resolve ambiguity, infer user intent, and map phrases to specific platform actions.
 
-**Ensuring the Logical Validity of Generated Workflows:**
+### Ensuring the Logical Validity of Generated Workflows
+
 The AI could generate workflows with logical errors. We implemented a validator agent to check for correct data flow, dependencies, and platform-specific constraints.
 
-**Reverse-Engineering the Core System:** Our first step was a deep dive into the existing workflow creation tool. We analyzed the fundamental objects, such as triggers and actions, and how they were configured and stored in the platform's database. This research allowed us to build a suite of custom tools capable of programmatically creating and configuring all the necessary workflow components directly in the database.
+### Reverse-Engineering the Core System
 
-**The Planning Agent: Collaborative Blueprinting:** We created a "Planning Agent" to act as the primary user interface. This agent takes a user's goal, described in natural language (e.g., "When a new lead is added in Salesforce, send a notification to the sales Slack channel"), and translates it into a high-level, jargon-free plan. This plan is presented back to the user for review. The user can then provide feedback in plain English to refine the plan, creating an intuitive, collaborative loop until the workflow blueprint is perfect.
+ Our first step was a deep dive into the existing workflow creation tool. We analyzed the fundamental objects, such as triggers and actions, and how they were configured and stored in the platform's database. This research allowed us to build a suite of custom tools capable of programmatically creating and configuring all the necessary workflow components directly in the database.
 
-**The Execution Agent: Autonomous Construction:** Once the user approves the high-level plan, it is passed to the "Execution Agent." This agent is a specialized system equipped with the custom tools we built in the first phase. It methodically follows the approved plan, using the tools to create the specific triggers and actions in the platform's database. This agent handles all the technical configuration, turning the user-approved plan into a fully functional, ready-to-run workflow.
+### The Planning Agent: Collaborative Blueprinting
+
+ We created a "Planning Agent" to act as the primary user interface. This agent takes a user's goal, described in natural language (e.g., "When a new lead is added in Salesforce, send a notification to the sales Slack channel"), and translates it into a high-level, jargon-free plan. This plan is presented back to the user for review. The user can then provide feedback in plain English to refine the plan, creating an intuitive, collaborative loop until the workflow blueprint is perfect.
+
+### The Execution Agent: Autonomous Construction
+
+Once the user approves the high-level plan, it is passed to the "Execution Agent." This agent is a specialized system equipped with the custom tools we built in the first phase. It methodically follows the approved plan, using the tools to create the specific triggers and actions in the platform's database. This agent handles all the technical configuration, turning the user-approved plan into a fully functional, ready-to-run workflow.
 
 
 

@@ -2,7 +2,7 @@
 slug: "scaling-sem-search-engine-marketing-ads-generation-using-genai"
 title: "Scaling SEM (Search Engine Marketing) Ads Generation using GenAI"
 industry: "Travel & Tourism"
-heroImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/scaling-sem-search-engine-marketing-ads-generation-using-genai-1.svg"
+heroImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/scaling-sem-search-engine-marketing-ads-generation-using-genai.svg"
 problemStatement: "The client's business model depended on volume, but their margins were being eroded by the manual labor of campaign setup. The hours required for each analyst to research, write, and launch ads for a new attraction made it increasingly unprofitable to serve the small-to-mid-sized clients that formed the core of their business. They were working harder for less return."
 clientInfo: "A large digital marketing agency specializing in the travel and tourism sector. Their business model is built on efficiently managing campaigns for hundreds of mid-sized attractions, from regional theme parks to city museums."
 # clientImage: "/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/client-logo.svg"
@@ -36,7 +36,7 @@ technologies:
 BeautifulCode started by shadowing the client's Business Analysts to deeply understand the creative and strategic process that went into creating a successful SEM ad. We identified that the core challenge was codifying their domain expertise and automating the research and generation process. To address this, we developed a human-in-the-loop AI agent to act as a powerful assistant for the analysts.
 
 <figure>
-  <img src="/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/ScalingSEM_artifact.png" alt="" />
+  <img src="/case-studies/scaling-sem-search-engine-marketing-ads-generation-using-genai/scaling-sem-search-engine-marketing-ads-generation-using-genai.png" alt="" />
   <figcaption>
     Scaling SEM (Search Engine Marketing) Ads Generation using GenAI
   </figcaption>

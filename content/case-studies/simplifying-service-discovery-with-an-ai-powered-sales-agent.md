@@ -10,7 +10,7 @@ outcomes:
   - outcome: "Reduced average service discovery time from 1-2 weeks to less than 24 hours."
     icon: "/icons/outcome/outcome-speed.svg"
   - outcome: "82% of users found the required information within 2 minutes, compared to 15+ minutes with manual navigation."
-    icon: "/icons/outcome/outcome-growth.svg"
+    icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Improved lead qualification rate by 52%."
     icon: "/icons/outcome/outcome-growth.svg"
 expertises: ["ai-applied-ml", "frontend-engineering"]
