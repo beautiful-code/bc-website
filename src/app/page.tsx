@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
@@ -23,35 +24,75 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-xl mx-auto">
-            <h2
-              className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-6 text-left px-8"
-              style={{ color: "var(--color-bc-red)" }}
-            >
-              {">"} WHAT WE ARE WIRED FOR
-            </h2>
-            <div className="expertises ">
-              {expertiseAreas.map((area) => {
-                return (
-                  <Link key={area.slug} href={`/expertise/${area.slug}`}>
-                    <div className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-2 sm:py-4">
-                      <div className="flex-shrink-0">
-                        <CategoryIcon
-                          slug={area.slug}
-                          name={area.name}
-                          type="expertise"
-                          className="w-8 h-8 sm:w-12 sm:h-12"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                          {area.name}
-                        </h3>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+          <div className="max-w-2xl mx-auto">
+            {/* AI Expertise Section */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 px-8 py-3 ">
+                <Image src="/icons/chevron.svg" alt="chevron" width={32} height={32} className="flex-shrink-0" />
+                <h2 className="text-xl sm:text-2xl font-medium tracking-wider uppercase" style={{ color: "#e01236" }}>
+                  OUR APPLIED AI EXPERTISE
+                </h2>
+              </div>
+              <div className="expertises">
+                {expertiseAreas
+                  .filter(area => area.category === "ai")
+                  .map((area) => {
+                    return (
+                      <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                        <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-neutral-100 hover:rounded group px-8 py-2 sm:py-4">
+                          <div className="flex-shrink-0">
+                            <CategoryIcon
+                              slug={area.slug}
+                              name={area.name}
+                              type="expertise"
+                              className="w-6 h-6 sm:w-8 sm:h-8"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg sm:text-xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                              {area.name}
+                            </h3>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+              </div>
+            </div>
+
+            {/* Product Engineering Section */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 px-8 py-3 ">
+              <Image src="/icons/chevron.svg" alt="chevron" width={32} height={32} className="flex-shrink-0" />
+                <h2 className="text-xl sm:text-2xl font-medium tracking-wider uppercase" style={{ color: "#e01236" }}>
+                  OUR PRODUCT ENGINEERING BACKBONE
+                </h2>
+              </div>
+              <div className="expertises">
+                {expertiseAreas
+                  .filter(area => area.category === "product")
+                  .map((area) => {
+                    return (
+                      <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                        <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-neutral-100 hover:rounded group px-8 py-2 sm:py-4">
+                          <div className="flex-shrink-0">
+                            <CategoryIcon
+                              slug={area.slug}
+                              name={area.name}
+                              type="expertise"
+                              className="w-6 h-6 sm:w-8 sm:h-8"
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg sm:text-xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                              {area.name}
+                            </h3>
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+              </div>
             </div>
 
             {SHOW_PRINCIPLES && (
@@ -60,17 +101,9 @@ export default function Home() {
                 className=""
                 aria-label="Explore our engineering principles"
               >
-                <div className="flex items-center justify-between mt-2 gap-4 pl-6 pr-2 py-8 hover:bg-[var(--color-bc-beige)] group">
-                  <div>
-                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
-                      <span style={{ color: "var(--color-bc-red)" }}>
-                        {">"}
-                      </span>
-                      <span className="font-bold text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                        READ OUR ENGINEERING PRINCIPLES
-                      </span>
-                    </h2>
-                  </div>
+                <div className="flex items-center gap-3 px-8 py-4 cursor-pointer uppercase tracking-wider text-lg sm:text-xl transition-colors duration-300 hover:bg-neutral-100 hover:rounded text-[#4f4f4f] hover:text-[var(--color-bc-red)] group">
+                <Image src="/icons/chevron.svg" alt="chevron" width={32} height={32} className="flex-shrink-0" />
+                  <span className="font-medium text-xl sm:text-2xl">READ OUR ENGINEERING PRINCIPLES</span>
                 </div>
               </Link>
             )}
