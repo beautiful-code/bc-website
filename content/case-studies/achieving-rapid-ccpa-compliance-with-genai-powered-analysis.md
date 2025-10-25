@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-scale-1.svg"
   - outcome: "60% Cost-effective scaling of privacy operations"
     icon: "/icons/outcome/outcome-savings.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["rag-solutions", "data-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core data processing and orchestration"

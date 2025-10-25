@@ -1,6 +1,6 @@
 ---
 title: "Layered Evaluation Strategies: Balancing Speed, Cost, and Quality in Production AI Systems"
-expertise: ai-applied-ml
+expertise: evaluation
 slug: layered-evaluation-strategies-balancing-speed-cost-and-quality-in-production-ai-systems
 tech: [langsmith, deepeval]
 date: 2025-08-05

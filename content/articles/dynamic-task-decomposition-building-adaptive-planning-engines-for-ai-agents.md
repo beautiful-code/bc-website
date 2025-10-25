@@ -1,6 +1,6 @@
 ---
 title: "Dynamic Task Decomposition: Building Adaptive Planning Engines for AI Agents"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: dynamic-task-decomposition-building-adaptive-planning-engines-for-ai-agents
 tech: [taskgen, langgraph, crewai]
 date: 2025-07-04

@@ -18,7 +18,6 @@ export const principlesCategories: PrincipleCategory[] = [
       "name-things-clearly",
       "duplicate-logic-is-a-liability",
       "readable-code-over-clever-code",
-      "ai-is-confident-but-not-necessarily-correct",
     ],
   },
   {

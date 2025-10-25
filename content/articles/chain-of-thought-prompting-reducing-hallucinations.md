@@ -1,6 +1,6 @@
 ---
 title: "Chain-of-Thought Prompting: Reducing Hallucinations Through Explicit Reasoning Steps"
-expertise: ai-applied-ml
+expertise: prompt-context-engineering
 slug: chain-of-thought-prompting-reducing-hallucinations
 tech:
   - langsmith

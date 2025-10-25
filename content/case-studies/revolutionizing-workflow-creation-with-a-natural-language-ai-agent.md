@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-automation.svg"
   - outcome: "Increased user adoption and platform engagement."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml"]
+expertises: ["agentic-systems"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"

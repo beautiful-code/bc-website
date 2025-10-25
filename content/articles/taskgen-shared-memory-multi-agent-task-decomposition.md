@@ -1,6 +1,6 @@
 ---
 title: "TaskGen: Shared Memory Architecture for Multi-Agent Task Decomposition"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: taskgen-shared-memory-multi-agent-task-decomposition
 tech: [taskgen, openai]
 date: 2025-06-04

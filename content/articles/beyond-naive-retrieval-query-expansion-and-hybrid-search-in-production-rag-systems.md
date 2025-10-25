@@ -1,6 +1,6 @@
 ---
 title: "Beyond Naive Retrieval: Query Expansion and Hybrid Search in Production RAG Systems"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: beyond-naive-retrieval-query-expansion-and-hybrid-search-in-production-rag-systems
 tech: [llamaindex, langchain, gemini]
 date: 2025-09-03

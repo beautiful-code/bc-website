@@ -2,7 +2,7 @@ import Link from "next/link";
 import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
-import { expertiseAreas } from "@/lib/expertise";
+import { fullStackAreas, appliedAIAreas } from "@/lib/expertise";
 import { SHOW_PRINCIPLES } from "@/lib/config";
 import "../styles/layout.scss";
 
@@ -23,35 +23,96 @@ export default function Home() {
         </div>
 
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
-          <div className="max-w-xl mx-auto">
-            <h2
-              className="text-lg sm:text-3xl tracking-wider uppercase mt-6 mb-6 text-left px-8"
+          <div className="max-w-6xl mx-auto">
+            {/* Main Heading */}
+            <h1
+              className="text-2xl sm:text-4xl tracking-wider uppercase mt-8 mb-12 text-left px-8 font-bold"
               style={{ color: "var(--color-bc-red)" }}
             >
-              {">"} WHAT WE ARE WIRED FOR
-            </h2>
-            <div className="expertises ">
-              {expertiseAreas.map((area) => {
-                return (
-                  <Link key={area.slug} href={`/expertise/${area.slug}`}>
-                    <div className="flex items-center space-x-6  cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group px-8 py-2 sm:py-4">
-                      <div className="flex-shrink-0">
-                        <CategoryIcon
-                          slug={area.slug}
-                          name={area.name}
-                          type="expertise"
-                          className="w-8 h-8 sm:w-12 sm:h-12"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                          {area.name}
-                        </h3>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+              {">"} What we are wired for
+            </h1>
+
+            {/* Two Column Layout */}
+            <div className="px-8 mb-12 space-y-8">
+              {/* Applied AI Row - Heading Left, Content Right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Applied AI Heading */}
+                <div className="p-6 flex items-center justify-center">
+                  <h2
+                    className="text-xl sm:text-3xl tracking-widest uppercase font-bold text-center"
+                    style={{ color: "var(--color-bc-text-black)" }}
+                  >
+                    Applied AI
+                  </h2>
+                </div>
+
+                {/* Applied AI Content */}
+                <div className="p-6">
+                  <div className="space-y-2">
+                    {appliedAIAreas.map((area) => {
+                      return (
+                        <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                          <div className="flex items-center space-x-4 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group py-3 px-2">
+                            <div className="flex-shrink-0">
+                              <CategoryIcon
+                                slug={'ai-applied-ml'}
+                                name={area.name}
+                                type="expertise"
+                                className="w-8 h-8"
+                              />
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-base sm:text-lg transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                                {area.name}
+                              </h3>
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+
+              {/* Core Engineering Row - Content Left, Heading Right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Core Engineering Content */}
+                <div className="p-6">
+                  <div className="space-y-2">
+                    {fullStackAreas.map((area) => {
+                      return (
+                        <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                          <div className="flex items-center space-x-4 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group py-3 px-2">
+                            <div className="flex-shrink-0">
+                              <CategoryIcon
+                                slug={area.slug}
+                                name={area.name}
+                                type="expertise"
+                                className="w-8 h-8"
+                              />
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-base sm:text-lg transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                                {area.name}
+                              </h3>
+                            </div>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Core Engineering Heading */}
+                <div className="p-6 flex items-center justify-center">
+                  <h2
+                    className="text-xl sm:text-3xl tracking-widest uppercase font-bold text-center"
+                    style={{ color: "var(--color-bc-text-black)" }}
+                  >
+                    Core Engineering
+                  </h2>
+                </div>
+              </div>
             </div>
 
             {SHOW_PRINCIPLES && (

@@ -1,6 +1,6 @@
 ---
 title: "IVF Indexing for Product Search: Scaling Beyond Brute-Force Vector Comparisons"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: ivf-indexing-product-search-scaling-vector-comparisons
 tech: [postgres, openai]
 date: 2025-07-03

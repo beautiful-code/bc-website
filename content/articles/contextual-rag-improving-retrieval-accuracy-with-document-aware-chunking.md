@@ -1,6 +1,6 @@
 ---
 title: "Contextual RAG: Improving Retrieval Accuracy with Document-Aware Chunking"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: contextual-rag-improving-retrieval-accuracy-with-document-aware-chunking
 tech: [llamaindex, pinecone]
 date: 2025-08-03

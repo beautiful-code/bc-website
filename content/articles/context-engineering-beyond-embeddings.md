@@ -1,6 +1,6 @@
 ---
 title: "Context Engineering Beyond Embeddings: Attention Dilution and Hierarchical Organization in RAG Systems"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: context-engineering-beyond-embeddings
 tech: [llamaindex]
 date: 2025-10-02

@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Achieved a 95% course completion rate by eliminating feedback delays and keeping learners engaged."
     icon: "/icons/outcome/outcome-evaluate.svg"
-expertises: ["ai-applied-ml", "frontend-engineering"]
+expertises: ["agentic-systems", "frontend-engineering"]
 technologies:
   - tech: "openai"
     purpose: "Foundation models for learning evaluation and feedback"

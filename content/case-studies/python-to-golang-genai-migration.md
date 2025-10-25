@@ -18,7 +18,7 @@ outcomes:
     icon: "/icons/outcome/outcome-savings.png"
   - outcome: "Customer satisfaction scores (NPS) rose by 17% due to improved performance."
     icon: "/icons/outcome/outcome-nps.png"
-expertises: ["backend-engineering", "cloud-devops", "genai-engineering"]
+expertises: ["backend-engineering", "cloud-devops", "prompt-engineering"]
 technologies:
   - tech: "golang"
     purpose: "for performance"
