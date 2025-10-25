@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
-import { expertiseAreas } from "@/lib/expertise";
+import { aiExpertiseAreas, productEngineeringExpertiseAreas } from "@/lib/expertise";
 import { SHOW_PRINCIPLES } from "@/lib/config";
 
 interface NavigationalSidebarProps {
@@ -11,10 +11,6 @@ interface NavigationalSidebarProps {
 export default function NavigationalSidebar({
   activeSlug,
 }: NavigationalSidebarProps) {
-  // Group expertise areas by category
-  const aiExpertise = expertiseAreas.filter(area => area.category === "ai");
-  const productExpertise = expertiseAreas.filter(area => area.category === "product");
-
   return (
     <div className="mt-8">
       {/* AI Expertise Section */}
@@ -26,7 +22,7 @@ export default function NavigationalSidebar({
           </h2>
         </div>
         <div className="space-y-2">
-          {aiExpertise.map((area) => {
+          {aiExpertiseAreas.map((area) => {
             const isActive = area.slug === activeSlug;
             return (
               <Link key={area.slug} href={`/expertise/${area.slug}`}>
@@ -67,7 +63,7 @@ export default function NavigationalSidebar({
           </h2>
         </div>
         <div className="space-y-2">
-          {productExpertise.map((area) => {
+          {productEngineeringExpertiseAreas.map((area) => {
             const isActive = area.slug === activeSlug;
             return (
               <Link key={area.slug} href={`/expertise/${area.slug}`}>

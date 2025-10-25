@@ -3,7 +3,7 @@ import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
-import { expertiseAreas } from "@/lib/expertise";
+import { aiExpertiseAreas, productEngineeringExpertiseAreas } from "@/lib/expertise";
 import { SHOW_PRINCIPLES } from "@/lib/config";
 import "../styles/layout.scss";
 
@@ -34,9 +34,7 @@ export default function Home() {
                 </h2>
               </div>
               <div className="expertises">
-                {expertiseAreas
-                  .filter(area => area.category === "ai")
-                  .map((area) => {
+                {aiExpertiseAreas.map((area) => {
                     return (
                       <Link key={area.slug} href={`/expertise/${area.slug}`}>
                         <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-neutral-100 hover:rounded group px-8 py-2 sm:py-4">
@@ -69,9 +67,7 @@ export default function Home() {
                 </h2>
               </div>
               <div className="expertises">
-                {expertiseAreas
-                  .filter(area => area.category === "product")
-                  .map((area) => {
+                {productEngineeringExpertiseAreas.map((area) => {
                     return (
                       <Link key={area.slug} href={`/expertise/${area.slug}`}>
                         <div className="flex items-center space-x-6 cursor-pointer transition-all duration-300 hover:bg-neutral-100 hover:rounded group px-8 py-2 sm:py-4">
