@@ -1,6 +1,6 @@
 ---
 title: "Why GenAI Evaluation is Your Production Bottleneck"
-expertise: ai-applied-ml
+expertise: evaluation
 slug: why-genai-evaluation-is-your-production-bottleneck
 tech: [deepeval, langsmith]
 date: 2025-10-05

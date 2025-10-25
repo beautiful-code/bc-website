@@ -1,6 +1,6 @@
 ---
 title: "Orchestrating External Tool Access in Production AI Agents"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: orchestrating-external-tool-access-in-production-ai-agents
 tech: [langgraph, tavily]
 date: 2025-05-04

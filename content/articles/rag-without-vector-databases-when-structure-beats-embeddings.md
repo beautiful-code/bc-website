@@ -1,6 +1,6 @@
 ---
 title: "RAG Without Vector Databases: When Structure Beats Embeddings"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: rag-without-vector-databases-when-structure-beats-embeddings
 tech: [llamindex, claude]
 date: 2025-06-03

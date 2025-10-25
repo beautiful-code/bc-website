@@ -1,6 +1,6 @@
 ---
 title: "Pairwise Comparison vs. Absolute Scoring in LLM Evaluation Systems"
-expertise: ai-applied-ml
+expertise: evaluation
 slug: pairwise-comparison-vs-absolute-scoring-in-llm-evaluation-systems
 tech: [langsmith, deepeval]
 date: 2025-07-05

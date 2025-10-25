@@ -1,6 +1,6 @@
 ---
 title: "RAG as a Precision Filter: Why Retrieval Still Matters with 2M+ Context Windows"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: rag-precision-filter-2m-context-windows
 tech: [gemini, llamaindex, pinecone]
 date: 2025-05-03
