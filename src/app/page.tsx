@@ -74,6 +74,23 @@ export default function Home() {
                 </div>
               </Link>
             )}
+
+            <Link
+              href="/leadership"
+              className=""
+              aria-label="Meet our leadership team"
+            >
+              <div className="flex items-center justify-between mt-2 gap-4 pl-6 pr-2 py-8 hover:bg-[var(--color-bc-beige)] group">
+                <div>
+                  <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
+                    <span style={{ color: "var(--color-bc-red)" }}>{">"}</span>
+                    <span className="font-bold text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                      LEADERSHIP
+                    </span>
+                  </h2>
+                </div>
+              </div>
+            </Link>
           </div>
           <Copyright />
         </div>

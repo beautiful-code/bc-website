@@ -65,6 +65,20 @@ export default function NavigationalSidebar({
           </Link>
         </div>
       )}
+
+      <div className="mt-4">
+        <Link href="/leadership">
+          <div
+            className={`px-4 sm:px-6 py-3 cursor-pointer uppercase tracking-wider text-lg sm:text-xl transition-colors duration-300 ${
+              activeSlug === "leadership"
+                ? "text-[var(--color-bc-red)] bg-white"
+                : "hover:bg-white/50 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] rounded-lg"
+            }`}
+          >
+            Leadership
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
