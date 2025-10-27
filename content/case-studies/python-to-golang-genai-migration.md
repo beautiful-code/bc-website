@@ -2,7 +2,7 @@
 slug: "python-to-golang-genai-migration"
 title: "The Future of Fashion, Powered by AI: Golang Migration with a GenAI Stitch"
 industry: "E-commerce / Fashion Tech"
-heroImage: "/case-studies/python-to-golang-genai-migration/heroimage.jpg"
+heroImage: "/case-studies/python-to-golang-genai-migration/python-to-golang-genai-migration.svg"
 problemStatement: |
   Our client, an online retail company, initially built their business on a Python-based codebase. As the company grew, this system faced two major challenges.
 
@@ -13,11 +13,11 @@ clientInfo: "A rapidly growing online retailer conquering the fashion world sinc
 # clientImage: "/case-studies/python-to-golang-genai-migration/client-logo.png"
 outcomes:
   - outcome: "40% faster page loading"
-    icon: "/case-studies/python-to-golang-genai-migration/outcome-performance.png"
+    icon: "/icons/outcome/outcome-performance.png"
   - outcome: "2x the usual development speed with 45% lower costs"
-    icon: "/case-studies/python-to-golang-genai-migration/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.png"
   - outcome: "Customer satisfaction scores (NPS) rose by 17% due to improved performance."
-    icon: "/case-studies/python-to-golang-genai-migration/outcome-nps.png"
+    icon: "/icons/outcome/outcome-nps.png"
 expertises: ["backend-engineering", "cloud-devops", "genai-engineering"]
 technologies:
   - tech: "golang"

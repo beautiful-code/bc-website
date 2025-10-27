@@ -2,18 +2,18 @@
 slug: "hasura-ecommerce-portal"
 title: "50% Faster Time to Market: Accelerating E-commerce Portal Development with Hasura"
 industry: "E-commerce"
-heroImage: "/case-studies/hasura-ecommerce-portal/cover_2.png"
+heroImage: "/case-studies/hasura-ecommerce-portal/hasura-ecommerce-portal.svg"
 problemStatement: |
   Our client aimed to quickly launch a merchant portal to make it easier for merchants to sell their products online and to stay competitive. The two main challenges involved speeding up the app's development for a quick market launch, and creating a wide range of APIs that work well for both web and mobile versions, addressing different data needs.
 clientInfo: "Our Client, a leading marketplace in the e-commerce sector, offers extensive product range and focuses on digital innovation to enhance the online customer experience."
 # clientImage: "/case-studies/hasura-ecommerce-portal/client-logo.png"
 outcomes:
   - outcome: "50% Reduction in Development Time"
-    icon: "/case-studies/hasura-ecommerce-portal/outcome-time.png"
+    icon: "/icons/outcome/outcome-time.png"
   - outcome: "30% Savings on Cloud Infrastructure"
-    icon: "/case-studies/hasura-ecommerce-portal/outcome-savings.png"
+    icon: "/icons/outcome/outcome-savings.svg"
   - outcome: "Supports 1 Million Live Data Connections"
-    icon: "/case-studies/hasura-ecommerce-portal/outcome-connections.png"
+    icon: "/icons/outcome/outcome-connections.png"
 expertises: ["backend-engineering", "frontend-engineering", "cloud-devops"]
 technologies:
   - tech: "react"

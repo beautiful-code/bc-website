@@ -18,6 +18,13 @@ export default function rehypeTableLinkIcons() {
         const firstLink = findFirstLink(node);
         if (!firstLink) return;
 
+        // Add target="_blank" to the link to open in new tab
+        if (!firstLink.properties) {
+          firstLink.properties = {};
+        }
+        firstLink.properties.target = "_blank";
+        firstLink.properties.rel = "noopener noreferrer";
+
         // Get the text content of the cell (not just the link)
         const cellText = getTextContent(node);
         const lowerText = cellText.toLowerCase();

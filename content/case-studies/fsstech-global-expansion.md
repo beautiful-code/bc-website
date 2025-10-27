@@ -2,18 +2,18 @@
 slug: "fsstech-global-expansion"
 title: "From Scratch to Card Swipe — How a lean team supercharged FSSTech global expansion?"
 industry: "Fintech / Payments"
-heroImage: "/case-studies/fsstech-global-expansion/A_digital_illustration_represents_the_global_expan.png"
+heroImage: "/case-studies/fsstech-global-expansion/fsstech-global-expansion.svg"
 problemStatement: |
   FSSTech aimed to expand globally by developing a tailored suite of payment solutions for small and medium-sized businesses (SMEs). Their goal was to emerge as a strong competitor to established market leaders such as Stripe, thereby repositioning themselves in the industry.
 clientInfo: "FSSTech, an Indian fintech company, specializes in payments solutions, including ATM services and digital banking, with an estimated revenue of $200 million"
 clientImage: "/case-studies/fsstech-global-expansion/clientLogo.png"
 outcomes:
   - outcome: "Launched a PCI DSS Level 1 Certified Application"
-    icon: "/case-studies/fsstech-global-expansion/outcome-pci.png"
+    icon: "/icons/outcome/outcome-pci.svg"
   - outcome: "Handles 5000 transactions per second"
-    icon: "/case-studies/fsstech-global-expansion/outcome-tps.png"
+    icon: "/icons/outcome/outcome-tps.png"
   - outcome: "Facilitated entry into North America & Europe markets"
-    icon: "/case-studies/fsstech-global-expansion/outcome-globe.png"
+    icon: "/icons/outcome/outcome-globe.png"
 expertises: ["backend-engineering", "frontend-engineering", "cloud-devops", "security-engineering"]
 technologies:
   - tech: "rubyonrails"
