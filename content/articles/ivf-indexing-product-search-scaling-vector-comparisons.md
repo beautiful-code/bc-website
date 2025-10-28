@@ -1,8 +1,8 @@
 ---
 title: "IVF Indexing for Product Search: Scaling Beyond Brute-Force Vector Comparisons"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: ivf-indexing-product-search-scaling-vector-comparisons
-tech: [postgres, openai]
+tech: [postgresql, openai]
 date: 2025-07-03
 author: BeautifulCode
 keytakeaway: "IVF (Inverted File) indexing transforms vector similarity search from O(N) to approximately O(sqrt(N)) by clustering embeddings and searching only relevant partitions, enabling sub-100ms product search queries at the cost of minor recall degradation."

@@ -1,6 +1,6 @@
 ---
 title: "Beyond Benchmarks: Production LLM Evaluation Pitfalls and Private Test Suites"
-expertise: ai-applied-ml
+expertise: evaluation
 slug: beyond-benchmarks-production-llm-evaluation-pitfalls
 tech: [deepeval, langsmith]
 date: 2025-09-05

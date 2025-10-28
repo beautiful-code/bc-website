@@ -1,6 +1,6 @@
 ---
 title: "Model Context Protocol: Bridging AI Applications with External Data Sources"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: model-context-protocol-bridging-ai-applications-with-external-data-sources
 tech: [claude, postgres]
 date: 2025-07-02

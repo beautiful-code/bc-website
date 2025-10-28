@@ -1,6 +1,6 @@
 ---
 title: "Hierarchical Agent Design Patterns for Domain-Specific Keyword Generation"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: hierarchical-agent-design-patterns-for-domain-specific-keyword-generation
 tech: [adk, gemini, litellm]
 date: 2025-09-04
