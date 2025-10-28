@@ -107,7 +107,23 @@ export default function NavigationalSidebar({
             </div>
           </Link>
         )}
+      </div>
 
+      <div className="mt-4">
+        <Link href="/ai-roadmap">
+          <div
+            className={`px-4 sm:px-6 py-3 cursor-pointer uppercase tracking-wider text-lg sm:text-xl transition-colors duration-300 ${
+              activeSlug === "ai-roadmap"
+                ? "text-[var(--color-bc-red)] bg-white"
+                : "hover:bg-white/50 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] rounded-lg"
+            }`}
+          >
+            Our Applied AI Roadmap
+          </div>
+        </Link>
+      </div>
+
+      <div className="mt-4">
         <Link href="/leadership">
           <div
             className={`px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
