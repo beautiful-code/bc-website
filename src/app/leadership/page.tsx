@@ -81,15 +81,15 @@ export default async function LeadershipPage() {
 
         {/* Header Section */}
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-red-600 mb-6">Leadership</h1>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
+          <h1 className="text-lg sm:text-2xl text-red-600 my-6">LEADERSHIP</h1>
+          <p className="text-sm sm:text-lg text-gray-700 leading-relaxed max-w-4xl">
             {introText}
           </p>
         </div>
 
         {/* Team Members Grid */}
         <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {teamMembers.map((member, index) => (
               <TeamMemberCard
                 key={index}
