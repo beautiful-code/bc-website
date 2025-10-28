@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Improved lead qualification rate by 52%."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "frontend-engineering"]
+expertises: ["rag-solutions", "frontend-engineering"]
 technologies:
   - tech: "gcp"
     purpose: "Cloud deployment and infrastructure"

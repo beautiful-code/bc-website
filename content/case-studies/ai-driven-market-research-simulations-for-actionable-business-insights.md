@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Increased confidence in market insights and client decision-making."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["rag-solutions", "data-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"

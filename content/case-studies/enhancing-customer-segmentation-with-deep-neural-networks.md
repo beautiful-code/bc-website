@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-revenue.svg"
   - outcome: "Increase in ROI (2.8x)"
     icon: "/icons/outcome/outcome-revenue.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["mlops", "data-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"

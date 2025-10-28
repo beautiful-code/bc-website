@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-savings.svg"
   - outcome: "Reduced keyword generation time by 85%, enabling analysts to manage 3x more accounts."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml"]
+expertises: ["agentic-systems"]
 technologies:
   - tech: "adk"
     purpose: "Google ADK for agent orchestration and tool use"

@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-time.png"
   - outcome: "Enhanced cross-department accountability and reduced routine slippage."
     icon: "/icons/outcome/outcome-growth.svg"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["backend-engineering", "frontend-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"
