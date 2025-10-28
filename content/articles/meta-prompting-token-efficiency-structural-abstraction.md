@@ -1,6 +1,6 @@
 ---
 title: "Meta-Prompting: Achieving Token Efficiency Through Structural Abstraction in LLM Workflows"
-expertise: ai-applied-ml
+expertise: prompt-context-engineering
 slug: meta-prompting-token-efficiency-structural-abstraction
 tech: [langchain, claude]
 date: 2025-08-02

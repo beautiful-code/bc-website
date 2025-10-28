@@ -1,6 +1,6 @@
 ---
 title: "Four Foundational Reasoning Patterns for Building Production-Grade Agentic Systems"
-expertise: "ai-applied-ml"
+expertise: agentic-systems
 slug: "four-foundational-reasoning-patterns-for-building-production-grade-agentic-systems"
 tech: ["adk", "claude", "litellm"]
 date: "2025-04-04"

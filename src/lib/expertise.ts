@@ -3,7 +3,30 @@ export interface ExpertiseArea {
   slug: string;
 }
 
-export const expertiseAreas: ExpertiseArea[] = [
+export const appliedAIAreas: ExpertiseArea[] = [
+  {
+    name: "Agentic Systems",
+    slug: "agentic-systems",
+  },
+  {
+    name: "RAG Solutions",
+    slug: "rag-solutions",
+  },
+  {
+    name: "Evaluation",
+    slug: "evaluation",
+  },
+  {
+    name: "Fine Tuning",
+    slug: "fine-tuning",
+  },
+  {
+    name: "MLOps",
+    slug: "mlops",
+  },
+];
+
+export const productEngineeringAreas: ExpertiseArea[] = [
   {
     name: "Frontend Engineering",
     slug: "frontend-engineering",
@@ -11,10 +34,6 @@ export const expertiseAreas: ExpertiseArea[] = [
   {
     name: "Backend Engineering",
     slug: "backend-engineering",
-  },
-  {
-    name: "Applied AI",
-    slug: "ai-applied-ml",
   },
   {
     name: "Infrastructure & Reliability",
@@ -27,9 +46,13 @@ export const expertiseAreas: ExpertiseArea[] = [
 ];
 
 export function getExpertiseBySlug(slug: string): ExpertiseArea | null {
-  return expertiseAreas.find((area) => area.slug === slug) || null;
-}
-
-export function getExpertiseByName(name: string): ExpertiseArea | null {
-  return expertiseAreas.find((area) => area.name === name) || null;
+  const appliedAIArea = appliedAIAreas.find((area) => area.slug === slug);
+  if (appliedAIArea) {
+    return appliedAIArea;
+  }
+  const productEngineeringArea = productEngineeringAreas.find((area) => area.slug === slug);
+  if (productEngineeringArea) {
+    return productEngineeringArea;
+  }
+  return null;
 }

@@ -1,6 +1,6 @@
 ---
 title: "Beyond Embeddings: Production RAG Architecture Trade-offs"
-expertise: ai-applied-ml
+expertise: rag-solutions
 slug: beyond-embeddings-production-rag-architecture-trade-offs
 tech:
   - llamaindex

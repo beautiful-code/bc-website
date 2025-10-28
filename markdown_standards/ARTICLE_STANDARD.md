@@ -57,12 +57,18 @@ keytakeaway: "Single sentence key takeaway that summarizes the main point of the
 
 ### Valid Expertise Values
 
+**AI Expertise Areas:**
+- `"agentic-systems"`
+- `"rag-solutions"`
+- `"evaluation"`
+- `"fine-tuning"`
+- `"machine-learning-ops"`
+
+**Product Engineering Expertise Areas:**
 - `"frontend-engineering"`
 - `"backend-engineering"`
-- `"ai-applied-ml"`
 - `"infrastructure-reliability"`
 - `"data-engineering"`
-- `"software-maintenance"`
 
 ### Valid Tech Values
 

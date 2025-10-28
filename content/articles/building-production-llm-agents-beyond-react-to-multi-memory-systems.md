@@ -1,6 +1,6 @@
 ---
 title: "Building Production LLM Agents: Beyond ReAct to Multi-Memory Systems"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: building-production-llm-agents-beyond-react-to-multi-memory-systems
 tech: ["adk", "vertexai"]
 date: 2025-10-04

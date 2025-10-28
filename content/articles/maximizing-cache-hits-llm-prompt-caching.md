@@ -1,6 +1,6 @@
 ---
 title: "Maximizing Cache Hits in LLM Prompt Caching: Static-First Prompt Design"
-expertise: ai-applied-ml
+expertise: prompt-context-engineering
 slug: maximizing-cache-hits-llm-prompt-caching
 tech:
   - claude

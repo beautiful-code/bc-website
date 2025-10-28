@@ -1,6 +1,6 @@
 ---
 title: "Two-Phase LLM Planning: Building Reliable AI Workflow Generators with Structured Outputs"
-expertise: ai-applied-ml
+expertise: agentic-systems
 slug: two-phase-llm-planning-structured-outputs
 tech: [adk, gemini]
 date: 2025-08-04
