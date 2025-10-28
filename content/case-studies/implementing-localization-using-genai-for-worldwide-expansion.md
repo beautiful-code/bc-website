@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "80% cost savings on translations"
     icon: "/icons/outcome/outcome-savings.svg"
-expertises: ["ai-applied-ml", "frontend-engineering"]
+expertises: ["frontend-engineering"]
 technologies:
   - tech: "llama"
     purpose: "Foundation model for translation"

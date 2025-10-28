@@ -13,7 +13,7 @@ outcomes:
     icon: "/icons/outcome/outcome-verification.svg"
   - outcome: "Improved analyst satisfaction and reduced manual review load"
     icon: "/icons/outcome/outcome-nps.png"
-expertises: ["ai-applied-ml", "data-engineering"]
+expertises: ["rag-solutions", "backend-engineering"]
 technologies:
   - tech: "python"
     purpose: "Core AI and data automation components"

@@ -11,7 +11,7 @@ outcomes:
     icon: "/icons/outcome/outcome-down.svg"
   - outcome: "Click-Through Rate (CTR) of the SEM Ads increased by 37%"
     icon: "/icons/outcome/outcome-click.svg"
-expertises: ["ai-applied-ml"]
+expertises: ["agentic-systems"]
 technologies:
   - tech: "python"
     purpose: "Core scripting and data integration"
