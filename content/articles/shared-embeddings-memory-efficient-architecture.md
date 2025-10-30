@@ -1,6 +1,6 @@
 ---
 title: "Shared Embeddings Across Semantically-Similar Features: Memory-Efficient Architecture for Multi-Categorical Models"
-expertise: ai-applied-ml
+expertise: mlops
 slug: shared-embeddings-memory-efficient-architecture
 tech: [pytorch, tensorflow, python]
 date: 2025-10-03
