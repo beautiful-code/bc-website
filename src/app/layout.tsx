@@ -13,9 +13,9 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BeautifulCode - Product Engineering Services",
+  title: "BeautifulCode - Applied AI Services",
   description:
-    "Product engineering services firm with expertise in frontend, backend, DevOps, mobile, data engineering, and AI/ML.",
+    "Applied AI & Product Engineering services firm with expertise in AI/ML, Frontend, Backend, DevOps, Data Engineering.",
 };
 
 export default function RootLayout({
