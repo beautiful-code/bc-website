@@ -1,10 +1,7 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
+import Image from "next/image";
 import MenuPage from "@/components/MenuPage";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { getHomeBreadcrumb } from "@/lib/breadcrumb-utils";
-import { processMarkdown } from "@/lib/utils/markdown-processor";
 import "../../styles/layout.scss";
 import "../../styles/markdown-content.scss";
 
@@ -17,14 +14,6 @@ export default async function AIRoadmapPage() {
     },
   ];
 
-  // Load the AI roadmap markdown file
-  const filePath = path.join(process.cwd(), "content/ai-roadmap.md");
-  const fileContents = fs.readFileSync(filePath, "utf8");
-  const { content } = matter(fileContents);
-
-  // Process the markdown content to HTML
-  const processedContent = await processMarkdown(content);
-
   return (
     <MenuPage activeSlug="ai-roadmap">
       <div className="px-4 sm:px-16">
@@ -34,17 +23,23 @@ export default async function AIRoadmapPage() {
 
         {/* Header Section */}
         <div className="mb-6">
-          <h1 className="text-4xl font-bold text-red-600 mb-6">
+          <h1 className="text-3xl font-medium uppercase text-red-600 mb-4">
             Our Applied AI Roadmap
           </h1>
+          <p className="text-base text-[var(--color-bc-text-gray)] mb-6">
+          This document outlines the <strong>systematic, engineering-first process</strong> required for all Applied GenAI projects. Its purpose is to ensure solutions are well-defined, validated, and built to <strong>production-grade architectural standards</strong>.
+          </p>
         </div>
 
-        {/* Content */}
-        <div className="markdown-content max-w-none mb-12">
-          <div
-            className="font-[family-name:var(--font-nunito-sans)] leading-relaxed"
-            style={{ color: "var(--color-bc-text-black)" }}
-            dangerouslySetInnerHTML={{ __html: processedContent }}
+        {/* Artifact Image */}
+        <div className="mb-12 flex justify-center">
+          <Image
+            src="/ai-roadmap/AI_roadmap_artifact.svg"
+            alt="Our Applied AI Roadmap Artifact"
+            width={1700}
+            height={2200}
+            className="w-full h-auto max-w-5xl"
+            priority
           />
         </div>
       </div>
