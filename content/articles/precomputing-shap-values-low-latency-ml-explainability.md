@@ -1,6 +1,6 @@
 ---
 title: "Precomputing SHAP Values for Low-Latency ML Explainability in Production"
-expertise: ai-applied-ml
+expertise: mlops
 slug: precomputing-shap-values-low-latency-ml-explainability
 tech: [pytorch, bigquery, tensorflow]
 date: 2025-09-04

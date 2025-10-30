@@ -1,6 +1,6 @@
 ---
 title: "Achieving Near-Linear Speedup in Multi-GPU Training Without Sacrificing Convergence"
-expertise: ai-applied-ml
+expertise: mlops
 slug: achieving-near-linear-speedup-in-multi-gpu-training
 tech: [tensorflow, pytorch, aws]
 date: 2025-06-01

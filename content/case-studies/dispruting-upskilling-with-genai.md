@@ -13,16 +13,18 @@ outcomes:
     icon: "/icons/outcome/outcome-time-2.svg"
   - outcome: "Achieved a 95% course completion rate by eliminating feedback delays and keeping learners engaged."
     icon: "/icons/outcome/outcome-evaluate.svg"
-expertises: ["fine-tuning"]
+expertises: ["fine-tuning", "evaluation"]
 technologies:
   - tech: "openai"
     purpose: "Foundation models for learning evaluation and feedback"
-  - tech: "Pydantic"
+  - tech: "pydantic"
     purpose: "structured output from Foundation models"
   - tech: "react"
     purpose: "Web UI for learning experiences"
   - tech: "supabase"
     purpose: "Auth, database, and storage backend"
+  - tech: "langsmith"
+    purpose: "Evaluation"
 # testimonial:
 #   quote: "N/A"
 #   author: "Client Representative"
@@ -62,6 +64,18 @@ If the AI determines the notes sufficiently cover the required concepts, the mod
 ### Seamless Mentor Handoff
 
 Once a learner completes all modules, the mentor has access to a comprehensive overview of their entire learning journey. This allows mentors to bypass granular, repetitive checks and focus their time on high-impact, strategic conversations, preparing the learner for the final project phase.
+
+### Rigorous Evaluation Framework
+
+To ensure the AI-generated feedback matched the quality and effectiveness of human mentors, we established a comprehensive evaluation system. We created a golden dataset of authentic human mentor feedback, which served as our quality benchmark. Using LangSmith, we implemented an LLM-as-judge evaluation framework that systematically assessed the AI's output against these gold-standard examples from experienced mentors.
+
+This evaluation system became the gatekeeper for all changes to production. Every prompt modification underwent rigorous testing against our benchmark dataset. We only promoted changes to production if they maintained an average pass percentage within a strict 5% tolerance of our baseline. This disciplined approach ensured that improvements in one area never came at the cost of regression in feedback quality or mentoring tone.
+
+### Fine-Tuning for Feedback Quality and Cost Efficiency
+
+Achieving the right balance of feedback strictness and mentoring tone proved challenging with standard prompting techniques. Initial attempts using prompt engineering and few-shot examples failed to consistently replicate the nuanced feedback style that experienced mentors provided. To address this, we curated a dataset of 100 authentic feedback examples from human mentors, capturing their evaluation approach and communication style. We fine-tuned a GPT-4o model on this dataset, which successfully achieved the targeted strictness and tone in its feedback.
+
+To optimize operational costs while maintaining quality, we implemented a cascading fine-tuning strategy. We generated 500 high-quality feedback examples using the fine-tuned GPT-4o model and used this synthetic dataset to fine-tune a GPT-4o-mini model. This cost-efficient mini model, trained on outputs from its larger counterpart, now powers the production system—delivering mentor-quality feedback at a fraction of the computational cost.
 
 <!-- ### Overview of Delivery Methodology
 

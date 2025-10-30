@@ -1,6 +1,6 @@
 ---
 title: "Accelerating ML Retraining with Kubeflow's Step-Level Caching"
-expertise: ai-applied-ml
+expertise: mlops
 slug: accelerating-ml-retraining-kubeflow-step-level-caching
 tech: [kubeflow, kubernetes, docker]
 date: 2025-09-02

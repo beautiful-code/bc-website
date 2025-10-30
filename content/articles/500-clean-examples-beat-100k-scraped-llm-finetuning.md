@@ -2,7 +2,7 @@
 title: "Why 500 Clean Examples Beat 100K Scraped Ones in LLM Fine-Tuning"
 expertise: fine-tuning
 slug: 500-clean-examples-beat-100k-scraped-llm-finetuning
-tech: [openai, huggingface]
+tech: [pytorch, openai, huggingface]
 date: 2025-10-28
 author: BeautifulCode
 keytakeaway: "In LLM fine-tuning, 500 expert-verified examples deliver better production results than 100K noisy samples because training amplifies data quality issues into persistent model errors that are expensive to fix."
@@ -14,16 +14,16 @@ Fine-tuning Large Language Models (LLMs) reveals a counterintuitive reality: tra
 
 ### The Quality-Quantity Trade-off
 
-When comparing dataset strategies, the performance gap becomes stark:
+When comparing dataset strategies, the differences become clear:
 
-| Dataset Type | Size | Validation Accuracy | Inference Quality |
-|--------------|------|---------------------|-------------------|
-| Scraped web data | 100,000 examples | 72% | Inconsistent, hallucinates |
-| Auto-generated synthetic | 50,000 examples | 78% | Plausible but generic |
-| Human-curated | 1,000 examples | 89% | Reliable, domain-accurate |
-| Expert-verified | 500 examples | 91% | Production-ready |
+| Dataset Type | Volume Characteristics | Signal-to-Noise Ratio | Common Issues |
+|--------------|------------------------|----------------------|---------------|
+| Scraped web data | High volume, minimal filtering | Low | Inconsistent formatting, mislabeled examples |
+| Auto-generated synthetic | Medium to high volume | Medium | Distribution mismatch, lacks edge cases |
+| Human-curated | Low to medium volume | High | Time-intensive, expensive |
+| Expert-verified | Low volume, selective | Very high | Scalability constraints |
 
-The manually-verified dataset at 0.5% the size achieves 19 percentage points higher accuracy. Noise compounds during backpropagation: mislabeled examples teach the model incorrect patterns that persist across epochs.
+Noise compounds during backpropagation: mislabeled examples teach the model incorrect patterns that persist across epochs. A manually-verified dataset at a fraction of the size consistently outperforms large noisy datasets because every example reinforces correct behavior.
 
 ### The Amplification Effect
 
