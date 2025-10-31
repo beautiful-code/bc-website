@@ -112,7 +112,7 @@ export default function Home() {
                           {">"}
                         </span>
                         <span className="font-semibold text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                          READ OUR ENGINEERING PRINCIPLES
+                          OUR ENGINEERING PRINCIPLES
                         </span>
                       </h2>
                     </div>
