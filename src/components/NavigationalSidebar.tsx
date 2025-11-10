@@ -93,47 +93,38 @@ export default function NavigationalSidebar({
       </div>
 
       {/* Bottom Links */}
-      <div className="mt-2 space-y-1">
-        {SHOW_PRINCIPLES && (
-          <Link href="/principles">
-            <div
-              className={`px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
+      {SHOW_PRINCIPLES && (
+        <div className={`mt-2 space-y-1 flex items-center gap-2 px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
                 activeSlug === "principles"
                   ? "text-[var(--color-bc-red)]"
                   : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
-              }`}
-            >
-              OUR ENGINEERING PRINCIPLES
-            </div>
+              }`}>
+          <span className={`text-[var(--color-bc-red)]`}>{">"}</span>
+          <Link href="/principles">
+            <div>OUR ENGINEERING PRINCIPLES</div>
           </Link>
-        )}
-      </div>
+        </div>
+      )}
 
-      <div className="mt-4">
-        <Link href="/ai-roadmap">
-          <div
-            className={`px-4 sm:px-6 py-3 cursor-pointer uppercase tracking-wider text-lg sm:text-xl transition-colors duration-300 ${
-              activeSlug === "ai-roadmap"
-                ? "text-[var(--color-bc-red)] bg-white"
-                : "hover:bg-white/50 text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)] rounded-lg"
-            }`}
-          >
-            Our Applied AI Roadmap
-          </div>
+      <div className={`mt-4 flex items-center gap-2 tracking-wider px-4 sm:px-6 py-2 cursor-pointer uppercase text-sm sm:text-lg transition-colors duration-300 ${
+              activeSlug === "ai-framework"
+                ? "text-[var(--color-bc-red)]"
+                : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
+            }`}>
+        <span className={`text-[var(--color-bc-red)]`}>{">"}</span>
+        <Link href="/ai-framework">
+          <div>Our Applied AI Framework</div>
         </Link>
       </div>
 
-      <div className="mt-4">
-        <Link href="/leadership">
-          <div
-            className={`px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
+      <div className={`mt-4 flex items-center gap-2 tracking-wider px-4 sm:px-6 py-2 cursor-pointer uppercase text-sm sm:text-lg transition-colors duration-300 ${
               activeSlug === "leadership"
                 ? "text-[var(--color-bc-red)]"
                 : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
-            }`}
-          >
-            LEADERSHIP
-          </div>
+            }`}>
+        <span className={`text-[var(--color-bc-red)]`}>{">"}</span>
+        <Link href="/leadership">
+          <div>LEADERSHIP</div>
         </Link>
       </div>
     </div>
