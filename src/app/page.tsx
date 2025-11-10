@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
 import Logo from "@/components/Logo";
 import Copyright from "@/components/Copyright";
@@ -25,18 +26,38 @@ export default function Home() {
         <div className="mainColumn font-[family-name:var(--font-jetbrains-mono)]">
           <div className="max-w-4xl mx-auto">
             <h2
-              className="text-xl sm:text-3xl tracking-wider uppercase mt-6 sm:mt-2 mb-8 text-left px-8"
+              className="text-xl sm:text-3xl tracking-wider uppercase mt-6 sm:mt-2 mb-8 text-left px-8 flex items-center gap-2"
               style={{ color: "var(--color-bc-red)" }}
             >
-              {">"} WHAT WE ARE WIRED FOR
+              <Image
+                src="/icons/chevron.svg"
+                alt=""
+                width={32}
+                height={32}
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              />
+              WHAT WE ARE WIRED FOR
             </h2>
 
             {/* Row 1: Applied AI - Label Left, Items Right */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-8 mb-4 sm:mb-8 px-8">
-              <div className="flex items-center pl-4">
+              <div className="flex flex-col items-start justify-center pl-4 gap-1">
                 <h3 className="text-lg sm:text-4xl font-semibold sm:font-bold uppercase text-[var(--color-bc-purple)]">
                   APPLIED AI
                 </h3>
+                {/* Desktop only - OUR FRAMEWORK link */}
+                <Link href="/ai-framework" className="hidden md:flex items-center gap-1 group">
+                  <span className="text-sm sm:text-base font-medium uppercase text-[var(--color-bc-purple)] transition-colors duration-300 group-hover:text-[var(--color-bc-red)]">
+                    OUR FRAMEWORK
+                  </span>
+                  <Image
+                    src="/icons/chevron.svg"
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="w-3 h-3 sm:w-4 sm:h-4"
+                  />
+                </Link>
               </div>
               <div className="space-y-2">
                 {appliedAIAreas.map((area) => (
@@ -59,6 +80,32 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
+            </div>
+
+            {/* Mobile: APPLIED AI FRAMEWORK Row - Mobile only */}
+            <div className="mb-4 sm:mb-8 md:hidden">
+              <Link
+                href="/ai-framework"
+                className=""
+                aria-label="Explore our Applied AI Framework"
+              >
+                <div className="flex items-center justify-between gap-4 pl-6 pr-2 py-6 hover:bg-[var(--color-bc-beige)] group">
+                  <div>
+                    <h2 className="text-lg tracking-wider uppercase text-left flex items-center gap-3">
+                      <Image
+                        src="/icons/chevron.svg"
+                        alt=""
+                        width={32}
+                        height={32}
+                        className="w-6 h-6"
+                      />
+                      <span className="font-semibold text-lg transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                        APPLIED AI FRAMEWORK
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             {/* Row 2: Product Engineering - Items Left, Label Right */}
@@ -107,10 +154,14 @@ export default function Home() {
                 >
                   <div className="flex items-center justify-between gap-4 pl-6 pr-2 py-6 hover:bg-[var(--color-bc-beige)] group">
                     <div>
-                      <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
-                        <span style={{ color: "var(--color-bc-red)" }}>
-                          {">"}
-                        </span>
+                      <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-3">
+                        <Image
+                          src="/icons/chevron.svg"
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="w-6 h-6 sm:w-8 sm:h-8"
+                        />
                         <span className="font-semibold text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
                           OUR ENGINEERING PRINCIPLES
                         </span>
@@ -120,19 +171,6 @@ export default function Home() {
                 </Link>
               )}
 
-            <Link href="/ai-framework">
-              <div className="flex items-center justify-between mt-2 gap-4 pl-6 pr-2 py-8 hover:bg-[var(--color-bc-beige)] group">
-                <div>
-                  <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
-                    <span style={{ color: "var(--color-bc-red)" }}>{">"}</span>
-                    <span className="font-bold text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                      OUR APPLIED AI Framework
-                    </span>
-                  </h2>
-                </div>
-              </div>
-            </Link>
-
             {SHOW_PRINCIPLES && (
               <Link
                 href="/leadership"
@@ -141,10 +179,14 @@ export default function Home() {
               >
                 <div className="flex items-center justify-between gap-4 pl-6 pr-2 py-6 hover:bg-[var(--color-bc-beige)] group">
                   <div>
-                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
-                      <span style={{ color: "var(--color-bc-red)" }}>
-                        {">"}
-                      </span>
+                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-3">
+                      <Image
+                        src="/icons/chevron.svg"
+                        alt=""
+                        width={32}
+                        height={32}
+                        className="w-6 h-6 sm:w-8 sm:h-8"
+                      />
                       <span className="font-semibold text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
                         LEADERSHIP
                       </span>
