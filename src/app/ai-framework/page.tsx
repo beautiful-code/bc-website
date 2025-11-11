@@ -27,7 +27,7 @@ export default async function AIFrameworkPage() {
             Our Applied AI Framework
           </h1>
           <p className="text-base text-[var(--color-bc-text-gray)] mb-6">
-          This document outlines the <strong>systematic, engineering-first process</strong> required for all Applied GenAI projects. Its purpose is to ensure solutions are well-defined, validated, and built to <strong>production-grade architectural standards</strong>.
+          This is our Applied AI Framework we use to build reliable AI solutions. It's our systematic process for taking any project from concept to a well-defined, validated, and production-grade system.
           </p>
         </div>
 
