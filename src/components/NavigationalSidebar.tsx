@@ -67,7 +67,7 @@ export default function NavigationalSidebar({
       <Link href="/ai-framework">
         <div className={`mb-6 py-3 px-3 sm:px-3 cursor-pointer transition-colors duration-300 flex items-center gap-1 ${
           activeSlug === "ai-framework"
-          ? "text-[var(--color-bc-red)]"
+          ? "bg-white text-[var(--color-bc-red)]"
           : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
         }`}>
           <Image
@@ -79,7 +79,7 @@ export default function NavigationalSidebar({
           />
           <span className={`text-sm sm:text-base uppercase tracking-wide transition-colors duration-300 ${
             activeSlug === "ai-framework"
-              ? "text-[var(--color-bc-red)]"
+              ? " text-[var(--color-bc-red)]"
               : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
           }`}>
             APPLIED AI FRAMEWORK
@@ -128,7 +128,7 @@ export default function NavigationalSidebar({
         <Link href="/principles">
           <div className={`py-3 px-3 sm:px-3 cursor-pointer transition-colors duration-300 flex items-center gap-1 ${
             activeSlug === "principles"
-              ? "text-[var(--color-bc-red)]"
+              ? "bg-white text-[var(--color-bc-red)]"
               : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
           }`}>
             <Image
@@ -149,7 +149,7 @@ export default function NavigationalSidebar({
         <Link href="/leadership">
           <div className={`py-3 px-3 sm:px-3 cursor-pointer transition-colors duration-300 flex items-center gap-1 ${
             activeSlug === "leadership"
-              ? "text-[var(--color-bc-red)]"
+              ? "bg-white text-[var(--color-bc-red)]"
               : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
           }`}>
             <Image
