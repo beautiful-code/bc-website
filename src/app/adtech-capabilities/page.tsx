@@ -107,7 +107,7 @@ export default function AdTechCapabilitiesPage() {
         </div>
 
         {/* Sections Container */}
-        <div className="flex flex-col gap-4 md:gap-6 max-w-[1259px] mx-auto">
+        <div className="flex flex-col gap-4 md:gap-1 max-w-[1259px] mx-auto">
           {/* Integration Layer */}
           <Section title="Integration Layer" backgroundColor="#F9F9F9">
             <CapabilityBox
