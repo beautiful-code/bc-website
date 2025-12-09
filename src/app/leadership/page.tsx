@@ -25,7 +25,10 @@ export default async function LeadershipPage() {
   ];
 
   // Load the leadership markdown file
-  const filePath = path.join(process.cwd(), "content/bc-leadership-page.md");
+  const filePath = path.join(
+    process.cwd(),
+    "content/bc-leadership-page-withoutai.md"
+  );
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { content } = matter(fileContents);
 
