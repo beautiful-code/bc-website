@@ -157,6 +157,12 @@ export default function FinTechCapabilitiesPage() {
               description="Zero-exposure payment environment using hosted fields/pages and secure vaulting."
               className="border border-[#EDEDED]"
             />
+            <CapabilityBox
+              icon="/icons/fintech/plug.svg"
+              title="Payment Processor Integrations"
+              description="Integrations with different payment processors ex: WorldPay, Payrix, ProPay"
+              className="border border-[#EDEDED]"
+            />
           </Section>
 
 
@@ -169,7 +175,7 @@ export default function FinTechCapabilitiesPage() {
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/fintech/agentic-systems-hover.svg"
+              icon="/icons/fintech/fine-tuning.svg"
               title="Automated Underwriting & Risk Evaluation"
               description="Real-time KYC underwriting by integrating with providers such as LexisNexis"
               className="border border-transparent"
@@ -182,15 +188,7 @@ export default function FinTechCapabilitiesPage() {
             />
           </Section>
 
-          {/* Orchestration & Connectivity */}
-          <Section title="Orchestration & Connectivity" backgroundColor="#FFFFFF">
-            <CapabilityBox
-              icon="/icons/fintech/plug.svg"
-              title="Payment Processor Integrations"
-              description="Integrations with different payment processors ex: WorldPay, Payrix, ProPay"
-              className="border border-[#EDEDED]"
-            />
-          </Section>
+          
         </div>
       </main>
     </div>
