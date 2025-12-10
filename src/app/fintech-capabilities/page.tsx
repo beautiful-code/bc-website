@@ -10,7 +10,7 @@ interface CapabilityBoxProps {
 
 function CapabilityBox({ icon, title, description, className = "" }: CapabilityBoxProps) {
   return (
-    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default  ${className}`}>
+    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default w-full lg:max-w-[360px] ${className}`}>
       <div className="flex items-start gap-2">
         <h3 className="md:text-lg text-base font-bold leading-6 flex-1 transition-colors duration-300" style={{ color: "#F15671", fontFamily: "var(--font-jetbrains-mono)" }}>
           {title}
@@ -41,11 +41,11 @@ interface SectionProps {
 function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps) {
   return (
     <div 
-      className="rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-start md:items-start gap-4 md:gap-9"
+      className="rounded-lg p-4 md:p-6 flex flex-col lg:flex-row items-start lg:items-start gap-4 lg:gap-9"
       style={{ backgroundColor }}
     >
       <div 
-        className="flex items-center gap-1.5 px-3 py-8 rounded-xl w-full md:w-[270px] flex-shrink-0"
+        className="flex items-center gap-1.5 px-3 py-8 rounded-xl w-full lg:w-[270px] flex-shrink-0"
         // style={{ backgroundColor: "#FAFAFA" }}
       >
         <h2 
@@ -55,7 +55,7 @@ function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps)
           {title}
         </h2>
       </div>
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-9 w-full">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-9 w-full">
         {children}
       </div>
     </div>
@@ -70,7 +70,7 @@ export default function FinTechCapabilitiesPage() {
         {/* Header Area with Logo */}
         <div className="relative mb-8 md:mb-12">
           {/* Logo - Absolute positioned on left */}
-          <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2">
+          <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2">
             <Link href="/">
               <Image
                 src="/BCLogo.svg"
@@ -84,13 +84,13 @@ export default function FinTechCapabilitiesPage() {
           </div>
           
           {/* Mobile Logo - Centered */}
-          <div className="md:hidden flex justify-center mb-4">
+          <div className="lg:hidden flex justify-center mb-4">
             <Link href="/">
               <Image
                 src="/BCLogo.svg"
                 alt="BeautifulCode Logo"
-                width={197.71}
-                height={37.75}
+                width={180}
+                height={32}
                 className="cursor-pointer hover:opacity-80 transition-opacity w-48 h-auto"
                 priority
               />
@@ -99,7 +99,7 @@ export default function FinTechCapabilitiesPage() {
           
           {/* Title - Centered */}
           <h1 
-            className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-center"
+            className="text-2xl md:text-3xl xl:text-4xl font-bold leading-tight text-center"
             style={{ color: "#E01236", fontFamily: "var(--font-jetbrains-mono)" }}
           >
             Our FinTech Capabilities
@@ -107,7 +107,7 @@ export default function FinTechCapabilitiesPage() {
         </div>
 
         {/* Sections Container */}
-        <div className="flex flex-col gap-4 md:gap-1 w-full  mx-auto">
+        <div className="flex flex-col gap-4 lg:gap-1 w-full  mx-auto">
           {/* Payment Processing & Settlement */}
           <Section title="Payment Processing & Settlement" backgroundColor="#F9F9F9">
             <CapabilityBox
