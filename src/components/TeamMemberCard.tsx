@@ -19,7 +19,7 @@ export default function TeamMemberCard({
   return (
     <div className="bg-white rounded-lg p-4 border border-gray-200">
       <div className="flex justify-between items-start mb-4">
-        <div className="flex-1">
+        <div className="flex-1 mt-2">
           <div className="flex items-center gap-2 mb-2">
             <Link
               href={linkedin}
@@ -52,10 +52,12 @@ export default function TeamMemberCard({
         </div>
       </div>
 
-      <p className="text-base font-[family-name:var(--font-nunito-sans)]">
-        <span className="font-semibold text-red-600">Applied AI Focus:</span>{" "}
-        <span className="text-gray-700">{focus}</span>
-      </p>
+      {focus && (
+        <p className="text-base font-[family-name:var(--font-nunito-sans)]">
+          <span className="font-semibold text-red-600">Applied AI Focus:</span>{" "}
+          <span className="text-gray-700">{focus}</span>
+        </p>
+      )}
     </div>
   );
 }
