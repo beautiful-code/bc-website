@@ -10,7 +10,7 @@ interface CapabilityBoxProps {
 
 function CapabilityBox({ icon, title, description, className = "" }: CapabilityBoxProps) {
   return (
-    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default w-full lg:max-w-[360px] ${className}`}>
+    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default w-full min-h-[100px] h-full ${className}`}>
       <div className="flex items-start gap-2">
         <h3 className="md:text-lg text-base font-bold leading-6 flex-1 transition-colors duration-300" style={{ color: "#F15671", fontFamily: "var(--font-jetbrains-mono)" }}>
           {title}
@@ -41,7 +41,7 @@ interface SectionProps {
 function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps) {
   return (
     <div 
-      className="rounded-lg p-4 md:p-6 flex flex-col lg:flex-row items-start lg:items-start gap-4 lg:gap-9"
+      className="rounded-lg p-4 md:p-6 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-9"
       style={{ backgroundColor }}
     >
       <div 
@@ -117,7 +117,7 @@ export default function FinTechCapabilitiesPage() {
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/fintech/settlement.svg"
+              icon="/icons/fintech/card-coin.svg"
               title="Settlement & Funds-Flow Workflows"
               description="Complex funds-flow logic supporting split payments, dynamic fee schedules, and multi-party disbursements."
               className="border border-transparent"
@@ -129,7 +129,7 @@ export default function FinTechCapabilitiesPage() {
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/fintech/shield.svg"
+              icon="/icons/adtech/security.svg"
               title="Dynamic Reserve Management"
               description="Handle rolling reserves, fixed holdbacks, and automated release logic."
               className="border border-transparent"

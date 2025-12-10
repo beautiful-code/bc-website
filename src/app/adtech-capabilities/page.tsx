@@ -10,7 +10,7 @@ interface CapabilityBoxProps {
 
 function CapabilityBox({ icon, title, description, className = "" }: CapabilityBoxProps) {
   return (
-    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default w-full lg:max-w-[360px] ${className}`}>
+    <div className={`bg-white rounded-lg p-5 flex flex-col gap-3 cursor-default w-full min-h-[100px] h-full ${className}`}>
       <div className="flex items-start gap-2">
         <h3 className="md:text-lg text-base font-bold leading-6 flex-1 transition-colors duration-300" style={{ color: "#F15671", fontFamily: "var(--font-jetbrains-mono)" }}>
           {title}
@@ -55,7 +55,7 @@ function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps)
           {title}
         </h2>
       </div>
-      <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-9 w-full items-start">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-9 w-full">
         {children}
       </div>
     </div>
@@ -114,19 +114,19 @@ export default function AdTechCapabilitiesPage() {
               icon="/icons/adtech/plug.svg"
               title="Cross-Platform DSP Integration"
               description="Integrations with CM360, DV360, Meta, GoogleAds, etc"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
             <CapabilityBox
               icon="/icons/adtech/high.svg"
               title="High-Throughput Pixel Processing"
               description="Scale real-time pipelines to process 100M+ pixel events daily"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
             <CapabilityBox
               icon="/icons/adtech/machine-learning.svg"
               title="Complex Partner Data Integration"
               description="Engineer format-agnostic pipelines via SFTP, S3, APIs for unified warehousing"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
           </Section>
 
@@ -136,19 +136,19 @@ export default function AdTechCapabilitiesPage() {
               icon="/icons/adtech/identity.svg"
               title="Identity Graph Management"
               description="Stitch fragmented identities using deterministic and probabilistic matching across devices"
-              className="flex-1 border border-[#EDEDED]"
+              className="border border-[#EDEDED]"
             />
             <CapabilityBox
               icon="/icons/adtech/video-icon.svg"
               title="Unified Creative Management"
               description="Orchestrate creative assets across DSPs through unified workflow systems"
-              className="flex-1 border border-[#EDEDED]"
+              className="border border-[#EDEDED]"
             />
             <CapabilityBox
               icon="/icons/adtech/megaphone.svg"
               title="Unified Campaign Management"
               description="Launch and manage campaigns across multiple DSPs from single interface"
-              className="flex-1 border border-[#EDEDED]"
+              className="border border-[#EDEDED]"
             />
           </Section>
 
@@ -158,38 +158,36 @@ export default function AdTechCapabilitiesPage() {
               icon="/icons/adtech/security.svg"
               title="Privacy-Safe Audience Activation"
               description="Build hashed-ID pipelines for cookieless targeting with MAID, ID5, UID2.0"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
             <CapabilityBox
               icon="/icons/adtech/ai-bot.svg"
               title="ML-Driven Campaign Optimization"
               description="Automate budget, bid, and impression optimization using ML model pipelines"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
             <CapabilityBox
               icon="/icons/adtech/graph.svg"
               title="Campaign Performance Visualization"
               description="Engineer high-performance AI-powered dashboards for real-time campaign analytics"
-              className="flex-1 border border-transparent"
+              className="border border-transparent"
             />
           </Section>
 
           {/* User Experience Layer */}
           <Section title="User Experience Layer" backgroundColor="#FFFFFF">
-            <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-9 w-full items-start">
-              <CapabilityBox
-                icon="/icons/adtech/frontend.svg"
-                title="Full-Stack Advertiser Portals"
-                description="Build self-service apps for performance tracking, bookings, and payments"
-                className="flex-1 border border-[#EDEDED]"
-              />
-              <CapabilityBox
-                icon="/icons/adtech/fine-tuning.svg"
-                title="AdOps Workflow Builder"
-                description="Create configurable workflows to standardize processes and reduce manual effort"
-                className="flex-1 border border-[#EDEDED]"
-              />
-            </div>
+            <CapabilityBox
+              icon="/icons/adtech/frontend.svg"
+              title="Full-Stack Advertiser Portals"
+              description="Build self-service apps for performance tracking, bookings, and payments"
+              className="border border-[#EDEDED]"
+            />
+            <CapabilityBox
+              icon="/icons/adtech/fine-tuning.svg"
+              title="AdOps Workflow Builder"
+              description="Create configurable workflows to standardize processes and reduce manual effort"
+              className="border border-[#EDEDED]"
+            />
           </Section>
         </div>
       </main>
