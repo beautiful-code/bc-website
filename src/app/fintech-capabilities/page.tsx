@@ -41,15 +41,15 @@ interface SectionProps {
 function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps) {
   return (
     <div 
-      className="rounded-lg w-full p-4 md:p-6 flex flex-col lg:flex-row items-start lg:items-center gap-4 md:gap-9"
+      className="rounded-lg p-4 md:p-6 flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-9"
       style={{ backgroundColor }}
     >
       <div 
-        className="flex items-center gap-1.5 px-3 py-8 rounded-xl  w-full md:w-[270px] flex-shrink-0"
+        className="flex items-center gap-1.5 px-3 py-8 rounded-xl w-full lg:w-[270px] flex-shrink-0"
         // style={{ backgroundColor: "#FAFAFA" }}
       >
         <h2 
-          className="text-xl md:text-2xl font-bold leading-none"
+          className="text-xl md:text-2xl font-bold leading-tight"
           style={{ color: "#000000", fontFamily: "var(--font-jetbrains-mono)" }}
         >
           {title}
@@ -62,11 +62,11 @@ function Section({ title, children, backgroundColor = "#F9F9F9" }: SectionProps)
   );
 }
 
-export default function AdTechCapabilitiesPage() {
+export default function FinTechCapabilitiesPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Main Content */}
-      <main className="w-full px-4 md:px-12  py-6 md:py-8" style={{ fontFamily: "var(--font-jetbrains-mono)" }}>
+      <main className="w-full px-4 md:px-12 py-6 md:py-8" style={{ fontFamily: "var(--font-jetbrains-mono)" }}>
         {/* Header Area with Logo */}
         <div className="relative mb-8 md:mb-12">
           {/* Logo - Absolute positioned on left */}
@@ -89,8 +89,8 @@ export default function AdTechCapabilitiesPage() {
               <Image
                 src="/BCLogo.svg"
                 alt="BeautifulCode Logo"
-                width={197.71}
-                height={37.75}
+                width={180}
+                height={32}
                 className="cursor-pointer hover:opacity-80 transition-opacity w-48 h-auto"
                 priority
               />
@@ -99,99 +99,98 @@ export default function AdTechCapabilitiesPage() {
           
           {/* Title - Centered */}
           <h1 
-            className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-center"
+            className="text-2xl md:text-3xl xl:text-4xl font-bold leading-tight text-center"
             style={{ color: "#E01236", fontFamily: "var(--font-jetbrains-mono)" }}
           >
-            Our AdTech Capabilities
+            Our FinTech Capabilities
           </h1>
         </div>
 
         {/* Sections Container */}
-        <div className="flex flex-col gap-4 lg:gap-1 w-full mx-auto">
-          {/* Integration Layer */}
-          <Section title="Integration Layer" backgroundColor="#F9F9F9">
+        <div className="flex flex-col gap-4 lg:gap-1 w-full  mx-auto">
+          {/* Payment Processing & Settlement */}
+          <Section title="Payment Processing & Settlement" backgroundColor="#F9F9F9">
             <CapabilityBox
-              icon="/icons/adtech/plug.svg"
-              title="Cross-Platform DSP Integration"
-              description="Integrations with CM360, DV360, Meta, GoogleAds, etc"
+              icon="/icons/fintech/creditcard.svg"
+              title="Multi-Rail Transaction Processing"
+              description="Unified transaction processing for card networks & ACH"
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/adtech/high.svg"
-              title="High-Throughput Pixel Processing"
-              description="Scale real-time pipelines to process 100M+ pixel events daily"
+              icon="/icons/fintech/card-coin.svg"
+              title="Settlement & Funds-Flow Workflows"
+              description="Complex funds-flow logic supporting split payments, dynamic fee schedules, and multi-party disbursements."
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/adtech/machine-learning.svg"
-              title="Complex Partner Data Integration"
-              description="Engineer format-agnostic pipelines via SFTP, S3, APIs for unified warehousing"
+              icon="/icons/fintech/dispute.svg"
+              title="Dispute & Chargeback Lifecycle Management"
+              description="End-to-end workflows handling chargeback lifecycle"
               className="border border-transparent"
             />
-          </Section>
-
-          {/* Operational Core */}
-          <Section title="Operational Core" backgroundColor="#FFFFFF">
-            <CapabilityBox
-              icon="/icons/adtech/identity.svg"
-              title="Identity Graph Management"
-              description="Stitch fragmented identities using deterministic and probabilistic matching across devices"
-              className="border border-[#EDEDED]"
-            />
-            <CapabilityBox
-              icon="/icons/adtech/video-icon.svg"
-              title="Unified Creative Management"
-              description="Orchestrate creative assets across DSPs through unified workflow systems"
-              className="border border-[#EDEDED]"
-            />
-            <CapabilityBox
-              icon="/icons/adtech/megaphone.svg"
-              title="Unified Campaign Management"
-              description="Launch and manage campaigns across multiple DSPs from single interface"
-              className="border border-[#EDEDED]"
-            />
-          </Section>
-
-          {/* Intelligence Layer */}
-          <Section title="Intelligence Layer" backgroundColor="#F9F9F9">
             <CapabilityBox
               icon="/icons/adtech/security.svg"
-              title="Privacy-Safe Audience Activation"
-              description="Build hashed-ID pipelines for cookieless targeting with MAID, ID5, UID2.0"
+              title="Dynamic Reserve Management"
+              description="Handle rolling reserves, fixed holdbacks, and automated release logic."
               className="border border-transparent"
             />
             <CapabilityBox
-              icon="/icons/adtech/ai-bot.svg"
-              title="ML-Driven Campaign Optimization"
-              description="Automate budget, bid, and impression optimization using ML model pipelines"
-              className="border border-transparent"
-            />
-            <CapabilityBox
-              icon="/icons/adtech/graph.svg"
-              title="Campaign Performance Visualization"
-              description="Engineer high-performance AI-powered dashboards for real-time campaign analytics"
+              icon="/icons/fintech/radar.svg"
+              title="Transaction Risk Management"
+              description="Rule-driven decision engines that enforce transaction-level risk controls in real time"
               className="border border-transparent"
             />
           </Section>
 
-          {/* User Experience Layer */}
-          <Section title="User Experience Layer" backgroundColor="#FFFFFF">
+
+          {/* Compliance & Integration */}
+          <Section title="Compliance & Integration" backgroundColor="#FFFFFF">
             <CapabilityBox
-              icon="/icons/adtech/frontend.svg"
-              title="Full-Stack Advertiser Portals"
-              description="Build self-service apps for performance tracking, bookings, and payments"
+              icon="/icons/fintech/pci.svg"
+              title="PCI DSS Level-1 Implementation"
+              description="Cloud-native environment that meet PCI DSS Level-1 standard."
               className="border border-[#EDEDED]"
             />
             <CapabilityBox
-              icon="/icons/adtech/fine-tuning.svg"
-              title="AdOps Workflow Builder"
-              description="Create configurable workflows to standardize processes and reduce manual effort"
+              icon="/icons/fintech/Key.svg"
+              title="Card Holder Data Isolation"
+              description="Zero-exposure payment environment using hosted fields/pages and secure vaulting."
+              className="border border-[#EDEDED]"
+            />
+            <CapabilityBox
+              icon="/icons/fintech/plug.svg"
+              title="Payment Processor Integrations"
+              description="Integrations with different payment processors ex: WorldPay, Payrix, ProPay"
               className="border border-[#EDEDED]"
             />
           </Section>
+
+
+          {/* Platform & Integration */}
+          <Section title="Platform & Integration" backgroundColor="#F9F9F9">
+            <CapabilityBox
+              icon="/icons/fintech/userplus.svg"
+              title="Payment Facilitator Onboarding"
+              description="Self-Service Onboarding flows for ISVs & Merchants."
+              className="border border-transparent"
+            />
+            <CapabilityBox
+              icon="/icons/fintech/fine-tuning.svg"
+              title="Automated Underwriting & Risk Evaluation"
+              description="Real-time KYC underwriting by integrating with providers such as LexisNexis"
+              className="border border-transparent"
+            />
+            <CapabilityBox
+              icon="/icons/fintech/layers.svg"
+              title="Multi-Tenant & Hierarchical Platform Modeling"
+              description="Scalable PayFac data models that support complex entity hierarchies."
+              className="border border-transparent"
+            />
+          </Section>
+
+          
         </div>
       </main>
     </div>
   );
 }
-
