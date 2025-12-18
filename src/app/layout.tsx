@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Nunito_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`${jetBrainsMono.variable} ${nunitoSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
