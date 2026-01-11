@@ -94,6 +94,30 @@ export default function NavigationalSidebar({
 
       {/* Bottom Links */}
       <div className="mt-2 space-y-1">
+        <Link href="/adtech-capabilities">
+          <div
+            className={`px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
+              activeSlug === "adtech-capabilities"
+                ? "text-[var(--color-bc-red)]"
+                : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
+            }`}
+          >
+            ADTECH CAPABILITIES
+          </div>
+        </Link>
+
+        <Link href="/fintech-capabilities">
+          <div
+            className={`px-4 sm:px-6 py-2 cursor-pointer uppercase tracking-wider text-sm sm:text-lg transition-colors duration-300 ${
+              activeSlug === "fintech-capabilities"
+                ? "text-[var(--color-bc-red)]"
+                : "text-[var(--color-bc-text-black)] hover:text-[var(--color-bc-red)]"
+            }`}
+          >
+            FINTECH CAPABILITIES
+          </div>
+        </Link>
+
         {SHOW_PRINCIPLES && (
           <Link href="/principles">
             <div

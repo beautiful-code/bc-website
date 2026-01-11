@@ -98,6 +98,44 @@ export default function Home() {
 
             {/* Additional Links Section */}
             <div className="mt-8">
+              <Link
+                href="/adtech-capabilities"
+                className=""
+                aria-label="View our AdTech capabilities"
+              >
+                <div className="flex items-center justify-between gap-4 pl-6 pr-2 py-6 hover:bg-[var(--color-bc-beige)] group">
+                  <div>
+                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
+                      <span style={{ color: "var(--color-bc-red)" }}>
+                        {">"}
+                      </span>
+                      <span className="font-semibold text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                        ADTECH CAPABILITIES
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+              </Link>
+
+              <Link
+                href="/fintech-capabilities"
+                className=""
+                aria-label="View our FinTech capabilities"
+              >
+                <div className="flex items-center justify-between gap-4 pl-6 pr-2 py-6 hover:bg-[var(--color-bc-beige)] group">
+                  <div>
+                    <h2 className="text-lg sm:text-3xl tracking-wider uppercase text-left flex items-center gap-4">
+                      <span style={{ color: "var(--color-bc-red)" }}>
+                        {">"}
+                      </span>
+                      <span className="font-semibold text-lg sm:text-2xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                        FINTECH CAPABILITIES
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+              </Link>
+
               {SHOW_PRINCIPLES && (
                 <Link
                   href="/principles"
