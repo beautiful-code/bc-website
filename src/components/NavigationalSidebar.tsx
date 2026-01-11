@@ -20,13 +20,13 @@ export default function NavigationalSidebar({
         <span>WHAT WE ARE WIRED FOR</span>
       </h2>
 
-      {/* Applied AI Section */}
+      {/* Product Engineering Section */}
       <div className="mb-6">
         <h3 className="text-lg sm:text-xl font-bold uppercase mb-4 px-4 sm:px-6 text-[var(--color-bc-purple)]">
-          APPLIED AI
+          PRODUCT ENGINEERING
         </h3>
         <div className="space-y-2">
-          {appliedAIAreas.map((area) => {
+          {productEngineeringAreas.map((area) => {
             const isActive = area.slug === activeSlug;
             return (
               <Link key={area.slug} href={`/expertise/${area.slug}`}>
@@ -56,13 +56,13 @@ export default function NavigationalSidebar({
         </div>
       </div>
 
-      {/* Product Engineering Section */}
+      {/* Applied AI Section */}
       <div className="mb-6">
         <h3 className="text-lg sm:text-xl font-bold uppercase mb-4 px-4 sm:px-6 text-[var(--color-bc-purple)]">
-          PRODUCT ENGINEERING
+          APPLIED AI
         </h3>
         <div className="space-y-2">
-          {productEngineeringAreas.map((area) => {
+          {appliedAIAreas.map((area) => {
             const isActive = area.slug === activeSlug;
             return (
               <Link key={area.slug} href={`/expertise/${area.slug}`}>

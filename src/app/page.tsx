@@ -31,11 +31,41 @@ export default function Home() {
               {">"} WHAT WE ARE WIRED FOR
             </h2>
 
-            {/* Row 1: Applied AI - Label Left, Items Right */}
+            {/* Row 1: Product Engineering - Label Left, Items Right */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-8 mb-4 sm:mb-8 px-8">
               <div className="flex items-center pl-4">
                 <h3 className="text-lg sm:text-4xl font-semibold sm:font-bold uppercase text-[var(--color-bc-purple)]">
-                  APPLIED AI
+                  Product Engineering
+                </h3>
+              </div>
+              <div className="space-y-2">
+                {productEngineeringAreas.map((area) => (
+                  <Link key={area.slug} href={`/expertise/${area.slug}`}>
+                    <div className="flex items-center space-x-4 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group py-3 px-4">
+                      <div className="flex-shrink-0">
+                        <CategoryIcon
+                          slug={area.slug}
+                          name={area.name}
+                          type="expertise"
+                          className="w-8 h-8"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-lg sm:text-xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
+                          {area.name}
+                        </h4>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2: Applied AI - Items Left, Label Right */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8 mt-8 px-8">
+              <div className="flex items-center justify-start pl-4 sm:hidden">
+                <h3 className="text-lg sm:text-2xl font-bold uppercase text-[var(--color-bc-purple)]">
+                  Applied AI
                 </h3>
               </div>
               <div className="space-y-2">
@@ -59,40 +89,9 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
-            </div>
-
-            {/* Row 2: Product Engineering - Items Left, Label Right */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8 mt-8 px-8">
-              <div className="flex items-center justify-start pl-4 sm:hidden">
-                <h3 className="text-lg sm:text-2xl font-bold uppercase text-[var(--color-bc-purple)]">
-                  PRODUCT ENGINEERING
-                </h3>
-              </div>
-
-              <div className="space-y-2">
-                {productEngineeringAreas.map((area) => (
-                  <Link key={area.slug} href={`/expertise/${area.slug}`}>
-                    <div className="flex items-center space-x-4 cursor-pointer transition-all duration-300 hover:bg-[var(--color-bc-beige)] group py-3 px-4">
-                      <div className="flex-shrink-0">
-                        <CategoryIcon
-                          slug={area.slug}
-                          name={area.name}
-                          type="expertise"
-                          className="w-8 h-8"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="text-lg sm:text-xl transition-colors duration-300 text-[var(--color-bc-text-black)] group-hover:text-[var(--color-bc-red)]">
-                          {area.name}
-                        </h4>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
               <div className="hidden sm:flex items-center justify-start pl-4">
                 <h3 className="text-lg sm:text-4xl font-bold uppercase text-[var(--color-bc-purple)]">
-                  PRODUCT ENGINEERING
+                  Applied AI
                 </h3>
               </div>
             </div>
